@@ -1,8 +1,9 @@
+/* @TODO */
+/* Transition animation for mobile nav btn */
+
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
-
-/* Transition animation for mobile nav btn */
 
 class NavBar extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class NavBar extends Component {
                             {socialNavItems.map((link, index) => {
                                 return (
                                     <li key={index}><a href={link.url}
-                                        class={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
+                                        className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
                                 );
                             })}
                         </ul>
@@ -41,7 +42,7 @@ class NavBar extends Component {
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {navItems.map((link, index) => {
                                     return (
-                                        <li key={index} class={link.liClass}>
+                                        <li key={index} className={link.liClass}>
                                             <a className={link.anchorClass} href={link.url}>{link.name}</a>
                                         </li>
                                     );
@@ -49,8 +50,8 @@ class NavBar extends Component {
                             </ul>
                             <a aria-label="homepage" href="index.html">
                                 <picture>
-                                    <source srcSet="assets/other/mobile/agLogoLarge.png" media="(min-width: 1024px)" />
-                                    <img className="ml-2 ag-logo" src="assets/other/mobile/agLogo.png"
+                                    <source srcSet="/components/agLogoLarge.png" media="(min-width: 1024px)" />
+                                    <img className="ml-2 ag-logo" srcSet="/assets/other/mobile/agLogo.png"
                                         alt="Aussie Grill By Outback Steakhouse" />
                                 </picture>
                             </a>
