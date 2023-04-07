@@ -5,9 +5,9 @@
 /* MAYBE WE DON'T NEED THE LINK / ANCHOR CLASS NAME BECAUSE WE DON'T NEED IT ON THE DATA BUT ON THE MAP WHEN MAPPING (AT TIME OF MAPPING, because we may share with nav links etc) */
 
 import React, { Component } from "react";
-import { footerItemsDataMain } from "./data/footerItemsDataMain.js";
-import { footerItemsSecondary } from "./data/footerItemsSecondary.js";
-import { socialNavItems } from "./data/socialNavItems.js";
+import { footerItemsDataMain } from "../data/footerItemsDataMain.js";
+import { footerItemsSecondary } from "../data/footerItemsSecondary.js";
+import { socialNavItems } from "../data/socialNavItems.js";
 
 class Footer extends Component {
     render() {
@@ -40,7 +40,7 @@ class Footer extends Component {
                             <ul className="social-links d-flex text-center flex-row justify-content-end m-0 p-0 w-100 h-auto">
                                 {socialNavItems.map((link, index) => {
                                     return (
-                                        <li className={link.liClass} key={index}><a href={link.href}
+                                        <li className={"m-2"} key={index}><a href={link.href}
                                             className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
                                     );
                                 })}
@@ -65,7 +65,7 @@ class Footer extends Component {
                         <ul className="social-links m-0 p-0 w-100 h-100 d-flex text-center flex-column">
                             {socialNavItems.map((link, index) => {
                                 return (
-                                    <li className={link.liClass} key={index}><a href={link.href}
+                                    <li className={"m-2"} key={index}><a href={link.href}
                                         className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
                                 );
                             })}
