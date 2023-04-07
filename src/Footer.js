@@ -1,4 +1,5 @@
 /* TO DO'S */
+/* Setup github desktop it may have gone to the wrong repo? */
 /* add target's to the other links (target=_self) as well as a conditonal for title /*
 /* Remake footer links so there is not a mobile and a desktop but one, use react.js media queries instead of CSS media queries becasue there mauy be HTML differences */
 /* MAYBE WE DON'T NEED THE LINK / ANCHOR CLASS NAME BECAUSE WE DON'T NEED IT ON THE DATA BUT ON THE MAP WHEN MAPPING (AT TIME OF MAPPING, because we may share with nav links etc) */
