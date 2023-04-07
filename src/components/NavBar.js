@@ -71,10 +71,6 @@ class NavBar extends Component {
                         </div>
                     </div>
                 </div>
-
-                {/* {navItems.map((link, index) => {
-
-                })} */}
             </div>
         );
     }
