@@ -21,7 +21,7 @@ class MenuItem extends Component {
                             <a class="d-block" href={menuItem.url}>
                                 <div class="primary-subheading-wrapper">
                                     <div class="w-100">
-                                        <h2 class="mb-0 primary-subheading">{menuItem.name}</h2>
+                                        <div  class="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>
                                     </div>
                                 </div>
                                 <div>  
