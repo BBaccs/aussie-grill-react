@@ -1,3 +1,26 @@
+/* FONTS */
+
+/* @font-face {
+    font-family: bureauGrotMedium;
+    src: url(../assets/fonts/bureauGrotMedium.otf);
+}
+
+@font-face {
+    font-family: bureauGrotBook;
+    src: url(../assets/fonts/bureauGrotBook.otf);
+}
+
+@font-face {
+    font-family: bureauGrotUltraBlack;
+    src: url(../assets/fonts/bureauGrotUltraBlack.otf);
+}
+
+
+@font-face {
+    font-family: openSansRegular;
+    src: url(../assets/fonts/openSansRegular.ttf);
+} */
+
 /* GLOBAL */
 
 a, a:active {
@@ -132,10 +155,12 @@ footer span.rights-reserved {
 .ag-nav {
     width: 100%;
     justify-content: space-around;
+    margin-left: 8px;
 }
 
 .ag-logo {
     padding: .25rem 0;
+    color: white; /* If img doesn't load, text will have sufficient contrast */
 }
 
 button {
@@ -185,7 +210,7 @@ button.btn.btn-primary {
 
 .cta-wrapper {
     position: fixed;
-    bottom: 0;
+    bottom: 0vh;
     width: 100%;
 }
 
@@ -215,6 +240,44 @@ button {
     height: 350px;
 }
 
+.subheading-img,
+.product-image,
+.menu-item-img
+{
+    -webkit-box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    -moz-box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border: 3px solid white;
+    /*Assures PDP images are centered and don't overflow container*/
+    max-width: 100%;
+}
+
+.card-body:not(.no-shadow) {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    border: 3px solid white;
+}
+
+/* Desktop */
+.meet-chef-card {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    width: fit-content;
+    margin: auto;
+}
+
+.meet-chef-card .card-body {
+   border: 1px solid white;
+}
+
+.menu-item-img-cta {
+    position: relative;
+    top: -3px;
+    right: 3px;
+}
+
 .d-grid {
     display: grid;
 }
@@ -227,9 +290,12 @@ button {
     overflow-x: scroll;
 }
 
-.orange-box-bg {
+.orange-box {
     background-image: url(../assets/agGraphicElements/mobile/orangeBox.png);
     background-size: cover;
+    max-width: 600px;
+    position: relative;
+    bottom: 5px;
 }
 
 .disclaimer-txt {
@@ -252,7 +318,7 @@ button {
 }
 
 .sm-modal-header {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .door-dash-logo {
@@ -275,27 +341,23 @@ ul {
     list-style-type: none;
 }
 
+.standard-link {
+    text-decoration: underline;
+    text-transform: none;
+}
+
+.social-links a.fa:hover {
+    color: white;
+}
+
+.mobile-footer-grid {
+    grid-template-columns: 11fr 1fr;
+}
+
 /* HOMEPAGE */
 #homepage-container-fluid {
     background-image: url(../assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png);
 }
-
-
-@media (max-width: 400px) { 
-    .menu-page .primary-subheading-wrapper,
-    .menu-page .primary-subheading-wrapper.xl-wrapper,
-    .menu-page .primary-subheading-wrapper.xxl-wrapper  {
-        background: none;
-        color: black;
-        margin: auto;
-        width: 100%;
-        padding: 1.25rem .5rem;
-        margin: 0;
-        font-size: 1.1rem;
-   
-    }
-}
-
 
 .primary-subheading-wrapper {
     background: url(../assets/agGraphicElements/strokeOrange.png);
@@ -306,6 +368,11 @@ ul {
     margin: auto;
     width: 60%;
     white-space: nowrap;
+    justify-content: center;
+}
+
+.primary-subheading-wrapper.lg-wrapper {
+    width: 70%;
 }
 
 .primary-subheading-wrapper.xl-wrapper {
@@ -314,7 +381,7 @@ ul {
 
 .primary-subheading-wrapper.xxl-wrapper {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .primary-subheading {
@@ -380,7 +447,7 @@ ul {
 
 .button.carousel-button {
     position: relative;
-    right: 55px;
+    right: 63px;
     border-color: #D4461D;
     color: #D4461D;
 }
@@ -422,6 +489,16 @@ ul {
     top: 20%;
 }
 
+.row .card-col {
+    max-width: 500px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.mt-n-10 {
+    margin-top: -10px;
+}
+
 /* MENU PAGES */
 .menu-page-bg,
 .landing-content-wrapper {
@@ -453,10 +530,10 @@ ul {
     text-align: center;
 }
 
-.menu-page .h1,
-.menu-page .h2,
-.menu-page .h3,
-.menu-page .h4 {
+.menu-page h1,
+.menu-page h2,
+.menu-page h3,
+.menu-page h4 {
     padding: 1.25rem .5rem;
     margin: 0;
     font-size: 1.1rem;
@@ -476,18 +553,18 @@ ul {
     font-family: bureauGrotBook;  
 }
 
-@media (max-width: 400px) { 
-    .mobile-menu-item {
-        border-bottom: 1px solid #cacaca;
-        padding: 10px 0px;
-    }
-    .select-category-bg,
+.select-category-bg,
 .menu-item-bg {
     background-image: url(../assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png);
 }
+
+.mobile-menu-item {
+    border-bottom: 1px solid #cacaca;
+    padding: 10px 0px;
 }
 
 .product-content-wrapper-lg {
+    margin-bottom: 2rem;
     display: inline-block;
 }
 
@@ -515,8 +592,14 @@ h2.pig-heading {
     padding-left: 120px;
 }
 
+h2.pig-heading.lg-pig-heading {
+    position: relative;
+    left: 60px;
+    padding-left: 0px;
+}
+
 h2.chicken-heading {
-    padding-right: 100px;
+    padding-right: 113px;
 }
 
 .pig-graphic,
@@ -539,7 +622,9 @@ h2.chicken-heading {
 
 /* Scroll Bar Styling for desktop */
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
+    height: 0px;
+    border-radius: 100%;
 }
 
 body::-webkit-scrollbar-track {
@@ -554,6 +639,7 @@ body::-webkit-scrollbar-thumb {
     background-repeat: repeat;
     border-radius: 10px;
 }
+
 
 /* Item Menu Pages / PDP */
 .menu-category {
@@ -636,6 +722,10 @@ body::-webkit-scrollbar-thumb {
     font-size: .75rem !important;
 }
 
+#investment-wrapper {
+    max-height: 650px;
+}
+
 #investment-wrapper h3 span {
     line-height: 1.5;
 }
@@ -654,9 +744,6 @@ body::-webkit-scrollbar-thumb {
 #investment-wrapper p span {
     max-width: 200px;
     line-height: 1.65;
-}
-#investment-wrapper {
-    max-height: 600px;
 }
 
 #qualifications-section li {
@@ -753,6 +840,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0px 12px 0px 12px;
 }
 
 .landing-content-wrapper * {
@@ -772,7 +860,116 @@ body::-webkit-scrollbar-thumb {
 
 #pickup-page .landing-content-wrapper a,
 #pickup-page .landing-content-wrapper button {
-    font-size: .7rem;
+    font-size: .65rem;
+}
+
+#pickup-page h1.landing-heading {
+    font-size: 1.25rem;
+}
+
+#pickup-page h2.landing-heading {
+    font-size: 1.1rem;
+}
+
+#pickup-page h3.landing-heading {
+    font-size: .9rem;
+}
+
+#pickup-page .card
+#contact-page .card {
+    width: 18.5rem;
+}
+
+#pickup-page .card-body {
+    height: fit-content;
+    padding: 1.75rem 1.25rem;
+}
+
+#pickup-page .card p,
+#pickup-page .card .card-title {
+    text-align: center;
+    width: 100%;
+}
+
+#statedd,
+#checkbox-wrapper label {
+    outline-color: #D4461D;
+}
+
+#location-filter-wrapper label,
+#checkbox-wrapper label,
+select.select {
+    font-size: .8rem;
+}
+
+#state-label,
+#checkbox-wrapper label,
+#checkbox-wrapper input {
+    font-family: bureauGrotMedium;
+    text-transform: uppercase;
+}
+
+#checkbox-wrapper label {
+    position: relative;
+    top: 1px;
+}
+
+input[type=checkbox] + label {
+    margin: .2em;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label:before {
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    color: white;
+    margin-right: 5px;
+    background-color: white;
+    content:  "\2713";
+}
+
+input[type=checkbox].checked-option + label:before {
+    background-color: #D3461D;
+}
+
+#state-label {
+    margin-right: 5px;
+}
+
+select.select {
+    font-family: 'bureauGrotMedium';
+    text-transform: uppercase;
+    padding: 1px;
+    background-color: white;
+}
+
+select.select .slim-option {
+    font-family: 'bureauGrotMedium';
+    font-size: .75rem;
+}
+
+.button-container button,
+.button-container a
+ {
+    margin-left: 5px;
+}
+
+#giveaway h1 {
+    font-size: 1.4rem;
+}
+
+#giveaway h2 {
+    font-size: 1.25rem;
+}
+
+#giveaway .landing-content-wrapper {
+    font-size: 1rem;
 }
 
 /* Franchise Linking */
@@ -803,6 +1000,10 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     bottom: 380px;
 }
+#qualifications-anchor {
+    position: relative;
+    bottom: 168px;
+}
 
 
 /* Privacy Policy Pages */
@@ -821,8 +1022,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .privacy-grid {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .privacy-page li {
@@ -849,6 +1052,62 @@ body::-webkit-scrollbar-thumb {
     max-width: 95vw;
 }
 
+.privacy-page a {
+    text-decoration: underline;
+}
+
+.privacy-page a.btn {
+    text-decoration: none;
+}
+
+.bggray {
+    background: #bbb6a9;
+}
+
+#tocTable td,
+#tocTable th {
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 2px solid #1c1a1a;
+    padding: 6px;
+}
+
+.terms-page th {
+    text-align: left;
+}
+
+.terms-page li {
+    list-style: inherit;
+}
+
+.terms-page li.listed-text {
+    list-style: none;
+}
+.terms-page th.tdcenter {
+    color: white;
+    background-color:#212529;
+}
+
+.sweepstakes-rules {
+    padding-left: 15px;
+}
+
+.sweepstakes-rules li {
+    list-style: none;
+}
+
+.sweepstakes-rules h4 {
+    color: #D3461D;
+    font-weight: bold;
+}
+
+.remove-bg {
+    background-image: none;
+}
+
+.mobile-bug {
+    width: 65px;
+}
 
 /* END Privacy Policy Pages */
 
@@ -887,6 +1146,9 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
 }
 
+#catering-carousel .carousel-item {
+    max-height: 800px;
+}
 
 /* Media Queries */
 @media (max-width: 374px) { 
@@ -929,12 +1191,6 @@ body::-webkit-scrollbar-thumb {
  }
 
 @media (min-width: 768px) { 
-    
-    ul.ag-nav li.nav-item a,
-    .nav-banner * {
-        font-size: 1rem;
-    }
-
     .card-img {
         height: 275px;
     }
@@ -970,14 +1226,55 @@ body::-webkit-scrollbar-thumb {
         position: relative;
         top: -288px;
     }
+    .pickup-layout .double-column {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .odd-column{
+        grid-column: span 2;
+    }
+
+    #pickup-page .card {
+        height: 220px;
+        width: 20rem;
+    }
+    
+    #pickup-page .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem 1.25rem;
+    }
+    
+    #pickup-page .card-title,
+    #pickup-page .button-container {
+        position: absolute;
+    }
+    
+    #pickup-page .card-title {
+        top: 20px;
+        /* Do not remove, this fixes an aligment bug in IE*/
+        right: 0px;
+        left: 0px;
+    }
+    
+    #pickup-page .button-container {
+        bottom: 20px;
+        /* Do not remove, this fixes an aligment bug in IE*/
+        left: 0px;
+        right: 0px;
+    }
  }
 
  @media (min-width: 992px) { 
-    
-    ul.ag-nav li.nav-item a {
-        font-size: 1.25rem !important;
+    ul.ag-nav li.nav-item a,
+    .nav-banner * {
+        font-size: 1rem;
     }
-
     .ag-logo {
         width: 125px;
         padding: .5rem 0;
@@ -992,6 +1289,21 @@ body::-webkit-scrollbar-thumb {
     }
     .vertical-food-image {
         max-width: 150px;
+    }
+    .pickup-layout {
+        max-width: 800px;
+    }
+    .btn-alignment-mb-35 {
+        margin-bottom: 35px;
+    }
+    .btn-alignment-mb-75 {
+        margin-bottom: 75px;
+    }
+    #investment-wrapper .investment-section {
+        padding: 24px;
+    }
+    .ag-nav {
+        margin-left: 0px;
     }
  }
 
@@ -1018,14 +1330,15 @@ body::-webkit-scrollbar-thumb {
     .slanted-bg {
         transform: skewY(-2deg);
     }
+    /* Bug fix for zooming iphones, if font size < 16px, iphones will unnecessarily zoom in*/
+    select.select,
+    #location-filter-wrapper #state-label,
+    select.select .slim-option {
+        font-size: 1rem;
+ }
  }
 
  @media (min-width: 1200px) {
-
-    .menu-item-img,
-    .card-img {
-        height: 350px;
-    }
 
     #homepage-container-fluid {
         padding-top: 4rem !important;
