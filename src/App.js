@@ -1,6 +1,7 @@
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItem from "./components/MenuItems.js";
+import HeroImg from "./components/HeroImg.js";
 import "./css/custom.css";
 import "./App.css";
 
@@ -10,8 +11,10 @@ function App() {
     <div className="App">
       <NavBar />
       <main>
-      <div>HERO IMG</div>
-      <MenuItem />
+        <HeroImg
+          img={'freestanding.jpg'}
+        />
+        <MenuItem />
       </main>
       <Footer />
     </div>
