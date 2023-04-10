@@ -15,3 +15,12 @@
 a {
   text-decoration: none;
 }
+
+.CHANGEMELATER {
+  font-family: bureauGrotBook;
+}
+
+/* Remake in SASS, when BG is dark, white font, when bg is light, dark font, for ADA purposes */
+img {
+  color: white;
+}
