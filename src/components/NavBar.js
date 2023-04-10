@@ -48,10 +48,10 @@ class NavBar extends Component {
                                     );
                                 })}
                             </ul>
-                            <a aria-label="homepage" href="index.html">
+                            <a href="index.html">
                                 <picture>
-                                    <source srcSet="/components/agLogoLarge.png" media="(min-width: 1024px)" />
-                                    <img className="ml-2 ag-logo" srcSet="/assets/other/mobile/agLogo.png"
+                                    <source srcSet="assets/other/mobile/agLogo.png" media="(min-width: 1024px)" />
+                                    <img className="ml-2 ag-logo" src="/assets/other/mobile/agLogo.png"
                                         alt="Aussie Grill By Outback Steakhouse" />
                                 </picture>
                             </a>
