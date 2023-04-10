@@ -6,6 +6,14 @@ import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
 
 class NavBar extends Component {
+    static defaultProps = {
+        alertBar: true,
+        alertBarMsg: 'Follow the Adventure on'
+        // ,
+        // navData: NavItems,
+        // catering: false,
+        // pickup: false
+      };
     constructor(props) {
         super(props);
         this.state = { clicked: false };
@@ -15,21 +23,24 @@ class NavBar extends Component {
         this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
     }
     render() {
+        const alertBar = this.props.alertBar ?
+        <div className="py-2 nav-banner text-white">
+            <div className="d-flex justify-content-center align-items-center">
+                <span className="mr-2">{this.props.alertBarMsg}</span>
+                <ul className="social-links d-flex mb-1 pl-0">
+                    {socialNavItems.map((link, index) => {
+                        return (
+                            <li key={index}><a href={link.url}
+                                className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
+                        );
+                    })}
+                </ul>
+            </div>
+        </div> :
+        '';
         return (
             <div>
-                <div className="py-2 nav-banner text-white">
-                    <div className="d-flex justify-content-center align-items-center">
-                        <span className="mr-2">Follow the Adventure on</span>
-                        <ul className="social-links d-flex mb-1 pl-0">
-                            {socialNavItems.map((link, index) => {
-                                return (
-                                    <li key={index}><a href={link.url}
-                                        className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
+                {alertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
                         <div className="container-lg d-flex nav-inner-wrapper">
