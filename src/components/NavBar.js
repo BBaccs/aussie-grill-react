@@ -11,7 +11,7 @@ class NavBar extends Component {
         alertBar: true,
         alertBarMsg: 'Follow the Adventure on',
         pickup: false,
-        // navData: NavItems,
+        navData: navItems,
     };
     constructor(props) {
         super(props);
@@ -63,7 +63,7 @@ class NavBar extends Component {
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    navItems.map((link, index) => {
+                                    this.props.navData.map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
                                                 <a className="nav-link" href={link.url} title={link.title}>{link.name}</a>
@@ -71,7 +71,7 @@ class NavBar extends Component {
                                         );
                                     })
                                     :
-                                    navItems.filter(link => link.name !== 'Order').map((link, index) => {
+                                    this.props.navData.filter(link => link.name !== 'Order').map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass} nav-item`}>
                                                 <a className="nav-link" href={link.url}>{link.name}</a>
@@ -92,7 +92,7 @@ class NavBar extends Component {
                     <div className={clicked ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
                         <div className="bg-ag-dark p-4">
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                {navItems.map((link, index) => {
+                                {this.props.navData.map((link, index) => {
                                     return (
                                         <li key={index} className="nav-item">
                                             <a className="nav-link" href={link.url}>{link.name}</a>
