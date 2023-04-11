@@ -14,7 +14,7 @@ function App() {
         <HeroImg
           img={'freestanding.jpg'}
         />
-        <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+        <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
           <MenuItem />
         </div>
       </main>
