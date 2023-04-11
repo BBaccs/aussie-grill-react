@@ -1,4 +1,36 @@
-/* FONTS */
+
+/* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*/
+/* Write a media query to hide on mobile only*/
+@media (max-width: 768px) {
+    .mobile-only {
+      display: none !important;
+    }
+  }
+  
+  /* Write a media query to hide on desktop only*/
+  @media (min-width: 768px) {
+    .desktop-only {
+      display: none !important;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .CHANGEMELATER {
+    font-family: bureauGrotBook;
+  }
+  
+  /* Remake in SASS, when BG is dark, white font, when bg is light, dark font, for ADA purposes */
+  img {
+    color: white;
+  }
+  /* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*/
+  
+  
+  
+  /* FONTS */
 
 /* @font-face {
     font-family: bureauGrotMedium;

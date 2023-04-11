@@ -5,7 +5,6 @@ import HeroImg from "./components/HeroImg.js";
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
-import "./App.css";
 
 function App() {
   return (
