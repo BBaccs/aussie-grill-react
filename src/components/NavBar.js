@@ -1,6 +1,6 @@
 /* @TODO */
 /* Transition animation for mobile nav btn */
-/* Catering logic */
+/* If we're on link X, hide link X in navbar? Catering page catering link should be hidden, no? */
 
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
@@ -10,10 +10,9 @@ class NavBar extends Component {
     static defaultProps = {
         alertBar: true,
         alertBarMsg: 'Follow the Adventure on',
-        pickup: false
-        // ,
+        pickup: false,
         // navData: NavItems,
-        // catering: false,
+
 
     };
     constructor(props) {
@@ -59,39 +58,20 @@ class NavBar extends Component {
                                 aria-expanded={this.state.clicked ? 'true' : 'false'} aria-label={this.state.clicked ? 'Close navigation' : 'Open navigation'} >
                                 <span className="navbar-toggler-icon"></span>
                             </button>
-                            {/* <ul className="nav nav-uncollapsed ag-nav">
-                                {navItems.map((link, index) => {
-                                    if (!this.props.pickup) {
-                                        return (
-                                            <li key={index} className={link.liClass}>
-                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
-                                            </li>
-                                        )
-
-                                    } else {
-                                        return (
-                                            <li key={index} className={link.name === 'Order' ? `${link.liClass} hidePickup` : link.liClass}>
-                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
-                                            </li>
-                                        );
-                                    }
-
-                                })}
-                            </ul> */}
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!this.props.pickup ?
                                     navItems.map((link, index) => {
                                         return (
-                                            <li key={index} className={link.liClass}>
-                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
+                                                <a className="nav-link" href={link.url} title={link.title}>{link.name}</a>
                                             </li>
                                         );
                                     })
-                                    : 
+                                    :
                                     navItems.filter(link => link.name !== 'Order').map((link, index) => {
                                         return (
-                                            <li key={index} className={link.liClass}>
-                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            <li key={index} className={`${link.liClass} nav-item`}>
+                                                <a className="nav-link" href={link.url}>{link.name}</a>
                                             </li>
                                         )
                                     })
@@ -108,11 +88,11 @@ class NavBar extends Component {
                     </nav>
                     <div className={this.state.clicked ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
                         <div className="bg-ag-dark p-4">
-                            <ul className="nav d-flex flex-column">
+                            <ul className="hamburger-dropdown nav d-flex flex-column">
                                 {navItems.map((link, index) => {
                                     return (
                                         <li key={index} className="nav-item">
-                                            <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            <a className="nav-link" href={link.url}>{link.name}</a>
                                         </li>
                                     );
                                 })}
