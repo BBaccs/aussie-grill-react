@@ -1,5 +1,6 @@
 /* @TODO */
 /* Transition animation for mobile nav btn */
+/* Catering logic */
 
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
@@ -8,12 +9,13 @@ import { socialNavItems } from "../data/socialNavItems.js";
 class NavBar extends Component {
     static defaultProps = {
         alertBar: true,
-        alertBarMsg: 'Follow the Adventure on'
+        alertBarMsg: 'Follow the Adventure on',
+        pickup: false
         // ,
         // navData: NavItems,
         // catering: false,
-        // pickup: false
-      };
+
+    };
     constructor(props) {
         super(props);
         this.state = { clicked: false };
@@ -24,22 +26,29 @@ class NavBar extends Component {
     }
     render() {
         const alertBar = this.props.alertBar ?
-        <div className="py-2 nav-banner text-white">
-            <div className="d-flex justify-content-center align-items-center">
-                <span className="mr-2">{this.props.alertBarMsg}</span>
-                <ul className="social-links d-flex mb-1 pl-0">
-                    {socialNavItems.map((link, index) => {
-                        return (
-                            <li key={index}><a href={link.url}
-                                className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
-                        );
-                    })}
-                </ul>
-            </div>
-        </div> :
-        '';
+            <div className="py-2 nav-banner text-white">
+                <div className="d-flex justify-content-center align-items-center">
+                    <span className="mr-2">{this.props.alertBarMsg}</span>
+                    <ul className="social-links d-flex mb-1 pl-0">
+                        {socialNavItems.map((link, index) => {
+                            return (
+                                <li key={index}><a href={link.url}
+                                    className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
+                            );
+                        })}
+                    </ul>
+                </div>
+            </div> :
+            '';
         return (
             <div>
+                {/* Skip Link */}
+                <a
+                    className="sr-only sr-only-focusable"
+                    href="#skip-link"
+                >
+                    Skip to main content
+                </a>
                 {alertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
@@ -50,14 +59,43 @@ class NavBar extends Component {
                                 aria-expanded={this.state.clicked ? 'true' : 'false'} aria-label={this.state.clicked ? 'Close navigation' : 'Open navigation'} >
                                 <span className="navbar-toggler-icon"></span>
                             </button>
-                            <ul className="nav nav-uncollapsed ag-nav">
+                            {/* <ul className="nav nav-uncollapsed ag-nav">
                                 {navItems.map((link, index) => {
-                                    return (
-                                        <li key={index} className={link.liClass}>
-                                            <a className={link.anchorClass} href={link.url}>{link.name}</a>
-                                        </li>
-                                    );
+                                    if (!this.props.pickup) {
+                                        return (
+                                            <li key={index} className={link.liClass}>
+                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            </li>
+                                        )
+
+                                    } else {
+                                        return (
+                                            <li key={index} className={link.name === 'Order' ? `${link.liClass} hidePickup` : link.liClass}>
+                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            </li>
+                                        );
+                                    }
+
                                 })}
+                            </ul> */}
+                            <ul className="nav nav-uncollapsed ag-nav">
+                                {!this.props.pickup ?
+                                    navItems.map((link, index) => {
+                                        return (
+                                            <li key={index} className={link.liClass}>
+                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            </li>
+                                        );
+                                    })
+                                    : 
+                                    navItems.filter(link => link.name !== 'Order').map((link, index) => {
+                                        return (
+                                            <li key={index} className={link.liClass}>
+                                                <a className={link.anchorClass} href={link.url}>{link.name}</a>
+                                            </li>
+                                        )
+                                    })
+                                }
                             </ul>
                             <a href="index.html">
                                 <picture>

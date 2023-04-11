@@ -8,6 +8,16 @@ export const navItems = [
     },
     {
         name: 'Order',
+        url: '/pages/otherPages/pickup.html',
+        cateringPageUrl: 'https://www.ezcater.com/brand/pvt/aussie-grill',
+        anchorClass: "nav-link",
+        // mobileLiCName:"nav-item",
+        liClass: "nav-item",
+        target: "_blank",
+        title: 'Opens in a new tab'
+      },
+    {
+        name: 'Order',
         url: 'pickup.html',
         liClass: 'nav-item',
         anchorClass: "nav-link",
