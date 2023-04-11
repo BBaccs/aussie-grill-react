@@ -1,3 +1,4 @@
+/* @TODO - use state (instead of props) for Navbar changes - franchise, homepage etc.? */
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItem from "./components/MenuItems.js";
@@ -11,24 +12,22 @@ import "./css/custom.css";
 function App() {
   return (
     <div className="App">
-      <main>
+      <NavBar />
+      <main id="main-content">
 
         <Routes>
           <Route
-            exact index
-            element={<NavBar navData={navItems} />}
+          exact index
+          element={<HeroImg img={"freestanding.jpg"} />}
           />
           <Route
-            exact path={'/franchise'}
-            element={<FranchisePage />}
-          />
-          <Route
-            exact path={'/franchise2'}
+            exact path={'/franchise.html'}
             element={
               <div>
-                <NavBar navData={franchiseNavItems} />
-                <HeroImg img={"freestanding.jpg"} />
-              </div>}
+                {/* <NavBar navData={franchiseNavItems} /> */}
+                <HeroImg img={"productPlaceholderImage.jpg"} />
+              </div>
+              }
           />
         </Routes>
         {/* <HeroImg img={"freestanding.jpg"} /> */}

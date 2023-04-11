@@ -47,7 +47,7 @@ class NavBar extends Component {
                 {/* Skip Link */}
                 <a
                     className="sr-only sr-only-focusable"
-                    href="#skip-link"
+                    href="#main-content"
                 >
                     Skip to main content
                 </a>
