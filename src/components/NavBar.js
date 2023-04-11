@@ -19,7 +19,7 @@ class NavBar extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(e) {
-        this.setState(clicked ? { clicked: false } : { clicked: true });
+        this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
     }
 
     render() {
