@@ -5,8 +5,9 @@ class HeroImg extends Component {
         return (
             <div>
                 <picture>
-                    <source src={`/assets/other/desktop/desktop-${this.props.img}`} media="(min-width: 1400px)" />
-                    <img src={`/assets/other/mobile/mobile-${this.props.img}`} className="d-block w-100"
+                <source srcSet={`/assets/other/mobile/mobile-${this.props.img}`} media="(max-width: 1399px)" />
+                    <source srcSet={`/assets/other/desktop/desktop-${this.props.img}`} media="(min-width: 1400px)" />
+                    <img srcSet={`/assets/other/mobile/mobile-${this.props.img}`} className="d-block w-100"
                         style={{maxHeight: '700px'}} alt="" />
                 </picture>
             </div>
