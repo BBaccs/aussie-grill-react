@@ -12,11 +12,6 @@ export const navItems = [
         title: 'Opens in a new tab'
       },
     {
-        name: 'Order',
-        url: 'pickup.html',
-        target: '_self'
-    },
-    {
         name: 'Catering',
         url: 'catering/index.html',
         target: '_self'
