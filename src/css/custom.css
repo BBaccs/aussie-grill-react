@@ -21,6 +21,10 @@
   .CHANGEMELATER {
     font-family: bureauGrotBook;
   }
+
+  .active-link {
+    color: #D3461D !important;
+  }
   
   /* Remake in SASS, when BG is dark, white font, when bg is light, dark font, for ADA purposes */
   img {

@@ -1,10 +1,14 @@
 /* @TODO */
 /* Transition animation for mobile nav btn */
-/* If we're on link X, hide link X in navbar? Catering page catering link should be hidden, no? */
+/* If we're on link X, activate given state (if necessarey), which could hide link X in navbar? Specifically for the PICKUP / ORDER page as well as the FRANCHISE page (different navigation data) */
+/* However, if this is just done w/ an onClick, it won't work for manually typing in the URL / using the browser back button */
 
+/* On either DOM load or when a new component / anything is loaded, we should check the URL, and activate said state per that URL. */
+/* Fix Nav Link active state */
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
+import { NavLink, Link } from 'react-router-dom';
 
 class NavBar extends Component {
     static defaultProps = {
@@ -17,12 +21,32 @@ class NavBar extends Component {
         super(props);
         this.state = { clicked: false };
         this.handleClick = this.handleClick.bind(this);
+        // this.handleUrlChange = this.handleUrlChange.bind(this);
     }
     handleClick(e) {
         this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
     }
 
+
     render() {
+        function logURLChanges() {
+            let prevPathname = window.location.pathname;
+
+            window.addEventListener('popstate', () => {
+                console.log(`Current URL: ${window.location.pathname}`);
+                console.log(`Previous URL: ${prevPathname}`);
+                prevPathname = window.location.pathname;
+            });
+        }
+
+        logURLChanges();
+
+        function hi() {
+            window.addEventListener("DOMContentLoaded", () => {
+                console.log("DOM fully loaded and parsed");
+            });
+        }
+        hi();
         // Destructuring props & state
         const { alertBar, alertBarMsg, pickup } = this.props;
         const { clicked } = this.state;
@@ -51,7 +75,7 @@ class NavBar extends Component {
                 >
                     Skip to main content
                 </a>
-                { generateAlertBar }
+                {generateAlertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
                         <div className="container-lg d-flex nav-inner-wrapper">
@@ -66,7 +90,7 @@ class NavBar extends Component {
                                     this.props.navData.map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
-                                                <a className="nav-link" href={link.url} title={link.title}>{link.name}</a>
+                                                <NavLink activeClassName="active-link" className="nav-link" to={link.url} title={link.title}>{link.name}</NavLink>
                                             </li>
                                         );
                                     })
@@ -74,9 +98,9 @@ class NavBar extends Component {
                                     this.props.navData.filter(link => link.name !== 'Order').map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass} nav-item`}>
-                                                <a className="nav-link" href={link.url}>{link.name}</a>
+                                                <NavLink activeClassName="active-link" className="nav-link" to={link.url}>{link.name}</NavLink>
                                             </li>
-                                        )
+                                        );
                                     })
                                 }
                             </ul>
@@ -95,7 +119,10 @@ class NavBar extends Component {
                                 {this.props.navData.map((link, index) => {
                                     return (
                                         <li key={index} className="nav-item">
-                                            <a className="nav-link" href={link.url}>{link.name}</a>
+                                            <NavLink 
+                                                className={isActive => "nav-link" + (!isActive ? " unselected" : "  active-link")} 
+                                                to={link.url}>{link.name}
+                                            </NavLink>
                                         </li>
                                     );
                                 })}
