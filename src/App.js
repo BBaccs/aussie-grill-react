@@ -3,7 +3,7 @@ import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItem from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
-import Carousel from "./components/CarouselAnnn.js";
+import CarouselAnnn from "./components/CarouselAnnn.js";
 import FranchisePage from "./pages/FranchisePage.js"
 import { Routes, Route } from 'react-router-dom';
 import { franchiseNavItems } from "./data/franchiseNavItems";
