@@ -3,12 +3,13 @@ import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItem from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
-// import Carousel from "./components/Carousel.js";
+import Carousel from "./components/CarouselAnnn.js";
 import FranchisePage from "./pages/FranchisePage.js"
 import { Routes, Route } from 'react-router-dom';
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
+import { Carousel } from "bootstrap";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             element={
               <div>
                 {/* <NavBar navData={franchiseNavItems} /> */}
+                <CarouselAnnn />
                 <HeroImg img={"productPlaceholderImage.jpg"} />
               </div>
               }
