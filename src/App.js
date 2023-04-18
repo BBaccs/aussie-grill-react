@@ -14,6 +14,7 @@ import { Carousel } from "bootstrap";
 function App() {
   return (
     <div className="App">
+
       <NavBar />
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
       <main id="main-content">
@@ -21,7 +22,8 @@ function App() {
         <Routes>
           <Route
           exact index
-          element={<HeroImg img={"freestanding.jpg"} />}
+          element={<CarouselAnnn id={"home-carousel"} />}
+          // element={<HeroImg img={"freestanding.jpg"} />}
           />
           <Route
             exact path={'/franchise.html'}
