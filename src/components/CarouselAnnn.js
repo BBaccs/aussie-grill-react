@@ -32,14 +32,14 @@ class CarouselAnnn extends Component {
                 </div>
                 <div className="carousel-inner">
                     {carouselData.map((item, index) => (
-                        <div className="carousel-item active">
+                        <div key={index} className="carousel-item active">
                             {/* <!-- Responsive pictures --> */}
                             <picture>
-                                <source srcset={`/assets/carouselImages/desktop/lg-${item.name}`}
+                                <source srcset={`/assets/carouselImages/desktop/lg-${item.imgName}`}
                                     media="(min-width: 1400px)" />
-                                <source srcset={`/assets/carouselImages/tablet/md-${item.name}`}
+                                <source srcset={`/assets/carouselImages/tablet/md-${item.imgName}`}
                                     media="(min-width: 700px) and (max-width: 1400px)" />
-                                <img src={`/assets/carouselImages/mobile/sm-${item.name}`}
+                                <img src={`/assets/carouselImages/mobile/sm-${item.imgName}`}
                                     className="d-block w-100 carousel-img" alt={item.alt} />
                             </picture>
                         </div>
