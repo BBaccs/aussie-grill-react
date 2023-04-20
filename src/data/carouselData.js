@@ -2,26 +2,26 @@ export const carouselData = [
     {
         imgName: 'baconBombBurgerHero.jpg',
         alt: "Soooooo Much Bacon.",
-        number: 1,
+        number: 0,
     },
     {
         imgName: 'crispySrirachaChickenSandwichHero.jpg',
         alt: "Sweetness + Heatness.",
-        number: 2,
+        number: 1,
     },
     {
         imgName: 'slicedSirloinFriesHero.jpg',
         alt: "Where Tender Meets Juicy.",
-        number: 3,
+        number: 2,
     },
     {
         imgName: 'crispyChickenTendersHero.jpg',
         alt: "Best Tenders In Town.",
-        number: 4,
+        number: 3,
     },
     {
         imgName: 'crispySrirachaChickenSandwichHero.jpg',
         alt: "Tender Tuesday – special deals available.",
-        number: 5,
+        number: 4,
     },
 ];

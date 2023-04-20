@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import { carouselData } from "../data/carouselData.js";
+import { Carousel, Button } from "react-bootstrap";
 
 class CarouselAnnn extends Component {
-    // static defaultProps = {
-    //     carousel: false,
-    // };
+    constructor(props) {
+        super(props);
+        this.state = { 
+            activeSlide: true,
+        };
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-    // handleClick(e) {
-    //     this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
-    // }
+    handleClick(e) {
+        console.log(`hi`)
+        this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
+    }
     render() {
         return (
             // id="home-carousel" 
@@ -24,15 +30,16 @@ class CarouselAnnn extends Component {
                     <ol className="carousel-indicators mx-0">
                         {/* Fix active name w/ state */}
                         {carouselData.map((item, index) => (
-                            <li key={index} data-target={this.props.id} tabindex="0" role="button" aria-label={`Slide ${index}`}
-                                data-slide-to={index} class={index === item.number ? "active" : ""}></li>
+                           
+                            <li key={index} onClick={this.handleClick} data-target={this.props.id} tabindex="0" role="button" aria-label={`Slide ${index}`}
+                                data-slide-to={index} className={this.state.activeSlide ? "active" : ""}> {console.log(item.number)}</li>
                         )
                         )}
                     </ol>
                 </div>
                 <div className="carousel-inner">
                     {carouselData.map((item, index) => (
-                        <div key={index} className="carousel-item active">
+                        <div key={index} className={index === item.number ? "active" : ""}>
                             {/* <!-- Responsive pictures --> */}
                             <picture>
                                 <source srcset={`/assets/carouselImages/desktop/lg-${item.imgName}`}
@@ -45,63 +52,6 @@ class CarouselAnnn extends Component {
                         </div>
                     )
                     )}
-                    <div className="carousel-item active">
-                        {/* <!-- Responsive pictures --> */}
-                        <picture>
-                            <source srcset={`/assets/carouselImages/desktop/lg-baconBombBurgerHero.jpg`}
-                                media="(min-width: 1400px)" />
-                            <source srcset="/assets/carouselImages/tablet/md-baconBombBurgerHero.jpg"
-                                media="(min-width: 700px) and (max-width: 1400px)" />
-                            <img src="/assets/carouselImages/mobile/sm-baconBombBurgerHero.jpg"
-                                className="d-block w-100 carousel-img" alt="Soooooo Much Bacon" />
-                        </picture>
-                    </div>
-                    <div className="carousel-item">
-                        <picture>
-                            <source srcset="/assets/carouselImages/desktop/crispySrirachaChickenSandwichHero.jpg"
-                                media="(min-width: 1400px)" />
-                            <source srcset="/assets/carouselImages/tablet/crispySrirachaChickenSandwichHero.jpg"
-                                media="(min-width: 700px) and (max-width: 1400px)" />
-                            <img src="/assets/carouselImages/mobile/crispySrirachaChickenSandwichHero.jpg"
-                                className="d-block w-100 carousel-img" alt="Sweetness + Heatness" />
-                        </picture>
-                    </div>
-                    <div className="carousel-item">
-                        <picture>
-                            <source srcset="/assets/carouselImages/desktop/slicedSirloinFriesHero.jpg"
-                                media="(min-width: 1400px)" />
-                            <source srcset="/assets/carouselImages/tablet/slicedSirloinFriesHero.jpg"
-                                media="(min-width: 700px) and (max-width: 1400px)" />
-                            <img src="/assets/carouselImages/mobile/slicedSirloinFriesHero.jpg"
-                                className="d-block w-100 carousel-img" alt="Where Tender Meets Juicy" />
-                        </picture>
-                        <div className="carousel-caption d-md-block">
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <picture>
-                            <source srcset="/assets/carouselImages/desktop/crispyChickenTendersHero.jpg"
-                                media="(min-width: 1400px)" />
-                            <source srcset="/assets/carouselImages/tablet/crispyChickenTendersHero.jpg"
-                                media="(min-width: 700px) and (max-width: 1400px)" />
-                            <img src="/assets/carouselImages/mobile/crispyChickenTendersHero.jpg"
-                                className="d-block w-100 carousel-img" alt="Best Tenders In Town" />
-                        </picture>
-                        <div className="carousel-caption d-md-block">
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <picture>
-                            <source srcset="/assets/carouselImages/desktop/tenderTuesday.jpg"
-                                media="(min-width: 1400px)" />
-                            <source srcset="/assets/carouselImages/tablet/tenderTuesday1.jpg"
-                                media="(min-width: 700px) and (max-width: 1400px)" />
-                            <img src="/assets/carouselImages/mobile/tenderTuesday.jpg"
-                                className="d-block w-100 carousel-img" alt="Tender Tuesday – special deals available." />
-                        </picture>
-                        <div className="carousel-caption d-md-block">
-                        </div>
-                    </div>
                 </div>
             </div>
         );

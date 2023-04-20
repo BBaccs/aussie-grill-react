@@ -9,12 +9,16 @@ import { Routes, Route } from 'react-router-dom';
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
-import { Carousel } from "bootstrap";
+// import { Carousel } from "bootstrap";
+import Button from 'react-bootstrap/Button';
+import Toggler from "./components/Test.js";
+import UncontrolledExample from "./components/Carousel.js";
 
 function App() {
   return (
     <div className="App">
-
+      <UncontrolledExample />
+      <Toggler />
       <NavBar />
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
       <main id="main-content">
@@ -22,7 +26,12 @@ function App() {
         <Routes>
           <Route
           exact index
-          element={<CarouselAnnn id={"home-carousel"} />}
+          element={
+           <Button variant="primary">Click me</Button>
+ }
+          // <Carousel />
+          // <CarouselAnnn id={"home-carousel"} />
+
           // element={<HeroImg img={"freestanding.jpg"} />}
           />
           <Route
