@@ -5,7 +5,7 @@ import { carouselData } from "../data/carouselData.js";
 
 function UncontrolledExample() {
     return (
-        <Carousel>
+        <Carousel fade hover>
             {carouselData.map((item, index) => (
                 <Carousel.Item key={index}>
                     {/* <!-- Responsive pictures --> */}
