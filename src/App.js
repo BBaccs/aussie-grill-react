@@ -17,8 +17,7 @@ import UncontrolledExample from "./components/Carousel.js";
 function App() {
   return (
     <div className="App">
-      <UncontrolledExample />
-      <Toggler />
+      {/* <Toggler /> */}
       <NavBar />
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
       <main id="main-content">
@@ -27,7 +26,7 @@ function App() {
           <Route
           exact index
           element={
-           <Button variant="primary">Click me</Button>
+            <UncontrolledExample />
  }
           // <Carousel />
           // <CarouselAnnn id={"home-carousel"} />
