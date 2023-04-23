@@ -24,4 +24,4 @@ export const franchiseNavItems = [
       name: 'Contact',
       url: '/pages/otherPages/franchise.html#available-opportunities-anchor',
     }
-  ]
+  ];
