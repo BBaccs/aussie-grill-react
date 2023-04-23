@@ -3,20 +3,26 @@ import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItem from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
-import CarouselAnnn from "./components/CarouselAnnn.js";
-import FranchisePage from "./pages/FranchisePage.js"
+// import FranchisePage from "./pages/FranchisePage.js"
 import { Routes, Route } from 'react-router-dom';
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
 // import { Carousel } from "bootstrap";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Toggler from "./components/Test.js";
 import ACarousel from "./components/Carousel.js";
+import AModal from './components/AModal.js';
+
 
 function App() {
   return (
     <div className="App">
+      <div>
+      <AModal />
+      {/* <AModal />
+      <AModal /> */}
+      </div>
       {/* <Toggler /> */}
       <NavBar />
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
@@ -38,7 +44,6 @@ function App() {
             element={
               <div>
                 {/* <NavBar navData={franchiseNavItems} /> */}
-                <CarouselAnnn />
                 <HeroImg img={"productPlaceholderImage.jpg"} />
               </div>
               }
@@ -53,6 +58,13 @@ function App() {
         </div>
       </main>
       <Footer />
+      {/* <!-- ORDER FOOD CTA -->
+    <div class="cta-wrapper">
+        <div class="d-flex container-fluid justify-content-between align-items-center cta-banner">
+            <img class="bull-cta" src="assets/agGraphicElements/animals/mobile/bullFullSmall.png" alt="" >
+            <a href="pickup.html" class="btn btn-primary cta-primary">Order now</a>
+        </div>
+    </div> */}
     </div>
   );
 }

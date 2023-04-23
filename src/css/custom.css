@@ -25,6 +25,19 @@
   .active-link {
     color: #D3461D !important;
   }
+
+  .bull-wrapper-2 {
+    position: absolute;
+    bottom: 238px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .doordash-uber-wrapper {
+    border: none;
+    flex-direction: column;
+  }
   
   /* Remake in SASS, when BG is dark, white font, when bg is light, dark font, for ADA purposes */
   img {
