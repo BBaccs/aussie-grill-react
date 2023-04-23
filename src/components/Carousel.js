@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { carouselData } from "../data/carouselData.js";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-function UncontrolledExample() {
+function ACarousel() {
     return (
         <Carousel fade hover>
             {carouselData.map((item, index) => (
@@ -28,4 +28,4 @@ function UncontrolledExample() {
     );
 }
 
-export default UncontrolledExample;
+export default ACarousel;

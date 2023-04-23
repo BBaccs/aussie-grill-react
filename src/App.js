@@ -12,7 +12,7 @@ import "./css/custom.css";
 // import { Carousel } from "bootstrap";
 import Button from 'react-bootstrap/Button';
 import Toggler from "./components/Test.js";
-import UncontrolledExample from "./components/Carousel.js";
+import ACarousel from "./components/Carousel.js";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <Route
           exact index
           element={
-            <UncontrolledExample />
+            <ACarousel />
  }
           // <Carousel />
           // <CarouselAnnn id={"home-carousel"} />
