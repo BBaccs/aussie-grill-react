@@ -1,4 +1,4 @@
-// @TODO refactor the json, things like haspickup === true is not necessary because we can check if it's undefined
+// @TODO fix modal bug, so that only one modal pops up at a given time!
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -18,7 +18,7 @@ function AModal() {
         return (
           <div className="card-modal-wrapper" key={index}>
             <Card style={{ width: '22rem' }}>
-              <Card.Header as="h5">{location.name}</Card.Header>
+              <Card.Header as="h5">{location.Name}</Card.Header>
               <Card.Body>
                 <Card.Title>{location.LocationInfo}</Card.Title>
                 <Card.Text>
