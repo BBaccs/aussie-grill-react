@@ -18,11 +18,6 @@ import AModal from './components/AModal.js';
 function App() {
   return (
     <div className="App">
-      <div>
-      <AModal />
-      {/* <AModal />
-      <AModal /> */}
-      </div>
       {/* <Toggler /> */}
       <NavBar />
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
@@ -32,7 +27,9 @@ function App() {
           <Route
           exact index
           element={
-            <ACarousel />
+            // <ACarousel />
+            <AModal />
+            
  }
           // <Carousel />
           // <CarouselAnnn id={"home-carousel"} />
