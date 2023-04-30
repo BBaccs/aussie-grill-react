@@ -28,10 +28,14 @@
 
   .bull-wrapper-2 {
     position: absolute;
-    bottom: 238px;
+    bottom: 228px;
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+
+  .card-modal-wrapper {
+    width: fit-content;
   }
 
   .doordash-uber-wrapper {
