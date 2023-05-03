@@ -24,8 +24,8 @@ export const locationsData = [
     "LocationInfo": "1.5 miles from Westfield Brandon Mall",
     "Address": "1426 W Brandon Blvd., Brandon, FL 33511",
     "PickupURL": "https://order.aussiegrill.com/menu/aussie-grill-brandon",
-    "DoorDashURL": "https://www.doordash.com/store/aussie-grill-by-outback-tampa-660325/en-US",
-    "UberEatsURL": "https://www.ubereats.com/brand/aussie-grilltampa/food-delivery/aussie-grill-by-outback-25340-sierra-center-blvd/hqrt5nXYSN2cpx7D9Crn_A/",
+    "DoorDashURL": "https://www.doordash.com/store/aussie-grill-by-outback-brandon-774349",
+    "UberEatsURL": "https://www.ubereats.com/brand-city/brandon-fl/aussie-grill",
     "YextURL": "https://locations.aussiegrill.com/florida/brandon/1426-w-brandon-blvd",
     "Phone": "813-487-9952"
   },
