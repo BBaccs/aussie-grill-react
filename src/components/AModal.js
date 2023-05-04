@@ -1,22 +1,20 @@
-// @TODO fix modal bug, so that only one modal pops up at a given time!
 // @TODO fix modal casing, "location.PickupURL should be location.pickupURL"
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 import { locationsData } from "../data/locationsData.js";
-import { Link } from 'react-router-dom';
 
 function AModal() {
   const [show, setShow] = useState(false);
-  const [thisDoorDashUrl, setDoorDashUrl] = useState("");
-  const [thisUberEatsUrl, setUberEatsUrl] = useState("");
+  const [thisDoorDashUrl, setthisDoorDashUrl] = useState("");
+  const [thisUberEatsUrl, setthisUberEatsUrl] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = (index) => {
     setShow(true);
-    setDoorDashUrl(locationsData[index].DoorDashURL);
-    setUberEatsUrl(locationsData[index].UberEatsURL);
+    setthisDoorDashUrl(locationsData[index].DoorDashURL);
+    setthisUberEatsUrl(locationsData[index].UberEatsURL);
   }
 
   return (
