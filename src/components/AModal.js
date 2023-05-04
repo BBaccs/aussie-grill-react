@@ -13,8 +13,8 @@ function AModal() {
   const handleClose = () => setShow(false);
   const handleShow = (index) => {
     setShow(true);
-    setthisDoorDashUrl(locationsData[index].DoorDashURL);
-    setthisUberEatsUrl(locationsData[index].UberEatsURL);
+    setthisDoorDashUrl(locationsData[index].doorDashURL);
+    setthisUberEatsUrl(locationsData[index].uberEatsURL);
   }
 
   return (
@@ -23,35 +23,36 @@ function AModal() {
         return (
           <div className="card-modal-wrapper" key={index}>
             <Card style={{ width: '22rem' }}>
-              <Card.Header as="h5">{location.Name}</Card.Header>
+              <Card.Header as="h5">{location.name}</Card.Header>
               <Card.Body>
-                <Card.Title>{location.LocationInfo}</Card.Title>
+                <Card.Title>{location.locationInfo}</Card.Title>
                 <Card.Text>
-                  {location.Address}
-                  {location.Phone && `Call: ${location.Phone}`}
+                  {location.address}
+                  {location.phone && `Call: ${location.phone}`}
                 </Card.Text>
                 <div className="">
                   {
-                    location.PickupURL &&
-                    <a className="btn btn-primary" href={location.PickupURL} title="Opens in a new tab">
+                    location.pickupURL &&
+                    <a className="btn btn-primary" href={location.pickupURL} title="Opens in a new tab">
                       Pickup
                     </a>
                   }
                   {
-                    location.DoorDashURL &&
+                    /* If there is a DoorDash URL there will also be an Uber Eats URL */
+                    location.doorDashURL &&
                     <Button variant="primary" onClick={() => handleShow(index)}>
                       Delivery
                     </Button>
                   }
                   {
                     location.YextURL &&
-                    <a className="btn btn-primary" href={location.YextURL}>
+                    <a className="btn btn-primary" href={location.yextURL}>
                       Learn more
                     </a>
                   }
                   {
                     location.MenuPdfURL &&
-                    <a className="btn btn-primary" href={location.MenuPdfURL}>
+                    <a className="btn btn-primary" href={location.menuPdfURL}>
                       Menu
                     </a>
                   }
