@@ -1,3 +1,4 @@
+/* Can imgfiel path be deleted in data set? */
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 

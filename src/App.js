@@ -10,58 +10,67 @@ import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
 // import { Carousel } from "bootstrap";
 // import Button from 'react-bootstrap/Button';
-import Toggler from "./components/Test.js";
+// import Toggler from "./components/Test.js";
 import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
+import Menu from './components/Menu.js';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Toggler /> */}
-      <NavBar />
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
+
+      <NavBar />
       <main id="main-content">
-        {/* <Carousel img={"freestanding.jpg"} /> */}
         <Routes>
           <Route
-          exact index
-          element={
-            // <ACarousel />
-            <AModal />
-            
- }
-          // <Carousel />
-          // <CarouselAnnn id={"home-carousel"} />
-
-          // element={<HeroImg img={"freestanding.jpg"} />}
+            exact index
+            element={
+              <>
+                <ACarousel />
+                <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+                  <MenuItem />
+                </div>
+              </>
+            }
+          />
+          {/* ORDER/PICKUP PAGE */}
+          <Route
+            exact path={'/pickup.html'}
+            element={
+              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+                <AModal />
+              </div>
+            }
           />
           <Route
             exact path={'/franchise.html'}
             element={
-              <div>
+              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
                 {/* <NavBar navData={franchiseNavItems} /> */}
                 <HeroImg img={"productPlaceholderImage.jpg"} />
               </div>
-              }
+            }
+          />
+          <Route
+            path={'/menu/index.html'}
+            element={
+              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+                <Menu />
+              </div>
+            }
           />
         </Routes>
-        {/* <HeroImg img={"freestanding.jpg"} /> */}
-        <div
-          id="homepage-container-fluid"
-          className="container-fluid-fluid py-5"
-        >
-          <MenuItem />
-        </div>
       </main>
       <Footer />
-      {/* <!-- ORDER FOOD CTA -->
-    <div class="cta-wrapper">
+      {/* <!-- ORDER FOOD CTA --> */}
+      <div class="cta-wrapper">
         <div class="d-flex container-fluid justify-content-between align-items-center cta-banner">
-            <img class="bull-cta" src="assets/agGraphicElements/animals/mobile/bullFullSmall.png" alt="" >
-            <a href="pickup.html" class="btn btn-primary cta-primary">Order now</a>
+          <img class="bull-cta" src="./assets/agGraphicElements/animals/mobile/bullFullSmall.png" alt="" />
+          <a href="/pickup.html" class="btn btn-primary cta-primary">Order now</a>
         </div>
-    </div> */}
+      </div>
     </div>
   );
 }
