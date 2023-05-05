@@ -583,10 +583,14 @@ ul {
     text-align: center;
 }
 
+.menu-page .h1,
+.menu-page .h2,
+.menu-page .h3,
+.menu-page .h4,
 .menu-page h1,
 .menu-page h2,
 .menu-page h3,
-.menu-page h4 {
+.menu-page h4  {
     padding: 1.25rem .5rem;
     margin: 0;
     font-size: 1.1rem;

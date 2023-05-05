@@ -56,9 +56,9 @@ function App() {
           <Route
             path={'/menu/index.html'}
             element={
-              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+              <>
                 <Menu />
-              </div>
+              </>
             }
           />
         </Routes>
