@@ -11,28 +11,28 @@ export const handheldData = [
       img: "brisketStackBurger",
       src: "/pages/mainMenu/handhelds/brisketStackBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "fwefewfew",
+      pdpDescription: "eeee.",
     },
     {
       name: "CLASSIC CHEESEBURGER",
       img: "classicBurgerWithFries",
       src: "/pages/mainMenu/handhelds/classicBurgerWithFries.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "aaaaaaa"
+      pdpDescription: "Beef burger, American cheese, house-made pickles, lettuce, tomato, and aioli."
     },
     {
       name: "AUSSIE BURGER",
       img: "aussieBurger",
       src: "/pages/mainMenu/handhelds/aussieBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "aaaaaaa"
+      pdpDescription: "Beef burger, American cheese, crispy onion petals, Aussie sauce, house-made pickles, lettuce, tomato."
     },
     {
       name: "JAMMIN' CHICKEN SANDWICH",
       img: "jamminChickenSandwich",
       src: "/pages/mainMenu/handhelds/jamminChickenSandwich.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "aaaaaaa"
+      pdpDescription: "Grilled chicken, Cheddar cheese, bacon onion jam, pickled jalapeños, lettuce, tomato, aioli."
     },
     {
       name: "BRAISED BRISKET SANDWICH",
@@ -53,14 +53,14 @@ export const handheldData = [
       img: "crispyshrimpPoBoy",
       src: "/pages/mainMenu/handhelds/crispyshrimpPoBoy.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "eeeeeee"
+      pdpDescription: "Crispy shrimp, house-made pickles, creamy Cajun sauce, lettuce, tomato."
     },
     {
       name: "CRISPY SRIRACHA CHICKEN SANDWICH",
       img: "crispyChickenSrirachaSandwich",
       src: "/pages/mainMenu/handhelds/crispyChickenSrirachaSandwich.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "eeeeeee"
+      pdpDescription: "Hand-breaded crispy chicken, house-made pickles, spicy honey Sriracha sauce, lettuce, tomato, aioli."
     }
   ];
   
