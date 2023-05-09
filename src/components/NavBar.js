@@ -104,7 +104,7 @@ class NavBar extends Component {
                                     })
                                 }
                             </ul>
-                            <a href="index.html">
+                            <a href="/">
                                 <picture>
                                     <source srcSet="/assets/other/mobile/agLogo.png" media="(min-width: 1024px)" />
                                     <img className="ml-2 ag-logo" src="/assets/other/mobile/agLogo.png"
