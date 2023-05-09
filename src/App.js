@@ -16,6 +16,7 @@ import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/TestMenuPage.js";
 import { handheldData } from './data/menuData/handHeldData.js';
+import { dumbyData } from './data/menuData/dumbyData.js';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
               <>
                 {/* <Menu /> */}
                 {/* <MenuPages /> */}
+                <MenuPages menuData={dumbyData} dataTitle={'fefe'}/>
                 <MenuPages menuData={handheldData} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
               </>
             }
