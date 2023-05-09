@@ -16,8 +16,8 @@ import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/TestMenuPage.js";
 import { handheldData } from './data/menuData/handHeldData.js';
+import { largePlatesData } from './data/menuData/largePlatesData.js';
 import { dumbyData } from './data/menuData/dumbyData.js';
-
 
 function App() {
   return (
@@ -68,8 +68,16 @@ function App() {
             path={'/menu/handhelds/index.html'}
             element={
               <>
-                <MenuPages menuData={dumbyData} dataTitle={'fefe'} />
+                {/* <MenuPages menuData={dumbyData} dataTitle={'dumbydata'} /> */}
                 <MenuPages menuData={handheldData} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/largeplates/index.html'}
+            element={
+              <>
+                <MenuPages menuData={largePlatesData} dataTitle={'Large Plates'} />
               </>
             }
           />
