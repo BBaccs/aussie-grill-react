@@ -15,6 +15,7 @@ import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/TestMenuPage.js";
+import PDP from "./components/PDP.js";
 import { handheldData } from './data/menuData/handHeldData.js';
 import { largePlatesData } from './data/menuData/largePlatesData.js';
 import { dessertsAndBeveragesData } from './data/menuData/dessertsAndBeveragesData.js';
@@ -114,6 +115,32 @@ function App() {
             element={
               <>
                 <MenuPages menuData={dessertsAndBeveragesData} dataTitle={'Desserts + fix'} />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/dessertsAndBeverages/index.html'}
+            element={
+              <>
+                <MenuPages menuData={dessertsAndBeveragesData} dataTitle={'Desserts + fix'} />
+              </>
+            }
+          />
+
+          {/* @TO DO, OPTIMIZE ROUTING */}
+          <Route
+            path={'/menu/salads/aussieSalad.html'}
+            element={
+              <>
+                <PDP />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/salads/appleArugulaSalad.html'}
+            element={
+              <>
+                <PDP />
               </>
             }
           />
