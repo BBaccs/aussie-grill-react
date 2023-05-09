@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 
 
-class MenuItem extends Component {
+class MenuItems extends Component {
     constructor(props) {
         super(props);
         // this.state = { clicked: false };
@@ -16,7 +16,7 @@ class MenuItem extends Component {
         const menuItems = menuCategoryData.map((menuItem, index) => (
         /* <!-- Menu Item --> */
             <div key={index} class="col-lg-4 col-md-6 pt-lg-0 menu-item-col">
-                <a class="d-block" href={menuItem.url}>
+                <a class="d-block" href={menuItem.linkTo}>
                     <div class="primary-subheading-wrapper">
                         <div class="w-100">
                             <div class="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>
@@ -52,4 +52,4 @@ class MenuItem extends Component {
     }
 }
 
-export default MenuItem;
+export default MenuItems;

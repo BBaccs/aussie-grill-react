@@ -1,7 +1,7 @@
 /* @TODO - use state (instead of props) for Navbar changes - franchise, homepage etc.? */
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
-import MenuItem from "./components/MenuItems.js";
+import MenuItems from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
 // import FranchisePage from "./pages/FranchisePage.js"
 import { Routes, Route } from 'react-router-dom';
@@ -33,7 +33,7 @@ function App() {
               <>
                 <ACarousel />
                 <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
-                  <MenuItem />
+                  <MenuItems />
                 </div>
               </>
             }
@@ -60,9 +60,15 @@ function App() {
             path={'/menu/index.html'}
             element={
               <>
-                {/* <Menu /> */}
-                {/* <MenuPages /> */}
-                <MenuPages menuData={dumbyData} dataTitle={'fefe'}/>
+                <Menu />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/handhelds/index.html'}
+            element={
+              <>
+                <MenuPages menuData={dumbyData} dataTitle={'fefe'} />
                 <MenuPages menuData={handheldData} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
               </>
             }
