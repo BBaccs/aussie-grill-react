@@ -11,7 +11,7 @@ export const handheldData = [
       img: "brisketStackBurger",
       src: "/pages/mainMenu/handhelds/brisketStackBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "eeee.",
+      pdpDescription: "Brisket, cheese, japanelos, and onions.",
     },
     {
       name: "CLASSIC CHEESEBURGER",
@@ -34,19 +34,19 @@ export const handheldData = [
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Grilled chicken, Cheddar cheese, bacon onion jam, pickled jalapeños, lettuce, tomato, aioli."
     },
-    {
-      name: "BRAISED BRISKET SANDWICH",
-      img: "brisketStackBurger",
-      src: "/pages/mainMenu/handhelds/brisketStackBurger.html",
-      imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "eeeeeee"
-    },
+    // {
+    //   name: "BRAISED BRISKET SANDWICH",
+    //   img: "brisketStackBurger",
+    //   src: "/pages/mainMenu/handhelds/brisketStackBurger.html",
+    //   imgFilePath: "foodImages/productImages/handhelds",
+    //   pdpDescription: "eeeeeee"
+    // },
     {
       name: "IMPOSSIBLE BURGER™",
       img: "impossibleBurgerWithKettleChips",
       src: "/pages/mainMenu/handhelds/impossibleBurgerWithKettleChips.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "eeeeeee"
+      pdpDescription: "Meat free vegetable burger so good you'll being saying it's impossible!"
     },
     {
       name: "CRISPY SHRIMP PO'BOY",

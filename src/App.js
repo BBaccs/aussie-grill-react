@@ -14,6 +14,8 @@ import "./css/custom.css";
 import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
+import MenuPages from "./components/TestMenuPage.js";
+import { handheldData } from './data/menuData/handHeldData.js';
 
 
 function App() {
@@ -57,7 +59,9 @@ function App() {
             path={'/menu/index.html'}
             element={
               <>
-                <Menu />
+                {/* <Menu /> */}
+                {/* <MenuPages /> */}
+                <MenuPages menuData={handheldData} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
               </>
             }
           />
