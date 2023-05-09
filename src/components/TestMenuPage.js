@@ -1,4 +1,5 @@
 // @TODO FIX MENUCATEGORYCATA, it's got some kind of casing issue or i'm using the wrong data for one of them.
+// @TODO CLEAN UP CONDITIONALS
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
@@ -8,6 +9,27 @@ class MenuPages extends Component {
         menuData: menuCategoryData
     };
     render() {
+        // if (menuData.pdpPreview && menuData.newItem) {
+        //     <div class="d-flex justify-content-center mr-4">
+        //         <img className="mobile-bug" src="../../../assets/agGraphicElements/bug75x75.png" />
+        //         <div className="h3">{menuData.name}<span>&gt;</span>
+        //         <div className="product-description-preview">Best in Tampa.</div>
+        //     </div>
+        //     </div>
+        // } else if (menuData.newItem && !menuData.pdpPreview) {
+        //     <div class="d-flex justify-content-center mr-4">
+        //         <img className="mobile-bug" src="../../../assets/agGraphicElements/bug75x75.png" />
+        //         <div className="h3">{menuData.name}<span>&gt;</span></div>
+        //     </div>
+        // } else if (menuData.pdpPreview) {
+        //     <>
+        //         <div className='h3 pb-0'>{menuData.name} <span>{`>`}</span></div>
+        //         <div className="product-description-preview">Best in Tampa.</div>
+        //     </>
+
+        // } else {
+        //     <div className='h3'>{menuData.name} <span>{`>`}</span></div>
+        // }
         return (
             <main id="handhelds-page" class="menu-page">
 
@@ -24,12 +46,16 @@ class MenuPages extends Component {
                         <div class="d-flex justify-content-center">
                             <img class="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/bullHalfSmall.png" alt="" />
-                            <div class="d-flex align-items-center w-100 flex-column pb-1">
-                                <h2 class="pb-1">{this.props.dataTitle}</h2>
-                                {this.props.titleDescription &&
-                                    <p class="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>100% USDA CHOICE BEEF</p>
-                                }
-                            </div>
+                            {this.props.titleDescription ?
+                                <div class="d-flex align-items-center w-100 flex-column pb-1">
+                                    <h2 className="pb-1">{this.props.dataTitle}</h2>
+                                    <p class="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
+                                </div>
+                                :
+                                <div class="d-flex align-items-center w-100 flex-column pb-1">
+                                    <h2 className="no-subhead-padding">{this.props.dataTitle}</h2>
+                                </div>
+                            }
                             <img class="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png" alt="" />
                         </div>
@@ -76,70 +102,48 @@ class MenuPages extends Component {
 
                     <div class="menu-category menu-category-selected">
                         <div class="d-flex justify-content-center">
-                            <div style={{ marginLeft: 125 + 'px' }} class="d-flex align-items-center w-100 flex-column pb-1">
-                                <h2 class="pb-1">Handhelds</h2>
-                                <p class="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>100% USDA CHOICE BEEF</p>
+                            <div class="d-flex align-items-center w-100 flex-column pb-1">
+                                {this.props.titleDescription ?
+                                    <div style={{ marginLeft: 125 + 'px' }} class="d-flex align-items-center w-100 flex-column pb-1">
+                                        <h2 class="pb-1">{this.props.dataTitle}</h2>
+                                        <p class="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
+                                    </div>
+                                    :
+                                    <h2 class="no-subhead-padding pig-heading lg-pig-heading w-100">{this.props.dataTitle}</h2>
+                                }
                             </div>
                             <img class="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
                                 alt="" />
                         </div>
                     </div>
 
-                    <div class="mobile-menu-item menu-item-bg">
-                        {/* <!-- need display block / w-100 on anchor for ADA --> */}
-                        <a class="d-block" href="./../../menu/handhelds/baconBombBurger.html">
-                            <h3>BACON BOMB BURGER <span></span></h3>
-                        </a>
-                    </div>
+                    {this.props.menuData.map((item, index) => (
+                        <div key={index} class="mobile-menu-item menu-item-bg">
+                            {/* <!-- need display block / w-100 on anchor for ADA --> */}
+                            <a class="d-block" href={item.src}>
+                                {!item.new ?
+                                    <>
+                                        {
+                                            item.pdpPreview ?
+                                                <div className="h3 pb-0">{item.name} <span>{`>`}</span></div>
 
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/doubleDoubleBurger.html">
-                            <h3>Double Double Burger <span></span></h3>
-                        </a>
-                    </div>
+                                                :
+                                                <div className="h3">{item.name} <span>{`>`}</span></div>
+                                        }
 
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/classicBurger.html">
-                            <h3>Classic Cheeseburger <span></span></h3>
-                        </a>
-                    </div>
-
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/aussieBurger.html">
-                            <h3>AUSSIE BURGER <span></span></h3>
-                        </a>
-                    </div>
-
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/volcanoBurger.html">
-                            <h3>Volcano Burger <span></span></h3>
-                        </a>
-                    </div>
-
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/crispyShrimpPoBoy.html">
-                            <h3>CRISPY SHRIMP PO'BOY <span></span></h3>
-                        </a>
-                    </div>
-
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/jamminGrilledChickenSandwich.html">
-                            <h3>Jammin’ Grilled Chicken Sandwich <span></span></h3>
-                        </a>
-                    </div>
-
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/agOgChickenSandwich.html">
-                            <h3>AG OG Chicken Sandwich <span></span></h3>
-                        </a>
-                    </div>
-
-                    <div class="mobile-menu-item menu-item-bg">
-                        <a class="d-block" href="./../../menu/handhelds/crispyChickenSrirachaSandwich.html">
-                            <h3>CRISPY SRIRACHA CHICKEN Sandwich <span></span></h3>
-                        </a>
-                    </div>
-
+                                        {item.pdpPreview && <div class="product-description-preview">{item.pdpPreview}</div>}
+                                    </>
+                                    :
+                                    <>
+                                        <div className="d-flex justify-content-center mr-4">
+                                            <img className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" />
+                                            <div className={`h3 ${!item.pdpPreview && 'pb-0'}`}>{item.name} <span>{`>`}</span></div>
+                                        </div>
+                                    </>
+                                }
+                            </a>
+                        </div>
+                    ))}
                 </div>
 
             </main>
