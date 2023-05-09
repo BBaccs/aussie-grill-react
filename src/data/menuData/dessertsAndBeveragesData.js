@@ -1,4 +1,4 @@
-export const sidesandSnacksData = [
+export const dessertsAndBeveragesData = [
     {
       name: "SALTED CARAMEL COOKIE",
       img: "saltedCaramelCookie",

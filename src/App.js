@@ -17,6 +17,10 @@ import Menu from './components/Menu.js';
 import MenuPages from "./components/TestMenuPage.js";
 import { handheldData } from './data/menuData/handHeldData.js';
 import { largePlatesData } from './data/menuData/largePlatesData.js';
+import { dessertsAndBeveragesData } from './data/menuData/dessertsAndBeveragesData.js';
+import { kidsData } from './data/menuData/kidsData.js';
+import { saladsData } from './data/menuData/saladsData.js';
+import { sidesAndSnacksData } from './data/menuData/sidesAndSnacksData.js';
 import { dumbyData } from './data/menuData/dumbyData.js';
 
 function App() {
@@ -78,6 +82,38 @@ function App() {
             element={
               <>
                 <MenuPages menuData={largePlatesData} dataTitle={'Large Plates'} />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/salads/index.html'}
+            element={
+              <>
+                <MenuPages menuData={saladsData} dataTitle={'Salads'} />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/sidesAndSnacks/index.html'}
+            element={
+              <>
+                <MenuPages menuData={sidesAndSnacksData} dataTitle={'Sides + fix'} />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/kids/index.html'}
+            element={
+              <>
+                <MenuPages menuData={kidsData} dataTitle={'Kids'} />
+              </>
+            }
+          />
+          <Route
+            path={'/menu/dessertsAndBeverages/index.html'}
+            element={
+              <>
+                <MenuPages menuData={dessertsAndBeveragesData} dataTitle={'Desserts + fix'} />
               </>
             }
           />
