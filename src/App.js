@@ -24,8 +24,10 @@ import { kids } from './data/menuData/kids.js';
 import { salads } from './data/menuData/salads.js';
 import { sidesAndSnacks } from './data/menuData/sidesAndSnacks.js';
 import { dumbyData } from './data/menuData/dumbyData.js';
-
+import { useLocation, useParams } from 'react-router-dom';
 function App() {
+  const location = useLocation();
+  console.log(location)
   return (
     <div className="App">
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
@@ -62,11 +64,19 @@ function App() {
 
 
 
+          {/* <Route path="/menu">
+     
+            <Route index element={<Menu />} />
+            <Route path=":id/index.html" element={<MenuPages menuData={salads} dataTitle={'Salads'} />} />
+          </Route> */}
+
+
           <Route path="/menu">
             {/* This one will match the parent route (/menu/:id) extacly */}
-            <Route index element={<MenuItems2 />} />
-            <Route path=":id" element={<MenuItems2 />} />
+            <Route index element={<Menu />} />
+            <Route path=":id/index.html" element={<MenuItems2 />} />
           </Route>
+
 
 
 
@@ -108,7 +118,7 @@ function App() {
             element={
               <>
                 {/* <MenuPages menuData={dumbyData} dataTitle={'dumbydata'} /> */}
-                <MenuPages menuData={handHelds} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
+                <MenuPages menuData={handHelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />
               </>
             }
           />
