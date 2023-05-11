@@ -1,4 +1,4 @@
-export const largePlatesData = [
+export const largePlates = [
     {
       name: "CRISPY CHICKEN TENDERS",
       img: "crispyChickenTenders",
