@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
 
-export function MenuItems2() {
-    // const location = useLocation();
-    console.log(location)
+function MenuItems2() {
+    const location = useLocation();
+    console.log(location.pathname, location.state, location)
     const { id } = useParams()
+    console.log(`HELLO, ${id}`)
     return <h1>hI {id} </h1>
 }
 
-
+export default MenuItems2;
 
 
 
