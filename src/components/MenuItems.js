@@ -6,12 +6,7 @@ import { menuCategoryData } from "../data/menuCategoryData.js";
 class MenuItems extends Component {
     constructor(props) {
         super(props);
-        // this.state = { clicked: false };
-        // this.handleClick = this.handleClick.bind(this);
     }
-    // handleClick(e) {
-    //     this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
-    // }
     render() {
         const menuItems = menuCategoryData.map((menuItem, index) => (
         /* <!-- Menu Item --> */
