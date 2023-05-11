@@ -17,7 +17,7 @@ import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/TestMenuPage.js";
 import PDP from "./components/PDP.js";
-import { handHelds } from './data/menuData/handHelds.js';
+import { handhelds } from './data/menuData/handhelds.js';
 import { largePlates } from './data/menuData/largePlates.js';
 import { dessertsAndBeverages } from './data/menuData/dessertsAndBeverages.js';
 import { kids } from './data/menuData/kids.js';
@@ -25,6 +25,8 @@ import { salads } from './data/menuData/salads.js';
 import { sidesAndSnacks } from './data/menuData/sidesAndSnacks.js';
 import { dumbyData } from './data/menuData/dumbyData.js';
 import { useLocation, useParams } from 'react-router-dom';
+import { allMenus } from './data/menuData/allMenus.js';
+
 function App() {
   const location = useLocation();
   console.log(location)
@@ -47,47 +49,19 @@ function App() {
             }
           />
 
-
-
-          {/* MENU PAGES */}
-
-
-          <Route
-            path="/tests/:id/index.html"
-            element={
-              <>
-                <MenuItems2 />
-              </>
-            }
-          />
           {/* <Route path="*" element={<NotFound404 />} */}
 
 
+          { /*  THE Menu Category Page */}
+          <Route path={'/menu/index.html'} element={<Menu />} />
+          { /*  Menu Category Pages */}
+          <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} />} />
+          <Route path={`/menu/largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
+          <Route path={`/menu/salads/index.html`} element={<MenuPages menuData={salads} dataTitle={location.state} />} />
+          <Route path={`/menu/sidesAndSnacks/index.html`} element={<MenuPages menuData={sidesAndSnacks} dataTitle={location.state} />} />
+          <Route path={`/menu/kids/index.html`} element={<MenuPages menuData={kids} dataTitle={location.state} />} />
+          <Route path={`/menu/dessertsAndBeverages/index.html`} element={<MenuPages menuData={dessertsAndBeverages} dataTitle={location.state} />} />
 
-          {/* <Route path="/menu">
-     
-            <Route index element={<Menu />} />
-            <Route path=":id/index.html" element={<MenuPages menuData={salads} dataTitle={'Salads'} />} />
-          </Route> */}
-
-
-          <Route path="/menu">
-            {/* This one will match the parent route (/menu/:id) extacly */}
-            <Route index element={<Menu />} />
-            <Route path=":id/index.html" element={<MenuItems2 />} />
-          </Route>
-
-
-
-
-
-
-
-
-
-
-
-          {/* ORDER/PICKUP PAGE */}
           <Route
             exact path={'/pickup.html'}
             element={
@@ -113,73 +87,6 @@ function App() {
               </>
             }
           />
-          <Route
-            path={'/menu/handhelds/index.html'}
-            element={
-              <>
-                {/* <MenuPages menuData={dumbyData} dataTitle={'dumbydata'} /> */}
-                <MenuPages menuData={handHelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/largeplates/index.html'}
-            element={
-              <>
-                <MenuPages menuData={largePlates} dataTitle={'Large Plates'} />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/salads/index.html'}
-            element={
-              <>
-                <MenuPages menuData={salads} dataTitle={'Salads'} />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/sidesAndSnacks/index.html'}
-            element={
-              <>
-                <MenuPages menuData={sidesAndSnacks} dataTitle={'Sides + fix'} />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/kids/index.html'}
-            element={
-              <>
-                <MenuPages menuData={kids} dataTitle={'Kids'} />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/dessertsAndBeverages/index.html'}
-            element={
-              <>
-                <MenuPages menuData={dessertsAndBeverages} dataTitle={'Desserts + fix'} />
-              </>
-            }
-          />
-
-          {/* @TO DO, OPTIMIZE ROUTING */}
-          <Route
-            path={'/menu/salads/aussieSalad.html'}
-            element={
-              <>
-                <PDP />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/salads/appleArugulaSalad.html'}
-            element={
-              <>
-                <PDP />
-              </>
-            }
-          />
         </Routes>
       </main>
       <Footer />
@@ -195,3 +102,55 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+{/* <Route path="/menu">
+     
+            <Route index element={<Menu />} />
+            <Route path=":id/index.html" element={<MenuPages menuData={salads} dataTitle={'Salads'} />} />
+          </Route> */}
+
+
+{/* Come back to this */ }
+{/* <Route path="/menu">
+            <Route index element={<Menu />}/>
+            <Route path={`:handhelds/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} />} />
+            <Route path={`:largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
+            <Route path={`:salads/index.html`} element={<MenuPages menuData={salads} dataTitle={location.state} />} />
+            <Route path={`:sidesAndSnacks/index.html`} element={<MenuPages menuData={sidesAndSnacks} dataTitle={location.state} />} />
+            <Route path={`:kids/index.html`} element={<MenuPages menuData={kids} dataTitle={location.state} />} />
+            <Route path={`:dessertsAndBeverages/index.html`} element={<MenuPages menuData={dessertsAndBeverages} dataTitle={location.state} />} />
+          </Route> */}
+
+
+
+
+
+
+
+
+
+{/* `${location.state}` */ }
+{/* A route with a <MenuPages /> element for each menuData object  */ }
+{/* {allMenus.map((menuData) => (
+              <Route path={`:${location.state}/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
+            ))} */}
+
+{/* ORDER/PICKUP PAGE */ }
+
+
+{/* MENU PAGES */ }
+
+
+{/* <Route
+            path="/tests/:id/index.html"
+            element={
+              <>
+                <MenuItems2 />
+              </>
+            }
+          /> */}
