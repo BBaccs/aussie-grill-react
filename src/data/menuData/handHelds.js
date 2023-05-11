@@ -1,4 +1,4 @@
-export const handheldData = [
+export const handHelds = [
     {
       name: "BACON BOMB BURGER",
       img: "baconBombBurger",

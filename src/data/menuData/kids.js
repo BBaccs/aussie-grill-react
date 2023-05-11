@@ -1,4 +1,4 @@
-export const kidsData = [
+export const kids = [
     {
       name: "KIDS CRISPY CHICKEN TENDERS",
     //   img: "baconBombBurger",

@@ -2,6 +2,7 @@
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
+import MenuItems2 from "./components/MenuItems2.js";
 import HeroImg from "./components/HeroImg.js";
 // import FranchisePage from "./pages/FranchisePage.js"
 import { Routes, Route } from 'react-router-dom';
@@ -16,12 +17,12 @@ import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/TestMenuPage.js";
 import PDP from "./components/PDP.js";
-import { handheldData } from './data/menuData/handHeldData.js';
-import { largePlatesData } from './data/menuData/largePlatesData.js';
-import { dessertsAndBeveragesData } from './data/menuData/dessertsAndBeveragesData.js';
-import { kidsData } from './data/menuData/kidsData.js';
-import { saladsData } from './data/menuData/saladsData.js';
-import { sidesAndSnacksData } from './data/menuData/sidesAndSnacksData.js';
+import { handHelds } from './data/menuData/handHelds.js';
+import { largePlates } from './data/menuData/largePlates.js';
+import { dessertsAndBeverages } from './data/menuData/dessertsAndBeverages.js';
+import { kids } from './data/menuData/kids.js';
+import { salads } from './data/menuData/salads.js';
+import { sidesAndSnacks } from './data/menuData/sidesAndSnacks.js';
 import { dumbyData } from './data/menuData/dumbyData.js';
 
 function App() {
@@ -43,6 +44,39 @@ function App() {
               </>
             }
           />
+
+
+
+          {/* MENU PAGES */}
+
+
+          <Route
+            path="/tests/:id/index.html"
+            element={
+              <>
+                <MenuItems2 />
+              </>
+            }
+          />
+          {/* <Route path="*" element={<NotFound404 />} */}
+
+
+
+          <Route path="/menu">
+            {/* This one will match the parent route (/menu/:id) extacly */}
+            <Route index element={<MenuItems2 />} />
+            <Route path=":id" element={<MenuItems2 />} />
+          </Route>
+
+
+
+
+
+
+
+
+
+
           {/* ORDER/PICKUP PAGE */}
           <Route
             exact path={'/pickup.html'}
@@ -74,7 +108,7 @@ function App() {
             element={
               <>
                 {/* <MenuPages menuData={dumbyData} dataTitle={'dumbydata'} /> */}
-                <MenuPages menuData={handheldData} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
+                <MenuPages menuData={handHelds} dataTitle={'Handhelds'} titleDescription={'100% USDA CHOICE BEEF'} />
               </>
             }
           />
@@ -82,7 +116,7 @@ function App() {
             path={'/menu/largeplates/index.html'}
             element={
               <>
-                <MenuPages menuData={largePlatesData} dataTitle={'Large Plates'} />
+                <MenuPages menuData={largePlates} dataTitle={'Large Plates'} />
               </>
             }
           />
@@ -90,7 +124,7 @@ function App() {
             path={'/menu/salads/index.html'}
             element={
               <>
-                <MenuPages menuData={saladsData} dataTitle={'Salads'} />
+                <MenuPages menuData={salads} dataTitle={'Salads'} />
               </>
             }
           />
@@ -98,7 +132,7 @@ function App() {
             path={'/menu/sidesAndSnacks/index.html'}
             element={
               <>
-                <MenuPages menuData={sidesAndSnacksData} dataTitle={'Sides + fix'} />
+                <MenuPages menuData={sidesAndSnacks} dataTitle={'Sides + fix'} />
               </>
             }
           />
@@ -106,7 +140,7 @@ function App() {
             path={'/menu/kids/index.html'}
             element={
               <>
-                <MenuPages menuData={kidsData} dataTitle={'Kids'} />
+                <MenuPages menuData={kids} dataTitle={'Kids'} />
               </>
             }
           />
@@ -114,15 +148,7 @@ function App() {
             path={'/menu/dessertsAndBeverages/index.html'}
             element={
               <>
-                <MenuPages menuData={dessertsAndBeveragesData} dataTitle={'Desserts + fix'} />
-              </>
-            }
-          />
-          <Route
-            path={'/menu/dessertsAndBeverages/index.html'}
-            element={
-              <>
-                <MenuPages menuData={dessertsAndBeveragesData} dataTitle={'Desserts + fix'} />
+                <MenuPages menuData={dessertsAndBeverages} dataTitle={'Desserts + fix'} />
               </>
             }
           />
