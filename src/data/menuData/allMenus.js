@@ -1,7 +1,21 @@
+import { dessertsAndBeverages } from "./dessertsAndBeverages";
+import { handhelds } from "./handhelds";
+import { kids } from "./kids";
+import { largePlates } from "./largePlates";
+import { salads } from "./salads";
+import { sidesAndSnacks } from "./sidesAndSnacks";
+
 export const allMenus = 
-[
-    'handheld', 'largePlates', 'salads', 'sidesAndSnacks', 'dessertsAndBeverages', 'kids'
-];
+[ handhelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages];
+
+
+
+
+
+// export const allMenus = 
+// [
+//     'handheld', 'largePlates', 'salads', 'sidesAndSnacks', 'dessertsAndBeverages', 'kids'
+// ];
 
 
 

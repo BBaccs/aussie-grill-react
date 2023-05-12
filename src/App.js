@@ -15,7 +15,7 @@ import "./css/custom.css";
 import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
-import MenuPages from "./components/TestMenuPage.js";
+import MenuPages from "./components/MenuPages.js";
 import PDP from "./components/PDP.js";
 import { handhelds } from './data/menuData/handhelds.js';
 import { largePlates } from './data/menuData/largePlates.js';
@@ -49,13 +49,11 @@ function App() {
             }
           />
 
-          {/* <Route path="*" element={<NotFound404 />} */}
-
 
           { /*  THE Menu Category Page */}
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category Pages */}
-          <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} />} />
+          <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
           <Route path={`/menu/salads/index.html`} element={<MenuPages menuData={salads} dataTitle={location.state} />} />
           <Route path={`/menu/sidesAndSnacks/index.html`} element={<MenuPages menuData={sidesAndSnacks} dataTitle={location.state} />} />
@@ -87,7 +85,12 @@ function App() {
               </>
             }
           />
+          <Route path='*' element={<h2>Page not found</h2>} />
         </Routes>
+
+
+
+
       </main>
       <Footer />
       {/* <!-- ORDER FOOD CTA --> */}
@@ -108,11 +111,11 @@ export default App;
 
 
 
-{/* <Route path="/menu">
+//  <Route path="/menu">
      
-            <Route index element={<Menu />} />
-            <Route path=":id/index.html" element={<MenuPages menuData={salads} dataTitle={'Salads'} />} />
-          </Route> */}
+//             <Route index element={<Menu />} />
+//             <Route path=":id/index.html" element={<MenuPages menuData={salads} dataTitle={'Salads'} />} />
+//           </Route> 
 
 
 {/* Come back to this */ }
@@ -124,7 +127,7 @@ export default App;
             <Route path={`:sidesAndSnacks/index.html`} element={<MenuPages menuData={sidesAndSnacks} dataTitle={location.state} />} />
             <Route path={`:kids/index.html`} element={<MenuPages menuData={kids} dataTitle={location.state} />} />
             <Route path={`:dessertsAndBeverages/index.html`} element={<MenuPages menuData={dessertsAndBeverages} dataTitle={location.state} />} />
-          </Route> */}
+          </Route>  */}
 
 
 
@@ -154,3 +157,49 @@ export default App;
               </>
             }
           /> */}
+
+
+
+
+          // {
+          //   allMenus.forEach((menu, index) => {
+          
+          //     <><Route path="*" element={<MenuPages menuData={largePlates} dataTitle={location.state} />} /> {console.log(allMenus[index], 'E', menu)} </>
+          
+          //   }
+          //   )
+          // }
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          {/* {allMenus.map((menuData, index) => (
+   <>
+   <Route path={`/menu/${location.state}/index.html`} element={<MenuPages menuData={allMenus[index]} dataTitle={location.state} />} />
+             {console.log(allMenus)}
+   </>
+            
+          ))} */}
+
+{/* {allMenus.array.forEach(e => {
+  <Route path={`/menu/${location.state}/index.html`} element={<MenuPages menuData={allMenus[e]} dataTitle={location.state} />} />
+})}
+
+
+
+Write a foreach for allMenus, which generated a route for each menu category, and passes the data to the menuPages component. */}
+
+{/* <Route path={`/menu/largePlates/index.html`}  element={<MenuPages menuData={largePlates} dataTitle={location.state} />} /> */}
+
+
+
+{/* {console.log('allmenus:', allMenus, 'pre-allmenus:', handhelds)} */}

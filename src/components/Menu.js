@@ -39,7 +39,7 @@ class MenuPages extends Component {
                     <ul>
                         {this.props.menuData.map((item, index) => (
                             <li key={index}>
-                                <Link className="d-block py-3 menu-item-bg" to={item.linkTo}  state={ item.name } >
+                                <Link className="d-block py-3 menu-item-bg" to={item.linkTo} state={ item.name } >
                                     <div className='h2'>{item.name}</div>
                                 </Link>
                             </li>
