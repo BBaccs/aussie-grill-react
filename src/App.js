@@ -2,21 +2,16 @@
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
-import MenuItems2 from "./components/MenuItems2.js";
+import useParamszzzz from "./components/useParamszzzz.js";
 import HeroImg from "./components/HeroImg.js";
-// import FranchisePage from "./pages/FranchisePage.js"
 import { Routes, Route } from 'react-router-dom';
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
-// import { Carousel } from "bootstrap";
-// import Button from 'react-bootstrap/Button';
-// import Toggler from "./components/Test.js";
 import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
-import PDP from "./components/PDP.js";
 import { handhelds } from './data/menuData/handhelds.js';
 import { largePlates } from './data/menuData/largePlates.js';
 import { dessertsAndBeverages } from './data/menuData/dessertsAndBeverages.js';
@@ -50,9 +45,12 @@ function App() {
           />
 
 
+{/* 
+          <Route path={`/pages/mainMenu/handhelds/baconBombBurger.html`} element={<PDP menuItem={'baconBombBurger'} />} />}
           { /*  THE Menu Category Page */}
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category Pages */}
+          <Route path={`/menu/:name/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} titleDescription={'TEST'} />} />
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
           <Route path={`/menu/salads/index.html`} element={<MenuPages menuData={salads} dataTitle={location.state} />} />
@@ -153,7 +151,7 @@ export default App;
             path="/tests/:id/index.html"
             element={
               <>
-                <MenuItems2 />
+                <useParams />
               </>
             }
           /> */}
