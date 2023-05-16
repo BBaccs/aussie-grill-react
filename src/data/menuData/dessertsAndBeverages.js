@@ -1,35 +1,35 @@
 export const dessertsAndBeverages = [
     {
       name: "SALTED CARAMEL COOKIE",
-      img: "saltedCaramelCookie",
+      img: "saltedCaramelCookie.jpg",
       src: "/pages/mainMenu/salads/saltedCaramelCookie.html",
       imgFilePath: "foodImages/productImages/dessertsAndBeverages",
       pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels.",
     },
     {
         name: "SALTED CARAMEL COOKIE",
-        img: "saltedCaramelCookie",
+        img: "saltedCaramelCookie.jpg",
         src: "/pages/mainMenu/salads/saltedCaramelCookie.html",
         imgFilePath: "foodImages/productImages/dessertsAndBeverages",
         pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels.",
       },
       {
         name: "SALTED CARAMEL COOKIE",
-        img: "saltedCaramelCookie",
+        img: "saltedCaramelCookie.jpg",
         src: "/pages/mainMenu/salads/saltedCaramelCookie.html",
         imgFilePath: "foodImages/productImages/dessertsAndBeverages",
         pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels."
       },
       {
         name: "GHIRARDELLI DOUBLE DARK CHOCOLATE BROWNIE",
-        img: "ghirardelliDoubleDarkChocolateBrownie",
+        img: "ghirardelliDoubleDarkChocolateBrownie.jpg",
         src: "/pages/mainMenu/salads/ghirardelliDoubleDarkChocolateBrownie.html",
         imgFilePath: "foodImages/productImages/dessertsAndBeverages",
         pdpDescription: "Rich double dark chocolate brownie."
       },
       {
         name: "DOUBLE DARK CHOCOLATE BROWNIE SUNDAE",
-        img: "sundaeChocolate",
+        img: "sundaeChocolate.jpg",
         src: "/pages/mainMenu/salads/sundaeChocolate345x260.html",
         imgFilePath: "foodImages/productImages/dessertsAndBeverages",
         pdpPreview: "*ONLY AVAILABLE AT LUTZ LOCATION.*",
@@ -38,7 +38,7 @@ export const dessertsAndBeverages = [
       },
       {
         name: "SALTED CARAMEL COOKIE SUNDAE",
-        img: "saltedCaramelCookieSundae",
+        img: "saltedCaramelCookieSundae.jpg",
         src: "/pages/mainMenu/salads/saltedCaramelCookie.html",
         imgFilePath: "foodImages/productImages/dessertsAndBeverages",
         pdpPreview: "*ONLY AVAILABLE AT LUTZ LOCATION.*",
@@ -69,7 +69,7 @@ export const dessertsAndBeverages = [
       },
       {
         name: "BEER & SELTZER",
-        img: "saltedCaramelCookie",
+        img: "saltedCaramelCookie.jpg",
         src: "/pages/mainMenu/salads/beerAndSeltzer.html",
         imgFilePath: "foodImages/productImages/dessertsAndBeverages",
         pdpDescription: "Variety of beer and seltzer flavors.",
@@ -77,7 +77,7 @@ export const dessertsAndBeverages = [
       },
       {
         name: "BOTTLED BEVERAGES",
-        img: "saltedCaramelCookie",
+        img: "saltedCaramelCookie.jpg",
         src: "/pages/mainMenu/salads/bottledBeverages.html",
         pdpDescription: "Variety of bottled beverages."
       }

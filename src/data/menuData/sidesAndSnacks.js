@@ -1,21 +1,21 @@
 export const sidesAndSnacks = [
     {
       name: "AUSSIE PETALS",
-      img: "aussiePetals",
+      img: "aussiePetals.jpg",
       src: "/pages/mainMenu/salads/aussiePetals.html",
       imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy, spicy onion petals, Aussie sauce.",
     },
     {
       name: "AUSSIE CHEESE FRIES",
-      img: "aussieCheeseFries",
+      img: "aussieCheeseFries.jpg",
       src: "/pages/mainMenu/salads/aussieCheeseFries.html",
       imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy fries, melted cheese, bacon.",
     },
     {
       name: "CRISPY CAJUN SHRIMP",
-      img: "crispyCajunShrimp",
+      img: "crispyCajunShrimp.jpg",
       src: "/pages/mainMenu/salads/crispyCajunShrimp.html",
       imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy shrimp tossed in creamy Cajun sauce.",
