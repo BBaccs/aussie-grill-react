@@ -1,5 +1,6 @@
 // @TODO FIX MENUCATEGORYCATA, it's got some kind of casing issue or i'm using the wrong data for one of them.
 // @TODO CLEAN UP CONDITIONALS
+// @TODO wrapper ID must be dynamic, and should be div (not a <main>)
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
@@ -9,29 +10,8 @@ class MenuPages extends Component {
         menuData: menuCategoryData
     };
     render() {
-        // if (menuData.pdpPreview && menuData.newItem) {
-        //     <div class="d-flex justify-content-center mr-4">
-        //         <img className="mobile-bug" src="../../../assets/agGraphicElements/bug75x75.png" />
-        //         <div className="h3">{menuData.name}<span>&gt;</span>
-        //         <div className="product-description-preview">Best in Tampa.</div>
-        //     </div>
-        //     </div>
-        // } else if (menuData.newItem && !menuData.pdpPreview) {
-        //     <div class="d-flex justify-content-center mr-4">
-        //         <img className="mobile-bug" src="../../../assets/agGraphicElements/bug75x75.png" />
-        //         <div className="h3">{menuData.name}<span>&gt;</span></div>
-        //     </div>
-        // } else if (menuData.pdpPreview) {
-        //     <>
-        //         <div className='h3 pb-0'>{menuData.name} <span>{`>`}</span></div>
-        //         <div className="product-description-preview">Best in Tampa.</div>
-        //     </>
-
-        // } else {
-        //     <div className='h3'>{menuData.name} <span>{`>`}</span></div>
-        // }
         return (
-            <main id="handhelds-page" class="menu-page">
+            <main id='handhelds-page' class="menu-page">
 
                 <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div class="select-category-bg">
@@ -72,7 +52,7 @@ class MenuPages extends Component {
                                     </div>
                                     <div>
                                         <img class="w-100 subheading-img"
-                                            src={`/assets/foodImages/productImages/handhelds/desktop/${item.img}500x375.jpg`}
+                                            src={`/assets/foodImages/productImages/${item.category}/desktop/${item.img}500x375.jpg`}
                                             alt="" />
                                     </div>
                                     <div class="pt-3 product-content-wrapper">

@@ -12,7 +12,8 @@ export const menuCategoryData = [
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/handhelds.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/handhelds/index.html"
+        linkTo: "/menu/handhelds/index.html",
+        category: "handhelds",
         // sourceSrc: "nav-item"
     },
     {
@@ -21,7 +22,8 @@ export const menuCategoryData = [
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/largePlates.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/largePlates/index.html"
+        linkTo: "/menu/largePlates/index.html",
+        category: "largePlates",
     },
     {
         name: "Salads",
@@ -29,7 +31,8 @@ export const menuCategoryData = [
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/salads.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/salads/index.html"
+        linkTo: "/menu/salads/index.html",
+        category: "salads",
     },
     {
         name: "Sides & Snacks",
@@ -37,7 +40,8 @@ export const menuCategoryData = [
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/augVolcanoShrimp.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/sidesAndSnacks/index.html"
+        linkTo: "/menu/sidesAndSnacks/index.html",
+        category: "sidesAndSnacks",
     },
     {
         name: "Kids",
@@ -45,7 +49,8 @@ export const menuCategoryData = [
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/crispyChickenTenders.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/kids/index.html"
+        linkTo: "/menu/kids/index.html",
+        category: "kids",
     },
     {
         name: "Desserts & Beverages",
@@ -53,6 +58,7 @@ export const menuCategoryData = [
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/dessertsAndBeverages.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/dessertsAndBeverages/index.html"
+        linkTo: "/menu/dessertsAndBeverages/index.html",
+        category: "dessertsAndBeverages",
     }
 ];
