@@ -2,9 +2,9 @@
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
-import useParamszzzz from "./components/useParamszzzz.js";
 import HeroImg from "./components/HeroImg.js";
 import { Routes, Route } from 'react-router-dom';
+import UseParamszzzz from "./components/UseParamszzzz.js";
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
@@ -12,7 +12,7 @@ import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
-import { handhelds } from './data/menuData/handhelds.js';
+import { handHelds } from './data/menuData/handHelds.js';
 import { largePlates } from './data/menuData/largePlates.js';
 import { dessertsAndBeverages } from './data/menuData/dessertsAndBeverages.js';
 import { kids } from './data/menuData/kids.js';
@@ -24,11 +24,10 @@ import { allMenus } from './data/menuData/allMenus.js';
 
 function App() {
   const location = useLocation();
-  console.log(location)
+  // console.log(location)
   return (
     <div className="App">
       {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
-
       <NavBar />
       <main id="main-content">
         <Routes>
@@ -48,8 +47,8 @@ function App() {
 {/* 
           <Route path={`/pages/mainMenu/handhelds/baconBombBurger.html`} element={<PDP menuItem={'baconBombBurger'} />} />}
           { /*  THE Menu Category Page */}
-          <Route path={'/menu/index.html'} element={<Menu />} />
-          { /*  Menu Category Pages */}
+          {/* <Route path={'/menu/index.html'} element={<Menu />} />
+
           <Route path={`/menu/:name/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} titleDescription={'TEST'} />} />
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handhelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
@@ -65,7 +64,34 @@ function App() {
                 <AModal />
               </div>
             }
+          /> */}
+
+<Route path={'/menu/index.html'} element={<Menu />} />
+          { /*  Menu Category Pages */}
+          <Route path={`/menu/:menuCategory/index.html`} element={
+          <>
+            <UseParamszzzz />
+           </>}/>
+          {/* <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handHelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} /> */}
+          {/* <Route path={`/menu/largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
+          <Route path={`/menu/salads/index.html`} element={<MenuPages menuData={salads} dataTitle={location.state} />} />
+          <Route path={`/menu/sidesAndSnacks/index.html`} element={<MenuPages menuData={sidesAndSnacks} dataTitle={location.state} />} />
+          <Route path={`/menu/kids/index.html`} element={<MenuPages menuData={kids} dataTitle={location.state} />} />
+          <Route path={`/menu/dessertsAndBeverages/index.html`} element={<MenuPages menuData={dessertsAndBeverages} dataTitle={location.state} />} /> */}
+
+          <Route
+            exact path={'/pickup.html'}
+            element={
+              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+                <AModal />
+              </div>
+            }
           />
+
+
+
+
+
           <Route
             exact path={'/franchise.html'}
             element={

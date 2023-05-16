@@ -9,13 +9,17 @@
 
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
+import { handHelds } from '../data/menuData/handHelds.js';
+import { largePlates } from '../data/menuData/largePlates.js';
 import { Link } from 'react-router-dom';
 
 class MenuPages extends Component {
     static defaultProps = {
         menuData: menuCategoryData
     };
+    
     render() {
+        // console.log(location.state, location)
         return (
             <main id='handhelds-page' class="menu-page">
 

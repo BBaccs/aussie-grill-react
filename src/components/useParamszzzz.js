@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
+import MenuPages from "./MenuPages.js";
+import { handHelds } from '../data/menuData/handHelds.js';
+import { largePlates } from '../data/menuData/largePlates.js';
 
 
-function useParamszzzz() {
+function UseParamszzzz() {
     const location = useLocation();
     console.log(location.pathname, location.state, location)
-    const { id } = useParams()
-    console.log(`HELLO, ${id}`)
-    return <h1>hI {id} </h1>
+    const { menuCategory } = useParams();
+    console.log(`HELLO, ${menuCategory}`)
+    return (
+        <>
+            <h1>ID: {menuCategory}</h1>
+            <MenuPages menuData={handHelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />
+        </>
+    );
+
 }
 
-export default useParamszzzz;
+export default UseParamszzzz;
 
 
 
