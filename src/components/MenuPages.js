@@ -1,6 +1,12 @@
 // @TODO FIX MENUCATEGORYCATA, it's got some kind of casing issue or i'm using the wrong data for one of them.
 // @TODO CLEAN UP CONDITIONALS
 // @TODO wrapper ID must be dynamic, and should be div (not a <main>)
+// @todo, could optimitze this so it's assets/mobile or assets/desktop, then just ite.imgfilepath which includes the img name and jpg or etc.
+// src={`/assets/${item.imgFilePath}/desktop/${item.img}500x375.jpg`}
+// You don't even need the "500X375" because you've got it divided by mobile/desktop/tablet.
+
+
+
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
@@ -52,9 +58,12 @@ class MenuPages extends Component {
                                     </div>
                                     <div>
                                         <img class="w-100 subheading-img"
-                                            src={`/assets/foodImages/productImages/${item.category}/desktop/${item.img}500x375.jpg`}
-                                            alt="" />
+                                            src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
+                                            alt="" /> 
+                                            {/* /Users/bebacks/code2/aussie-grill-react/public/assets/foodImages/productImages/largePlates/crispyChickenTenders500x375.jpg */}
+                                            {/* /assets/foodImages/productImages/largePlates/desktop/crispyChickenTenders500x375.jpg */}
                                     </div>
+                                    {/* src="/assets/foodImages/productImages/largePlates/desktop/crispyChickenTenders500x375.jpg" */}
                                     <div class="pt-3 product-content-wrapper">
                                         <p class="product-description">{item.pdpDescription}
                                         </p>
