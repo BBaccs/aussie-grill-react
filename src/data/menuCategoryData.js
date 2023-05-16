@@ -1,58 +1,50 @@
 export const menuCategoryData = [
-    // {
-    //     name: 'HANDHELDS',
-    //     imgName: 'crispyChickenSrirachaSandwich',
-    //     imgType: 'png',
-    //     url: 'menu/handhelds/index.html',
-
-    // },
     {
         name: "Handhelds",
         img: "crispyChickenSrirachaSandwich",
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/handhelds.html",
-        imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/handhelds/index.html"
-        // sourceSrc: "nav-item"
+        imgFilePath: "foodImages/categoryImages/handhelds",
+        linkTo: "/menu/handhelds/index.html",
     },
     {
         name: "Large Plates",
         img: "slicedSteakPlatter",
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/largePlates.html",
-        imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/largePlates/index.html"
+        imgFilePath: "foodImages/categoryImages/largeplates",
+        linkTo: "/menu/largePlates/index.html",
     },
     {
         name: "Salads",
         img: "appleArugulaSaladChicken",
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/salads.html",
-        imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/salads/index.html"
+        imgFilePath: "foodImages/categoryImages/salads",
+        linkTo: "/menu/salads/index.html",
     },
     {
         name: "Sides & Snacks",
         img: "augVolcanoShrimp",
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/augVolcanoShrimp.html",
-        imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/sidesAndSnacks/index.html"
+        imgFilePath: "foodImages/categoryImages/sidesAndSnacks",
+        linkTo: "/menu/sidesAndSnacks/index.html",
     },
     {
         name: "Kids",
         img: "crispyChickenTenders",
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/crispyChickenTenders.html",
-        imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/kids/index.html"
+        imgFilePath: "foodImages/categoryImages/kids",
+        linkTo: "/menu/kids/index.html",
     },
     {
         name: "Desserts & Beverages",
         img: "oreoAndToastedPecanSundae",
         imgType: 'jpg',
         url: "/pages/mainMenu/menuCategories/dessertsAndBeverages.html",
-        imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/dessertsAndBeverages/index.html"
+        imgFilePath: "foodImages/categoryImages/dessertsAndBeverages",
+        linkTo: "/menu/dessertsAndBeverages/index.html",
     }
 ];
