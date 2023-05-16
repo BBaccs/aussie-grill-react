@@ -60,10 +60,7 @@ class MenuPages extends Component {
                                         <img class="w-100 subheading-img"
                                             src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
                                             alt="" /> 
-                                            {/* /Users/bebacks/code2/aussie-grill-react/public/assets/foodImages/productImages/largePlates/crispyChickenTenders500x375.jpg */}
-                                            {/* /assets/foodImages/productImages/largePlates/desktop/crispyChickenTenders500x375.jpg */}
                                     </div>
-                                    {/* src="/assets/foodImages/productImages/largePlates/desktop/crispyChickenTenders500x375.jpg" */}
                                     <div class="pt-3 product-content-wrapper">
                                         <p class="product-description">{item.pdpDescription}
                                         </p>
