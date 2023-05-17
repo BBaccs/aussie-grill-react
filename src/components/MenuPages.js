@@ -38,28 +38,23 @@ class MenuPages extends Component {
         console.log('categoryData2', categoryData)
         this.state = {
             category: categoryData,
+            // category: [],
             menuTitle: normalizeMenuCategory(menuCategory)
         };
-
     }
+
     // componentDidMount() {
     //     console.log('componentDidMount');
-    //     document.addEventListener('DOMContentLoaded', this.handleDOMContentLoaded);
-    // }
-
-    // componentWillUnmount() {
-    //     console.log('componentWillUnmount');
-    //     document.removeEventListener('DOMContentLoaded', this.handleDOMContentLoaded);
-    // }
-
-    // handleDOMContentLoaded = () => {
-    //     console.log('handleDOMContentLoaded', 'hFEFEEEEEEEi');
     //     const menuCategory = window.location.pathname.split('/')[2];
     //     const categoryData = this.getCategoryData(menuCategory);
     //     if (categoryData) {
-    //         this.setState({ category: categoryData });
+    //       this.setState({ category: categoryData });
     //     }
-    // }
+    //   }
+
+    //   componentWillUnmount() {
+    //     console.log('componentWillUnmount');
+    //   }
 
     getCategoryData(category) {
         switch (category) {
