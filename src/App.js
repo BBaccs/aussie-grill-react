@@ -18,7 +18,7 @@ function App() {
   const location = useLocation();
   return (
     <div className="App">
-      {/* <h1 class="sr-only">Welcome to Aussie Grill</h1> */}
+      <h1 class="sr-only">Welcome to Aussie Grill</h1>
       <NavBar />
       <main id="main-content">
         <Routes>

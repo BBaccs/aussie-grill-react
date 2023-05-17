@@ -42,24 +42,24 @@ class MenuPages extends Component {
         };
 
     }
-    componentDidMount() {
-        console.log('componentDidMount');
-        document.addEventListener('DOMContentLoaded', this.handleDOMContentLoaded);
-    }
+    // componentDidMount() {
+    //     console.log('componentDidMount');
+    //     document.addEventListener('DOMContentLoaded', this.handleDOMContentLoaded);
+    // }
 
-    componentWillUnmount() {
-        console.log('componentWillUnmount');
-        document.removeEventListener('DOMContentLoaded', this.handleDOMContentLoaded);
-    }
+    // componentWillUnmount() {
+    //     console.log('componentWillUnmount');
+    //     document.removeEventListener('DOMContentLoaded', this.handleDOMContentLoaded);
+    // }
 
-    handleDOMContentLoaded = () => {
-        console.log('handleDOMContentLoaded');
-        const menuCategory = window.location.pathname.split('/')[2];
-        const categoryData = this.getCategoryData(menuCategory);
-        if (categoryData) {
-            this.setState({ category: categoryData });
-        }
-    }
+    // handleDOMContentLoaded = () => {
+    //     console.log('handleDOMContentLoaded', 'hFEFEEEEEEEi');
+    //     const menuCategory = window.location.pathname.split('/')[2];
+    //     const categoryData = this.getCategoryData(menuCategory);
+    //     if (categoryData) {
+    //         this.setState({ category: categoryData });
+    //     }
+    // }
 
     getCategoryData(category) {
         switch (category) {
