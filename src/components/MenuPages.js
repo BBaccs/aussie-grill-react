@@ -87,7 +87,6 @@ class MenuPages extends Component {
         // console.log('test', this.state.category)
         return (
             <div id={`${this.state.category}-page`} class="menu-page">
-
                 <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div class="select-category-bg">
                         <a href="./../../menu/index.html">
@@ -96,7 +95,6 @@ class MenuPages extends Component {
                             </div>
                         </a>
                     </div>
-
                     <div class="menu-category menu-category-selected">
                         <div class="d-flex justify-content-center">
                             <img class="animal-graphic d-lg-none"
@@ -115,7 +113,6 @@ class MenuPages extends Component {
                                 src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png" alt="" />
                         </div>
                     </div>
-
                     {/* <!-- Start Menu Item Row--> */}
                     <div class="row px-lg-4 pt-lg-5 justify-content-center product-list-wrapper-lg">
                         {this.state.category.map((item, index) => (
@@ -137,16 +134,13 @@ class MenuPages extends Component {
                                 </div>
                             </div>
                         ))}
-
                     </div>
                     <div class="m-auto">
                         <a class="btn btn-primary btn-lg mr-5" href="./../../pickup.html">Order</a>
                     </div>
                 </div>
                 {/* <!-- End Menu Item Row--> */}
-
                 <div class="d-xl-none d-lg-none">
-
                     <div class="select-category-bg">
                         <a href="./../../menu/index.html">
                             <div class="d-flex">
@@ -154,7 +148,6 @@ class MenuPages extends Component {
                             </div>
                         </a>
                     </div>
-
                     <div class="menu-category menu-category-selected">
                         <div class="d-flex justify-content-center">
                             <div class="d-flex align-items-center w-100 flex-column pb-1">
@@ -171,7 +164,6 @@ class MenuPages extends Component {
                                 alt="" />
                         </div>
                     </div>
-
                     {this.state.category.map((item, index) => (
                         <div key={index} class="mobile-menu-item menu-item-bg">
                             {/* <!-- need display block / w-100 on anchor for ADA --> */}
@@ -200,7 +192,6 @@ class MenuPages extends Component {
                         </div>
                     ))}
                 </div>
-
             </div>
         );
     }
