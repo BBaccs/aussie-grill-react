@@ -1,6 +1,3 @@
-// @TODO FIX MENUCATEGORYCATA, it's got some kind of casing issue or i'm using the wrong data for one of them.
-// @TODO CLEAN UP CONDITIONALS
-// @TODO wrapper ID must be dynamic, and should be div (not a <main>)
 // @todo, could optimitze this so it's assets/mobile or assets/desktop, then just ite.imgfilepath which includes the img name and jpg or etc.
 // src={`/assets/${item.imgFilePath}/desktop/${item.img}500x375.jpg`}
 // You don't even need the "500X375" because you've got it divided by mobile/desktop/tablet.
@@ -17,9 +14,6 @@ import { kids } from "../data/menuData/kids.js";
 import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { Link } from 'react-router-dom';
 
-
-
-// Define normalizeMenuCategory function outside the component class
 function normalizeMenuCategory(category) {
     switch (category) {
         case 'handhelds':
@@ -71,7 +65,6 @@ class MenuPages extends Component {
     }
 
     getCategoryData(category) {
-        console.log('getCategoryData:', category)
         switch (category) {
             case 'handhelds':
                 return handHelds;
@@ -91,11 +84,11 @@ class MenuPages extends Component {
     }
 
     render() {
-        console.log('test', this.state.category)
+        // console.log('test', this.state.category)
         return (
-            <main id={`${this.state.category}-page`} class="menu-page">
+            <div id={`${this.state.category}-page`} class="menu-page">
 
-                <div onClick={this.handleClick} class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
+                <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div class="select-category-bg">
                         <a href="./../../menu/index.html">
                             <div class="d-flex">
@@ -208,7 +201,7 @@ class MenuPages extends Component {
                     ))}
                 </div>
 
-            </main>
+            </div>
         );
     }
 }
