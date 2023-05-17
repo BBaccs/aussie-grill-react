@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
 import { Routes, Route } from 'react-router-dom';
-import UseParamszzzz from "./components/UseParamszzzz.js";
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import "./css/custom.css";
