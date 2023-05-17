@@ -6,6 +6,7 @@ export const menuCategoryData = [
         url: "/pages/mainMenu/menuCategories/handhelds.html",
         imgFilePath: "foodImages/categoryImages/handhelds",
         linkTo: "/menu/handhelds/index.html",
+        titleDEscription: "100% USDA CHOICE BEEF"
     },
     {
         name: "Large Plates",
@@ -27,9 +28,9 @@ export const menuCategoryData = [
         name: "Sides & Snacks",
         img: "augVolcanoShrimp",
         imgType: 'jpg',
-        url: "/pages/mainMenu/menuCategories/augVolcanoShrimp.html",
+        url: "/pages/mainMenu/menuCategories/sidesAndSnacks.html",
         imgFilePath: "foodImages/categoryImages/sidesAndSnacks",
-        linkTo: "/menu/sidesAndSnacks/index.html",
+        linkTo: "/menu/sides&Snacks/index.html",
     },
     {
         name: "Kids",
@@ -43,8 +44,8 @@ export const menuCategoryData = [
         name: "Desserts & Beverages",
         img: "oreoAndToastedPecanSundae",
         imgType: 'jpg',
-        url: "/pages/mainMenu/menuCategories/dessertsAndBeverages.html",
+        url: "/pages/mainMenu/menuCategories/desserts&Beverages.html",
         imgFilePath: "foodImages/categoryImages/dessertsAndBeverages",
-        linkTo: "/menu/dessertsAndBeverages/index.html",
+        linkTo: "/menu/desserts&Beverages/index.html",
     }
 ];

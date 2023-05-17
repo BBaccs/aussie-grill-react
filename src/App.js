@@ -68,17 +68,13 @@ function App() {
 
 <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category Pages */}
-          <Route path={`/menu/:menuCategory/index.html`} element={
+          {/* <Route path={`/menu/:menuategory/index.html`} element={
           <>
             <UseParamszzzz />
-           </>}/>
-          {/* <Route path={`/menu/handhelds/index.html`} element={<MenuPages menuData={handHelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} /> */}
-          {/* <Route path={`/menu/largePlates/index.html`} element={<MenuPages menuData={largePlates} dataTitle={location.state} />} />
-          <Route path={`/menu/salads/index.html`} element={<MenuPages menuData={salads} dataTitle={location.state} />} />
-          <Route path={`/menu/sidesAndSnacks/index.html`} element={<MenuPages menuData={sidesAndSnacks} dataTitle={location.state} />} />
-          <Route path={`/menu/kids/index.html`} element={<MenuPages menuData={kids} dataTitle={location.state} />} />
-          <Route path={`/menu/dessertsAndBeverages/index.html`} element={<MenuPages menuData={dessertsAndBeverages} dataTitle={location.state} />} /> */}
-
+           </>}/> */}
+           {/* REMOVE TITLE DESCREIPTION PROP? */}
+          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
+          <Route path={`/menu/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
           <Route
             exact path={'/pickup.html'}
             element={

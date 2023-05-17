@@ -4,9 +4,6 @@ import { menuCategoryData } from "../data/menuCategoryData.js";
 
 
 class MenuItems extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const menuItems = menuCategoryData.map((menuItem, index) => (
         /* <!-- Menu Item --> */

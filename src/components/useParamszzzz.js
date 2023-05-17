@@ -12,8 +12,8 @@ function UseParamszzzz() {
     console.log(`HELLO, ${menuCategory}`)
     return (
         <>
-            <h1>ID: {menuCategory}</h1>
-            <MenuPages menuData={handHelds} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />
+            <h1>fROM PARAMSZZ{menuCategory}</h1>
+            <MenuPages menuData={largePlates} dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />
         </>
     );
 
