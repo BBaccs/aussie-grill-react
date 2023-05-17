@@ -27,7 +27,6 @@ class NavBar extends Component {
         this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
     }
 
-
     render() {
         function logURLChanges() {
             let prevPathname = window.location.pathname;
