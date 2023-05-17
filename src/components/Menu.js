@@ -1,4 +1,5 @@
 // @TODO FIX MENUCATEGORYCATA, it's got some kind of casing issue or i'm using the wrong data for one of them.
+// @TODO remove state={} from links, because we can just grab the location/href.
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
