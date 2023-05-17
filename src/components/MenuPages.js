@@ -1,9 +1,6 @@
 // @todo, could optimitze this so it's assets/mobile or assets/desktop, then just ite.imgfilepath which includes the img name and jpg or etc.
 // src={`/assets/${item.imgFilePath}/desktop/${item.img}500x375.jpg`}
 // You don't even need the "500X375" because you've got it divided by mobile/desktop/tablet.
-
-
-
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { handHelds } from '../data/menuData/handHelds.js';
@@ -38,9 +35,9 @@ class MenuPages extends Component {
         super(props);
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
-
+        console.log('categoryData2', categoryData)
         this.state = {
-            category: categoryData ? categoryData : [],
+            category: categoryData,
             menuTitle: normalizeMenuCategory(menuCategory)
         };
 

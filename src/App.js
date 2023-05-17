@@ -1,25 +1,18 @@
 /* @TODO - use state (instead of props) for Navbar changes - franchise, homepage etc.? */
+import "./css/custom.css";
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
-import { Routes, Route } from 'react-router-dom';
-import { franchiseNavItems } from "./data/franchiseNavItems";
-import { navItems } from "./data/navItems.js";
-import "./css/custom.css";
 import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
-import { handHelds } from './data/menuData/handHelds.js';
-import { largePlates } from './data/menuData/largePlates.js';
-import { dessertsAndBeverages } from './data/menuData/dessertsAndBeverages.js';
-import { kids } from './data/menuData/kids.js';
-import { salads } from './data/menuData/salads.js';
-import { sidesAndSnacks } from './data/menuData/sidesAndSnacks.js';
-import { dumbyData } from './data/menuData/dumbyData.js';
+import { franchiseNavItems } from "./data/franchiseNavItems";
+import { navItems } from "./data/navItems.js";
+import { Routes, Route } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
-import { allMenus } from './data/menuData/allMenus.js';
+
 
 function App() {
   const location = useLocation();
