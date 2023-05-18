@@ -23,7 +23,8 @@ class MenuPages extends Component {
                                         <div className="h2">{item.name}</div>
                                     </div>
                                     <div>
-                                        <img class="w-100 subheading-img"
+                                        {/* Fix the largeplates image bug here, ALSO, remove category image (pointless) and restructure deskop/mobile images folders. */}
+                                        <img className="w-100 subheading-img"
                                             src={`/assets/foodImages/categoryImages/mobile/${item.img}345x260.jpg`}
                                             alt="" />
                                     </div>

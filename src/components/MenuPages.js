@@ -112,7 +112,7 @@ class MenuPages extends Component {
                                         <div className="h3">{item.name}</div>
                                     </div>
                                     <div>
-                                        <img class="w-100 subheading-img"
+                                        <img className="w-100 subheading-img"
                                             src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
                                             alt="" />
                                     </div>
