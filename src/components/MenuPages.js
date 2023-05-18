@@ -105,8 +105,8 @@ class MenuPages extends Component {
                     {/* <!-- Start Menu Item Row--> */}
                     <div class="row px-lg-4 pt-lg-5 justify-content-center product-list-wrapper-lg">
                         {this.state.category.map((item, index) => (
-                            <div key={index}>
-                                <div
+                            <>
+                                <div key={index}
                                     class="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
                                     <div class="primary-subheading-wrapper ">
                                         <div className="h3">{item.name}</div>
@@ -121,7 +121,7 @@ class MenuPages extends Component {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </>
                         ))}
                     </div>
                     <div class="m-auto">
