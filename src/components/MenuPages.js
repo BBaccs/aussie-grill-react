@@ -1,6 +1,8 @@
 // @todo, could optimitze this so it's assets/mobile or assets/desktop, then just ite.imgfilepath which includes the img name and jpg or etc.
 // src={`/assets/${item.imgFilePath}/desktop/${item.img}500x375.jpg`}
 // You don't even need the "500X375" because you've got it divided by mobile/desktop/tablet.
+
+//Could add a loading spinner in between the time it takes to load
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { handHelds } from '../data/menuData/handHelds.js';
@@ -35,26 +37,21 @@ class MenuPages extends Component {
         super(props);
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
-        console.log('categoryData2', categoryData)
+        console.log('render, category data', categoryData)
         this.state = {
-            category: categoryData,
-            // category: [],
+            category: [],
             menuTitle: normalizeMenuCategory(menuCategory)
         };
     }
 
-    // componentDidMount() {
-    //     console.log('componentDidMount');
-    //     const menuCategory = window.location.pathname.split('/')[2];
-    //     const categoryData = this.getCategoryData(menuCategory);
-    //     if (categoryData) {
-    //       this.setState({ category: categoryData });
-    //     }
-    //   }
-
-    //   componentWillUnmount() {
-    //     console.log('componentWillUnmount');
-    //   }
+    componentDidMount() {
+        console.log('componentDidMount');
+        const menuCategory = window.location.pathname.split('/')[2];
+        const categoryData = this.getCategoryData(menuCategory);
+        if (categoryData) {
+          this.setState({ category: categoryData });
+        }
+      }
 
     getCategoryData(category) {
         switch (category) {
