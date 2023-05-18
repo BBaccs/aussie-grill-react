@@ -30,7 +30,7 @@ class MenuItems extends Component {
         const rows = [];
         for (let i = 0; i < menuItems.length; i += 3) {
             rows.push(
-                <div key={i} className="row px-lg-4 justify-content-center">
+                <div key={i} className="row px-lg-4 justify-content-center mb-5">
                   {menuItems.slice(i, i + 3)}
                 </div>
               );
