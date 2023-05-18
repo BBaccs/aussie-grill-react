@@ -11,7 +11,7 @@ export const menuCategoryData = [
     {
         name: "Large Plates",
         img: "slicedSteakPlatter",
-        imgType: 'jpg',
+        imgType: 'jpeg',
         url: "/pages/mainMenu/menuCategories/largePlates.html",
         imgFilePath: "foodImages/categoryImages/largeplates",
         linkTo: "/menu/largePlates/index.html",
