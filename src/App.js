@@ -12,7 +12,7 @@ import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import { Routes, Route } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
-
+import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 
 function App() {
   const location = useLocation();
@@ -36,6 +36,8 @@ function App() {
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
+          { /*  Menu Category for CATERING */}
+          <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
           {/* REMOVE TITLE DESCREIPTION PROP? */}
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
