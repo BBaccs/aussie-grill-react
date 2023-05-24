@@ -1,8 +1,8 @@
-/* Can imgfiel path be deleted in data set? */
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 
 
+/* Handheld link works because it's the only way that's not using location.state, merge the two components */
 class MenuItems extends Component {
     render() {
         const menuItems = menuCategoryData.map((menuItem, index) => (
@@ -17,10 +17,10 @@ class MenuItems extends Component {
                     <div>
                         <picture>
                             <source
-                                srcSet={`/assets/foodImages/categoryImages/desktop/${menuItem.img}500x375.${menuItem.imgType}`}
+                                srcSet={`/assets/foodImages/categoryImages/desktop/500x375${menuItem.img}`}
                                 media="(min-width: 768px)" />
                             <img class="w-100 menu-item-img"
-                                srcSet={`/assets/foodImages/categoryImages/mobile/${menuItem.img}345x260.${menuItem.imgType}`}
+                                srcSet={`/assets/foodImages/categoryImages/mobile/345x260${menuItem.img}`}
                                 alt="" />
                         </picture>
                     </div>

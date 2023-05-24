@@ -1,10 +1,9 @@
 // @todo, could optimitze this so it's assets/mobile or assets/desktop, then just ite.imgfilepath which includes the img name and jpg or etc.
 // src={`/assets/${item.imgFilePath}/desktop/${item.img}500x375.jpg`}
 // You don't even need the "500X375" because you've got it divided by mobile/desktop/tablet.
-
+// This may be a better way but not worth refactoring at this point.
 //Could add a loading spinner in between the time it takes to load
 import React, { Component } from "react";
-import { menuCategoryData } from "../data/menuCategoryData.js";
 import { handHelds } from '../data/menuData/handHelds.js';
 import { largePlates } from '../data/menuData/largePlates.js';
 import { salads } from "../data/menuData/salads.js";
@@ -37,7 +36,6 @@ class MenuPages extends Component {
         super(props);
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
-        console.log('render, category data', categoryData)
         this.state = {
             category: [],
             menuTitle: normalizeMenuCategory(menuCategory)
@@ -73,7 +71,6 @@ class MenuPages extends Component {
     }
 
     render() {
-        // console.log('test', this.state.category)
         return (
             <div id={`${this.state.category}-page`} class="menu-page">
                 <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
@@ -156,7 +153,7 @@ class MenuPages extends Component {
                     {this.state.category.map((item, index) => (
                         <div key={index} class="mobile-menu-item menu-item-bg">
                             {/* <!-- need display block / w-100 on anchor for ADA --> */}
-                            <a class="d-block" href={item.src}>
+                            <a class="d-block" href={item.linkTo}>
                                 {!item.new ?
                                     <>
                                         {
