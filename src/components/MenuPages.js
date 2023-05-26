@@ -11,6 +11,8 @@ import { sidesAndSnacks } from "../data/menuData/sidesAndSnacks.js";
 import { kids } from "../data/menuData/kids.js";
 import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { Link } from 'react-router-dom';
+import { CateringCategoryData } from "../data/cateringMenuData/CateringCategoryData.js";
+import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 
 function normalizeMenuCategory(category) {
     switch (category) {
@@ -26,6 +28,12 @@ function normalizeMenuCategory(category) {
             return 'Kids';
         case 'desserts&Beverages':
             return 'Desserts & Beverages';
+        case 'platters':
+            return 'Platters';
+        case 'platters':
+            return 'Salad Platter';
+        case 'platters':
+            return 'Desserts & Sides';
         default:
             return null;
     }
@@ -46,10 +54,11 @@ class MenuPages extends Component {
         console.log('componentDidMount');
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
+        console.log(menuCategory, window.location.pathname)
         if (categoryData) {
-          this.setState({ category: categoryData });
+            this.setState({ category: categoryData });
         }
-      }
+    }
 
     getCategoryData(category) {
         switch (category) {
@@ -65,17 +74,21 @@ class MenuPages extends Component {
                 return kids;
             case 'desserts&Beverages':
                 return dessertsAndBeverages;
+            case 'platters':
+                return plattersCatering;
             default:
                 return null;
         }
     }
 
     render() {
+        let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
         return (
             <div id={`${this.state.category}-page`} class="menu-page">
                 <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div class="select-category-bg">
-                        <a href="./../../menu/index.html">
+
+                        <a href={menuCategoryPage}>
                             <div class="d-flex">
                                 <h1 class="w-100 py-4 my-1">Select New Category ^</h1>
                             </div>
@@ -128,7 +141,7 @@ class MenuPages extends Component {
                 {/* <!-- End Menu Item Row--> */}
                 <div class="d-xl-none d-lg-none">
                     <div class="select-category-bg">
-                        <a href="./../../menu/index.html">
+                        <a href={menuCategoryPage}>
                             <div class="d-flex">
                                 <h1 class="w-100 py-4 my-1">Select New Category ^</h1>
                             </div>

@@ -16,6 +16,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 
+
 function App() {
   const location = useLocation();
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category for CATERING */}
           <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
+          <Route path={`/catering/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
           {/* REMOVE TITLE DESCREIPTION PROP? */}
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
