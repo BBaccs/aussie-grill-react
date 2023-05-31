@@ -13,6 +13,8 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { Link } from 'react-router-dom';
 import { CateringCategoryData } from "../data/cateringMenuData/CateringCategoryData.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
+import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
+import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
 
 function normalizeMenuCategory(category) {
     switch (category) {
@@ -30,9 +32,9 @@ function normalizeMenuCategory(category) {
             return 'Desserts & Beverages';
         case 'platters':
             return 'Platters';
-        case 'platters':
-            return 'Salad Platter';
-        case 'platters':
+        case 'saladPlatter':
+            return 'Salad Platters';
+        case 'desserts&Sides':
             return 'Desserts & Sides';
         default:
             return null;
@@ -76,6 +78,10 @@ class MenuPages extends Component {
                 return dessertsAndBeverages;
             case 'platters':
                 return plattersCatering;
+            case 'saladPlatter':
+                return saladPlattersCatering;
+            case 'desserts&Sides':
+                return dessertsAndSidesCatering;
             default:
                 return null;
         }
