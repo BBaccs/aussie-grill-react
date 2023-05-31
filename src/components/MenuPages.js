@@ -127,11 +127,13 @@ class MenuPages extends Component {
                                     <div class="primary-subheading-wrapper ">
                                         <div className="h3">{item.name}</div>
                                     </div>
-                                    <div>
-                                        <img className="w-100 subheading-img"
-                                            src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
-                                            alt="" />
-                                    </div>
+                                    {!item.imgFilePath ? '' :
+                                        <div>
+                                            <img className="w-100 subheading-img"
+                                                src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
+                                                alt="" />
+                                        </div>
+                                    }
                                     <div class="pt-3 product-content-wrapper">
                                         <p class="product-description">{item.pdpDescription}
                                         </p>
