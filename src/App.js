@@ -11,6 +11,7 @@ import ACarousel from "./components/Carousel.js";
 import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
+import PDP from './hooks/PDP.js';
 import { franchiseNavItems } from "./data/franchiseNavItems";
 import { navItems } from "./data/navItems.js";
 import { Routes, Route } from 'react-router-dom';
@@ -38,6 +39,8 @@ function App() {
             }
           />
 
+          <Route path={`/menu/handhelds/baconBombBurger.html`} element={<PDP />} />
+
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category for CATERING */}
@@ -46,6 +49,7 @@ function App() {
           {/* REMOVE TITLE DESCREIPTION PROP? */}
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
+
           <Route
             exact path={'/pickup.html'}
             element={

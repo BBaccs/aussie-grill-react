@@ -2,42 +2,42 @@ export const sidesAndSnacks = [
     {
       name: "AUSSIE PETALS",
       img: "aussiePetals.jpg",
-      linkTo: "/pages/mainMenu/salads/aussiePetals.html",
+      linkTo: "/menu/salads/aussiePetals.html",
       imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy, spicy onion petals, Aussie sauce.",
     },
     {
       name: "AUSSIE CHEESE FRIES",
       img: "aussieCheeseFries.jpg",
-      linkTo: "/pages/mainMenu/salads/aussieCheeseFries.html",
+      linkTo: "/menu/salads/aussieCheeseFries.html",
       imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy fries, melted cheese, bacon.",
     },
     {
       name: "CRISPY CAJUN SHRIMP",
       img: "crispyCajunShrimp.jpg",
-      linkTo: "/pages/mainMenu/salads/crispyCajunShrimp.html",
+      linkTo: "/menu/salads/crispyCajunShrimp.html",
       imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy shrimp tossed in creamy Cajun sauce.",
     },
     {
       name: "Fries",
       // img: "",
-      linkTo: "/pages/mainMenu/salads/fries.html",
+      linkTo: "/menu/salads/fries.html",
       // imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Crispy french fries perfectly seasoned."
     },
     {
       name: "HOUSE SALAD",
       // img: "",
-      linkTo: "/pages/mainMenu/salads/appleArugulaSalad.html",
+      linkTo: "/menu/salads/appleArugulaSalad.html",
       // imgFilePath: "foodImages/productImages/sidesandSnacks",
       pdpDescription: "Greens, onion, tomato, cucumber, and choice of dressing."
     },
     {
     name: "COLESLAW",
     // img: "",
-    linkTo: "/pages/mainMenu/salads/COLESLAW.html",
+    linkTo: "/menu/salads/COLESLAW.html",
     // imgFilePath: "foodImages/productImages/sidesandSnacks",
     pdpDescription: "House-made coleslaw."
   }

@@ -2,7 +2,7 @@ export const dumbyData = [
     {
       name: "BACON BOMB BURGER",
       img: "baconBombBurger",
-      linkTo: "/pages/mainMenu/handhelds/baconBombBurger.html",
+      linkTo: "/menu/handhelds/baconBombBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "BBQ baby back ribs, spicy BBQ sauce & choice of side.",
       pdpPreview: 'Best in Tampa'
@@ -10,14 +10,14 @@ export const dumbyData = [
     {
       name: "BRISKET STACK BURGER",
       img: "brisketStackBurger",
-      linkTo: "/pages/mainMenu/handhelds/brisketStackBurger.html",
+      linkTo: "/menu/handhelds/brisketStackBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Brisket, cheese, japanelos, and onions.",
     },
     {
       name: "CLASSIC CHEESEBURGER",
       img: "classicBurgerWithFries",
-      linkTo: "/pages/mainMenu/handhelds/classicBurgerWithFries.html",
+      linkTo: "/menu/handhelds/classicBurgerWithFries.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Beef burger, American cheese, house-made pickles, lettuce, tomato, and aioli.",
       new: true
@@ -25,7 +25,7 @@ export const dumbyData = [
     {
       name: "AUSSIE BURGER",
       img: "aussieBurger",
-      linkTo: "/pages/mainMenu/handhelds/aussieBurger.html",
+      linkTo: "/menu/handhelds/aussieBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Beef burger, American cheese, crispy onion petals, Aussie sauce, house-made pickles, lettuce, tomato.",
       pdpPreview: 'test'
@@ -33,7 +33,7 @@ export const dumbyData = [
     {
       name: "JAMMIN' CHICKEN SANDWICH",
       img: "jamminChickenSandwich",
-      linkTo: "/pages/mainMenu/handhelds/jamminChickenSandwich.html",
+      linkTo: "/menu/handhelds/jamminChickenSandwich.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Grilled chicken, Cheddar cheese, bacon onion jam, pickled jalapeños, lettuce, tomato, aioli.",
       pdpPreview: 'testinggg'
@@ -41,21 +41,21 @@ export const dumbyData = [
     {
       name: "IMPOSSIBLE BURGER™",
       img: "impossibleBurgerWithKettleChips",
-      linkTo: "/pages/mainMenu/handhelds/impossibleBurgerWithKettleChips.html",
+      linkTo: "/menu/handhelds/impossibleBurgerWithKettleChips.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Meat free vegetable burger so good you'll being saying it's impossible!"
     },
     {
       name: "CRISPY SHRIMP PO'BOY",
       img: "crispyshrimpPoBoy",
-      linkTo: "/pages/mainMenu/handhelds/crispyshrimpPoBoy.html",
+      linkTo: "/menu/handhelds/crispyshrimpPoBoy.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Crispy shrimp, house-made pickles, creamy Cajun sauce, lettuce, tomato."
     },
     {
       name: "CRISPY SRIRACHA CHICKEN SANDWICH",
       img: "crispyChickenSrirachaSandwich",
-      linkTo: "/pages/mainMenu/handhelds/crispyChickenSrirachaSandwich.html",
+      linkTo: "/menu/handhelds/crispyChickenSrirachaSandwich.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Hand-breaded crispy chicken, house-made pickles, spicy honey Sriracha sauce, lettuce, tomato, aioli."
     }

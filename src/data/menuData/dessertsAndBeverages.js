@@ -2,35 +2,35 @@ export const dessertsAndBeverages = [
   {
     name: "SALTED CARAMEL COOKIE",
     img: "saltedCaramelCookie.jpg",
-    linkTo: "/pages/mainMenu/salads/saltedCaramelCookie.html",
+    linkTo: "/menu/salads/saltedCaramelCookie.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels.",
   },
   {
     name: "SALTED CARAMEL COOKIE",
     img: "saltedCaramelCookie.jpg",
-    linkTo: "/pages/mainMenu/salads/saltedCaramelCookie.html",
+    linkTo: "/menu/salads/saltedCaramelCookie.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels.",
   },
   {
     name: "SALTED CARAMEL COOKIE",
     img: "saltedCaramelCookie.jpg",
-    linkTo: "/pages/mainMenu/salads/saltedCaramelCookie.html",
+    linkTo: "/menu/salads/saltedCaramelCookie.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels."
   },
   {
     name: "GHIRARDELLI DOUBLE DARK CHOCOLATE BROWNIE",
     img: "ghirardelliDoubleDarkChocolateBrownie.jpg",
-    linkTo: "/pages/mainMenu/salads/ghirardelliDoubleDarkChocolateBrownie.html",
+    linkTo: "/menu/salads/ghirardelliDoubleDarkChocolateBrownie.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "Rich double dark chocolate brownie."
   },
   {
     name: "DOUBLE DARK CHOCOLATE BROWNIE SUNDAE",
     img: "sundaeChocolate.jpg",
-    linkTo: "/pages/mainMenu/salads/sundaeChocolate345x260.html",
+    linkTo: "/menu/salads/sundaeChocolate345x260.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpPreview: "*ONLY AVAILABLE AT LUTZ LOCATION.*",
     pdpDescription: "Creamy custard, chocolate sauce, with pieces of Double Dark Chocolate Brownie and whipped cream.",
@@ -39,7 +39,7 @@ export const dessertsAndBeverages = [
   {
     name: "SALTED CARAMEL COOKIE SUNDAE",
     img: "saltedCaramelCookieSundae.jpg",
-    linkTo: "/pages/mainMenu/salads/saltedCaramelCookie.html",
+    linkTo: "/menu/salads/saltedCaramelCookie.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpPreview: "*ONLY AVAILABLE AT LUTZ LOCATION.*",
     pdpDescription: "Creamy custard, caramel and chocolate sauce, with pieces of house-baked Salted Caramel Cookie and whipped cream.",
@@ -47,30 +47,30 @@ export const dessertsAndBeverages = [
   },
   {
     name: "NOT YO' MAMA'S LEMONADE",
-    linkTo: "/pages/mainMenu/salads/notYoMamasLemonade.html",
+    linkTo: "/menu/salads/notYoMamasLemonade.html",
     pdpDescription: "House-made sweet, tart, tangy lemonade with a hint of heat."
   },
   {
     name: "NOT YO' MAMA'S WATERMELON LEMONADE",
-    linkTo: "/pages/mainMenu/salads/notYoMamasWatermelonLemonade.html",
+    linkTo: "/menu/salads/notYoMamasWatermelonLemonade.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "House-made sweet, tart, tangy watermelon lemonade with a hint of heat."
   },
   {
     name: "ICED TEA",
-    linkTo: "/pages/mainMenu/salads/icedTea.html",
+    linkTo: "/menu/salads/icedTea.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "Sweet and Unsweet Iced Tea available."
   },
   {
     name: "SOFT DRINKS",
-    linkTo: "/pages/mainMenu/salads/saltedsoftDrinksCaramelCookie.html",
+    linkTo: "/menu/salads/saltedsoftDrinksCaramelCookie.html",
     pdpDescription: "Coca-Cola® Products.",
   },
   {
     name: "BEER & SELTZER",
     img: "saltedCaramelCookie.jpg",
-    linkTo: "/pages/mainMenu/salads/beerAndSeltzer.html",
+    linkTo: "/menu/salads/beerAndSeltzer.html",
     imgFilePath: "foodImages/productImages/dessertsAndBeverages",
     pdpDescription: "Variety of beer and seltzer flavors.",
     pdpDescription2: "ONLY AVAILABLE AT LUTZ AND BRANDON BLVD. LOCATIONS."
@@ -78,7 +78,7 @@ export const dessertsAndBeverages = [
   {
     name: "BOTTLED BEVERAGES",
     img: "saltedCaramelCookie.jpg",
-    linkTo: "/pages/mainMenu/salads/bottledBeverages.html",
+    linkTo: "/menu/salads/bottledBeverages.html",
     pdpDescription: "Variety of bottled beverages."
   }
 ];
