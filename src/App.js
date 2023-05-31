@@ -1,4 +1,7 @@
 /* @TODO - use state (instead of props) for Navbar changes - franchise, homepage etc.? */
+// Is menu items component necessarry? it's on home page but maybe should be deleted.
+// (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
+// Fix footer links
 import "./css/custom.css";
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
@@ -13,6 +16,7 @@ import { navItems } from "./data/navItems.js";
 import { Routes, Route } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
+
 
 function App() {
   const location = useLocation();
@@ -38,6 +42,7 @@ function App() {
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category for CATERING */}
           <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
+          <Route path={`/catering/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
           {/* REMOVE TITLE DESCREIPTION PROP? */}
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
