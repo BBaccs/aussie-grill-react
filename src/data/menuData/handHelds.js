@@ -11,7 +11,7 @@ export const handHelds = [
       img: "brisketStackBurger.jpg",
       linkTo: "/menu/handhelds/brisketStackBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
-      pdpDescription: "Brisket, cheese, japanelos, and onions.",
+      pdpDescription: "Brisket, cheese, japanelos, and onions."
     },
     {
       name: "CLASSIC CHEESEBURGER",
