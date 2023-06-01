@@ -40,6 +40,8 @@ function App() {
           />
 
           <Route path={`/menu/handhelds/baconBombBurger.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/brisketStackBurger.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/classicBurgerWithFries.html`} element={<PDP />} />
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
