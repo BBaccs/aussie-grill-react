@@ -49,7 +49,7 @@ element={
 }
 />
 <Route
-path={'/menu/dessertsAndBeverages/index.html'}
+path={'/menu/desserts&Beverages/index.html'}
 element={
   <>
     <MenuPages menuData={dessertsAndBeverages} dataTitle={location.state} />

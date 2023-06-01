@@ -49,10 +49,27 @@ function App() {
           <Route path={`/menu/handhelds/crispySrirachaChickenSandwich.html`} element={<PDP />} />
 
           <Route path={`/menu/largePlates/crispyChickenTenders.html`} element={<PDP />} />
-
           <Route path={`/menu/largePlates/toppedGrilledChicken.html`} element={<PDP />} />
-
           <Route path={`/menu/largePlates/center-cutSirloin.html`} element={<PDP />} />
+
+          <Route path={`/menu/salads/aussieSalad.html`} element={<PDP />} />
+          <Route path={`/menu/salads/appleArugulaSalad.html`} element={<PDP />} />
+
+          <Route path={`/menu/sides&Snacks/aussiePetals.html`} element={<PDP />} />
+          <Route path={`/menu/sides&Snacks/aussieCheeseFries.html`} element={<PDP />} />
+          <Route path={`/menu/sides&Snacks/fries.html`} element={<PDP />} />
+          <Route path={`/menu/sides&Snacks/appleArugulaSalad.html`} element={<PDP />} />
+          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
+
+          <Route path={`/menu/kids/kidsCrispyChickenTenders.html`} element={<PDP />} />
+          <Route path={`/menu/kids/kidsCheeseburger.html`} element={<PDP />} />
+          <Route path={`/menu/kids/kidsGrilledCheeseSandwich.html`} element={<PDP />} />
+
+          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
+          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
+          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
+
+
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
