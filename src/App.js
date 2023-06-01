@@ -23,7 +23,7 @@ function App() {
   const location = useLocation();
   return (
     <div className="App">
-      <h1 class="sr-only">Welcome to Aussie Grill</h1>
+      <h1 className="sr-only">Welcome to Aussie Grill</h1>
       <NavBar />
       <main id="main-content">
         <Routes>
@@ -32,7 +32,7 @@ function App() {
             element={
               <>
                 <ACarousel />
-                <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+                <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
                   <MenuItems />
                 </div>
               </>
@@ -41,6 +41,10 @@ function App() {
 
           <Route path={`/menu/handhelds/baconBombBurger.html`} element={<PDP />} />
           <Route path={`/menu/handhelds/brisketStackBurger.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/classicBurgerWithFries.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/aussieBurger.html`} element={<PDP />} />
+          {/* <Route path={`/menu/handhelds/jamminChickenSandwich.html`} element={<PDP />} /> */}
+          <Route path={`/menu/handhelds/impossibleBurger.html`} element={<PDP />} />
           <Route path={`/menu/handhelds/classicBurgerWithFries.html`} element={<PDP />} />
 
           { /*  Menu Category Pages */}
@@ -55,7 +59,7 @@ function App() {
           <Route
             exact path={'/pickup.html'}
             element={
-              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+              <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
                 <AModal />
               </div>
             }
@@ -64,7 +68,7 @@ function App() {
           <Route
             exact path={'/franchise.html'}
             element={
-              <div id="homepage-container-fluid" class="container-fluid-fluid py-5">
+              <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
                 {/* <NavBar navData={franchiseNavItems} /> */}
                 <HeroImg img={"productPlaceholderImage.jpg"} />
               </div>
@@ -84,10 +88,10 @@ function App() {
       </main>
       <Footer />
       {/* <!-- ORDER FOOD CTA --> */}
-      <div class="cta-wrapper">
-        <div class="d-flex container-fluid justify-content-between align-items-center cta-banner">
-          <img class="bull-cta" src="./assets/agGraphicElements/animals/mobile/bullFullSmall.png" alt="" />
-          <a href="/pickup.html" class="btn btn-primary cta-primary">Order now</a>
+      <div className="cta-wrapper">
+        <div className="d-flex container-fluid justify-content-between align-items-center cta-banner">
+          <img className="bull-cta" src="./assets/agGraphicElements/animals/mobile/bullFullSmall.png" alt="" />
+          <a href="/pickup.html" className="btn btn-primary cta-primary">Order now</a>
         </div>
       </div>
     </div>

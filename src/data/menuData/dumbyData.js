@@ -41,7 +41,7 @@ export const dumbyData = [
     {
       name: "IMPOSSIBLE BURGER™",
       img: "impossibleBurgerWithKettleChips",
-      linkTo: "/menu/handhelds/impossibleBurgerWithKettleChips.html",
+      linkTo: "/menu/handhelds/impossibleBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Meat free vegetable burger so good you'll being saying it's impossible!"
     },
