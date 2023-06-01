@@ -48,6 +48,12 @@ function App() {
           <Route path={`/menu/handhelds/crispyshrimpPoBoy.html`} element={<PDP />} />
           <Route path={`/menu/handhelds/crispySrirachaChickenSandwich.html`} element={<PDP />} />
 
+          <Route path={`/menu/largePlates/crispyChickenTenders.html`} element={<PDP />} />
+
+          <Route path={`/menu/largePlates/toppedGrilledChicken.html`} element={<PDP />} />
+
+          <Route path={`/menu/largePlates/center-cutSirloin.html`} element={<PDP />} />
+
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category for CATERING */}

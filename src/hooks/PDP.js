@@ -5,37 +5,36 @@ import { salads } from "../data/menuData/salads.js";
 import { sidesAndSnacks } from "../data/menuData/sidesAndSnacks.js";
 import { kids } from "../data/menuData/kids.js";
 import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
-import { CateringCategoryData } from "../data/cateringMenuData/CateringCategoryData.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
 
-let menuData = handHelds;
+// let menuData = handHelds;
 
-// getCategoryData(category) {
-//     switch (category) {
-//         case 'handhelds':
-//             return handHelds;
-//         case 'largePlates':
-//             return largePlates;
-//         case 'salads':
-//             return salads;
-//         case 'sides&Snacks':
-//             return sidesAndSnacks;
-//         case 'kids':
-//             return kids;
-//         case 'desserts&Beverages':
-//             return dessertsAndBeverages;
-//         case 'platters':
-//             return plattersCatering;
-//         case 'saladPlatter':
-//             return saladPlattersCatering;
-//         case 'desserts&Sides':
-//             return dessertsAndSidesCatering;
-//         default:
-//             return null;
-//     }
-// }
+function getCategoryData(category) {
+    switch (category) {
+        case 'handhelds':
+            return handHelds;
+        case 'largePlates':
+            return largePlates;
+        case 'salads':
+            return salads;
+        case 'sides&Snacks':
+            return sidesAndSnacks;
+        case 'kids':
+            return kids;
+        case 'desserts&Beverages':
+            return dessertsAndBeverages;
+        case 'platters':
+            return plattersCatering;
+        case 'saladPlatter':
+            return saladPlattersCatering;
+        case 'desserts&Sides':
+            return dessertsAndSidesCatering;
+        default:
+            return null;
+    }
+}
 
 // function normalizeMenuCategory(category) {
 //     switch (category) {
@@ -70,6 +69,9 @@ let menuData = handHelds;
 
 function PDP() {
     const location = useLocation();
+    let category = location.pathname.split('/')[2];
+    let menuData = getCategoryData(category);
+    console.log('menuData', menuData);
     // console.log('handhelds', handHelds);
     // console.log(location.pathname[1], location.state, location)
     // const { pdpItem } = useParams()
@@ -77,7 +79,7 @@ function PDP() {
 
     console.log(location.pathname.split('/')[3]);
     let pathName = location.pathname.split('/')[3].replaceAll('.html', '').toLowerCase();
-    console.log(pathName)
+    console.log(pathName);
 
     return (
         <>
