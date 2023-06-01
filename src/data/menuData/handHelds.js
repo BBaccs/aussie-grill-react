@@ -15,8 +15,8 @@ export const handHelds = [
     },
     {
       name: "CLASSIC CHEESEBURGER",
-      img: "classicBurgerWithFries.jpg",
-      linkTo: "/menu/handhelds/classicBurgerWithFries.html",
+      img: "classicCheeseburger.jpg",
+      linkTo: "/menu/handhelds/classicCheeseburger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Beef burger, American cheese, house-made pickles, lettuce, tomato, and aioli."
     },
@@ -36,7 +36,7 @@ export const handHelds = [
     },
     {
       name: "IMPOSSIBLE BURGER™",
-      img: "impossibleBurgerWithKettleChips.jpg",
+      img: "impossibleBurger.jpg",
       linkTo: "/menu/handhelds/impossibleBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Meat free vegetable burger so good you'll being saying it's impossible!"
@@ -50,8 +50,8 @@ export const handHelds = [
     },
     {
       name: "CRISPY SRIRACHA CHICKEN SANDWICH",
-      img: "crispyChickenSrirachaSandwich.jpg",
-      linkTo: "/menu/handhelds/crispyChickenSrirachaSandwich.html",
+      img: "crispySrirachaChickenSandwich.jpg",
+      linkTo: "/menu/handhelds/crispySrirachaChickenSandwich.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Hand-breaded crispy chicken, house-made pickles, spicy honey Sriracha sauce, lettuce, tomato, aioli."
     }

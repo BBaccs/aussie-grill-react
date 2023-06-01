@@ -41,11 +41,12 @@ function App() {
 
           <Route path={`/menu/handhelds/baconBombBurger.html`} element={<PDP />} />
           <Route path={`/menu/handhelds/brisketStackBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/classicBurgerWithFries.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/classicCheeseBurger.html`} element={<PDP />} />
           <Route path={`/menu/handhelds/aussieBurger.html`} element={<PDP />} />
-          {/* <Route path={`/menu/handhelds/jamminChickenSandwich.html`} element={<PDP />} /> */}
+          <Route path={`/menu/handhelds/jamminChickenSandwich.html`} element={<PDP />} />
           <Route path={`/menu/handhelds/impossibleBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/classicBurgerWithFries.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/crispyshrimpPoBoy.html`} element={<PDP />} />
+          <Route path={`/menu/handhelds/crispySrirachaChickenSandwich.html`} element={<PDP />} />
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
