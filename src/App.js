@@ -65,9 +65,11 @@ function App() {
           <Route path={`/menu/kids/kidsCheeseburger.html`} element={<PDP />} />
           <Route path={`/menu/kids/kidsGrilledCheeseSandwich.html`} element={<PDP />} />
 
-          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
-          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
-          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
+          <Route path={`/menu/desserts&Beverages/saltedCaramelCookie.html`} element={<PDP />} />
+          <Route path={`/menu/desserts&Beverages/ghirardelliDoubleDarkChocolateBrownie.html`} element={<PDP />} />
+          <Route path={`/menu/desserts&Beverages/saltedCaramelCookieSundae.html`} element={<PDP />} />
+          <Route path={`/menu/desserts&Beverages/doubleDarkChocolateBrownieSundae.html`} element={<PDP />} />
+          
 
 
 
