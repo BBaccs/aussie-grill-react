@@ -37,7 +37,7 @@ export const handHelds = [
     {
       name: "IMPOSSIBLE BURGER™",
       img: "impossibleBurgerWithKettleChips.jpg",
-      linkTo: "/menu/handhelds/impossibleBurgerWithKettleChips.html",
+      linkTo: "/menu/handhelds/impossibleBurger.html",
       imgFilePath: "foodImages/productImages/handhelds",
       pdpDescription: "Meat free vegetable burger so good you'll being saying it's impossible!"
     },

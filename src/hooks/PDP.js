@@ -68,11 +68,6 @@ let menuData = handHelds;
 
 // }
 
-function normalizeItemName(item) {
-    let normalizedItem = item.name.replace(' ', '').toLowerCase();
-    return normalizedItem;
-}
-
 function PDP() {
     const location = useLocation();
     // console.log('handhelds', handHelds);
@@ -84,18 +79,12 @@ function PDP() {
     let pathName = location.pathname.split('/')[3].replaceAll('.html', '').toLowerCase();
     console.log(pathName)
 
-    // if (item.name.includes(pathName)) {
-    //     console.log(pathName)
-    // } else {
-    //     console.log('nope', item.name)
-    // }
-
     return (
         <>
             {menuData.map((item, index) => (
                 <div key={index} className="menu-page menu-page-bg product-description-page">
-                    {
-                        pathName.includes(item.name.replaceAll(' ', '').toLowerCase())
+                    { 
+                        pathName.includes(item.name.replaceAll(' ', '').replaceAll('™', '').replaceAll('\'', '').toLowerCase())
                             ? <div className="container-fluid mt-0 p-3 pt-4">
                                 {/* <!-- Responsive pictures --> */}
                                 <picture>
