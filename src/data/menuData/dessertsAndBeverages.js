@@ -39,13 +39,11 @@ export const dessertsAndBeverages = [
   {
     name: "NOT YO' MAMA'S WATERMELON LEMONADE",
     linkTo: "/menu/desserts&Beverages/notYoMamasWatermelonLemonade.html",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
     pdpDescription: "House-made sweet, tart, tangy watermelon lemonade with a hint of heat."
   },
   {
     name: "ICED TEA",
     linkTo: "/menu/desserts&Beverages/icedTea.html",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
     pdpDescription: "Sweet and Unsweet Iced Tea available."
   },
   {
@@ -55,15 +53,12 @@ export const dessertsAndBeverages = [
   },
   {
     name: "BEER & SELTZER",
-    img: "saltedCaramelCookie.jpg",
     linkTo: "/menu/salads/beerAndSeltzer.html",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
     pdpDescription: "Variety of beer and seltzer flavors.",
     pdpDescription2: "ONLY AVAILABLE AT LUTZ AND BRANDON BLVD. LOCATIONS."
   },
   {
     name: "BOTTLED BEVERAGES",
-    img: "saltedCaramelCookie.jpg",
     linkTo: "/menu/desserts&Beverages/bottledBeverages.html",
     pdpDescription: "Variety of bottled beverages."
   }
