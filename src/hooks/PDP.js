@@ -9,8 +9,6 @@ import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
 
-// let menuData = handHelds;
-
 function getCategoryData(category) {
     switch (category) {
         case 'handhelds':
@@ -83,7 +81,7 @@ function PDP() {
 
     return (
         <>
-          {menuData.map((item, index) => {
+          {menuData.map((item, index) => { 
             const normalizedItemName = item.name.replaceAll(' ', '').replaceAll('™', '').replaceAll('\'', '').toLowerCase();
             if (normalizedItemName === pathName) {
               return (

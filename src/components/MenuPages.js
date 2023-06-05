@@ -45,7 +45,7 @@ class MenuPages extends Component {
     constructor(props) {
         super(props);
         const menuCategory = window.location.pathname.split('/')[2];
-        const categoryData = this.getCategoryData(menuCategory);
+        // const categoryData = this.getCategoryData(menuCategory);
         this.state = {
             category: [],
             menuTitle: normalizeMenuCategory(menuCategory)
@@ -93,7 +93,6 @@ class MenuPages extends Component {
             <div id={`${this.state.category}-page`} class="menu-page">
                 <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div class="select-category-bg">
-
                         <a href={menuCategoryPage}>
                             <div class="d-flex">
                                 <h1 class="w-100 py-4 my-1">Select New Category ^</h1>
