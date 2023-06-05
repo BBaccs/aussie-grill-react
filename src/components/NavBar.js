@@ -67,13 +67,6 @@ class NavBar extends Component {
             '';
         return (
             <div>
-                {/* Skip Link */}
-                <a
-                    className="sr-only sr-only-focusable"
-                    href="#main-content"
-                >
-                    Skip to main content
-                </a>
                 {generateAlertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
@@ -89,7 +82,10 @@ class NavBar extends Component {
                                     this.props.navData.map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
-                                                <NavLink activeClassName="active-link" className="nav-link" to={link.url} title={link.title}>{link.name}</NavLink>
+                                                {
+                                                    link.externalLink
+                                                        ? <a className="nav-link" href={link.url}>{link.name}</a> :
+                                                        <NavLink activeClassName="active-link" className="nav-link" to={link.url} title={link.title}>{link.name}</NavLink>}
                                             </li>
                                         );
                                     })
@@ -97,7 +93,11 @@ class NavBar extends Component {
                                     this.props.navData.filter(link => link.name !== 'Order').map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass} nav-item`}>
-                                                <NavLink activeClassName="active-link" className="nav-link" to={link.url}>{link.name}</NavLink>
+                                                {
+                                                    link.externalLink
+                                                        ? <a className="nav-link" href={link.url}>{link.name}</a>
+                                                        : <NavLink activeClassName="active-link" className="nav-link" to={link.url}>{link.name}</NavLink>
+                                                }
                                             </li>
                                         );
                                     })
@@ -118,10 +118,13 @@ class NavBar extends Component {
                                 {this.props.navData.map((link, index) => {
                                     return (
                                         <li key={index} className="nav-item">
-                                            <NavLink 
-                                                className={isActive => "nav-link" + (!isActive ? " unselected" : "  active-link")} 
-                                                to={link.url}>{link.name}
-                                            </NavLink>
+                                            {
+                                                link.externalLink
+                                                    ? <a className="nav-link" href={link.url}>{link.name}</a> :
+                                                    <NavLink
+                                                        className={isActive => "nav-link" + (!isActive ? " unselected" : "  active-link")}
+                                                        to={link.url}>{link.name}
+                                                    </NavLink>}
                                         </li>
                                     );
                                 })}

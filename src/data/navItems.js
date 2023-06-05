@@ -8,8 +8,7 @@ export const navItems = [
         name: 'Order',
         url: 'pickup.html',
         // cateringPageUrl: 'https://www.ezcater.com/brand/pvt/aussie-grill',
-        target: "_blank",
-        title: 'Opens in a new tab'
+        target: "_self"
       },
     {
         name: 'Catering',
@@ -18,6 +17,7 @@ export const navItems = [
     },
     {
         name: 'Gift Cards',
+        externalLink: true,
         url: 'https://www.buyatab.com/custom/aussiegrill/?page=ecard',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_blank',
