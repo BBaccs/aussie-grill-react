@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
+import { Link } from 'react-router-dom';
 
 
 /* Handheld link works because it's the only way that's not using location.state, merge the two components */
@@ -7,8 +8,8 @@ class MenuItems extends Component {
     render() {
         const menuItems = menuCategoryData.map((menuItem, index) => (
         /* <!-- Menu Item --> */
-            <div key={index} class="col-lg-4 col-md-6 pt-lg-0 menu-item-col">
-                <a class="d-block" href={menuItem.linkTo}>
+            <div key={index} class="col-lg-4 col-md-6 pt-lg-0 menu-item-col"> 
+                <Link class="d-block" to={menuItem.linkTo} >
                     <div class="primary-subheading-wrapper">
                         <div class="w-100">
                             <div class="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>
@@ -24,7 +25,7 @@ class MenuItems extends Component {
                                 alt="" />
                         </picture>
                     </div>
-                </a>
+                </Link>
             </div>
         ));
         const rows = [];

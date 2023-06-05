@@ -7,11 +7,11 @@ export const CateringCategoryData = [
     linkTo: "/catering/platters/index.html",
 },
 {
-    name: "Salad Platter",
+    name: "Salad Platters",
     img: "saladPlatters.jpeg",
     // url: "/pages/catering/cateringMenu/saladPlatters.html",
     imgFilePath: "foodImages/categoryImages",
-    linkTo: "/catering/saladPlatter/index.html",
+    linkTo: "/catering/saladPlatters/index.html",
 },
 {
     name: "Desserts & sides",
