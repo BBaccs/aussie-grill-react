@@ -19,7 +19,9 @@ class MenuPages extends Component {
                         {this.props.menuData.map((item, index) => (
                             <div key={index}
                                 className="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
-                                <Link class="d-block" to={item.linkTo} state={ item.name.replace(/\s/g, '') }>
+                                {/* State can be assigned on link, keep here if needed */}
+                                {/* <Link class="d-block" to={item.linkTo} state={ item.name.replace(/\s/g, '') }> */}
+                                <Link class="d-block" to={item.linkTo}>
                                     <div className="primary-subheading-wrapper">
                                         <div className="h2">{item.name}</div>
                                     </div>
@@ -42,7 +44,7 @@ class MenuPages extends Component {
                     <ul>
                         {this.props.menuData.map((item, index) => (
                             <li key={index}>
-                                <Link className="d-block py-3 menu-item-bg" to={item.linkTo} state={ item.name.replace(/\s/g, '') } >
+                                <Link className="d-block py-3 menu-item-bg" to={item.linkTo} >
                                     <div className='h2'>{item.name}</div>
                                 </Link>
                             </li>

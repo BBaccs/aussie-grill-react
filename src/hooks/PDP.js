@@ -67,9 +67,13 @@ function getCategoryData(category) {
 
 function PDP() {
     const location = useLocation();
+
     let category = location.pathname.split('/')[2];
     let menuData = getCategoryData(category);
-    console.log('menuData', menuData);
+
+    // location.state = category;
+    // let testing = location.state;
+    // console.log('state', location.state);
     // console.log('handhelds', handHelds);
     // console.log(location.pathname[1], location.state, location)
     // const { pdpItem } = useParams()
@@ -77,7 +81,7 @@ function PDP() {
 
     console.log(location.pathname.split('/')[3]);
     let pathName = location.pathname.split('/')[3].replaceAll('.html', '').toLowerCase();
-    console.log(pathName);
+    // console.log(pathName);
 
     return (
         <>

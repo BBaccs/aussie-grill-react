@@ -9,7 +9,7 @@ class MenuItems extends Component {
         const menuItems = menuCategoryData.map((menuItem, index) => (
         /* <!-- Menu Item --> */
             <div key={index} class="col-lg-4 col-md-6 pt-lg-0 menu-item-col"> 
-                <Link class="d-block" to={menuItem.linkTo} state={ menuItem.name.replace(/\s/g, '') }>
+                <Link class="d-block" to={menuItem.linkTo} >
                     <div class="primary-subheading-wrapper">
                         <div class="w-100">
                             <div class="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>

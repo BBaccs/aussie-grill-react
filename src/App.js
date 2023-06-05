@@ -21,6 +21,13 @@ import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryDa
 
 function App() {
   const location = useLocation();
+  let category = location.pathname.split('/')[2];
+  let menuItem = location.pathname.split('/')[3];
+  location.state = category;
+  // console.log('location',location.state)
+  // console.log(menuItem)
+  // console.log(`${category}/${menuItem}`)
+
   return (
     <div className="App">
       <h1 className="sr-only">Welcome to Aussie Grill</h1>
@@ -39,14 +46,30 @@ function App() {
             }
           />
 
-          <Route path={`/menu/handhelds/baconBombBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/brisketStackBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/classicCheeseBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/aussieBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/jamminChickenSandwich.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/impossibleBurger.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/crispyshrimpPoBoy.html`} element={<PDP />} />
-          <Route path={`/menu/handhelds/crispySrirachaChickenSandwich.html`} element={<PDP />} />
+          
+
+
+
+          { /*  Menu Category Pages */}
+          <Route path={'/menu/index.html'} element={<Menu />} />
+          { /*  Menu Category for CATERING */}
+          <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
+          <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={location.state} />} />
+          {/* Individual Catering Menu PDP Pages */}
+          <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
+          {/* @TODO remove title description PROP? */}
+          { /*  Menu Category */}
+          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
+          <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={location.state} />} />
+          {/* Individual Menu PDP Pages */}
+          <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
+          {/* <Route path={`/menu/${category}/brisketStackBurger.html`} element={<PDP />} />
+          <Route path={`/menu/${category}/classicCheeseBurger.html`} element={<PDP />} />
+          <Route path={`/menu/${location.state}/aussieBurger.html`} element={<PDP />} />
+          <Route path={`/menu/${location.state}/jamminChickenSandwich.html`} element={<PDP />} />
+          <Route path={`/menu/${location.state}/impossibleBurger.html`} element={<PDP />} />
+          <Route path={`/menu/${location.state}/crispyshrimpPoBoy.html`} element={<PDP />} />
+          <Route path={`/menu/${location.state}/crispySrirachaChickenSandwich.html`} element={<PDP />} />
 
           <Route path={`/menu/largePlates/crispyChickenTenders.html`} element={<PDP />} />
           <Route path={`/menu/largePlates/toppedGrilledChicken.html`} element={<PDP />} />
@@ -68,19 +91,18 @@ function App() {
           <Route path={`/menu/desserts&Beverages/saltedCaramelCookie.html`} element={<PDP />} />
           <Route path={`/menu/desserts&Beverages/ghirardelliDoubleDarkChocolateBrownie.html`} element={<PDP />} />
           <Route path={`/menu/desserts&Beverages/saltedCaramelCookieSundae.html`} element={<PDP />} />
-          <Route path={`/menu/desserts&Beverages/doubleDarkChocolateBrownieSundae.html`} element={<PDP />} />
-          
+          <Route path={`/menu/desserts&Beverages/doubleDarkChocolateBrownieSundae.html`} element={<PDP />} /> */}
 
 
 
-          { /*  Menu Category Pages */}
-          <Route path={'/menu/index.html'} element={<Menu />} />
-          { /*  Menu Category for CATERING */}
-          <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
-          <Route path={`/catering/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
-          {/* REMOVE TITLE DESCREIPTION PROP? */}
-          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
-          <Route path={`/menu/${location.state}/index.html`} element={<MenuPages dataTitle={location.state} />} />
+
+
+
+
+
+
+
+
 
           <Route
             exact path={'/pickup.html'}
