@@ -93,17 +93,6 @@ function App() {
           <Route path={`/menu/desserts&Beverages/saltedCaramelCookieSundae.html`} element={<PDP />} />
           <Route path={`/menu/desserts&Beverages/doubleDarkChocolateBrownieSundae.html`} element={<PDP />} /> */}
 
-
-
-
-
-
-
-
-
-
-
-
           <Route
             exact path={'/pickup.html'}
             element={

@@ -32,7 +32,7 @@ function normalizeMenuCategory(category) {
             return 'Desserts & Beverages';
         case 'platters':
             return 'Platters';
-        case 'saladPlatter':
+        case 'saladPlatters':
             return 'Salad Platters';
         case 'desserts&Sides':
             return 'Desserts & Sides';
@@ -78,7 +78,7 @@ class MenuPages extends Component {
                 return dessertsAndBeverages;
             case 'platters':
                 return plattersCatering;
-            case 'saladPlatter':
+            case 'saladPlatters':
                 return saladPlattersCatering;
             case 'desserts&Sides':
                 return dessertsAndSidesCatering;
