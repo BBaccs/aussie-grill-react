@@ -28,7 +28,7 @@ export const handHelds = [
       pdpDescription: "Beef burger, American cheese, crispy onion petals, Aussie sauce, house-made pickles, lettuce, tomato."
     },
     {
-      name: "JAMMIN' CHICKEN SANDWICH",
+      name: "JAMMIN’ CHICKEN SANDWICH",
       img: "jamminChickenSandwich.jpg",
       linkTo: "/menu/handhelds/jamminChickenSandwich.html",
       imgFilePath: "foodImages/productImages/handhelds",

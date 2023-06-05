@@ -26,7 +26,7 @@ function App() {
   location.state = category;
   // console.log('location',location.state)
   // console.log(menuItem)
-  // console.log(`${category}/${menuItem}`)
+  console.log(`${category}/${menuItem}`)
 
   return (
     <div className="App">

@@ -25,7 +25,7 @@ function getCategoryData(category) {
             return dessertsAndBeverages;
         case 'platters':
             return plattersCatering;
-        case 'saladPlatter':
+        case 'saladPlatters':
             return saladPlattersCatering;
         case 'desserts&Sides':
             return dessertsAndSidesCatering;
@@ -34,43 +34,10 @@ function getCategoryData(category) {
     }
 }
 
-// function normalizeMenuCategory(category) {
-//     switch (category) {
-//         case 'handhelds':
-//             return 'Handhelds';
-//         case 'largePlates':
-//             return 'Large Plates';
-//         case 'salads':
-//             return 'Salads';
-//         case 'sides&Snacks':
-//             return 'Sides & Snacks';
-//         case 'kids':
-//             return 'Kids';
-//         case 'desserts&Beverages':
-//             return 'Desserts & Beverages';
-//         case 'platters':
-//             return 'Platters';
-//         case 'saladPlatter':
-//             return 'Salad Platters';
-//         case 'desserts&Sides':
-//             return 'Desserts & Sides';
-//         default:
-//             return null;
-//     }
-// }
-
-// {
-//     let item2 = item.name;
-//     item2 = item2.replace(' ', '');
-
-// }
-
 function PDP() {
     const location = useLocation();
-
     let category = location.pathname.split('/')[2];
     let menuData = getCategoryData(category);
-
     // location.state = category;
     // let testing = location.state;
     // console.log('state', location.state);
@@ -78,15 +45,12 @@ function PDP() {
     // console.log(location.pathname[1], location.state, location)
     // const { pdpItem } = useParams()
     // console.log(`HELLO, ${pdpItem}`)
-
     console.log(location.pathname.split('/')[3]);
     let pathName = location.pathname.split('/')[3].replaceAll('.html', '').toLowerCase();
-    // console.log(pathName);
-
     return (
         <>
           {menuData.map((item, index) => { 
-            const normalizedItemName = item.name.replaceAll(' ', '').replaceAll('™', '').replaceAll('\'', '').toLowerCase();
+            const normalizedItemName = item.name.replaceAll(' ', '').replaceAll('™', '').replaceAll('\’', '').toLowerCase();
             if (normalizedItemName === pathName) {
               return (
                 <div key={index} className="menu-page menu-page-bg product-description-page">
