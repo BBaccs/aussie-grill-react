@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="sr-only">Welcome to Aussie Grill</h1>
+      <a href="#main-content" className="sr-only">Skip to main content</a>
       <NavBar />
       <main id="main-content">
         <Routes>
@@ -45,11 +46,6 @@ function App() {
               </>
             }
           />
-
-          
-
-
-
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
           { /*  Menu Category for CATERING */}
