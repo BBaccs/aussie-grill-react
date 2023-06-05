@@ -21,7 +21,7 @@ class Footer extends Component {
                                 {footerItemsDataMain.map((link, index) => {
                                     return (
                                         <li className={link.liClass} key={index}>
-                                            <a className={link.anchorClass} href={link.href}>{link.name}</a>
+                                            <a className={link.anchorClass} href={link.url}>{link.name}</a>
                                         </li>
                                     );
                                 })}
@@ -30,7 +30,7 @@ class Footer extends Component {
                                 {footerItemsSecondary.map((link, index) => {
                                     return (
                                         <li className={link.liClass} key={index}>
-                                            <a className={link.anchorClass} href={link.href}>{link.name}</a>
+                                            <a className={link.anchorClass} href={link.url}>{link.name}</a>
                                         </li>
                                     );
                                 })}
@@ -40,7 +40,7 @@ class Footer extends Component {
                             <ul className="social-links d-flex text-center flex-row justify-content-end m-0 p-0 w-100 h-auto">
                                 {socialNavItems.map((link, index) => {
                                     return (
-                                        <li className={"m-2"} key={index}><a href={link.href}
+                                        <li className={"m-2"} key={index}><a href={link.url}
                                             className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
                                     );
                                 })}
@@ -51,13 +51,10 @@ class Footer extends Component {
                     </div>
                     <div className="d-grid d-lg-none mobile-footer-grid">
                         <ul className="nav nav-uncollapsed d-grid">
-                            {/* <li className="nav-item">
-                                <a className="nav-link" href="giveaway.html">Giveaways</a>
-                            </li> */}
                             {footerItemsSecondary.map((link, index) => {
                                 return (
                                     <li className={link.liClass} key={index}>
-                                        <a className={link.anchorClass} href={link.href}>{link.name}</a>
+                                        <a className={link.anchorClass} href={link.url}>{link.name}</a>
                                     </li>
                                 );
                             })}
@@ -65,7 +62,7 @@ class Footer extends Component {
                         <ul className="social-links m-0 p-0 w-100 h-100 d-flex text-center flex-column">
                             {socialNavItems.map((link, index) => {
                                 return (
-                                    <li className={"m-2"} key={index}><a href={link.href}
+                                    <li className={"m-2"} key={index}><a href={link.url}
                                         className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
                                 );
                             })}
