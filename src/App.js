@@ -21,6 +21,7 @@ import { homePageCards } from "./data/homePageCards";
 import OurStoryPage from './pages/OurStoryPage.js';
 import CareersPage from "./pages/Careers.js";
 import ContactPage from "./pages/Contact.js";
+import GiveawaysPage from "./pages/Giveaways";
 
 function App() {
   const location = useLocation();
@@ -59,6 +60,11 @@ function App() {
           <Route
             exact path={'/contact.html'}
             element={<ContactPage />}
+          />
+
+<Route
+            exact path={'/giveaways.html'}
+            element={<GiveawaysPage />}
           />
 
           { /*  Menu Category Pages */}

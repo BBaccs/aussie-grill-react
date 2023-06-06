@@ -38,7 +38,7 @@ export const footerItemsDataMain = [
     /* Desktop Only */
     {
       name: 'Giveaways',
-      url: '/pages/giveaway.html',
+      url: '/giveaway.html',
       anchorClass: "nav-link",
       liClass: "nav-item desktop-only"
     }
