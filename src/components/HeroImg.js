@@ -13,11 +13,6 @@ class HeroImg extends Component {
                     <img srcSet={`/assets/${this.props.imgFilePath}/mobile/mobile-${this.props.img}`} className="d-block w-100" media="(max-width: 1400px)"
                         style={{maxHeight: '700px'}} alt="" />
                 </picture>
-                {/* <picture>
-                <source srcSet={`assets/other/desktop/desktop-agOurStory.jpg`} media="(min-width: 1400px)" />
-                <source srcSet={`assets/other/desktop/ourStory1024x500.jpg`} media="(min-width: 600px)" />
-                <img srcSet={`assets/other/mobile/mobile-agOurStory.jpg`} className="d-block w-100" alt="" />
-            </picture> */}
             </div>
         );
     }

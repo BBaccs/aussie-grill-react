@@ -44,17 +44,6 @@ export default function OurStoryPage() {
 
                         <div className="col-md-12 d-none d-md-block d-lg-block d-xl-block m-auto">
                             <div className="d-flex justify-content-center meet-chef-card">
-                                {/* <img src="assets/other/mobile/ourStoryVerticalCollageMobile.jpg" className="card-img-top"
-                                    style={{ width: '250px' }} alt="" />
-                                <div className="card" style={{ maxWidth: '250px' }}>
-                                    <div className="card-body no-shadow">
-                                        <h2 className="card-title" style={{ fontSize: '1.3rem' }}>Meet Our Chef</h2>
-                                        <p className="card-text" style={{ fontSize: '.95rem' }} >Chef Efrem is the master mind behind
-                                            the Aussie Grill menu. He used his knowledge of 35 years in the Restaurant
-                                            Industry to create a bold, flavorful, and memorable menu that every team member
-                                            would be proud to serve to a guest in their home.</p>
-                                    </div>
-                                </div> */}
                                 <Card style={{ maxWidth: '36rem', display: 'flex', flexDirection: 'row' }}>
                                     <Card.Img variant="top" src="assets/other/mobile/ourStoryVerticalCollageMobile.jpg" />
                                     <Card.Body>
