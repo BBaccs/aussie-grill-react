@@ -18,6 +18,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 import { homePageCards } from "./data/homePageCards";
+import OurStoryPage from './pages/OurStoryPage.js';
 
 function App() {
   const location = useLocation();
@@ -26,7 +27,7 @@ function App() {
   location.state = category;
   return (
     <div className="App">
-      <h1 className="sr-only">Welcome to Aussie Grill</h1>
+      {/* <h1 className="sr-only">Welcome to Aussie Grill</h1> */}
       <a href="#main-content" className="sr-only">Skip to main content</a>
       <NavBar />
       <main id="main-content">
@@ -43,6 +44,12 @@ function App() {
               </>
             }
           />
+
+            <Route 
+            exact path={'/ourStory.html'}
+            element={ <OurStoryPage /> }
+            />
+
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
 
