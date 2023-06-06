@@ -21,7 +21,7 @@ import { homePageCards } from "./data/homePageCards";
 import OurStoryPage from './pages/OurStoryPage.js';
 import CareersPage from "./pages/Careers.js";
 import ContactPage from "./pages/Contact.js";
-import GiveawaysPage from "./pages/Giveaways.js";
+import GiveawaysPage from "./pages/GiveawaysPage.js";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.js";
 import CcpaPage from "./pages/CcpaPage.js";
 import AccessibilityPage from "./pages/AccessibilityPage.js";
@@ -31,13 +31,14 @@ function App() {
   const location = useLocation();
   let category = location.pathname.split('/')[2];
   let menuItem = location.pathname.split('/')[3];
-  location.state = category;
+  // location.state = category;
   return (
     <div className="App">
       {/* <h1 className="sr-only">Welcome to Aussie Grill</h1> */}
       <NavBar />
       <main id="main-content">
         <Routes>
+          {/* Home Page */}
           <Route
             exact index
             element={
@@ -51,57 +52,30 @@ function App() {
             }
           />
 
-          <Route
-            exact path={'/ourStory.html'}
-            element={<OurStoryPage />}
-          />
-
-          <Route
-            exact path={'/careers.html'}
-            element={<CareersPage />}
-          />
-
-          <Route
-            exact path={'/contact.html'}
-            element={<ContactPage />}
-          />
-
-          <Route
-            exact path={'/giveaways.html'}
-            element={<GiveawaysPage />}
-          />
-
-          <Route
-            exact path={'/privacyPolicyPages/privacyPolicy.html'}
-            element={<PrivacyPolicyPage />}
-          />
-          <Route
-            exact path={'/privacyPolicyPages/ccpa.html'}
-            element={<CcpaPage />}
-          />
-          <Route
-            exact path={'/privacyPolicyPages/accessibilityStatement.html'}
-            element={<AccessibilityPage />}
-          />
-          <Route
-            exact path={'/privacyPolicyPages/termsAndConditions.html'}
-            element={<TermsAndConditionsPage />}
-          />
-
+          { /*  Static Pages */}
+          <Route path={'/ourStory.html'} element={<OurStoryPage />} />
+          <Route path={'/careers.html'}element={<CareersPage />} />
+          <Route path={'/contact.html'} element={<ContactPage />} />
+          <Route path={'/giveaways.html'} element={<GiveawaysPage />} />
+          <Route path={'/privacyPolicyPages/privacyPolicy.html'} element={<PrivacyPolicyPage />}/>
+          <Route path={'/privacyPolicyPages/ccpa.html'} element={<CcpaPage />} />
+          <Route path={'/privacyPolicyPages/accessibilityStatement.html'} element={<AccessibilityPage />} />
+          <Route path={'/privacyPolicyPages/termsAndConditions.html'} element={<TermsAndConditionsPage />}/>
+ 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
 
           { /*  Menu Category for CATERING */}
           <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
-          <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={location.state} />} />
+          <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
 
           {/* Individual Catering Menu PDP Pages */}
           <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
 
           {/* @TODO remove title description PROP? */}
           { /*  Menu Category */}
-          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={location.state} titleDescription={'100% USDA CHOICE BEEF'} />} />
-          <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={location.state} />} />
+          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />
+          <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
 
           {/* Individual Menu PDP Pages */}
           <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
@@ -120,14 +94,6 @@ function App() {
                 {/* <NavBar navData={franchiseNavItems} /> */}
                 <HeroImg img={"productPlaceholderImage.jpg"} />
               </div>
-            }
-          />
-          <Route
-            path={'/menu/index.html'}
-            element={
-              <>
-                <Menu />
-              </>
             }
           />
           <Route path='*' element={<h2>Page not found</h2>} />
