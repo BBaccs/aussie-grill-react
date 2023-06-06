@@ -26,7 +26,7 @@ export const footerItemsSecondary = [
       /* Mobile Only */
       {
         name: 'Giveaways',
-        url: '/giveaway.html',
+        url: '/giveaways.html',
         anchorClass: "nav-link",
         liClass: "nav-item mobile-only"
       }
