@@ -932,8 +932,8 @@ body::-webkit-scrollbar-thumb {
     font-size: .9rem;
 }
 
-#pickup-page .card
-#contact-page .card {
+#pickup-page .card,
+#contact-page .card.legacy-card {
     width: 18.5rem;
 }
 

@@ -19,7 +19,8 @@ import { useLocation, useParams } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 import { homePageCards } from "./data/homePageCards";
 import OurStoryPage from './pages/OurStoryPage.js';
-import CareersPage from "./pages/Careers";
+import CareersPage from "./pages/Careers.js";
+import ContactPage from "./pages/Contact.js";
 
 function App() {
   const location = useLocation();
@@ -29,7 +30,6 @@ function App() {
   return (
     <div className="App">
       {/* <h1 className="sr-only">Welcome to Aussie Grill</h1> */}
-      <a href="#main-content" className="sr-only">Skip to main content</a>
       <NavBar />
       <main id="main-content">
         <Routes>
@@ -54,6 +54,11 @@ function App() {
           <Route
             exact path={'/careers.html'}
             element={<CareersPage />}
+          />
+
+          <Route
+            exact path={'/contact.html'}
+            element={<ContactPage />}
           />
 
           { /*  Menu Category Pages */}
