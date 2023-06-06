@@ -5,8 +5,7 @@ export default function ContactPage() {
         <div id="contact-page" className="landing-page">
             <HeroImg img={"freestanding.jpg"} />
             <div className="container-fluid text-center landing-content-wrapper">
-                <h1 className="sr-only">Contact Us</h1>
-
+                <h1 className="landing-heading mb-4">Contact Us</h1>
                 <div>
                     <div style={{ maxWidth: '1200px' }} className="row mt-md-4 mx-auto">
                         <div className="card legacy-card mx-auto mb-4">
@@ -43,11 +42,8 @@ export default function ContactPage() {
                         </div>
                     </div>
                 </div>
-
-
                 <a href="mailto:AussieGrill@BloominBrands.com" className="btn btn-primary small-btn mt-md-3">Email US</a>
             </div>
-
         </div>
     )
 }
