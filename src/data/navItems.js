@@ -52,5 +52,11 @@ export const navItems = [
         url: 'contact.html',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
+    },
+    {
+        name: 'Giveaways',
+        url: 'giveaways.html',
+        liClass: 'd-none d-sm-none d-md-block',
+        target: '_self'
     }
 ];
