@@ -1,37 +1,37 @@
 export const footerItemsDataMain = [
     {
       name: 'Careers',
-      url: '/pages/otherPages/careers.html',
+      url: '/careers.html',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Catering',
-      url: '/pages/catering/cateringMenu/index.html',
+      url: '/catering/index.html',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Franchise',
-      url: '/pages/otherPages/franchise.html',
+      url: '/franchise.html',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Our Story',
-      url: '/pages/otherPages/ourStory.html',
+      url: '/ourStory.html',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Locations',
-      url: '/pages/otherPages/pickup.html',
+      url: '/pickup.html',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Contact',
-      url: '/pages/otherPages/contact.html',
+      url: '/contact.html',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
