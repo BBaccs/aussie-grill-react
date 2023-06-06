@@ -21,7 +21,11 @@ import { homePageCards } from "./data/homePageCards";
 import OurStoryPage from './pages/OurStoryPage.js';
 import CareersPage from "./pages/Careers.js";
 import ContactPage from "./pages/Contact.js";
-import GiveawaysPage from "./pages/Giveaways";
+import GiveawaysPage from "./pages/Giveaways.js";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.js";
+import CcpaPage from "./pages/CcpaPage.js";
+import AccessibilityPage from "./pages/AccessibilityPage.js";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
 
 function App() {
   const location = useLocation();
@@ -62,9 +66,26 @@ function App() {
             element={<ContactPage />}
           />
 
-<Route
+          <Route
             exact path={'/giveaways.html'}
             element={<GiveawaysPage />}
+          />
+
+          <Route
+            exact path={'/privacyPolicyPages/privacyPolicy.html'}
+            element={<PrivacyPolicyPage />}
+          />
+          <Route
+            exact path={'/privacyPolicyPages/ccpa.html'}
+            element={<CcpaPage />}
+          />
+          <Route
+            exact path={'/privacyPolicyPages/accessibilityStatement.html'}
+            element={<AccessibilityPage />}
+          />
+          <Route
+            exact path={'/privacyPolicyPages/termsAndConditions.html'}
+            element={<TermsAndConditionsPage />}
           />
 
           { /*  Menu Category Pages */}

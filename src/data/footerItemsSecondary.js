@@ -13,7 +13,7 @@ export const footerItemsSecondary = [
       },
       {
         name: 'Accessability Statement',
-        url: '/privacyPolicyPages/accessabilityStatement.html',
+        url: '/privacyPolicyPages/accessibilityStatement.html',
         anchorClass: "nav-link",
         liClass: "nav-item"
       },
