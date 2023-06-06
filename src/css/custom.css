@@ -1062,6 +1062,13 @@ select.select .slim-option {
     bottom: 168px;
 }
 
+.careers-card-col {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
 
 /* Privacy Policy Pages */
 
@@ -1213,7 +1220,7 @@ select.select .slim-option {
         display: none;
     }
     .landing-subheading {
-        width: 18rem;
+        max-width: 18rem;
     }
     .product-image {
         max-width: 270px;

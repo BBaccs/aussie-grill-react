@@ -19,6 +19,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 import { homePageCards } from "./data/homePageCards";
 import OurStoryPage from './pages/OurStoryPage.js';
+import CareersPage from "./pages/Careers";
 
 function App() {
   const location = useLocation();
@@ -45,10 +46,15 @@ function App() {
             }
           />
 
-            <Route 
+          <Route
             exact path={'/ourStory.html'}
-            element={ <OurStoryPage /> }
-            />
+            element={<OurStoryPage />}
+          />
+
+          <Route
+            exact path={'/careers.html'}
+            element={<CareersPage />}
+          />
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
