@@ -71,10 +71,10 @@ function App() {
           <Route path={'/careers.html'} element={<CareersPage />} />
           <Route path={'/contact.html'} element={<ContactPage />} />
           <Route path={'/giveaways.html'} element={<GiveawaysPage />} />
-          <Route path={'/privacyPolicyPages/privacyPolicy.html'} element={<PrivacyPolicyPage />} />
-          <Route path={'/privacyPolicyPages/ccpa.html'} element={<CcpaPage />} />
-          <Route path={'/privacyPolicyPages/accessibilityStatement.html'} element={<AccessibilityPage />} />
-          <Route path={'/privacyPolicyPages/termsAndConditions.html'} element={<TermsAndConditionsPage />} />
+          <Route path={'/privacyPolicy/privacyPolicy.html'} element={<PrivacyPolicyPage />} />
+          <Route path={'/privacyPolicy/ccpa.html'} element={<CcpaPage />} />
+          <Route path={'/privacyPolicy/accessibilityStatement.html'} element={<AccessibilityPage />} />
+          <Route path={'/privacyPolicy/termsAndConditions.html'} element={<TermsAndConditionsPage />} />
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />

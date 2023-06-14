@@ -29,13 +29,13 @@ function AModal() {
                   <Card.Body>
                     <Card.Title>{location.locationInfo}</Card.Title>
                     <Card.Text>
-                      {location.address}
-                      {location.phone && `Call: ${location.phone}`}
+                      <div>{location.address}</div>
+                      <div>{location.phone && `Call: ${location.phone}`}</div>
                     </Card.Text>
                     <div className="">
                       {
                         location.pickupURL &&
-                        <a className="btn btn-primary" href={location.pickupURL} title="Opens in a new tab">
+                        <a className="btn btn-primary" href={location.pickupURL} target="_blank" title="Opens in a new tab">
                           Pickup
                         </a>
                       }
@@ -47,13 +47,13 @@ function AModal() {
                         </Button>
                       }
                       {
-                        location.YextURL &&
+                        location.yextURL &&
                         <a className="btn btn-primary" href={location.yextURL}>
                           Learn more
                         </a>
                       }
                       {
-                        location.MenuPdfURL &&
+                        location.menuPdfURL &&
                         <a className="btn btn-primary" href={location.menuPdfURL}>
                           Menu
                         </a>
@@ -88,7 +88,7 @@ function AModal() {
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
               <a className="d-block" target="_blank" href={thisDoorDashUrl} >
-                <img class="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab"></img>
+                <img class="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab" />
               </a>
             </div>
             <p id="or-separator" class="m-2">
@@ -96,7 +96,7 @@ function AModal() {
             </p>
             <div id="uber-eats-div">
               <a className="d-block" target="_blank" href={thisUberEatsUrl} >
-                <img class="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab"></img>
+                <img class="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab" />
               </a>
             </div>
           </div>
