@@ -103,7 +103,10 @@ a, a:active {
     color: inherit;
 }
 
-a:hover {
+.nav-item .nav-link:hover,
+.nav-item .nav-link:active,
+.nav-item  .nav-link:focus,
+.nav-item .nav-link.active {
     color: #D3461D;
     text-decoration: none;
 }
