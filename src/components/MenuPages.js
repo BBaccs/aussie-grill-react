@@ -90,40 +90,40 @@ class MenuPages extends Component {
     render() {
         let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
         return (
-            <div id={`${this.state.category}-page`} class="menu-page">
-                <div class="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
-                    <div class="select-category-bg">
+            <div id={`${this.state.category}-page`} className="menu-page">
+                <div className="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
+                    <div className="select-category-bg">
                         <a href={menuCategoryPage}>
-                            <div class="d-flex">
-                                <h1 class="w-100 py-4 my-1">Select New Category ^</h1>
+                            <div className="d-flex">
+                                <h1 className="w-100 py-4 my-1">Select New Category ^</h1>
                             </div>
                         </a>
                     </div>
-                    <div class="menu-category menu-category-selected">
-                        <div class="d-flex justify-content-center">
-                            <img class="animal-graphic d-lg-none"
+                    <div className="menu-category menu-category-selected">
+                        <div className="d-flex justify-content-center">
+                            <img className="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/bullHalfSmall.png" alt="" />
                             {this.props.titleDescription ?
-                                <div class="d-flex align-items-center w-100 flex-column pb-1">
+                                <div className="d-flex align-items-center w-100 flex-column pb-1">
                                     <h2 className="pb-1">{this.state.menuTitle}</h2>
-                                    <p class="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
+                                    <p className="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
                                 </div>
                                 :
-                                <div class="d-flex align-items-center w-100 flex-column pb-1">
+                                <div className="d-flex align-items-center w-100 flex-column pb-1">
                                     <h2 className="no-subhead-padding">{this.state.menuTitle}</h2>
                                 </div>
                             }
-                            <img class="animal-graphic d-lg-none"
+                            <img className="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png" alt="" />
                         </div>
                     </div>
                     {/* <!-- Start Menu Item Row--> */}
-                    <div class="row px-lg-4 pt-lg-5 justify-content-center product-list-wrapper-lg">
+                    <div className="row px-lg-4 pt-lg-5 justify-content-center product-list-wrapper-lg">
                         {this.state.category.map((item, index) => (
                             <>
                                 <div key={index}
-                                    class="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
-                                    <div class="primary-subheading-wrapper ">
+                                    className="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
+                                    <div className="primary-subheading-wrapper ">
                                         <div className="h3">{item.name}</div>
                                     </div>
                                     {!item.imgFilePath ? '' :
@@ -133,47 +133,47 @@ class MenuPages extends Component {
                                                 alt="" />
                                         </div>
                                     }
-                                    <div class="pt-3 product-content-wrapper">
-                                        <p class="product-description">{item.pdpDescription}
+                                    <div className="pt-3 product-content-wrapper">
+                                        <p className="product-description">{item.pdpDescription}
                                         </p>
                                     </div>
                                 </div>
                             </>
                         ))}
                     </div>
-                    <div class="m-auto">
-                        <a class="btn btn-primary btn-lg mr-5" href="./../../pickup.html">Order</a>
+                    <div className="m-auto">
+                        <a className="btn btn-primary btn-lg mr-5" href="./../../pickup.html">Order</a>
                     </div>
                 </div>
                 {/* <!-- End Menu Item Row--> */}
-                <div class="d-xl-none d-lg-none">
-                    <div class="select-category-bg">
+                <div className="d-xl-none d-lg-none">
+                    <div className="select-category-bg">
                         <a href={menuCategoryPage}>
-                            <div class="d-flex">
-                                <h1 class="w-100 py-4 my-1">Select New Category ^</h1>
+                            <div className="d-flex">
+                                <h1 className="w-100 py-4 my-1">Select New Category ^</h1>
                             </div>
                         </a>
                     </div>
-                    <div class="menu-category menu-category-selected">
-                        <div class="d-flex justify-content-center">
-                            <div class="d-flex align-items-center w-100 flex-column pb-1">
+                    <div className="menu-category menu-category-selected">
+                        <div className="d-flex justify-content-center">
+                            <div className="d-flex align-items-center w-100 flex-column pb-1">
                                 {this.props.titleDescription ?
-                                    <div style={{ marginLeft: 125 + 'px' }} class="d-flex align-items-center w-100 flex-column pb-1">
-                                        <h2 class="pb-1">{this.state.menuTitle}</h2>
-                                        <p class="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
+                                    <div style={{ marginLeft: 125 + 'px' }} className="d-flex align-items-center w-100 flex-column pb-1">
+                                        <h2 className="pb-1">{this.state.menuTitle}</h2>
+                                        <p className="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
                                     </div>
                                     :
-                                    <h2 class="no-subhead-padding pig-heading lg-pig-heading w-100">{this.state.menuTitle}</h2>
+                                    <h2 className="no-subhead-padding pig-heading lg-pig-heading w-100">{this.state.menuTitle}</h2>
                                 }
                             </div>
-                            <img class="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
+                            <img className="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
                                 alt="" />
                         </div>
                     </div>
                     {this.state.category.map((item, index) => (
-                        <div key={index} class="mobile-menu-item menu-item-bg">
+                        <div key={index} className="mobile-menu-item menu-item-bg">
                             {/* <!-- need display block / w-100 on anchor for ADA --> */}
-                            <a class="d-block" href={item.linkTo}>
+                            <a className="d-block" href={item.linkTo}>
                                 {!item.new ?
                                     <>
                                         {
@@ -184,7 +184,7 @@ class MenuPages extends Component {
                                                 <div className="h3">{item.name} <span>{`>`}</span></div>
                                         }
 
-                                        {item.pdpPreview && <div class="product-description-preview">{item.pdpPreview}</div>}
+                                        {item.pdpPreview && <div className="product-description-preview">{item.pdpPreview}</div>}
                                     </>
                                     :
                                     <>

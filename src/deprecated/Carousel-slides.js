@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class CarouselSlides extends Component {
     render() {
         return (
-            <ol class="carousel-indicators mx-0">
+            <ol className="carousel-indicators mx-0">
                 {/* <!-- Make carosuel buttons child component --> */}
                 <li data-target={this.props.id} tabindex="0" role="button" aria-label={`Slide number ${index}`}
                     data-slide-to={index} className="active"></li>

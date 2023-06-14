@@ -9,11 +9,11 @@ class MenuItems extends Component {
     render() {
         const menuItems = this.props.menuData.map((menuItem, index) => (
             /* <!-- Menu Item --> */
-            <div key={index} class="col-lg-4 col-md-6 pt-lg-0 menu-item-col">
-                <Link class="d-block mt-5" to={menuItem.linkTo} >
-                    <div class="primary-subheading-wrapper">
-                        <div class="w-100">
-                            <div class="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>
+            <div key={index} className="col-lg-4 col-md-6 pt-lg-0 menu-item-col">
+                <Link className="d-block mt-5" to={menuItem.linkTo} >
+                    <div className="primary-subheading-wrapper">
+                        <div className="w-100">
+                            <div className="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>
                         </div>
                     </div>
                     <div>
@@ -21,13 +21,13 @@ class MenuItems extends Component {
                             <source
                                 srcSet={`/assets/${menuItem.imgFilePath}/desktop/500x375${menuItem.img}`}
                                 media="(min-width: 768px)" />
-                            <img class="w-100 menu-item-img"
+                            <img className="w-100 menu-item-img"
                                 srcSet={`/assets/${menuItem.imgFilePath}/mobile/345x260${menuItem.img}`}
                                 alt="" />
                         </picture>
                         {menuItem.btn &&
-                            <div class="btn-bottom-wrapper">
-                                <div class="btn btn-primary menu-item-img-cta">{menuItem.btn}</div>
+                            <div className="btn-bottom-wrapper">
+                                <div className="btn btn-primary menu-item-img-cta">{menuItem.btn}</div>
                             </div>}
                     </div>
                 </Link>

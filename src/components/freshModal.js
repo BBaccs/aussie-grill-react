@@ -69,7 +69,7 @@ function AModal() {
       >
         <div className="bull-wrapper-2">
           <img
-            class="mx-auto"
+            className="mx-auto"
             src="/assets/agGraphicElements/animals/bullFullMedium.png"
             alt=""
           />
@@ -82,15 +82,15 @@ function AModal() {
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
               <a className="d-block" target="_blank" href={deliveryUrl} >
-                <img class="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab"></img>
+                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab"></img>
               </a>
             </div>
-            <p id="or-separator" class="m-2">
+            <p id="or-separator" className="m-2">
               -OR-
             </p>
             <div id="uber-eats-div">
               <a className="d-block" target="_blank" href={deliveryUrl} >
-                <img class="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab"></img>
+                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab"></img>
               </a>
             </div>
           </div>

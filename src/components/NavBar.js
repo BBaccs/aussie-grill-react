@@ -88,7 +88,7 @@ class NavBar extends Component {
                                                 {
                                                     link.externalLink
                                                         ? <a className="nav-link" href={link.url}>{link.name}</a> :
-                                                        <NavLink activeClassName="active-link" className="nav-link" to={link.url} title={link.title}>{link.name}</NavLink>}
+                                                        <NavLink className="nav-link" to={link.url} title={link.title}>{link.name}</NavLink>}
                                             </li>
                                         );
                                     })
@@ -99,7 +99,7 @@ class NavBar extends Component {
                                                 {
                                                     link.externalLink
                                                         ? <a className="nav-link" href={link.url}>{link.name}</a>
-                                                        : <NavLink activeClassName="active-link" className="nav-link" to={link.url}>{link.name}</NavLink>
+                                                        : <NavLink className="nav-link" to={link.url}>{link.name}</NavLink>
                                                 }
                                             </li>
                                         );
