@@ -4,7 +4,6 @@
 /* However, if this is just done w/ an onClick, it won't work for manually typing in the URL / using the browser back button */
 
 /* On either DOM load or when a new component / anything is loaded, we should check the URL, and activate said state per that URL. */
-/* Fix Nav Link active state */
 
 // @TODO, GIVEAWAYS should be in the hamburger menu only (and in the footer), not in the main nav.
 import React, { Component } from "react";
@@ -125,7 +124,7 @@ class NavBar extends Component {
                                                 link.externalLink
                                                     ? <a className="nav-link" href={link.url}>{link.name}</a> :
                                                     <NavLink
-                                                        className={isActive => "nav-link" + (!isActive ? " unselected" : "  active-link")}
+                                                        className="nav-link" 
                                                         to={link.url}>{link.name}
                                                     </NavLink>}
                                         </li>
