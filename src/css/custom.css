@@ -49,7 +49,30 @@
   }
   /* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*/
   
-  
+  /* PICK UP PAGE REFACTORS */
+
+ #pickup-page .card-body {
+    flex-direction: column;
+}
+
+#pickup-page .card-body .btn {
+    margin: 0 3px 0 3px;
+}
+#pickup-page .card-header {
+    font-size: 1rem;
+}
+
+.pickup-layout {
+    display: flex;
+    justify-content: center;
+}
+
+#pickup-page .card-modal-wrapper {
+    margin: 0px 0 50px 0;
+}
+  /* PICK UP PAGE REFACTORS */
+
+
   
   /* FONTS */
 
@@ -1438,33 +1461,3 @@ select.select .slim-option {
         object-fit: fill;
     } 
  }
-
-
-
-
- /* @TODO REFACTOR LATER */
-
- #pickup-page .card-body {
-    flex-direction: column;
-}
-
-#pickup-page .card-body .btn {
-    margin: 0 3px 0 3px;
-}
-#pickup-page .card-header {
-    font-size: 1rem;
-}
-
-/* #pickup-page {
-    display: flex;
-    justify-content: center;
-} */
-
-.pickup-layout {
-    display: flex;
-    justify-content: center;
-}
-
-#pickup-page .card-modal-wrapper {
-    margin: 0px 0 50px 0;
-}
