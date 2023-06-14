@@ -13,6 +13,7 @@ export const navItems = [
     {
         name: 'Catering',
         url: 'catering/index.html',
+        liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
     },
     {
@@ -56,7 +57,7 @@ export const navItems = [
     {
         name: 'Giveaways',
         url: 'giveaways.html',
-        liClass: 'd-none d-sm-none d-md-block',
+        liClass: 'd-none d-sm-none d-md-none d-lg-none',
         target: '_self'
     }
 ];
