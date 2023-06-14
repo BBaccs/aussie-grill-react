@@ -11,9 +11,9 @@ class MenuItems extends Component {
             /* <!-- Menu Item --> */
             <div key={index} className="col-lg-4 col-md-6 pt-lg-0 menu-item-col">
                 <Link className="d-block mt-5" to={menuItem.linkTo} >
-                    <div className="primary-subheading-wrapper">
+                    <div className={`primary-subheading-wrapper ${menuItem.name.length >= 22 && 'xxl-wrapper'}`}>
                         <div className="w-100">
-                            <div className="CHANGEMELATER mb-0 primary-subheading">{menuItem.name}</div>
+                            <div className='CHANGEMELATER mb-0 primary-subheading'>{menuItem.name}</div>
                         </div>
                     </div>
                     <div>
