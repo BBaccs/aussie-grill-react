@@ -69,6 +69,7 @@ class NavBar extends Component {
         return (
             <div>
                 <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
+                <a href="/privacyPolicy/accessibilityStatement.html" className="sr-only sr-only-focusable">Skip to accessibility statement</a>
                 {generateAlertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
