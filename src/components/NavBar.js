@@ -4,8 +4,6 @@
 /* However, if this is just done w/ an onClick, it won't work for manually typing in the URL / using the browser back button */
 
 /* On either DOM load or when a new component / anything is loaded, we should check the URL, and activate said state per that URL. */
-
-// @TODO, GIVEAWAYS should be in the hamburger menu only (and in the footer), not in the main nav.
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";

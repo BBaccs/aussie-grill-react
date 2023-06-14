@@ -27,6 +27,7 @@ import CcpaPage from "./pages/CcpaPage.js";
 import AccessibilityPage from "./pages/AccessibilityPage.js";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
 import OrderPage from "./pages/OrderPage.js";
+import FranchisePage from "./pages/FranchisePage";
 
 function App() {
   const location = useLocation();
@@ -104,13 +105,13 @@ function App() {
           <Route
             exact path={'/franchise.html'}
             element={
-              <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
+              <div >
                 {/* <NavBar navData={franchiseNavItems} /> */}
-                <HeroImg img={"productPlaceholderImage.jpg"} />
+                <FranchisePage />
               </div>
             }
           />
-          <Route path='*' element={<h2>Page not found</h2>} />
+          <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
         </Routes>
 
       </main>
