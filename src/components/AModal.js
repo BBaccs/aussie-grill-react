@@ -19,49 +19,53 @@ function AModal() {
 
   return (
     <>
-      {locationsData.map((location, index) => {
-        return (
-          <div className="card-modal-wrapper" key={index}>
-            <Card style={{ width: '22rem' }}>
-              <Card.Header as="h5">{location.name}</Card.Header>
-              <Card.Body>
-                <Card.Title>{location.locationInfo}</Card.Title>
-                <Card.Text>
-                  {location.address}
-                  {location.phone && `Call: ${location.phone}`}
-                </Card.Text>
-                <div className="">
-                  {
-                    location.pickupURL &&
-                    <a className="btn btn-primary" href={location.pickupURL} title="Opens in a new tab">
-                      Pickup
-                    </a>
-                  }
-                  {
-                    /* If there is a DoorDash URL there will also be an Uber Eats URL */
-                    location.doorDashURL &&
-                    <Button variant="primary" onClick={() => handleShow(index)}>
-                      Delivery
-                    </Button>
-                  }
-                  {
-                    location.YextURL &&
-                    <a className="btn btn-primary" href={location.yextURL}>
-                      Learn more
-                    </a>
-                  }
-                  {
-                    location.MenuPdfURL &&
-                    <a className="btn btn-primary" href={location.menuPdfURL}>
-                      Menu
-                    </a>
-                  }
-                </div>
-              </Card.Body>
-            </Card>
-          </div>
-        );
-      })}
+      <div className="pickup-layout">
+        <div className="double-column" style={{justifyContent: 'space-around'}}>
+          {locationsData.map((location, index) => {
+            return (
+              <div className="card-modal-wrapper" key={index}>
+                <Card style={{ width: '22rem' }}>
+                  <Card.Header as="h3">{location.name}</Card.Header>
+                  <Card.Body>
+                    <Card.Title>{location.locationInfo}</Card.Title>
+                    <Card.Text>
+                      {location.address}
+                      {location.phone && `Call: ${location.phone}`}
+                    </Card.Text>
+                    <div className="">
+                      {
+                        location.pickupURL &&
+                        <a className="btn btn-primary" href={location.pickupURL} title="Opens in a new tab">
+                          Pickup
+                        </a>
+                      }
+                      {
+                        /* If there is a DoorDash URL there will also be an Uber Eats URL */
+                        location.doorDashURL &&
+                        <Button variant="primary" onClick={() => handleShow(index)}>
+                          Delivery
+                        </Button>
+                      }
+                      {
+                        location.YextURL &&
+                        <a className="btn btn-primary" href={location.yextURL}>
+                          Learn more
+                        </a>
+                      }
+                      {
+                        location.MenuPdfURL &&
+                        <a className="btn btn-primary" href={location.menuPdfURL}>
+                          Menu
+                        </a>
+                      }
+                    </div>
+                  </Card.Body>
+                </Card>
+              </div>
+            );
+          })}
+        </div>
+      </div>
       <Modal
         show={show}
         onHide={handleClose}

@@ -4,8 +4,8 @@ import { useLocation, useParams } from 'react-router-dom';
 function MenuItems2() {
     const location = useLocation();
     console.log(location.pathname, location.state, location)
-    const { pdpItem } = useParams()
-    console.log(`HELLO, ${pdpItem}`)
+    // const { pdpItem } = useParams()
+    // console.log(`HELLO, ${pdpItem}`)
     return (
         <main id="skip-link" className="menu-page menu-page-bg product-description-page">
             <div className="container-fluid mt-0 p-3 pt-4">
@@ -33,27 +33,3 @@ function MenuItems2() {
 }
 
 export default MenuItems2;
-
-
-
-
-
-// <Route 
-// path="/tests/:id/index.html"
-// element={
-//   <>
-//     <MenuItems2 />
-//   </>
-// }
-// />
-// {/* <Route path="*" element={<NotFound404 />} */}
-
-
-
-// <Route path="/menu">
-//   {/* This one will match the parent route (/menu/:id) extacly */}
-//   <Route index element={<MenuItems2 />} />
-//   <Route path=":id" element={<MenuItems2 />} />
-// </Route>
-
-

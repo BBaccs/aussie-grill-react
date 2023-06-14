@@ -1314,17 +1314,17 @@ select.select .slim-option {
         padding: 0rem 1.25rem;
     }
     
-    #pickup-page .card-title,
+    /* #pickup-page .card-title,
     #pickup-page .button-container {
         position: absolute;
-    }
+    } */
     
-    #pickup-page .card-title {
-        top: 20px;
+    /* #pickup-page .card-title {
+        top: 20px; */
         /* Do not remove, this fixes an aligment bug in IE*/
-        right: 0px;
-        left: 0px;
-    }
+        /* right: 0px;
+        left: 0px; */
+    /* } */
     
     #pickup-page .button-container {
         bottom: 20px;
@@ -1438,3 +1438,33 @@ select.select .slim-option {
         object-fit: fill;
     } 
  }
+
+
+
+
+ /* @TODO REFACTOR LATER */
+
+ #pickup-page .card-body {
+    flex-direction: column;
+}
+
+#pickup-page .card-body .btn {
+    margin: 0 3px 0 3px;
+}
+#pickup-page .card-header {
+    font-size: 1rem;
+}
+
+/* #pickup-page {
+    display: flex;
+    justify-content: center;
+} */
+
+.pickup-layout {
+    display: flex;
+    justify-content: center;
+}
+
+#pickup-page .card-modal-wrapper {
+    margin: 0px 0 50px 0;
+}

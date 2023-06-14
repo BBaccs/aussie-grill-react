@@ -1,3 +1,4 @@
+// @TODO Once pnme item has been maped and looped oover and subcatgery === true, then start a new categoy.
 export const dessertsAndBeverages = [
   {
     name: "SALTED CARAMEL COOKIE",
@@ -34,32 +35,38 @@ export const dessertsAndBeverages = [
   {
     name: "NOT YO' MAMA'S LEMONADE",
     linkTo: "/menu/desserts&Beverages/notYoMamasLemonade.html",
-    pdpDescription: "House-made sweet, tart, tangy lemonade with a hint of heat."
+    pdpDescription: "House-made sweet, tart, tangy lemonade with a hint of heat.",
+    subCategory: "Beverages"
   },
   {
     name: "NOT YO' MAMA'S WATERMELON LEMONADE",
     linkTo: "/menu/desserts&Beverages/notYoMamasWatermelonLemonade.html",
-    pdpDescription: "House-made sweet, tart, tangy watermelon lemonade with a hint of heat."
+    pdpDescription: "House-made sweet, tart, tangy watermelon lemonade with a hint of heat.",
+    subCategory: "Beverages"
   },
   {
     name: "ICED TEA",
     linkTo: "/menu/desserts&Beverages/icedTea.html",
-    pdpDescription: "Sweet and Unsweet Iced Tea available."
+    pdpDescription: "Sweet and Unsweet Iced Tea available.",
+    subCategory: "Beverages"
   },
   {
     name: "SOFT DRINKS",
     linkTo: "/menu/desserts&Beverages/saltedsoftDrinksCaramelCookie.html",
     pdpDescription: "Coca-Cola® Products.",
+    subCategory: "Beverages"
   },
   {
     name: "BEER & SELTZER",
     linkTo: "/menu/salads/beerAndSeltzer.html",
     pdpDescription: "Variety of beer and seltzer flavors.",
-    pdpDescription2: "ONLY AVAILABLE AT LUTZ AND BRANDON BLVD. LOCATIONS."
+    pdpDescription2: "ONLY AVAILABLE AT LUTZ AND BRANDON BLVD. LOCATIONS.",
+    subCategory: "Beverages"
   },
   {
     name: "BOTTLED BEVERAGES",
     linkTo: "/menu/desserts&Beverages/bottledBeverages.html",
-    pdpDescription: "Variety of bottled beverages."
+    pdpDescription: "Variety of bottled beverages.",
+    subCategory: "Beverages"
   }
 ];

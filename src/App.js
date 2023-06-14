@@ -26,6 +26,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.js";
 import CcpaPage from "./pages/CcpaPage.js";
 import AccessibilityPage from "./pages/AccessibilityPage.js";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
+import OrderPage from "./pages/OrderPage.js";
 
 function App() {
   const location = useLocation();
@@ -53,15 +54,28 @@ function App() {
           />
 
           { /*  Static Pages */}
+          <Route
+            exact path={'/pickup2.html'}
+            element={
+              <div id="pickup-page" className="landing-page">
+                <div className="container-fluid text-center landing-content-wrapper">
+                  <OrderPage />
+                  <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
+                    <AModal />
+                  </div>
+                </div>
+              </div>
+            }
+          />
           <Route path={'/ourStory.html'} element={<OurStoryPage />} />
-          <Route path={'/careers.html'}element={<CareersPage />} />
+          <Route path={'/careers.html'} element={<CareersPage />} />
           <Route path={'/contact.html'} element={<ContactPage />} />
           <Route path={'/giveaways.html'} element={<GiveawaysPage />} />
-          <Route path={'/privacyPolicyPages/privacyPolicy.html'} element={<PrivacyPolicyPage />}/>
+          <Route path={'/privacyPolicyPages/privacyPolicy.html'} element={<PrivacyPolicyPage />} />
           <Route path={'/privacyPolicyPages/ccpa.html'} element={<CcpaPage />} />
           <Route path={'/privacyPolicyPages/accessibilityStatement.html'} element={<AccessibilityPage />} />
-          <Route path={'/privacyPolicyPages/termsAndConditions.html'} element={<TermsAndConditionsPage />}/>
- 
+          <Route path={'/privacyPolicyPages/termsAndConditions.html'} element={<TermsAndConditionsPage />} />
+
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
 
@@ -113,53 +127,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <Route path={`/menu/${category}/brisketStackBurger.html`} element={<PDP />} />
-          <Route path={`/menu/${category}/classicCheeseBurger.html`} element={<PDP />} />
-          <Route path={`/menu/${location.state}/aussieBurger.html`} element={<PDP />} />
-          <Route path={`/menu/${location.state}/jamminChickenSandwich.html`} element={<PDP />} />
-          <Route path={`/menu/${location.state}/impossibleBurger.html`} element={<PDP />} />
-          <Route path={`/menu/${location.state}/crispyshrimpPoBoy.html`} element={<PDP />} />
-          <Route path={`/menu/${location.state}/crispySrirachaChickenSandwich.html`} element={<PDP />} />
-
-          <Route path={`/menu/largePlates/crispyChickenTenders.html`} element={<PDP />} />
-          <Route path={`/menu/largePlates/toppedGrilledChicken.html`} element={<PDP />} />
-          <Route path={`/menu/largePlates/center-cutSirloin.html`} element={<PDP />} />
-
-          <Route path={`/menu/salads/aussieSalad.html`} element={<PDP />} />
-          <Route path={`/menu/salads/appleArugulaSalad.html`} element={<PDP />} />
-
-          <Route path={`/menu/sides&Snacks/aussiePetals.html`} element={<PDP />} />
-          <Route path={`/menu/sides&Snacks/aussieCheeseFries.html`} element={<PDP />} />
-          <Route path={`/menu/sides&Snacks/fries.html`} element={<PDP />} />
-          <Route path={`/menu/sides&Snacks/appleArugulaSalad.html`} element={<PDP />} />
-          <Route path={`/menu/sides&Snacks/COLESLAW.html`} element={<PDP />} />
-
-          <Route path={`/menu/kids/kidsCrispyChickenTenders.html`} element={<PDP />} />
-          <Route path={`/menu/kids/kidsCheeseburger.html`} element={<PDP />} />
-          <Route path={`/menu/kids/kidsGrilledCheeseSandwich.html`} element={<PDP />} />
-
-          <Route path={`/menu/desserts&Beverages/saltedCaramelCookie.html`} element={<PDP />} />
-          <Route path={`/menu/desserts&Beverages/ghirardelliDoubleDarkChocolateBrownie.html`} element={<PDP />} />
-          <Route path={`/menu/desserts&Beverages/saltedCaramelCookieSundae.html`} element={<PDP />} />
-          <Route path={`/menu/desserts&Beverages/doubleDarkChocolateBrownieSundae.html`} element={<PDP />} /> */}
