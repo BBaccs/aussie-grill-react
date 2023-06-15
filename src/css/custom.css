@@ -1,13 +1,12 @@
 
-/* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*//* REFACTOR ME*/
+/* @TO: These ALREADY exist in botostrap, use them)
 /* Write a media query to hide on mobile only*/
 @media (max-width: 768px) {
     .mobile-only {
       display: none !important;
     }
   }
-  
-  /* Write a media query to hide on desktop only*/
+  /* Hide desktop only*/
   @media (min-width: 768px) {
     .desktop-only {
       display: none !important;
@@ -18,6 +17,7 @@
     text-decoration: none;
   }
 
+  /* Important ADA requirement, do not override */
   :focus {
     outline: -webkit-focus-ring-color auto 1px!important;
     outline-offset: 3px!important;
@@ -72,6 +72,8 @@
     margin: 0px 0 50px 0;
 }
   /* PICK UP PAGE REFACTORS */
+
+  
 
 
   

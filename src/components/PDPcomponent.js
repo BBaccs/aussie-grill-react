@@ -7,7 +7,7 @@ function MenuItems2() {
     // const { pdpItem } = useParams()
     // console.log(`HELLO, ${pdpItem}`)
     return (
-        <main id="skip-link" className="menu-page menu-page-bg product-description-page">
+        <div className="menu-page menu-page-bg product-description-page">
             <div className="container-fluid mt-0 p-3 pt-4">
                 {/* <!-- Responsive pictures --> */}
                 <picture>
@@ -28,7 +28,7 @@ function MenuItems2() {
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     )
 }
 

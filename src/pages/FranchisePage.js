@@ -1,15 +1,13 @@
-import NavBar from '../components/NavBar';
-import { franchiseNavItems } from '../data/franchiseNavItems';
 import HeroImg from '../components/HeroImg';
 
 export default function FranchisePage() {
     return (
         <>
-            <NavBar navData={franchiseNavItems} />
+            {/* <NavBar navData={franchiseNavItems} /> */}
             <div id="franchise-page" className="landing-page">
                 <HeroImg img={"freestanding.jpg"} />
                 <div id="why-aussie-section-anchor" className="nav-anchor"></div>
-                <div style={{paddingRight: '0px', paddingLeft: '0px'}} className="container-fluid landing-content-wrapper">
+                <div style={{ paddingRight: '0px', paddingLeft: '0px' }} className="container-fluid landing-content-wrapper">
                     <div className="content-inner-wrapper m-auto">
                         <h1 className="sr-only">Franchise Information</h1>
                         <div className="row">
@@ -32,7 +30,7 @@ export default function FranchisePage() {
                             <div className="row mb-md-4">
                                 <div className="col-12 col-md-4">
                                     <picture>
-                                        <source srcset="assets/other/desktop/webFloorPlanFreeStandingv3.jpg"
+                                        <source srcSet="/assets/other/desktop/webFloorPlanFreeStandingv3.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100"
                                             srcSet="/assets/other/mobile/webFloorPlanFreeStandingv3Mobile.jpg"
@@ -41,7 +39,7 @@ export default function FranchisePage() {
                                 </div>
                                 <div className="col-12 col-md-4 my-3 my-md-0">
                                     <picture>
-                                        <source srcset="assets/other/desktop/webFloorPlanv3.jpg"
+                                        <source srcSet="/assets/other/desktop/webFloorPlanv3.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100" srcSet="/assets/other/mobile/webFloorPlanv3Mobile.jpg"
                                             alt="2,000 square feet, 74 seats & 24 tables" />
@@ -49,7 +47,7 @@ export default function FranchisePage() {
                                 </div>
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
                                     <picture>
-                                        <source srcset="assets/other/desktop/webFloorPlanFoodHallv3.jpg"
+                                        <source srcSet="/assets/other/desktop/webFloorPlanFoodHallv3.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100"
                                             srcSet="/assets/other/mobile/webFloorPlanFoodHallv3Mobile.jpg"
@@ -101,7 +99,7 @@ export default function FranchisePage() {
 
                                 {/* <!-- DESKTOP SUPPORT SECTION --> */}
                                 <div className="col-lg-5 col-md-12 mt-4 mt-md-4 ml-3">
-                                    <div className="orange-bg mb-2" style={{Height: '45px'}}>
+                                    <div className="orange-bg mb-2" style={{ Height: '45px' }}>
                                         <h2 className="landing-subheading pt-2">SUPPORT YOU GET</h2>
                                     </div>
                                     <div className="row">
@@ -250,7 +248,7 @@ export default function FranchisePage() {
                                         </li>
                                         <li>
                                             <div className="d-flex w-100 justify-content-end">
-                                                <img style={{marginRight: '-50px'}}
+                                                <img style={{ marginRight: '-50px' }}
                                                     srcSet="/assets/agGraphicElements/animals/bullFullMedium.png" alt="" />
                                             </div>
                                         </li>
