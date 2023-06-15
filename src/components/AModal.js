@@ -18,9 +18,9 @@ function AModal() {
   }
 
   return (
-    <>
+    <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
       <div className="pickup-layout">
-        <div className="double-column" style={{justifyContent: 'space-around'}}>
+        <div className="double-column" style={{ justifyContent: 'space-around' }}>
           {locationsData.map((location, index) => {
             return (
               <div className="card-modal-wrapper" key={index}>
@@ -102,7 +102,7 @@ function AModal() {
           </div>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
 

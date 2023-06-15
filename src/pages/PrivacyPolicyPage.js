@@ -39,14 +39,8 @@ export default function PrivacyPolicyPage() {
                     <div className="privacy-policy-wraper">
                         <div className="privacy-policy-content">
                             <p>
-                                This Privacy Policy applies to information about you that Bloomin’ Brands, Inc. (“BBI”, “we”, “our”, “us”) may obtain when you visit our websites including
-                                <a href="./../https://www.bloominbrands.com/">bloominbrands.com</a>, <a href="./../https://www.outback.com/">outback.com</a>,
-                                <a href="./../https://www.carrabbas.com/">carrabbas.com</a>, <a href="./../https://www.bonefishgrill.com/">bonefishgrill.com</a>,
-                                <a href="./../https://www.flemingssteakhouse.com/">flemingssteakhouse.com</a>, aussiegrill.com,
-                                <a href="./../https://www.outbackandcarrabbasexpress.com/">outbackandcarrabbasexpress.com</a>
-                                or
-                                <a aria-label="Dine Rewards's website" href="./../https://www.dine-rewards.com/">dine-rewards.com</a>
-                                (collectively, the “Sites”); use any of the associated mobile applications (the “Apps”); or connect to the WiFi in our locations (the Sites, Apps, and WiFi are collectively referred to as the “Services” in this
+                                This Privacy Policy applies to information about you that Bloomin’ Brands, Inc. (“BBI”, “we”, “our”, “us”) may obtain when you visit our websites including <a href="./../https://www.bloominbrands.com/">bloominbrands.com</a>, <a href="./../https://www.outback.com/">outback.com</a>, <a href="./../https://www.carrabbas.com/">carrabbas.com</a>, <a href="./../https://www.bonefishgrill.com/">bonefishgrill.com</a>, <a href="./../https://www.flemingssteakhouse.com/">flemingssteakhouse.com</a>, aussiegrill.com, <a href="./../https://www.outbackandcarrabbasexpress.com/">outbackandcarrabbasexpress.com</a>
+                                or <a href="./../https://www.dine-rewards.com/">dine-rewards.com</a> (collectively, the “Sites”); use any of the associated mobile applications (the “Apps”); or connect to the WiFi in our locations (the Sites, Apps, and WiFi are collectively referred to as the “Services” in this
                                 Policy). This Privacy Policy describes how we may collect, use, or share information about you; your choices regarding our use of your information; how we safeguard such information; and how you may contact us
                                 regarding our privacy practices.
                             </p>
@@ -240,8 +234,7 @@ export default function PrivacyPolicyPage() {
                                 of future text messages by replying to one of our SMS text messages with the word “Stop.”
                             </p>
                             <p>
-                                Additionally, you may request to stop receiving marketing communications by contacting us at
-                                <a href="./../mailto:privacy@bloominbrands.com">privacy@bloominbrands.com</a>.
+                                Additionally, you may request to stop receiving marketing communications by contacting us at <a href="./../mailto:privacy@bloominbrands.com">privacy@bloominbrands.com</a>.
                             </p>
                             <h3 className="privacy-policy-sub-text">
                                 Accessing, changing, and deleting your personal information.
@@ -266,15 +259,11 @@ export default function PrivacyPolicyPage() {
                             </p>
                             <h3 className="privacy-policy-sub-text">California Residents</h3>
                             <p>
-                                California residents may click
-                                <a aria-label="CCPA page" href="./../privacyPolicy/ccpa.html">here</a>
-                                to view our California Privacy Notice.
+                                California residents may click <a aria-label="CCPA page" href="./../privacyPolicy/ccpa.html">here</a> to view our California Privacy Notice.
                             </p>
                             <h3 className="privacy-policy-sub-text">Nevada Residents</h3>
                             <p>
-                                Nevada residents may click
-                                <a href="https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71.html" aria-label="Nevada Residents Privacy Policy" target="_blank">here</a>
-                                to exercise their privacy rights.
+                                Nevada residents may click <a href="https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71.html" aria-label="Nevada Residents Privacy Policy" target="_blank">here</a> to exercise their privacy rights.
                             </p>
                             <h3 className="privacy-policy-sub-text">
                                 Information for Users Outside the United States
@@ -291,8 +280,7 @@ export default function PrivacyPolicyPage() {
                             </p>
                             <h3 className="privacy-policy-sub-text">Contact Information</h3>
                             <p>
-                                You may direct comments or questions regarding this Privacy Policy via email to
-                                <a href="./../mailto:privacy@bloominbrands.com">privacy@bloominbrands.com</a>
+                                You may direct comments or questions regarding this Privacy Policy via email to <a href="./../mailto:privacy@bloominbrands.com">privacy@bloominbrands.com</a>
                             </p>
                         </div>
                     </div>

@@ -1,7 +1,5 @@
-/* @TODO - use state (instead of props) for Navbar changes - franchise, homepage etc.? */
 // Is menu items component necessarry? it's on home page but maybe should be deleted.
 // (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
-// Fix footer links
 import "./css/custom.css";
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
@@ -26,7 +24,8 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.js";
 import CcpaPage from "./pages/CcpaPage.js";
 import AccessibilityPage from "./pages/AccessibilityPage.js";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
-import OrderPage from "./pages/OrderPage.js";
+// import OrderPage from "./pages/OrderPage.js";
+import Ordering from "./components/Ordering";
 import FranchisePage from "./pages/FranchisePage";
 
 function App() {
@@ -56,14 +55,11 @@ function App() {
 
           { /*  Static Pages */}
           <Route
-            exact path={'/pickup2.html'}
+            exact path={'/pickup.html'}
             element={
               <div id="pickup-page" className="landing-page">
                 <div className="container-fluid text-center landing-content-wrapper">
-                  <OrderPage />
-                  <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
-                    <AModal />
-                  </div>
+                  <Ordering />
                 </div>
               </div>
             }
@@ -94,14 +90,14 @@ function App() {
 
           {/* Individual Menu PDP Pages */}
           <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
-          <Route
+          {/* <Route
             exact path={'/pickup.html'}
             element={
               <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
                 <AModal />
               </div>
             }
-          />
+          /> */}
           <Route
             exact path={'/franchise.html'}
             element={
