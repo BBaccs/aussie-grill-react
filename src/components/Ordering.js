@@ -9,39 +9,25 @@ class Ordering extends Component {
             showDelivery: true,
             showPickup: true,
         };
-        this.toggleDelivery = this.toggleDelivery.bind(this);
-        this.togglePickup = this.togglePickup.bind(this);
     }
-    toggleDelivery() {
+
+    //No need to bind becasue of arrow functions
+    toggleDelivery = () => {
         this.setState({ showDelivery: !this.state.showDelivery });
-        console.log('this.state.showDelivery', this.state.showDelivery)
     }
-    togglePickup() {
+    togglePickup = () => {
         this.setState({ showPickup: !this.state.showPickup });
-        console.log('this.state.showDelivery', this.state.showPickup);
     }
+
+    toggleChecked = (e) => {
+        console.log(e.target.id)
+        document.querySelector(`#${e.target.id}`).toggleAttribute('checked')
+    }
+
 
 
     render() {
         const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
-        const pickupInput = this.state.showPickup
-        ? <>
-            <input onClick={this.togglePickup} className="checkboxLeft checked-option primary-color" type="checkbox" id="pickupChk" />
-            <label tabIndex="0" htmlFor="pickupChk">PickUp</label>
-        </> :
-        <>
-            <input onClick={this.togglePickup} className="checkboxLeft" type="checkbox" id="pickupChk" />
-            <label tabIndex="0" htmlFor="pickupChk">PickUp</label>
-        </>;
-        const deliveryInput = this.state.showDelivery
-        ? <>
-            <input onClick={this.toggleDelivery} className="option-filter checked-option checkboxRight primary-color" type="checkbox" id="deliveryChk" checked />
-            <label tabIndex="0" htmlFor="deliveryChk">Delivery</label>
-        </>
-        : <>
-            <input onClick={this.toggleDelivery} className="option-filter checkboxRight primary-color" type="checkbox" id="deliveryChk" />
-            <label tabIndex="0" htmlFor="deliveryChk">Delivery</label>
-        </>;        
         return (
             <>
                 <h1 className="landing-heading mb-4 mb-lg-4">Choose your location to place an order!</h1>
@@ -56,8 +42,28 @@ class Ordering extends Component {
                         </select>
                     </div>
                     <div id="checkbox-wrapper" className="mb-3">
-                        {pickupInput}
-                        {deliveryInput}
+                        <div>
+                            <input
+                                onClick={this.togglePickup}
+                                className={`checkboxLeft ${this.state.showPickup ? 'checked-option' : ''}`}
+                                type="checkbox"
+                                id="pickupChk"
+                                checked={this.state.showPickup}
+                                onChange={this.toggleChecked}
+                            />
+                            <label tabIndex="0" htmlFor="pickupChk">PickUp</label>
+                        </div>
+                        <div>
+                            <input
+                                onClick={this.toggleDelivery}
+                                className={`option-filter checkboxRight primary-color ${this.state.showDelivery ? 'checked-option' : ''}`}
+                                checked={this.state.showDelivery}
+                                onChange={this.toggleChecked}
+                                type="checkbox"
+                                id="deliveryChk"
+                            />
+                            <label tabIndex="0" htmlFor="deliveryChk">Delivery</label> {console.log('this.state.showDelivery', this.state.showDelivery)}
+                        </div>
                     </div>
                 </div>
                 <AModal />
