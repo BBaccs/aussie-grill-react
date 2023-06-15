@@ -8,43 +8,38 @@ import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
 import { NavLink, Link } from 'react-router-dom';
+import { franchiseNavItems } from "../data/franchiseNavItems.js";
 
 class NavBar extends Component {
     static defaultProps = {
         alertBar: true,
         alertBarMsg: 'Follow the Adventure on',
         pickup: false,
-        navData: navItems,
     };
     constructor(props) {
         super(props);
-        this.state = { clicked: false };
+        this.state = {
+            clicked: false,
+            navData: window.location.pathname === '/franchise.html' ? franchiseNavItems : navItems
+        };
         this.handleClick = this.handleClick.bind(this);
-        // this.handleUrlChange = this.handleUrlChange.bind(this);
     }
     handleClick(e) {
         this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
     }
 
+    // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. 
+    // It is automatically provided by React and does not need to be explicitly passed.
+    componentDidUpdate(prevProps) {
+        const { location } = this.props;
+        if (location && location.pathname === '/franchise.html' && prevProps.location.pathname !== '/franchise.html') {
+            this.setState({ navData: franchiseNavItems });
+        }
+        console.log('locaiton:', location, 'location.pathname:',location.pathname )
+    }
+
     render() {
-        function logURLChanges() {
-            let prevPathname = window.location.pathname;
 
-            window.addEventListener('popstate', () => {
-                console.log(`Current URL: ${window.location.pathname}`);
-                console.log(`Previous URL: ${prevPathname}`);
-                prevPathname = window.location.pathname;
-            });
-        }
-
-        logURLChanges();
-
-        function hi() {
-            window.addEventListener("DOMContentLoaded", () => {
-                console.log("DOM fully loaded and parsed");
-            });
-        }
-        hi();
         // Destructuring props & state
         const { alertBar, alertBarMsg, pickup } = this.props;
         const { clicked } = this.state;
@@ -80,18 +75,19 @@ class NavBar extends Component {
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    this.props.navData.map((link, index) => {
+                                    this.state.navData.map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
                                                 {
                                                     link.externalLink
                                                         ? <a className="nav-link" href={link.url}>{link.name}</a> :
-                                                        <NavLink className="nav-link" to={link.url} title={link.title}>{link.name}</NavLink>}
+                                                        <NavLink className="nav-link" to={link.url} exact={link.url.includes("#")} title={link.title}>{link.name}</NavLink>
+                                                }
                                             </li>
                                         );
                                     })
                                     :
-                                    this.props.navData.filter(link => link.name !== 'Order').map((link, index) => {
+                                    this.state.navData.filter(link => link.name !== 'Order').map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass} nav-item`}>
                                                 {
@@ -116,14 +112,14 @@ class NavBar extends Component {
                     <div className={clicked ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
                         <div className="bg-ag-dark p-4">
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                {this.props.navData.map((link, index) => {
+                                {this.state.navData.map((link, index) => {
                                     return (
                                         <li key={index} className="nav-item">
                                             {
                                                 link.externalLink
                                                     ? <a className="nav-link" href={link.url}>{link.name}</a> :
                                                     <NavLink
-                                                        className="nav-link" 
+                                                        className="nav-link"
                                                         to={link.url}>{link.name}
                                                     </NavLink>}
                                         </li>

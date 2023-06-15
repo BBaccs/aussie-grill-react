@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       {/* <h1 className="sr-only">Welcome to Aussie Grill</h1> */}
-      <NavBar />
+      <NavBar location={location} />
       <main id="main-content">
         <Routes>
           {/* Home Page */}
