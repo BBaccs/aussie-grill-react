@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       {/* <h1 className="sr-only">Welcome to Aussie Grill</h1> */}
       <NavBar location={location} />
-      <main id="main-content">
+      <main id="main-content" style={{background: 'url(/assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png)'}}>
         <Routes>
           {/* Home Page */}
           <Route
@@ -73,7 +73,20 @@ function App() {
           <Route path={'/menu/index.html'} element={<Menu />} />
 
           { /*  Menu Category for CATERING */}
-          <Route path={'/catering/index.html'} element={<Menu menuData={CateringCategoryData} />} />
+          <Route path={'/catering/index.html'} element={
+            <>
+              <div class="menu-page mt-0 pt-lg-5 py-4 mb-4">
+                <div class="px-4">
+                  <h1 class="pt-lg-2 pb-2">CATERING DONE MORE DARINGLY</h1>
+                  <p class="mb-0 primary-color">We offer up a variety of platters to get you fueled through a work
+                    meeting, house party or wherever your next adventure takes you.</p>
+                  <p class="mb-0 primary-color">3-hour notice required, some restrictions apply.</p>
+                  <p class="mb-0 primary-color">All platters serve 6-8.</p>
+                </div>
+              </div>
+              <Menu menuData={CateringCategoryData} />
+            </>
+          } />
           <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
 
           {/* Individual Catering Menu PDP Pages */}

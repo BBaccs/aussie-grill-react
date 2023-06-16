@@ -1,6 +1,9 @@
 
 /* @TO: These ALREADY exist in botostrap, use them)
 /* Write a media query to hide on mobile only*/
+
+
+
 @media (max-width: 768px) {
     .mobile-only {
       display: none !important;
