@@ -172,8 +172,7 @@ export default function FranchisePage() {
                                 </div>
                             </div>
 
-                            <div id="investment-section-anchor"></div>
-                            <div id="investment-section-anchor-dropdown"></div>
+                            {/* <div id="investment-section-anchor-dropdown"></div> */}
                             <div id="support-anchor" className="nav-anchor"></div>
 
                             {/* <!-- MOBILE SUPPORT SECTION --> */}
