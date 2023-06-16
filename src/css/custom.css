@@ -982,6 +982,11 @@ body::-webkit-scrollbar-thumb {
     outline-color: #D4461D;
 }
 
+#location-filter-wrapper {
+    align-items: center;
+    flex-direction: column;
+}
+
 #location-filter-wrapper label,
 #checkbox-wrapper label,
 select.select {
