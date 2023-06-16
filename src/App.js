@@ -6,12 +6,9 @@ import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
 import ACarousel from "./components/Carousel.js";
-import AModal from './components/AModal.js';
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
 import PDP from './hooks/PDP.js';
-import { franchiseNavItems } from "./data/franchiseNavItems";
-import { navItems } from "./data/navItems.js";
 import { Routes, Route } from 'react-router-dom';
 import { useLocation, useParams } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
@@ -24,7 +21,6 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.js";
 import CcpaPage from "./pages/CcpaPage.js";
 import AccessibilityPage from "./pages/AccessibilityPage.js";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
-// import OrderPage from "./pages/OrderPage.js";
 import Ordering from "./components/Ordering";
 import FranchisePage from "./pages/FranchisePage";
 
@@ -90,14 +86,6 @@ function App() {
 
           {/* Individual Menu PDP Pages */}
           <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
-          {/* <Route
-            exact path={'/pickup.html'}
-            element={
-              <div id="homepage-container-fluid" className="container-fluid-fluid py-5">
-                <AModal />
-              </div>
-            }
-          /> */}
           <Route
             exact path={'/franchise.html'}
             element={

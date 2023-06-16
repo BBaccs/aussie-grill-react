@@ -1,7 +1,5 @@
 /* @TODO */
 /* Transition animation for mobile nav btn */
-/* If we're on link X, activate given state (if necessarey), which could hide link X in navbar? Specifically for the PICKUP / ORDER page as well as the FRANCHISE page (different navigation data) */
-/* However, if this is just done w/ an onClick, it won't work for manually typing in the URL / using the browser back button */
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";

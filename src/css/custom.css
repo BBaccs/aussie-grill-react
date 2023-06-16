@@ -79,26 +79,26 @@
   
   /* FONTS */
 
-/* @font-face {
+  @font-face {
     font-family: bureauGrotMedium;
-    src: url(../assets/fonts/bureauGrotMedium.otf);
+    src: url(/public/assets/fonts/bureauGrotMedium.otf);
 }
 
 @font-face {
     font-family: bureauGrotBook;
-    src: url(../assets/fonts/bureauGrotBook.otf);
+    src: url(/public/assets/fonts/bureauGrotBook.otf);
 }
 
 @font-face {
     font-family: bureauGrotUltraBlack;
-    src: url(../assets/fonts/bureauGrotUltraBlack.otf);
+    src: url(/public/assets/fonts/bureauGrotUltraBlack.otf);
 }
 
 
 @font-face {
     font-family: openSansRegular;
-    src: url(../assets/fonts/openSansRegular.ttf);
-} */
+    src: url(/public/assets/fonts/openSansRegular.ttf);
+}
 
 /* GLOBAL */
 
