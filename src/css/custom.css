@@ -987,6 +987,10 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 }
 
+#checkbox-wrapper {
+    display: flex;
+}
+
 #location-filter-wrapper label,
 #checkbox-wrapper label,
 select.select {

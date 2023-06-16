@@ -33,7 +33,6 @@ class Ordering extends Component {
     handleLocationChange = (e) => {
         this.setState({ selectedLocation: e.target.value });
     }
-    
 
     render() {
         const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
