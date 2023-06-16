@@ -39,21 +39,20 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
       <div className="pickup-layout">
         <div className="double-column" style={{ justifyContent: 'space-around' }}>
-          {filteredLocations.length === 0 && 
-          <Alert style={{fontSize: '1.1rem'}} key={'alert'} variant={'danger'}>
-            Sorry! No locations match this criteria.
-          </Alert>}
+          {filteredLocations.length === 0 &&
+            <Alert style={{ fontSize: '1.1rem' }} key={'alert'} variant={'danger'}>
+              Sorry! No locations match this criteria.
+            </Alert>}
           {filteredLocations.map((location, index) => {
             return (
               <div className="card-modal-wrapper" key={index}>
                 <Card style={{ width: '22rem' }}>
                   <Card.Header as="h3">{location.name}</Card.Header>
                   <Card.Body>
-                    <Card.Title>{location.locationInfo}</Card.Title>
-                    <Card.Text>
-                      <div>{location.address}</div>
-                      <div>{location.phone && `Call: ${location.phone}`}</div>
-                    </Card.Text>
+                    <Card.Text as={'p'}>{location.locationInfo}</Card.Text>
+                    <Card.Text as={'p'}>{location.address}</Card.Text>
+                    <Card.Text>{location.phone && `Call: ${location.phone}`}</Card.Text>
+
                     <div className="">
                       {
                         location.pickupURL &&

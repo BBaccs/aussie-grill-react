@@ -1,9 +1,6 @@
 
 /* @TO: These ALREADY exist in botostrap, use them)
 /* Write a media query to hide on mobile only*/
-
-
-
 @media (max-width: 768px) {
     .mobile-only {
       display: none !important;
@@ -440,9 +437,9 @@ ul {
 }
 
 /* HOMEPAGE */
-#homepage-container-fluid {
+/* #homepage-container-fluid {
     background-image: url(../assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png);
-}
+} */
 
 .primary-subheading-wrapper {
     background: url(../assets/agGraphicElements/strokeOrange.png);
@@ -585,11 +582,11 @@ ul {
 }
 
 /* MENU PAGES */
-.menu-page-bg,
+/* .menu-page-bg,
 .landing-content-wrapper {
     background-image: url(../assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png);
     background-repeat: round;
-}
+} */
 
 .landing-content-wrapper {
     padding-top: 2rem;
