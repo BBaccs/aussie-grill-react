@@ -5,7 +5,7 @@
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { franchiseNavItems } from "../data/franchiseNavItems.js";
 
 class NavBar extends Component {
@@ -77,7 +77,7 @@ class NavBar extends Component {
                                         return (
                                             <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
                                                 {
-                                                    link.externalLink
+                                                    link.externalLink || link.hashLink
                                                         ? <a className="nav-link" href={link.url}>{link.name}</a> :
                                                         <NavLink className="nav-link" to={link.url} exact={link.url.includes("#")} title={link.title}>{link.name}</NavLink>
                                                 }
@@ -89,7 +89,7 @@ class NavBar extends Component {
                                         return (
                                             <li key={index} className={`${link.liClass} nav-item`}>
                                                 {
-                                                    link.externalLink
+                                                    link.externalLink || link.hashLink
                                                         ? <a className="nav-link" href={link.url}>{link.name}</a>
                                                         : <NavLink className="nav-link" to={link.url}>{link.name}</NavLink>
                                                 }
@@ -114,7 +114,7 @@ class NavBar extends Component {
                                     return (
                                         <li key={index} className="nav-item">
                                             {
-                                                link.externalLink
+                                                link.externalLink || link.hashLink
                                                     ? <a className="nav-link" href={link.url}>{link.name}</a> :
                                                     <NavLink
                                                         className="nav-link"

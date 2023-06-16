@@ -2,26 +2,31 @@ export const franchiseNavItems = [
     {
       name: 'Why Aussie Grill',
       url: '#why-aussie-section-anchor',
-      // mobileLiCName:"nav-item",
+      hashLink: true,
     },
     {
       name: 'Investment Considerations',
-      url: '#investment-considererations',
+      url: '#investment-section-anchor',
+      hashLink: true,
     },
     {
       name: 'Support',
-      url: '#investment-considererations',
+      url: '#investment-section-anchor',
+      hashLink: true,
     },
     {
       name: 'Qualifications',
-      url: '#investment-considererations',
+      url: '#qualifications-anchor',
+      hashLink: true,
     },
     {
       name: 'Available Opportunities',
       url: '#available-opportunities-anchor',
+      hashLink: true,
     },
     {
       name: 'Contact',
       url: '#available-opportunities-anchor',
+      hashLink: true,
     }
   ];
