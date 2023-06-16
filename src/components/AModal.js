@@ -4,8 +4,9 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 import { locationsData } from "../data/locationsData.js";
+import Alert from "react-bootstrap/Alert";
 
-function AModal() {
+function AModal({ selectedLocation, showDelivery, showPickup }) {
   const [show, setShow] = useState(false);
   const [thisDoorDashUrl, setthisDoorDashUrl] = useState("");
   const [thisUberEatsUrl, setthisUberEatsUrl] = useState("");
@@ -17,11 +18,32 @@ function AModal() {
     setthisUberEatsUrl(locationsData[index].uberEatsURL);
   }
 
+  // Filter the locations based on showDelivery, showPickup, and selectedLocation
+  const filteredLocations = locationsData.filter((location) => {
+    if (selectedLocation !== "All" && location.stateName !== selectedLocation) {
+      return false;
+    }
+    if (!showDelivery) {
+      if (location.doorDashURL || location.uberEatsURL) {
+        return false;
+      }
+
+    }
+    if (!showPickup && location.pickupURL) {
+      return false;
+    }
+    return true;
+  });
+
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
       <div className="pickup-layout">
         <div className="double-column" style={{ justifyContent: 'space-around' }}>
-          {locationsData.map((location, index) => {
+          {filteredLocations.length === 0 && 
+          <Alert style={{fontSize: '1.1rem'}} key={'alert'} variant={'danger'}>
+            Sorry! No locations match this criteria.
+          </Alert>}
+          {filteredLocations.map((location, index) => {
             return (
               <div className="card-modal-wrapper" key={index}>
                 <Card style={{ width: '22rem' }}>

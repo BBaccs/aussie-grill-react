@@ -8,6 +8,7 @@ class Ordering extends Component {
         this.state = {
             showDelivery: true,
             showPickup: true,
+            selectedLocation: 'All',
         };
     }
 
@@ -20,7 +21,6 @@ class Ordering extends Component {
     }
 
     toggleChecked = (e) => {
-        console.log(e.target.id)
         document.querySelector(`#${e.target.id}`).toggleAttribute('checked')
     }
 
@@ -30,6 +30,11 @@ class Ordering extends Component {
         }
     }
 
+    handleLocationChange = (e) => {
+        this.setState({ selectedLocation: e.target.value });
+    }
+    
+
     render() {
         const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
         return (
@@ -38,10 +43,10 @@ class Ordering extends Component {
                 <div id="location-filter-wrapper" className="mt-md-4 mx-auto pickup-layout">
                     <div className="mb-2">
                         <label id="state-label" className="mb-0" htmlFor="statedd">State :</label>
-                        <select id="statedd" className="primary-color select">
-                            <option className="slim-option">All</option>
+                        <select onChange={this.handleLocationChange} id="statedd" className="primary-color select">
+                            <option className="slim-option" value="All">All</option>
                             {uniqueStates.map((stateName) => (
-                                <option className="slim-option" key={stateName}>{stateName}</option>
+                                <option className="slim-option" key={stateName} value={stateName}>{stateName}</option>
                             ))}
                         </select>
                     </div>
@@ -56,7 +61,7 @@ class Ordering extends Component {
                                 onChange={this.toggleChecked}
                             />
                             {/* OnKeydown goes on label */}
-                            <label onKeyDown={(e) => this.handleKeyDown(e, this.togglePickup) } tabIndex="0" htmlFor="pickupChk">PickUp</label>
+                            <label onKeyDown={(e) => this.handleKeyDown(e, this.togglePickup)} tabIndex="0" htmlFor="pickupChk">PickUp</label>
                         </div>
                         <div>
                             <input
@@ -72,7 +77,11 @@ class Ordering extends Component {
                         </div>
                     </div>
                 </div>
-                <AModal />
+                <AModal
+                    selectedLocation={this.state.selectedLocation}
+                    showDelivery={this.state.showDelivery}
+                    showPickup={this.state.showPickup}
+                />
             </>
         );
     }
