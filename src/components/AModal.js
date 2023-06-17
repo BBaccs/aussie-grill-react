@@ -35,6 +35,9 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
     return true;
   });
 
+
+  let previousStateName = null; // Track the previous state name (FL, CO, etc.) for the cards
+
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
       <div className="pickup-layout">
@@ -44,45 +47,50 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
               Sorry! No locations match this criteria.
             </Alert>}
           {filteredLocations.map((location, index) => {
+            let currentStateName = location.stateName;
+            let stateTitle = currentStateName !== previousStateName && <h2 key={`state-heading ${currentStateName}`} class="landing-heading mt-3">{location.stateName}</h2>;
+            previousStateName = currentStateName;
             return (
-              <div className="card-modal-wrapper" key={index}>
-                <Card style={{ width: '22rem' }}>
-                  <Card.Header as="h3">{location.name}</Card.Header>
-                  <Card.Body>
-                    <Card.Text as={'p'}>{location.locationInfo}</Card.Text>
-                    <Card.Text as={'p'}>{location.address}</Card.Text>
-                    <Card.Text>{location.phone && `Call: ${location.phone}`}</Card.Text>
-
-                    <div className="">
-                      {
-                        location.pickupURL &&
-                        <a className="btn btn-primary" href={location.pickupURL} target="_blank" title="Opens in a new tab">
-                          Pickup
-                        </a>
-                      }
-                      {
-                        /* If there is a DoorDash URL there will also be an Uber Eats URL */
-                        location.doorDashURL &&
-                        <Button variant="primary" onClick={() => handleShow(index)}>
-                          Delivery
-                        </Button>
-                      }
-                      {
-                        location.yextURL &&
-                        <a className="btn btn-primary" href={location.yextURL}>
-                          Learn more
-                        </a>
-                      }
-                      {
-                        location.menuPdfURL &&
-                        <a className="btn btn-primary" href={location.menuPdfURL}>
-                          Menu
-                        </a>
-                      }
-                    </div>
-                  </Card.Body>
-                </Card>
-              </div>
+              <>
+                {stateTitle}
+                <div className="card-modal-wrapper" key={index}>
+                  <Card style={{ width: '22rem' }}>
+                    <Card.Header as="h3">{location.name}</Card.Header>
+                    <Card.Body>
+                      <Card.Text as={'p'}>{location.locationInfo}</Card.Text>
+                      <Card.Text as={'p'}>{location.address}</Card.Text>
+                      <Card.Text>{location.phone && `Call: ${location.phone}`}</Card.Text>
+                      <div>
+                        {
+                          location.pickupURL &&
+                          <a className="btn btn-primary" href={location.pickupURL} target="_blank" title="Opens in a new tab">
+                            Pickup
+                          </a>
+                        }
+                        {
+                          /* If there is a DoorDash URL there will also be an Uber Eats URL */
+                          location.doorDashURL &&
+                          <Button variant="primary" onClick={() => handleShow(index)}>
+                            Delivery
+                          </Button>
+                        }
+                        {
+                          location.yextURL &&
+                          <a className="btn btn-primary" href={location.yextURL} target="_blank" title="Opens in a new tab">
+                            Learn more
+                          </a>
+                        }
+                        {
+                          location.menuPdfURL &&
+                          <a className="btn btn-primary" href={location.menuPdfURL} target="_self">
+                            Menu
+                          </a>
+                        }
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </>
             );
           })}
         </div>
