@@ -5,7 +5,7 @@ import { carouselData } from "../data/carouselData.js";
 
 function ACarousel() {
     return (
-        <Carousel fade hover>
+        <Carousel fade hover={'true'}> 
             {carouselData.map((item, index) => (
                 <Carousel.Item key={index}>
                     {/* <!-- Responsive pictures --> */}
