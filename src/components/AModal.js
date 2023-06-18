@@ -1,4 +1,13 @@
-// @TODO rename me, something like locationCardModal
+// AMODAL SOLUTION
+
+
+
+
+
+
+
+
+
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -6,7 +15,7 @@ import Card from "react-bootstrap/Card";
 import { locationsData } from "../data/locationsData.js";
 import Alert from "react-bootstrap/Alert";
 
-function AModal({ selectedLocation, showDelivery, showPickup }) {
+function AModal2({ selectedLocation, showDelivery, showPickup }) {
   const [show, setShow] = useState(false);
   const [thisDoorDashUrl, setthisDoorDashUrl] = useState("");
   const [thisUberEatsUrl, setthisUberEatsUrl] = useState("");
@@ -18,84 +27,64 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
     setthisUberEatsUrl(locationsData[index].uberEatsURL);
   }
 
-  // Filter the locations based on showDelivery, showPickup, and selectedLocation
-  const filteredLocations = locationsData.filter((location) => {
-    if (selectedLocation !== "All" && location.stateName !== selectedLocation) {
-      return false;
+  // Group locations by stateName
+  const groupedLocations = locationsData.reduce((acc, location) => {
+    const stateName = location.stateName;
+    if (!acc[stateName]) {
+      acc[stateName] = [];
     }
-    if (!showDelivery) {
-      if (location.doorDashURL || location.uberEatsURL) {
-        return false;
-      }
+    acc[stateName].push(location);
+    return acc;
+  }, {});
 
-    }
-    if (!showPickup && location.pickupURL) {
-      return false;
-    }
-    return true;
-  });
-
-
-  let previousStateName = null; // Track the previous state name (FL, CO, etc.) for the cards
+  { console.log( groupedLocations) }
 
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
-      <div className="pickup-layout">
-        <div className="double-column" style={{ justifyContent: 'space-around' }}>
-          {filteredLocations.length === 0 &&
-            <Alert style={{ fontSize: '1.1rem' }} key={'alert'} variant={'danger'}>
+      {Object.entries(groupedLocations).map(([stateName, locations]) => (
+        <div key={stateName} className="double-column" style={{ justifyContent: 'space-around' }}>
+          <h2 className="landing-heading mt-3">{stateName}</h2>
+          {locations.length === 0 && (
+            <Alert style={{ fontSize: '1.1rem' }} key={`alert-${stateName}`} variant="danger">
               Sorry! No locations match this criteria.
-            </Alert>}
-          {filteredLocations.map((location, index) => {
-            let currentStateName = location.stateName;
-            let stateTitle = currentStateName !== previousStateName && <h2 key={`state-heading ${currentStateName}`} class="landing-heading mt-3">{location.stateName}</h2>;
-            previousStateName = currentStateName;
-            return (
-              <>
-                {stateTitle}
-                <div className="card-modal-wrapper" key={index}>
-                  <Card style={{ width: '22rem' }}>
-                    <Card.Header as="h3">{location.name}</Card.Header>
-                    <Card.Body>
-                      <Card.Text as={'p'}>{location.locationInfo}</Card.Text>
-                      <Card.Text as={'p'}>{location.address}</Card.Text>
-                      <Card.Text>{location.phone && `Call: ${location.phone}`}</Card.Text>
-
-                      <div>
-                        {
-                          location.pickupURL &&
-                          <a className="btn btn-primary" href={location.pickupURL} target="_blank" title="Opens in a new tab">
-                            Pickup
-                          </a>
-                        }
-                        {
-                          /* If there is a DoorDash URL there will also be an Uber Eats URL */
-                          location.doorDashURL &&
-                          <Button variant="primary" onClick={() => handleShow(index)}>
-                            Delivery
-                          </Button>
-                        }
-                        {
-                          location.yextURL &&
-                          <a className="btn btn-primary" href={location.yextURL} target="_blank" title="Opens in a new tab">
-                            Learn more
-                          </a>
-                        }
-                        {
-                          location.menuPdfURL &&
-                          <a className="btn btn-primary" href={location.menuPdfURL} target="_self">
-                            Menu
-                          </a>
-                        }
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </>
-            );
-          })}
+            </Alert>
+          )}
+          {locations.map((location, index) => (
+            <div className="card-modal-wrapper" key={index}>
+              <Card style={{ width: '22rem' }}>
+                <Card.Header as="h3">{location.name}</Card.Header>
+                <Card.Body>
+                  <Card.Text as="p">{location.locationInfo}</Card.Text>
+                  <Card.Text as="p">{location.address}</Card.Text>
+                  {location.phone && <Card.Text>Call: {location.phone}</Card.Text>}
+                  <div>
+                    {location.pickupURL && (
+                      <a className="btn btn-primary" href={location.pickupURL} target="_blank" title="Opens in a new tab">
+                        Pickup
+                      </a>
+                    )}
+                    {location.doorDashURL && (
+                      <Button variant="primary" onClick={() => handleShow(index)}>
+                        Delivery
+                      </Button>
+                    )}
+                    {location.yextURL && (
+                      <a className="btn btn-primary" href={location.yextURL} target="_blank" title="Opens in a new tab">
+                        Learn more
+                      </a>
+                    )}
+                    {location.menuPdfURL && (
+                      <a className="btn btn-primary" href={location.menuPdfURL} target="_self">
+                        Menu
+                      </a>
+                    )}
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
+          ))}
         </div>
-      </div>
+      ))}
       <Modal
         show={show}
         onHide={handleClose}
@@ -118,7 +107,7 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
               <a className="d-block" target="_blank" href={thisDoorDashUrl} >
-                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab" />
+                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash" title="Opens in new tab" />
               </a>
             </div>
             <p id="or-separator" className="m-2">
@@ -126,7 +115,7 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
             </p>
             <div id="uber-eats-div">
               <a className="d-block" target="_blank" href={thisUberEatsUrl} >
-                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab" />
+                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats" title="Opens in new tab" />
               </a>
             </div>
           </div>
@@ -136,4 +125,4 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
   );
 }
 
-export default AModal;
+export default AModal2;

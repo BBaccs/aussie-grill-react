@@ -34,8 +34,10 @@ function AModal2({ selectedLocation, showDelivery, showPickup }) {
             acc[stateName] = [];
         }
         acc[stateName].push(location);
+
         return acc;
     }, {});
+
 
     return (
         <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
