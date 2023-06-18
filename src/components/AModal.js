@@ -39,6 +39,9 @@ function AModal2({ selectedLocation, showDelivery, showPickup }) {
 
   { console.log( groupedLocations) }
 
+
+  let previousStateName = null; // Track the previous state name (FL, CO, etc.) for the cards
+
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
       {Object.entries(groupedLocations).map(([stateName, locations]) => (

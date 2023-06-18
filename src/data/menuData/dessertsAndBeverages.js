@@ -52,13 +52,13 @@ export const dessertsAndBeverages = [
   },
   {
     name: "SOFT DRINKS",
-    linkTo: "/menu/desserts&Beverages/saltedsoftDrinksCaramelCookie.html",
+    linkTo: "/menu/desserts&Beverages/softDrinks.html",
     pdpDescription: "Coca-Cola® Products.",
     subCategory: "Beverages"
   },
   {
     name: "BEER & SELTZER",
-    linkTo: "/menu/salads/beerAndSeltzer.html",
+    linkTo: "/menu/desserts&Beverages/beer&Seltzer.html",
     pdpDescription: "Variety of beer and seltzer flavors.",
     pdpDescription2: "ONLY AVAILABLE AT LUTZ AND BRANDON BLVD. LOCATIONS.",
     subCategory: "Beverages"
