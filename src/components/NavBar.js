@@ -115,9 +115,11 @@ class NavBar extends Component {
                                                 link.externalLink || link.hashLink
                                                     ? <a className="nav-link" href={link.url}>{link.name}</a> :
                                                     <NavLink
+                                                        onClick={this.handleClick}
                                                         className="nav-link"
                                                         to={link.url}>{link.name}
-                                                    </NavLink>}
+                                                    </NavLink>
+                                            }
                                         </li>
                                     );
                                 })}
