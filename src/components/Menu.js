@@ -4,11 +4,21 @@
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
+import Seo from "../hooks/Seo.js";
 
 class MenuPages extends Component {
     static defaultProps = {
         menuData: menuCategoryData,
     };
+
+    componentDidMount() {
+        Seo({
+          title: `Aussie Grill - Menu Category Page`,
+        //   metaDescription: 'With some meta description'
+        });
+      }
+
+
     render() {
         return (
             <div id="menu-category-page" className="menu-page">
@@ -19,8 +29,6 @@ class MenuPages extends Component {
                         {this.props.menuData.map((item, index) => (
                             <div key={index}
                                 className="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
-                                {/* State can be assigned on link, keep here if needed */}
-                                {/* <Link className="d-block" to={item.linkTo} state={ item.name.replace(/\s/g, '') }> */}
                                 <Link className="d-block" to={item.linkTo}>
                                     <div className="primary-subheading-wrapper">
                                         <div className="h2">{item.name}</div>

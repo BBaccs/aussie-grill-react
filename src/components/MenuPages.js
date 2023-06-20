@@ -8,6 +8,7 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
+import Seo from "../hooks/Seo.js";
 
 function normalizeMenuCategory(category) {
     switch (category) {
@@ -46,13 +47,16 @@ class MenuPages extends Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
         console.log(menuCategory, window.location.pathname)
         if (categoryData) {
             this.setState({ category: categoryData });
         }
+        Seo({
+            title: `Aussie Grill - ${this.state.menuTitle}`,
+        //   metaDescription: 'With some meta description'
+        });
     }
 
     getCategoryData(category) {
