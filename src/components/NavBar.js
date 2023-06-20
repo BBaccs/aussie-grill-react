@@ -15,13 +15,13 @@ class NavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            clicked: false,
+            open: false,
             navData: window.location.pathname === '/franchise.html' ? franchiseNavItems : navItems
         };
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(e) {
-        this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
+        this.setState(this.state.open ? { open: false } : { open: true });
     }
 
     // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. 
@@ -38,7 +38,7 @@ class NavBar extends Component {
 
         // Destructuring props & state
         const { alertBar, alertBarMsg, pickup } = this.props;
-        const { clicked } = this.state;
+        const { open, navData } = this.state;
 
         const generateAlertBar = alertBar ?
             <div className="py-2 nav-banner text-white">
@@ -64,14 +64,14 @@ class NavBar extends Component {
                     <nav className="navbar navbar-dark bg-ag-dark">
                         <div className="container-lg d-flex nav-inner-wrapper">
                             {/*When the transition animation is added we'll need to add classes like 'collapse' to the btn, which temporarily hides it during transition*/}
-                            <button onClick={this.handleClick} className={clicked ? "navbar-toggler d-md-none d-lg-none d-xl-none" : "navbar-toggler d-md-none d-lg-none d-xl-none collapsed"} type="button"
+                            <button onClick={this.handleClick} className={open ? "navbar-toggler d-md-none d-lg-none d-xl-none" : "navbar-toggler d-md-none d-lg-none d-xl-none collapsed"} type="button"
                                 data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                                aria-expanded={clicked ? 'true' : 'false'} aria-label={clicked ? 'Close navigation' : 'Open navigation'} >
+                                aria-expanded={open ? 'true' : 'false'} aria-label={open ? 'Close navigation' : 'Open navigation'} >
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    this.state.navData.map((link, index) => {
+                                    navData.map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
                                                 {
@@ -83,7 +83,7 @@ class NavBar extends Component {
                                         );
                                     })
                                     :
-                                    this.state.navData.filter(link => link.name !== 'Order').map((link, index) => {
+                                    navData.filter(link => link.name !== 'Order').map((link, index) => {
                                         return (
                                             <li key={index} className={`${link.liClass} nav-item`}>
                                                 {
@@ -105,19 +105,21 @@ class NavBar extends Component {
                             </a>
                         </div>
                     </nav>
-                    <div className={clicked ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
+                    <div className={open ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
                         <div className="bg-ag-dark p-4">
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                {this.state.navData.map((link, index) => {
+                                {navData.map((link, index) => {
                                     return (
                                         <li key={index} className="nav-item">
                                             {
                                                 link.externalLink || link.hashLink
                                                     ? <a className="nav-link" href={link.url}>{link.name}</a> :
                                                     <NavLink
+                                                        onClick={this.handleClick}
                                                         className="nav-link"
                                                         to={link.url}>{link.name}
-                                                    </NavLink>}
+                                                    </NavLink>
+                                            }
                                         </li>
                                     );
                                 })}
