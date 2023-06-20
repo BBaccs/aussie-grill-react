@@ -123,7 +123,7 @@ class MenuPages extends Component {
                             <>
                                 <div key={index}
                                     className="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
-                                    <div className="primary-subheading-wrapper ">
+                                    <div className={`primary-subheading-wrapper ${item.name.length >= 22 && 'xxl-wrapper'}`}>
                                         <div className="h3">{item.name}</div>
                                     </div>
                                     {!item.imgFilePath ? '' :
