@@ -1,8 +1,3 @@
-// @todo, could optimitze this so it's assets/mobile or assets/desktop, then just ite.imgfilepath which includes the img name and jpg or etc.
-// src={`/assets/${item.imgFilePath}/desktop/${item.img}500x375.jpg`}
-// You don't even need the "500X375" because you've got it divided by mobile/desktop/tablet.
-// This may be a better way but not worth refactoring at this point.
-//Could add a loading spinner in between the time it takes to load
 import React, { Component } from "react";
 import { handHelds } from '../data/menuData/handHelds.js';
 import { largePlates } from '../data/menuData/largePlates.js';
@@ -10,8 +5,6 @@ import { salads } from "../data/menuData/salads.js";
 import { sidesAndSnacks } from "../data/menuData/sidesAndSnacks.js";
 import { kids } from "../data/menuData/kids.js";
 import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
-import { Link } from 'react-router-dom';
-import { CateringCategoryData } from "../data/cateringMenuData/CateringCategoryData.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
@@ -95,7 +88,7 @@ class MenuPages extends Component {
                     <div className="select-category-bg">
                         <a href={menuCategoryPage}>
                             <div className="d-flex">
-                                <h1 className="w-100 py-4 my-1">Select New Category ^</h1>
+                                <span className="w-100 py-4 my-1">Select New Category ^</span>
                             </div>
                         </a>
                     </div>
@@ -105,12 +98,12 @@ class MenuPages extends Component {
                                 src="/assets/agGraphicElements/animals/mobile/bullHalfSmall.png" alt="" />
                             {this.props.titleDescription ?
                                 <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                    <h2 className="pb-1">{this.state.menuTitle}</h2>
+                                    <h1 className="pb-1">{this.state.menuTitle}</h1>
                                     <p className="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
                                 </div>
                                 :
                                 <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                    <h2 className="no-subhead-padding">{this.state.menuTitle}</h2>
+                                    <h1 className="no-subhead-padding">{this.state.menuTitle}</h1>
                                 </div>
                             }
                             <img className="animal-graphic d-lg-none"
@@ -150,7 +143,7 @@ class MenuPages extends Component {
                     <div className="select-category-bg">
                         <a href={menuCategoryPage}>
                             <div className="d-flex">
-                                <h1 className="w-100 py-4 my-1">Select New Category ^</h1>
+                                <span className="w-100 py-4 my-1">Select New Category ^</span>
                             </div>
                         </a>
                     </div>
@@ -159,7 +152,7 @@ class MenuPages extends Component {
                             <div className="d-flex align-items-center w-100 flex-column pb-1">
                                 {this.props.titleDescription ?
                                     <div style={{ marginLeft: 125 + 'px' }} className="d-flex align-items-center w-100 flex-column pb-1">
-                                        <h2 className="pb-1">{this.state.menuTitle}</h2>
+                                        <h1 className="pb-1">{this.state.menuTitle}</h1>
                                         <p className="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
                                     </div>
                                     :
@@ -178,10 +171,10 @@ class MenuPages extends Component {
                                     <>
                                         {
                                             item.pdpPreview ?
-                                                <div className="h3 pb-0">{item.name} <span>{`>`}</span></div>
+                                                <div className="h3 pb-0">{item.name}</div>
 
                                                 :
-                                                <div className="h3">{item.name} <span>{`>`}</span></div>
+                                                <div className="h3">{item.name}</div>
                                         }
 
                                         {item.pdpPreview && <div className="product-description-preview">{item.pdpPreview}</div>}
@@ -190,7 +183,7 @@ class MenuPages extends Component {
                                     <>
                                         <div className="d-flex justify-content-center mr-4">
                                             <img className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" />
-                                            <div className={`h3 ${!item.pdpPreview && 'pb-0'}`}>{item.name} <span>{`>`}</span></div>
+                                            <div className={`h3 ${!item.pdpPreview && 'pb-0'}`}>{item.name}</div>
                                         </div>
                                     </>
                                 }

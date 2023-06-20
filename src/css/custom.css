@@ -674,17 +674,17 @@ ul {
     padding-top: 30px
 }
 
-h2.pig-heading {
+.pig-heading {
     padding-left: 120px;
 }
 
-h2.pig-heading.lg-pig-heading {
+.pig-heading.lg-pig-heading {
     position: relative;
     left: 60px;
     padding-left: 0px;
 }
 
-h2.chicken-heading {
+.chicken-heading {
     padding-right: 113px;
 }
 

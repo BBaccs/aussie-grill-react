@@ -8,7 +8,6 @@ function ACarousel() {
         <Carousel fade hover>
             {carouselData.map((item, index) => (
                 <Carousel.Item key={index}>
-                    {/* <!-- Responsive pictures --> */}
                     <picture>
                         <source srcSet={`/assets/carouselImages/desktop/lg-${item.imgName}`}
                             media="(min-width: 1400px)" />
@@ -17,11 +16,6 @@ function ACarousel() {
                         <img src={`/assets/carouselImages/mobile/sm-${item.imgName}`}
                             className="d-block w-100 carousel-img" alt={item.alt} />
                     </picture>
-                    {/* Write a conditional if the accessibility state is true to show this info...
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption> */}
                 </Carousel.Item>
             ))}
         </Carousel>

@@ -5,7 +5,7 @@ import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
-import ACarousel from "./components/Carousel.js";
+import ACarousel from "./components/ACarousel.js";
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
 import PDP from './hooks/PDP.js';
@@ -28,22 +28,26 @@ function App() {
   const location = useLocation();
   let category = location.pathname.split('/')[2];
   let menuItem = location.pathname.split('/')[3];
-  // location.state = category;
   return (
     <div className="App">
-      {/* <h1 className="sr-only">Welcome to Aussie Grill</h1> */}
       <NavBar location={location} />
-      <main id="main-content" style={{background: 'url(/assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png)'}}>
+      <main id="main-content" style={{ background: 'url(/assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png)' }}>
         <Routes>
           {/* Home Page */}
           <Route
             exact index
             element={
               <>
+                <h1 className="sr-only">Welcome to Aussie Grill</h1>
                 <ACarousel />
                 <div id="homepage-container-fluid" className="container-fluid-fluid py-5 pt-1">
-                  <MenuItems />
-                  <MenuItems menuData={homePageCards} />
+                  <section>
+                    <h2 className="sr-only">Welcome to Aussie Grill</h2>
+                    <MenuItems />
+                  </section>
+                  <section className="mt-5">
+                    <MenuItems menuData={homePageCards} />
+                  </section>
                 </div>
               </>
             }
@@ -71,6 +75,9 @@ function App() {
 
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
+          {/* @TODO remove title description PROP? */}
+          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />
+          <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
 
           { /*  Menu Category for CATERING */}
           <Route path={'/catering/index.html'} element={
@@ -92,18 +99,12 @@ function App() {
           {/* Individual Catering Menu PDP Pages */}
           <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
 
-          {/* @TODO remove title description PROP? */}
-          { /*  Menu Category */}
-          <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />
-          <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
-
           {/* Individual Menu PDP Pages */}
           <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
           <Route
             exact path={'/franchise.html'}
             element={
               <div >
-                {/* <NavBar navData={franchiseNavItems} /> */}
                 <FranchisePage />
               </div>
             }
