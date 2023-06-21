@@ -47,7 +47,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
             </Alert>}
           {filteredLocations.map((location, index) => {
             let currentStateName = location.stateName;
-            let stateTitle = currentStateName !== previousStateName && <h2 key={`state-heading ${currentStateName}`} class="landing-heading my-3 w-100">{location.stateName}</h2>;
+            let stateTitle = currentStateName !== previousStateName && <h2 key={`state-heading ${currentStateName}`} className="landing-heading my-3 w-100">{location.stateName}</h2>;
             previousStateName = currentStateName;
             return (
               <>

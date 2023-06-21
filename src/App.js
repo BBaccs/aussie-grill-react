@@ -82,13 +82,13 @@ function App() {
           { /*  Menu Category for CATERING */}
           <Route path={'/catering/index.html'} element={
             <>
-              <div class="menu-page mt-0 pt-lg-5 py-4 mb-4">
-                <div class="px-4">
-                  <h1 class="pt-lg-2 pb-2">CATERING DONE MORE DARINGLY</h1>
-                  <p class="mb-0 primary-color">We offer up a variety of platters to get you fueled through a work
+              <div className="menu-page mt-0 pt-lg-5 py-4 mb-4">
+                <div className="px-4">
+                  <h1 className="pt-lg-2 pb-2">CATERING DONE MORE DARINGLY</h1>
+                  <p className="mb-0 primary-color">We offer up a variety of platters to get you fueled through a work
                     meeting, house party or wherever your next adventure takes you.</p>
-                  <p class="mb-0 primary-color">3-hour notice required, some restrictions apply.</p>
-                  <p class="mb-0 primary-color">All platters serve 6-8.</p>
+                  <p className="mb-0 primary-color">3-hour notice required, some restrictions apply.</p>
+                  <p className="mb-0 primary-color">All platters serve 6-8.</p>
                 </div>
               </div>
               <Menu menuData={CateringCategoryData} />
