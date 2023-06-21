@@ -5,7 +5,7 @@ import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";
 import MenuItems from "./components/MenuItems.js";
 import HeroImg from "./components/HeroImg.js";
-import ACarousel from "./components/ACarousel.js";
+import ACarousel from "./hooks/ACarousel.js";
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
 import PDP from './hooks/PDP.js';

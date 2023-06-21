@@ -1,4 +1,3 @@
-// @TODO rename me, something like locationCardModal
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -6,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { locationsData } from "../data/locationsData.js";
 import Alert from "react-bootstrap/Alert";
 
-function AModal({ selectedLocation, showDelivery, showPickup }) {
+function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
   const [show, setShow] = useState(false);
   const [thisDoorDashUrl, setthisDoorDashUrl] = useState("");
   const [thisUberEatsUrl, setthisUberEatsUrl] = useState("");
@@ -35,8 +34,8 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
     return true;
   });
 
-
-  let previousStateName = null; // Track the previous state name (FL, CO, etc.) for the cards
+  // Track the previous state name (FL, CO, etc.) for the cards
+  let previousStateName = null; 
 
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
@@ -135,4 +134,4 @@ function AModal({ selectedLocation, showDelivery, showPickup }) {
   );
 }
 
-export default AModal;
+export default LocationCardModal;

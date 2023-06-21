@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 import { locationsData } from "../data/locationsData.js";
 import { Link } from 'react-router-dom';
-function AModal() {
+function LocationCardModal() {
   const [show, setShow] = useState(false);
   const [deliveryUrl, setDeliveryUrl] = useState("");
 
@@ -100,4 +100,4 @@ function AModal() {
   );
 }
 
-export default AModal;
+export default LocationCardModal;

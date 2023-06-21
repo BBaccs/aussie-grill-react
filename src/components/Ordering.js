@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { locationsData } from "../data/locationsData.js";
-import AModal from "../components/AModal";
+import LocationCardModal from "../hooks/LocationCardModal.js";
 
 class Ordering extends Component {
     constructor(props) {
@@ -76,7 +76,7 @@ class Ordering extends Component {
                         </div>
                     </div>
                 </div>
-                <AModal
+                <LocationCardModal
                     selectedLocation={this.state.selectedLocation}
                     showDelivery={this.state.showDelivery}
                     showPickup={this.state.showPickup}

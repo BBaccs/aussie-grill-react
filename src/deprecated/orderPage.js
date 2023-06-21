@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { locationsData } from "../data/locationsData.js";
-import AModal from "../components/AModal";
+import LocationCardModal from "../components/LocationCardModal";
 
 class OrderPage extends Component {
     // static defaultProps = {
@@ -38,7 +38,7 @@ class OrderPage extends Component {
                     </div>
                 </div>
                 <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
-                    <AModal />
+                    <LocationCardModal />
                 </div>
             </>
         );
@@ -67,7 +67,7 @@ export default OrderPage;
 
 
 // import { locationsData } from "../data/locationsData.js";
-// import AModal from "../components/AModal";
+// import LocationCardModal from "../components/LocationCardModal";
 
 // export default function OrderPage() {
 //     const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
@@ -93,7 +93,7 @@ export default OrderPage;
 //                 </div>
 //             </div>
 //             <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
-//                 <AModal />
+//                 <LocationCardModal />
 //             </div>
 //         </>
 //     );
