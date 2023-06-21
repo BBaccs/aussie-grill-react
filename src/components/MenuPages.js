@@ -9,31 +9,7 @@ import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
 import Seo from "../hooks/Seo.js";
-
-function normalizeMenuCategory(category) {
-    switch (category) {
-        case 'handhelds':
-            return 'Handhelds';
-        case 'largePlates':
-            return 'Large Plates';
-        case 'salads':
-            return 'Salads';
-        case 'sides&Snacks':
-            return 'Sides & Snacks';
-        case 'kids':
-            return 'Kids';
-        case 'desserts&Beverages':
-            return 'Desserts & Beverages';
-        case 'platters':
-            return 'Platters';
-        case 'saladPlatters':
-            return 'Salad Platters';
-        case 'desserts&Sides':
-            return 'Desserts & Sides';
-        default:
-            return null;
-    }
-}
+import NormalizeMenuCategory from "../helpers/NormalizeMenuCategory.js";
 
 class MenuPages extends Component {
     constructor(props) {
@@ -42,7 +18,7 @@ class MenuPages extends Component {
         // const categoryData = this.getCategoryData(menuCategory);
         this.state = {
             category: [],
-            menuTitle: normalizeMenuCategory(menuCategory)
+            menuTitle: NormalizeMenuCategory(menuCategory)
         };
     }
 
@@ -53,10 +29,6 @@ class MenuPages extends Component {
         if (categoryData) {
             this.setState({ category: categoryData });
         }
-        Seo({
-            title: `Aussie Grill - ${this.state.menuTitle}`,
-        //   metaDescription: 'With some meta description'
-        });
     }
 
     getCategoryData(category) {
@@ -85,6 +57,10 @@ class MenuPages extends Component {
     }
 
     render() {
+        Seo({
+            title: `Aussie Grill - ${this.state.menuTitle}`,
+        //   metaDescription: 'With some meta description'
+        });
         let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
         return (
             <div id={`${this.state.category}-page`} className="menu-page">

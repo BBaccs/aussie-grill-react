@@ -9,7 +9,7 @@ import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
 import Seo from  "../hooks/Seo.js";
-import normalizeMenuCategory from "../helpers/normalizeMenu.js";
+import NormalizeMenuCategory from '../helpers/NormalizeMenuCategory.js';
 
 function getCategoryData(category) {
   switch (category) {
@@ -45,6 +45,7 @@ function PDP() {
 
     // $1 refers to the first captured group (the matched capital letter).
   let formattedTitle = `${location.pathname.split('/')[3].charAt(0).toUpperCase().slice(0) + location.pathname.split('/')[3].replaceAll('.html', '').replace(/([A-Z])/g, ' $1').slice(1) }`;
+  category = NormalizeMenuCategory(category);
   Seo({
     title: `Aussie Grill - ${formattedTitle} - ${category}`,
     metaDescription: `Check out our ${category} menu! You will love our delicious ${formattedTitle}! Visit us today or order online!`
