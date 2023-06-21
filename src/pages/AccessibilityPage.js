@@ -1,4 +1,9 @@
+import { useEffect } from "react"
+
 export default function AccessibilityPage() {
+    useEffect(() => {
+        document.title = 'Accessibility Statement - Bloomin\' Brands Inc. - Aussie Grill';
+    }, []);
     return (
         <div className="privacy-page landing-page landing-content-wrapper">
             <div>

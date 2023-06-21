@@ -8,7 +8,6 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
-import Seo from "../hooks/Seo.js";
 import NormalizeMenuCategory from "../hooks/NormalizeMenuCategory.js";
 
 class MenuPages extends Component {
@@ -18,7 +17,8 @@ class MenuPages extends Component {
         // const categoryData = this.getCategoryData(menuCategory);
         this.state = {
             category: [],
-            menuTitle: NormalizeMenuCategory(menuCategory)
+            menuTitle: NormalizeMenuCategory(menuCategory),
+            title: 'harcdcoded title',
         };
     }
 
@@ -57,10 +57,11 @@ class MenuPages extends Component {
     }
 
     render() {
-        Seo({
-            title: `Aussie Grill - ${this.state.menuTitle}`,
-        //   metaDescription: 'With some meta description'
-        });
+        // Seo({
+        //     title: `Aussie Grill - ${this.state.menuTitle}`,
+        // //   metaDescription: 'With some meta description'
+        // });
+        console.log(this.state.title)
         let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
         return (
             <div id={`${this.state.category}-page`} className="menu-page">
