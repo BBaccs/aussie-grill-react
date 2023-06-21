@@ -9,7 +9,7 @@ import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
 import Seo from  "../hooks/Seo.js";
-import NormalizeMenuCategory from '../helpers/NormalizeMenuCategory.js';
+import NormalizeMenuCategory from './NormalizeMenuCategory.js';
 
 function getCategoryData(category) {
   switch (category) {
