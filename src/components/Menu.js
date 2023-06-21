@@ -1,5 +1,3 @@
-// @TODO FIX MENUCATEGORYCATA, it's got some kind of casing issue or i'm using the wrong data for one of them.
-// @TODO remove state={} from links, because we can just grab the location/href.
 // catering uses desktop not mobile -  src={`/assets/foodImages/categoryImages/mobile/345x260${item.img}`} but it should both be
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
@@ -10,6 +8,7 @@ class MenuPages extends Component {
         menuData: menuCategoryData,
     };
     render() {
+        console.log('<Menu />');
         return (
             <div id="menu-category-page" className="menu-page">
                 <div className="d-none d-lg-block menu-item-bg menu-wrapper-lg pb-5">
@@ -28,7 +27,7 @@ class MenuPages extends Component {
                                     <div>
                                         {/* Fix the largeplates image bug here, ALSO, remove category image (pointless) and restructure deskop/mobile images folders. */}
                                         <img className="w-100 subheading-img"
-                                       src={`/assets/foodImages/categoryImages/desktop/500x375${item.img}`}
+                                            src={`/assets/foodImages/categoryImages/desktop/500x375${item.img}`}
                                             alt="" />
                                     </div>
                                 </Link>

@@ -7,6 +7,7 @@ class MenuItems extends Component {
         menuData: menuCategoryData,
     };
     render() {
+        console.log('<MenuItems />');
         const menuItems = this.props.menuData.map((menuItem, index) => (
             /* <!-- Menu Item --> */
             <div key={index} className="col-lg-4 col-md-6 pt-lg-0 menu-item-col">

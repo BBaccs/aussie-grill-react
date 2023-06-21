@@ -2,20 +2,12 @@ import React, { Component } from "react";
 
 
 class PDP extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         menuItem: this.props.menuItem,
-    //     };
-    // }
     static defaultProps = {
         menuItem: 'baconBombBurger'
     };
     render() {
         const location = useLocation();
-        console.log(location.pathname, location.state, location)
         const { pdpItem } = useParams()
-        console.log(`HELLO, ${pdpItem}`)
         return (
             <>
                 <div className="menu-page menu-page-bg product-description-page">

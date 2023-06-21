@@ -46,10 +46,9 @@ class MenuPages extends Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
-        console.log(menuCategory, window.location.pathname)
+        // console.log(menuCategory, window.location.pathname)
         if (categoryData) {
             this.setState({ category: categoryData });
         }
@@ -81,6 +80,7 @@ class MenuPages extends Component {
     }
 
     render() {
+        console.log('<MenuPages />')
         let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
         return (
             <div id={`${this.state.category}-page`} className="menu-page">

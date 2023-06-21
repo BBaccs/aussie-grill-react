@@ -31,15 +31,12 @@ class NavBar extends Component {
         if (location && location.pathname === '/franchise.html' && prevProps.location.pathname !== '/franchise.html') {
             this.setState({ navData: franchiseNavItems });
         }
-        console.log('locaiton:', location, 'location.pathname:', location.pathname)
+        // console.log('locaiton:', location, 'location.pathname:', location.pathname)
     }
 
     render() {
-
-        // Destructuring props & state
         const { alertBar, alertBarMsg, pickup } = this.props;
         const { open, navData } = this.state;
-
         const generateAlertBar = alertBar ?
             <div className="py-2 nav-banner text-white">
                 <div className="d-flex justify-content-center align-items-center">

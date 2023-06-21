@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { carouselData } from "../data/carouselData.js";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 function ACarousel() {
     return (
         <Carousel fade hover>

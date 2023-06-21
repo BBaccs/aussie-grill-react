@@ -12,7 +12,6 @@ class CarouselAnnn extends Component {
     }
 
     handleClick(e) {
-        console.log(`hi`)
         this.setState(this.state.clicked ? { clicked: false } : { clicked: true });
     }
     render() {
