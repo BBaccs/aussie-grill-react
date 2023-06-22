@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+// set initial val to false by default if no otehr value is set
 function useToggle(initialVal = false) {
     //call useState, "reserve piece of state"
     // the names state and setState are confusing because they are also special 
