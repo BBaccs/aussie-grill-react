@@ -17,7 +17,6 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
     setthisUberEatsUrl(locationsData[index].uberEatsURL);
   }
 
-  // Filter the locations based on showDelivery, showPickup, and selectedLocation
   const filteredLocations = locationsData.filter((location) => {
     if (selectedLocation !== "All" && location.stateName !== selectedLocation) {
       return false;
@@ -104,7 +103,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
         <div className="bull-wrapper-2">
           <img
             className="mx-auto"
-            src="/assets/agGraphicElements/animals/bullFullMedium.png"
+            src="./assets/agGraphicElements/animals/bullFullMedium.png"
             alt=""
           />
         </div>
@@ -116,7 +115,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
               <a className="d-block" target="_blank" href={thisDoorDashUrl} >
-                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab" />
+                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash" title="Opens in a new tab" />
               </a>
             </div>
             <p id="or-separator" className="m-2">
@@ -124,7 +123,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
             </p>
             <div id="uber-eats-div">
               <a className="d-block" target="_blank" href={thisUberEatsUrl} >
-                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab" />
+                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats" title="Opens in a new tab" />
               </a>
             </div>
           </div>

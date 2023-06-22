@@ -52,7 +52,6 @@ function App() {
               </>
             }
           />
-
           { /*  Static Pages */}
           <Route
             exact path={'/pickup.html'}
@@ -72,13 +71,11 @@ function App() {
           <Route path={'/privacyPolicy/ccpa.html'} element={<CcpaPage />} />
           <Route path={'/privacyPolicy/accessibilityStatement.html'} element={<AccessibilityPage />} />
           <Route path={'/privacyPolicy/termsAndConditions.html'} element={<TermsAndConditionsPage />} />
-
           { /*  Menu Category Pages */}
           <Route path={'/menu/index.html'} element={<Menu />} />
           {/* @TODO remove title description PROP? */}
           <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />
           <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
-
           { /*  Menu Category for CATERING */}
           <Route path={'/catering/index.html'} element={
             <>
@@ -95,10 +92,8 @@ function App() {
             </>
           } />
           <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
-
           {/* Individual Catering Menu PDP Pages */}
           <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
-
           {/* Individual Menu PDP Pages */}
           <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
           <Route
@@ -111,7 +106,6 @@ function App() {
           />
           <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
         </Routes>
-
       </main>
       <Footer />
       {/* <!-- ORDER FOOD CTA --> */}
