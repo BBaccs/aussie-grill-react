@@ -9,10 +9,6 @@ import ACarousel from "./hooks/ACarousel.js";
 import Menu from './components/Menu.js';
 import MenuPages from "./components/MenuPages.js";
 import PDP from './hooks/PDP.js';
-import { Routes, Route } from 'react-router-dom';
-import { useLocation, useParams } from 'react-router-dom';
-import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
-import { homePageCards } from "./data/homePageCards";
 import OurStoryPage from './pages/OurStoryPage.js';
 import CareersPage from "./pages/Careers.js";
 import ContactPage from "./pages/Contact.js";
@@ -23,11 +19,16 @@ import AccessibilityPage from "./pages/AccessibilityPage.js";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
 import Ordering from "./components/Ordering";
 import FranchisePage from "./pages/FranchisePage";
+import { Routes, Route } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
+import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
+import { homePageCards } from "./data/homePageCards";
 
 function App() {
   const location = useLocation();
   let category = location.pathname.split('/')[2];
   let menuItem = location.pathname.split('/')[3];
+
   return (
     <div className="App">
       <NavBar location={location} />
