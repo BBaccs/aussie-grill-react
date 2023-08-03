@@ -108,7 +108,7 @@ function App() {
           <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer location={location} />
       {/* <!-- ORDER FOOD CTA --> */}
       <div className="cta-wrapper">
         <div className="d-flex container-fluid justify-content-between align-items-center cta-banner">
