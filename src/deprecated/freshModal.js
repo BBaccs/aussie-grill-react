@@ -81,7 +81,7 @@ function LocationCardModal() {
         <Modal.Body>
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
-              <a className="d-block" target="_blank" href={deliveryUrl} >
+              <a className="d-block" target="_blank"  rel="noreferrer" href={deliveryUrl} >
                 <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab"></img>
               </a>
             </div>
@@ -89,7 +89,7 @@ function LocationCardModal() {
               -OR-
             </p>
             <div id="uber-eats-div">
-              <a className="d-block" target="_blank" href={deliveryUrl} >
+              <a className="d-block" target="_blank"  rel="noreferrer" href={deliveryUrl} >
                 <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab"></img>
               </a>
             </div>

@@ -385,7 +385,7 @@ export default function CcpaPage() {
                                 a request,
                                 <a
                                     href="./../https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71.html"
-                                    target="_blank"
+                                    target="_blank"  rel="noreferrer"
                                 >click here</a>
                                 to connect with our CCPA portal and provide the following
                                 information, including the nature of your request.
@@ -485,7 +485,7 @@ export default function CcpaPage() {
                                 ad limitation choices. In addition, third party tools may enable you
                                 to search for and opt-out of some of these trackers, such as the
                                 Ghostery browser plug-in available at
-                                <a href="./../https://www.ghostery.com/" target="_blank"
+                                <a href="./../https://www.ghostery.com/" target="_blank"  rel="noreferrer"
                                 >www.ghostery.com</a>. You can learn more about your choices regarding certain kinds of
                                 online interest-based advertising in our privacy policy. We do not
                                 represent that these third party tools, programs or statements are

@@ -43,7 +43,7 @@ function PDP() {
   return (
     <>
       {menuData.map((item, index) => {
-        const normalizedItemName = item.name.replaceAll(' ', '').replaceAll('™', '').replaceAll('\’', '').toLowerCase();
+        const normalizedItemName = item.name.replaceAll(' ', '').replaceAll('™', '').replaceAll('’', '').toLowerCase();
         if (normalizedItemName === pathName) {
           return (
             <div key={index} className="menu-page menu-page-bg product-description-page">

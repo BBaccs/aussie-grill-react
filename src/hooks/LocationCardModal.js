@@ -61,7 +61,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
                       <div>
                         {
                           location.pickupURL &&
-                          <a className="btn btn-primary" href={location.pickupURL} target="_blank" title="Opens in a new tab">
+                          <a className="btn btn-primary" href={location.pickupURL} target="_blank"  rel="noreferrer" title="Opens in a new tab">
                             Pickup
                           </a>
                         }
@@ -74,7 +74,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
                         }
                         {
                           location.yextURL &&
-                          <a className="btn btn-primary" href={location.yextURL} target="_blank" title="Opens in a new tab">
+                          <a className="btn btn-primary" href={location.yextURL} target="_blank"  rel="noreferrer" title="Opens in a new tab">
                             Learn more
                           </a>
                         }
@@ -114,7 +114,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
         <Modal.Body>
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
-              <a className="d-block" target="_blank" href={thisDoorDashUrl} >
+              <a className="d-block" target="_blank"  rel="noreferrer" href={thisDoorDashUrl} >
                 <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash" title="Opens in a new tab" />
               </a>
             </div>
@@ -122,7 +122,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
               -OR-
             </p>
             <div id="uber-eats-div">
-              <a className="d-block" target="_blank" href={thisUberEatsUrl} >
+              <a className="d-block" target="_blank"  rel="noreferrer" href={thisUberEatsUrl} >
                 <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats" title="Opens in a new tab" />
               </a>
             </div>
