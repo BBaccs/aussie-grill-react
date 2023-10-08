@@ -24,7 +24,7 @@ function SWMovies() {
                 <option value="4">A New Hope</option>
                 <option value="5">The Empire Strikes Back</option>
                 <option value="6">Return of the Jedi</option>
-                <option value="7">The Force Awakens</option>
+                <option value="7">The Force Awakens </option>
             </select>
         </div>
     );
