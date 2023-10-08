@@ -4,7 +4,7 @@ export default function PrivacyPolicyPage() { return (
 >
   <div>
     <h1 className="privacy-h1 text-center landing-subheading">
-      Bloomin’ Brands Website Privacy Policy 
+      Bloomin’ Brands Website Privacy Policy
     </h1>
     <p className="text-center mb-1">
       <b>Effective Date:</b> <time dateTime="2020-01-01">January 1, 2020</time>
