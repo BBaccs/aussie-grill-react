@@ -314,7 +314,7 @@ export default function GiveawaysPage() {
                                         <p>During the Promotion Period, Entrant must visit <a className="primary-color"
                                             style={{textDecoration: 'underline'}}
                                             href="https://lovesfeedback.com/aussiegrill"
-                                            target="_blank">aussiegrill.lovesfeedback.com</a> and
+                                            target="_blank"  rel="noreferrer">aussiegrill.lovesfeedback.com</a> and
                                             answer a short survey regarding their Aussie Grill experience. Entrant may
                                             submit one (1) survey during the Promotion Period. For an alternate means of
                                             entry, Entrant may mail-in a 3x5-inch card, handprinted with the Entrant’s name,
