@@ -1,4 +1,4 @@
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { handHelds } from '../data/menuData/handHelds.js';
 import { largePlates } from '../data/menuData/largePlates.js';
 import { salads } from "../data/menuData/salads.js";

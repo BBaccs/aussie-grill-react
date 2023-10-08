@@ -20,7 +20,7 @@ import TermsAndConditionsPage from "./pages/TermsAndConditionsPage.js";
 import Ordering from "./components/Ordering";
 import FranchisePage from "./pages/FranchisePage";
 import { Routes, Route } from 'react-router-dom';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 import { homePageCards } from "./data/homePageCards";
 

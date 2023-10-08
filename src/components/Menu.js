@@ -8,7 +8,6 @@ class MenuPages extends Component {
         menuData: menuCategoryData,
     };
     render() {
-        console.log('<Menu />');
         return (
             <div id="menu-category-page" className="menu-page">
                 <div className="d-none d-lg-block menu-item-bg menu-wrapper-lg pb-5">

@@ -182,7 +182,7 @@ class MenuPages extends Component {
                                     :
                                     <>
                                         <div className="d-flex justify-content-center mr-4">
-                                            <img className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" />
+                                            <img className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" alt=""/>
                                             <div className={`h3 ${!item.pdpPreview && 'pb-0'}`}>{item.name}</div>
                                         </div>
                                     </>

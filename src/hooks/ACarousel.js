@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { carouselData } from "../data/carouselData.js";
 function ACarousel() {
