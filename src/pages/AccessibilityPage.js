@@ -51,8 +51,7 @@ export default function AccessibilityPage() {
                             </p>
                             <h3 className="privacy-policy-sub-text">Contact Us</h3>
                             <p>If, at any time, you have specific questions or concerns about the accessibility or usability
-                                of
-                                any particular web page on this website, please contact us at <a className="standard-link"
+                                of any particular web page on this website, please contact us at <a className="standard-link"
                                     href="./../mailto:compliance@bloominbrands.com">compliance@bloominbrands.com</a> or
                                 <a href="tel: 1-866-886-1346">1-866-886-1346</a>. If you encounter any accessibility/usability issues, please be sure to
                                 specify
