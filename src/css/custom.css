@@ -1411,6 +1411,15 @@ select.select .slim-option {
     }
  }
 
+ @media (max-width: 421px) {
+    .delivery.modal-title {
+        font-size: 1rem;
+    }
+    .bull-wrapper-2 {
+        bottom: 217px;
+    }
+}
+
  @media (max-width: 768px) {
     #franchise-lg-nav ul {
         justify-content: center;

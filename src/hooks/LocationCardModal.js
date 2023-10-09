@@ -109,7 +109,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
         </div>
 
         <Modal.Header closeButton>
-          <Modal.Title as="h2" className="h4">Choose your delivery method</Modal.Title>
+          <Modal.Title as="h2" className="h4 delivery">Choose your delivery method</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
