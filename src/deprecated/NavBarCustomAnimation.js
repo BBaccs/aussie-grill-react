@@ -102,7 +102,7 @@ class NavBar2 extends Component {
                 }
               </ul>
               <a href="/">
-                <picture>
+                <picture loading="lazy">
                   <source srcSet="/assets/other/mobile/agLogo.png" media="(min-width: 1024px)" />
                   <img className="ml-2 ag-logo" src="/assets/other/mobile/agLogo.png" alt="Aussie Grill By Outback Steakhouse" />
                 </picture>

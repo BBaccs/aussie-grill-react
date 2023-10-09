@@ -68,7 +68,7 @@ function LocationCardModal() {
         centered
       >
         <div className="bull-wrapper-2">
-          <img
+          <img loading="lazy"
             className="mx-auto"
             src="/assets/agGraphicElements/animals/bullFullMedium.png"
             alt=""
@@ -82,7 +82,7 @@ function LocationCardModal() {
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
               <a className="d-block" target="_blank"  rel="noreferrer" href={deliveryUrl} >
-                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab"></img>
+                <img loading="lazy" className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash, opens in a new tab"></img>
               </a>
             </div>
             <p id="or-separator" className="m-2">
@@ -90,7 +90,7 @@ function LocationCardModal() {
             </p>
             <div id="uber-eats-div">
               <a className="d-block" target="_blank"  rel="noreferrer" href={deliveryUrl} >
-                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab"></img>
+                <img loading="lazy" className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats, opens in a new tab"></img>
               </a>
             </div>
           </div>

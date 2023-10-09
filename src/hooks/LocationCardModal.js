@@ -101,7 +101,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
         centered
       >
         <div className="bull-wrapper-2">
-          <img
+          <img loading="lazy"
             className="mx-auto"
             src="./assets/agGraphicElements/animals/bullFullMedium.png"
             alt=""
@@ -115,7 +115,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
             <div id="doordash-div">
               <a className="d-block" target="_blank"  rel="noreferrer" href={thisDoorDashUrl} >
-                <img className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash" title="Opens in a new tab" />
+                <img loading="lazy" className="door-dash-logo" src="/./../../assets/other/doorDashLogoSmall.jpg" alt="Order from Doordash" title="Opens in a new tab" />
               </a>
             </div>
             <p id="or-separator" className="m-2">
@@ -123,7 +123,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
             </p>
             <div id="uber-eats-div">
               <a className="d-block" target="_blank"  rel="noreferrer" href={thisUberEatsUrl} >
-                <img className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats" title="Opens in a new tab" />
+                <img loading="lazy" className="uber-eats-logo" src="/./../../assets/other/uberEatsLogoSmall.png" alt="Order from Uber Eats" title="Opens in a new tab" />
               </a>
             </div>
           </div>

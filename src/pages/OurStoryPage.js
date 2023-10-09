@@ -30,7 +30,7 @@ export default function OurStoryPage() {
 
                         <div className="col-lg-6 d-block d-sm-none d-md-none">
                             <div className="card m-auto">
-                                <img srcSet="assets/other/mobile/ourStoryVerticalCollageMobile.jpg" className="card-img-top"
+                                <img loading="lazy" srcSet="assets/other/mobile/ourStoryVerticalCollageMobile.jpg" className="card-img-top"
                                     alt="" />
                                 <div className="card-body">
                                     <h2 className="card-title">Meet Our Chef</h2>

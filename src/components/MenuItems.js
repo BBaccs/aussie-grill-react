@@ -18,7 +18,8 @@ class MenuItems extends Component {
                         </div>
                     </div>
                     <div>
-                        <picture>
+                    {/* lazy load test */}
+                        <picture loading="lazy">
                             <source
                                 srcSet={`/assets/${menuItem.imgFilePath}/desktop/500x375${menuItem.img}`}
                                 media="(min-width: 768px)" />

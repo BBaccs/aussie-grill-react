@@ -29,7 +29,7 @@ export default function FranchisePage() {
 
                             <div className="row mb-md-4">
                                 <div className="col-12 col-md-4">
-                                    <picture>
+                                    <picture loading="lazy">
                                         <source srcSet="/assets/other/desktop/webFloorPlanFreeStandingv3.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100"
@@ -38,7 +38,7 @@ export default function FranchisePage() {
                                     </picture>
                                 </div>
                                 <div className="col-12 col-md-4 my-3 my-md-0">
-                                    <picture>
+                                    <picture loading="lazy">
                                         <source srcSet="/assets/other/desktop/webFloorPlanv3.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100" srcSet="/assets/other/mobile/webFloorPlanv3Mobile.jpg"
@@ -46,7 +46,7 @@ export default function FranchisePage() {
                                     </picture>
                                 </div>
                                 <div className="col-12 col-md-4 mb-3 mb-md-0">
-                                    <picture>
+                                    <picture loading="lazy">
                                         <source srcSet="/assets/other/desktop/webFloorPlanFoodHallv3.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100"
@@ -89,7 +89,7 @@ export default function FranchisePage() {
                                 </div>
 
                                 <div className="bring-up-z-index col-4 col-lg-2 col-md-3 px-0 text-left ml-0 mt-md-4">
-                                    <picture>
+                                    <picture loading="lazy">
                                         <source srcSet="/assets/other/desktop/verticalImage.jpg"
                                             media="(min-width: 1024px)" />
                                         <img className="w-100 h-100 vertical-food-img"
@@ -247,7 +247,7 @@ export default function FranchisePage() {
                                         </li>
                                         <li>
                                             <div className="d-flex w-100 justify-content-end">
-                                                <img style={{ marginRight: '-50px' }}
+                                                <img loading="lazy" style={{ marginRight: '-50px' }}
                                                     srcSet="/assets/agGraphicElements/animals/bullFullMedium.png" alt="" />
                                             </div>
                                         </li>
@@ -299,13 +299,13 @@ export default function FranchisePage() {
 
                             <span id="contact-us-anchor" className="nav-anchor"></span>
                             <div className="animal-franchise-wrapper col-md-12 mb-4 ml-md-0">
-                                <img srcSet="/assets/agGraphicElements/animals/mobile/chickenMobile.png" alt="" />
+                                <img loading="lazy" srcSet="/assets/agGraphicElements/animals/mobile/chickenMobile.png" alt="" />
                                 <div>
                                     <h2 className="landing-subheading w-100">READY TO JOIN THE ADVENTURE? </h2>
                                     <p>Email us at <a className="standard-link primary-color"
                                         href="mailto:Franchise@AussieGrill.com">Franchise@AussieGrill.com</a></p>
                                 </div>
-                                <img srcSet="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png" alt="" />
+                                <img loading="lazy" srcSet="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png" alt="" />
                             </div>
 
                             <div className="col-md-12">

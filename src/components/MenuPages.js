@@ -94,7 +94,7 @@ class MenuPages extends Component {
                     </div>
                     <div className="menu-category menu-category-selected">
                         <div className="d-flex justify-content-center">
-                            <img className="animal-graphic d-lg-none"
+                            <img loading="lazy" className="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/bullHalfSmall.png" alt="" />
                             {this.props.titleDescription ?
                                 <div className="d-flex align-items-center w-100 flex-column pb-1">
@@ -106,7 +106,7 @@ class MenuPages extends Component {
                                     <h1 className="no-subhead-padding">{this.state.menuTitle}</h1>
                                 </div>
                             }
-                            <img className="animal-graphic d-lg-none"
+                            <img loading="lazy" className="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png" alt="" />
                         </div>
                     </div>
@@ -121,7 +121,7 @@ class MenuPages extends Component {
                                     </div>
                                     {!item.imgFilePath ? '' :
                                         <div>
-                                            <img className="w-100 subheading-img"
+                                            <img loading="lazy" className="w-100 subheading-img"
                                                 src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
                                                 alt="" />
                                         </div>
@@ -159,7 +159,7 @@ class MenuPages extends Component {
                                     <h2 className="no-subhead-padding pig-heading lg-pig-heading w-100">{this.state.menuTitle}</h2>
                                 }
                             </div>
-                            <img className="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
+                            <img loading="lazy" className="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
                                 alt="" />
                         </div>
                     </div>
@@ -182,7 +182,7 @@ class MenuPages extends Component {
                                     :
                                     <>
                                         <div className="d-flex justify-content-center mr-4">
-                                            <img className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" alt=""/>
+                                            <img loading="lazy" className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" alt=""/>
                                             <div className={`h3 ${!item.pdpPreview && 'pb-0'}`}>{item.name}</div>
                                         </div>
                                     </>

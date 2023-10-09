@@ -49,7 +49,7 @@ function PDP() {
             <div key={index} className="menu-page menu-page-bg product-description-page">
               <div className="container-fluid mt-0 p-3 pt-4">
                 {item.img &&
-                  <picture>
+                  <picture loading="lazy">
                     <source src={`/assets/${item.imgFilePath}/desktop/800x600${item.img}`} media="(min-width: 1600px)" />
                     <source src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`} media="(min-width: 768px)" />
                     {/* <!-- The <img /> is the fall back for non browser compatible w/ picture tag and mobile version.  --> */}

@@ -29,7 +29,7 @@ class CarouselAnnn extends Component {
                     <ol className="carousel-indicators mx-0">
                         {/* Fix active name w/ state */}
                         {carouselData.map((item, index) => (
-                           
+    
                             <li key={index} onClick={this.handleClick} data-target={this.props.id} tabindex="0" role="button" aria-label={`Slide ${index}`}
                                 data-slide-to={index} className={this.state.activeSlide ? "active" : ""}> {console.log(item.number)}</li>
                         )

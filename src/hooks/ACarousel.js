@@ -5,7 +5,7 @@ function ACarousel() {
         <Carousel fade hover>
             {carouselData.map((item, index) => (
                 <Carousel.Item key={index}>
-                    <picture>
+                    <picture loading="lazy">
                         <source srcSet={`/assets/carouselImages/desktop/lg-${item.imgName}`}
                             media="(min-width: 1400px)" />
                         <source srcSet={`/assets/carouselImages/tablet/md-${item.imgName}`}
