@@ -35,8 +35,7 @@ export default function AccessibilityPage() {
                         <div className="privacy-policy-content">
                             <h2 className="privacy-policy-section-header">General</h2>
                             <p>Bloomin’ Brands, Inc. is committed to facilitating and improving the accessibility and
-                                usability
-                                of its websites (www.bloominbrands.com; www.outback.com; www.carrabbas.com;
+                                usability of its websites (www.bloominbrands.com; www.outback.com; www.carrabbas.com;
                                 www.bonefishgrill.com; www.flemingssteakhouse.com; and www.dine-rewards.com.) Bloomin’
                                 Brands
                                 strives to ensure that its website services and content are accessible to persons with
