@@ -38,7 +38,7 @@ function PDP() {
   const location = useLocation();
   let category = location.pathname.split('/')[2];
   let menuData = getCategoryData(category);
-  let pathName = location.pathname.split('/')[3].replaceAll('.html', '').toLowerCase();
+  let pathName = location.pathname.split('/')[3].toLowerCase();
   return (
     <>
       {menuData.map((item, index) => {
@@ -61,7 +61,7 @@ function PDP() {
                 </div>
                 <div className="row py-5 d-none d-lg-block">
                   <div className="m-auto">
-                    <a href="/../pickup.html" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</a>
+                    <a href="/../pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</a>
                   </div>
                 </div>
               </div>

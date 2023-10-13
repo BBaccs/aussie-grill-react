@@ -60,26 +60,26 @@ function AppRoutes(props) {
                 <Route exact index element={<HomePage />} />
 
                 { /*  Static Pages */}
-                <Route exact path={'/pickup.html'} element={<Ordering />} />
-                <Route path={'/ourStory.html'} element={<OurStoryPage />} />
-                <Route path={'/careers.html'} element={<CareersPage />} />
-                <Route path={'/contact.html'} element={<ContactPage />} />
-                <Route path={'/giveaways.html'} element={<GiveawaysPage />} />
-                <Route path={'/franchise.html'} element={<FranchisePage />}/>
-                <Route path={'/privacyPolicy/privacyPolicy.html'} element={<PrivacyPolicyPage />} />
-                <Route path={'/privacyPolicy/ccpa.html'} element={<CcpaPage />} />
-                <Route path={'/privacyPolicy/accessibilityStatement.html'} element={<AccessibilityPage />} />
-                <Route path={'/privacyPolicy/termsAndConditions.html'} element={<TermsAndConditionsPage />} />
+                <Route exact path={'/pickup'} element={<Ordering />} />
+                <Route path={'/ourStory'} element={<OurStoryPage />} />
+                <Route path={'/careers'} element={<CareersPage />} />
+                <Route path={'/contact'} element={<ContactPage />} />
+                <Route path={'/giveaways'} element={<GiveawaysPage />} />
+                <Route path={'/franchise'} element={<FranchisePage />}/>
+                <Route path={'/privacyPolicy/privacyPolicy'} element={<PrivacyPolicyPage />} />
+                <Route path={'/privacyPolicy/ccpa'} element={<CcpaPage />} />
+                <Route path={'/privacyPolicy/accessibilityStatement'} element={<AccessibilityPage />} />
+                <Route path={'/privacyPolicy/termsAndConditions'} element={<TermsAndConditionsPage />} />
                 
 
                 { /*  Menu Category Pages */}
-                <Route path={'/menu/index.html'} element={<Menu />} />
-                <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />{/* @TODO remove title description PROP? */}
-                <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
+                <Route path={'/menu'} element={<Menu />} />
+                <Route path={`/menu/handhelds`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />{/* @TODO remove title description PROP? */}
+                <Route path={`/menu/${category}`} element={<MenuPages dataTitle={category} />} />
 
                 { /*  Menu Category for CATERING */}
-                <Route path={'/catering/index.html'} element={<CateringPage />} />
-                <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
+                <Route path={'/catering'} element={<CateringPage />} />
+                <Route path={`/catering/${category}`} element={<MenuPages dataTitle={category} />} />
                 {/* Individual Menu PDP Pages */}
                 <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
                 <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />

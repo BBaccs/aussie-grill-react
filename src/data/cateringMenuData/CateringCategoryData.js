@@ -2,22 +2,22 @@ export const CateringCategoryData = [
   {
     name: "Platters",
     img: "baconBombBurger.jpeg",
-    // url: "/pages/catering/cateringMenu/platters.html",
+    // url: "/pages/catering/cateringMenu/platters",
     imgFilePath: "foodImages/categoryImages",
-    linkTo: "/catering/platters/index.html",
+    linkTo: "/catering/platters",
 },
 {
     name: "Salad Platters",
     img: "saladPlatters.jpeg",
-    // url: "/pages/catering/cateringMenu/saladPlatters.html",
+    // url: "/pages/catering/cateringMenu/saladPlatters",
     imgFilePath: "foodImages/categoryImages",
-    linkTo: "/catering/saladPlatters/index.html",
+    linkTo: "/catering/saladPlatters",
 },
 {
     name: "Desserts & sides",
     img: "aussiePetals.jpeg",
-    // url: "/pages/catering/cateringMenu/sidePlatters.html",
+    // url: "/pages/catering/cateringMenu/sidePlatters",
     imgFilePath: "foodImages/categoryImages",
-    linkTo: "/catering/desserts&Sides/index.html",
+    linkTo: "/catering/desserts&Sides",
 }
 ];

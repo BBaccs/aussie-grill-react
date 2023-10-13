@@ -1,3 +1,4 @@
+/* Special Legal pages, do not optimize or add components! */
 export default function TermsAndConditionsPage() {
     return (
         <div className="privacy-page landing-page landing-content-wrapper terms-page">
@@ -13,16 +14,16 @@ export default function TermsAndConditionsPage() {
                     <nav className="d-flex flex-column">
                         <ul className="xxl-buttons p-0 m-0">
                             <li>
-                                <a className="btn btn-primary" href="./../privacyPolicy/privacyPolicy.html">Privacy Policy</a>
+                                <a className="btn btn-primary" href="./../privacyPolicy/privacyPolicy">Privacy Policy</a>
                             </li>
                             <li>
-                                <a className="btn btn-primary" href="./../privacyPolicy/ccpa.html">California Privacy Notice</a>
+                                <a className="btn btn-primary" href="./../privacyPolicy/ccpa">California Privacy Notice</a>
                             </li>
                             <li>
-                                <a className="btn btn-primary" href="./../privacyPolicy/accessibilityStatement.html">Accessibility Statement</a>
+                                <a className="btn btn-primary" href="./../privacyPolicy/accessibilityStatement">Accessibility Statement</a>
                             </li>
                             <li>
-                                <a className="btn btn-primary" href="./../privacyPolicy/termsAndConditions.html">Terms &amp; Conditions</a>
+                                <a className="btn btn-primary" href="./../privacyPolicy/termsAndConditions">Terms &amp; Conditions</a>
                             </li>
                         </ul>
                     </nav>
@@ -173,7 +174,7 @@ export default function TermsAndConditionsPage() {
                             <p>
                                 Your use of the Site is subject to our Privacy Policy. Notice to Nevada Residents: Requests by Nevada residents to exercise their privacy rights should direct their request to:
                                 <a className="standard-link" href="./../mailto:NVprivacyrequest@bloominbrands.com">NVprivacyrequest@bloominbrands.com</a>. If you would like to view our privacy practices please review our
-                                <a href="./../privacyPolicy/privacyPolicy.html">Privacy Policy</a>.
+                                <a href="./../privacyPolicy/privacyPolicy">Privacy Policy</a>.
                             </p>
                             <h2 className="privacy-policy-sub-text">SECURITY</h2>
                             <p>

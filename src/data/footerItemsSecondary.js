@@ -1,31 +1,31 @@
 export const footerItemsSecondary = [
     {
         name: 'Privacy Policy',
-        url: '/privacyPolicy/privacyPolicy.html',
+        url: '/privacyPolicy/privacyPolicy',
         anchorClass: "nav-link",
         liClass: "nav-item"
       },
       {
         name: 'CCPA Privacy Notice',
-        url: '/privacyPolicy/ccpa.html',
+        url: '/privacyPolicy/ccpa',
         anchorClass: "nav-link",
         liClass: "nav-item"
       },
       {
         name: 'Accessability Statement',
-        url: '/privacyPolicy/accessibilityStatement.html',
+        url: '/privacyPolicy/accessibilityStatement',
         anchorClass: "nav-link",
         liClass: "nav-item"
       },
       {
         name: 'Terms & Conditions',
-        url: '/privacyPolicy/termsAndConditions.html',
+        url: '/privacyPolicy/termsAndConditions',
         anchorClass: "nav-link",
         liClass: "nav-item"
       },
       {
         name: 'Giveaways',
-        url: '/giveaways.html',
+        url: '/giveaways',
         anchorClass: "nav-link",
         liClass: "nav-item"
       }

@@ -10,7 +10,7 @@ class OrderPage extends Component {
         super(props);
         // this.state = {
         //     clicked: false,
-        //     navData: window.location.pathname === '/franchise.html' ? franchiseNavItems : navItems
+        //     navData: window.location.pathname === '/franchise' ? franchiseNavItems : navItems
         // };
         // this.handleClick = this.handleClick.bind(this);
     }

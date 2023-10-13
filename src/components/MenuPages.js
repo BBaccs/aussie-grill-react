@@ -79,7 +79,7 @@ class MenuPages extends Component {
     }
 
     render() {
-        let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
+        let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
         return (
             <div id={`${this.state.category}-page`} className="menu-page">
                 <div className="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
@@ -133,7 +133,7 @@ class MenuPages extends Component {
                         ))}
                     </div>
                     <div className="m-auto">
-                        <a className="btn btn-primary btn-lg mr-5" href="./../../pickup.html">Order</a>
+                        <a className="btn btn-primary btn-lg mr-5" href="./../../pickup">Order</a>
                     </div>
                 </div>
                 {/* <!-- End Menu Item Row--> */}

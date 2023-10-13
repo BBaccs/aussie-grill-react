@@ -1,3 +1,4 @@
+/* Special Legal pages, do not optimize or add components! */
 export default function PrivacyPolicyPage() {
   return (
     <div
@@ -21,20 +22,20 @@ export default function PrivacyPolicyPage() {
               <li>
                 <a
                   className="btn btn-primary"
-                  href="./../privacyPolicy/privacyPolicy.html"
+                  href="./../privacyPolicy/privacyPolicy"
                 >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a className="btn btn-primary" href="./../privacyPolicy/ccpa.html">
+                <a className="btn btn-primary" href="./../privacyPolicy/ccpa">
                   California Privacy Notice
                 </a>
               </li>
               <li>
                 <a
                   className="btn btn-primary"
-                  href="./../privacyPolicy/accessabilityStatement.html"
+                  href="./../privacyPolicy/accessabilityStatement"
                 >
                   Accessibility Statement
                 </a>
@@ -42,7 +43,7 @@ export default function PrivacyPolicyPage() {
               <li>
                 <a
                   className="btn btn-primary"
-                  href="./../privacyPolicy/termsAndConditions.html"
+                  href="./../privacyPolicy/termsAndConditions"
                 >
                   Terms &amp; Conditions
                 </a>
@@ -506,7 +507,7 @@ export default function PrivacyPolicyPage() {
               <h3 className="privacy-policy-sub-text">California Residents</h3>
               <p>
                 California residents may click{" "}
-                <a aria-label="CCPA page" href="./../privacyPolicy/ccpa.html">
+                <a aria-label="CCPA page" href="./../privacyPolicy/ccpa">
                   here
                 </a>{" "}
                 to view our California Privacy Notice.{" "}
@@ -515,7 +516,7 @@ export default function PrivacyPolicyPage() {
               <p>
                 Nevada residents may click{" "}
                 <a
-                  href="https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71.html"
+                  href="https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71"
                   aria-label="Nevada Residents Privacy Policy"
                   target="_blank"  rel="noreferrer"
                 >

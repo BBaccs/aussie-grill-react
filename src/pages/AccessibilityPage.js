@@ -1,3 +1,4 @@
+/* Special Legal pages, do not optimize or add components! */
 export default function AccessibilityPage() {
     return (
         <div className="privacy-page landing-page landing-content-wrapper">
@@ -10,20 +11,20 @@ export default function AccessibilityPage() {
                         <ul className="xxl-buttons p-0 m-0">
                             <li>
                                 <a className="btn btn-primary"
-                                    href="./../privacyPolicy/privacyPolicy.html">Privacy Policy</a>
+                                    href="./../privacyPolicy/privacyPolicy">Privacy Policy</a>
                             </li>
                             <li>
                                 <a className="btn btn-primary"
-                                    href="./../privacyPolicy/ccpa.html">California Privacy Notice</a>
+                                    href="./../privacyPolicy/ccpa">California Privacy Notice</a>
                             </li>
                             <li>
                                 <a className="btn btn-primary"
-                                    href="./../privacyPolicy/accessibilityStatement.html">Accessibility
+                                    href="./../privacyPolicy/accessibilityStatement">Accessibility
                                     Statement</a>
                             </li>
                             <li>
                                 <a className="btn btn-primary"
-                                    href="./../privacyPolicy/termsAndConditions.html">Terms &amp;
+                                    href="./../privacyPolicy/termsAndConditions">Terms &amp;
                                     Conditions</a>
                             </li>
                         </ul>

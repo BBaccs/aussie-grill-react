@@ -15,7 +15,7 @@ class NavBar extends Component {
         super(props);
         this.state = {
             open: false,
-            navData: window.location.pathname === '/franchise.html' ? franchiseNavItems : navItems
+            navData: window.location.pathname === '/franchise' ? franchiseNavItems : navItems
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -27,7 +27,7 @@ class NavBar extends Component {
     // It is automatically provided by React and does not need to be explicitly passed.
     componentDidUpdate(prevProps) {
         const { location } = this.props;
-        if (location && location.pathname === '/franchise.html' && prevProps.location.pathname !== '/franchise.html') {
+        if (location && location.pathname === '/franchise' && prevProps.location.pathname !== '/franchise') {
             this.setState({ navData: franchiseNavItems });
         }
     }
@@ -53,7 +53,7 @@ class NavBar extends Component {
         return (
             <div>
                 <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
-                <a href="/privacyPolicy/accessibilityStatement.html" className="sr-only sr-only-focusable">Skip to accessibility statement</a>
+                <a href="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</a>
                 {generateAlertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">

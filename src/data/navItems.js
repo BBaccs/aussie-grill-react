@@ -1,18 +1,18 @@
 export const navItems = [
     {
         name: 'Menu',
-        url: 'menu/index.html',
+        url: 'menu',
         target: 'self'
     },
     {
         name: 'Order',
-        url: 'pickup.html',
+        url: 'pickup',
         // cateringPageUrl: 'https://www.ezcater.com/brand/pvt/aussie-grill',
         target: "_self"
       },
     {
         name: 'Catering',
-        url: 'catering/index.html',
+        url: 'catering',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
     },
@@ -26,37 +26,37 @@ export const navItems = [
     },
     {
         name: 'Our Story',
-        url: 'ourStory.html',
+        url: 'ourStory',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
     },
     {
         name: 'Careers',
-        url: 'careers.html',
+        url: 'careers',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
     },
     {
         name: 'Franchise',
-        url: 'franchise.html',
+        url: 'franchise',
         liClass: 'nav-item d-none d-sm-none d-md-block',
         target: '_self'
     },
     {
         name: 'Locations',
-        url: 'pickup.html',
+        url: 'pickup',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
     },
     {
         name: 'Contact',
-        url: 'contact.html',
+        url: 'contact',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_self'
     },
     {
         name: 'Giveaways',
-        url: 'giveaways.html',
+        url: 'giveaways',
         liClass: 'd-none d-sm-none d-md-none d-lg-none',
         target: '_self'
     }

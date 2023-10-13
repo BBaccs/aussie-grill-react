@@ -248,7 +248,7 @@ export default function GiveawaysPage() {
                                     <li>
                                         <h4>13. PRIVACY POLICY: </h4>
                                         <p>Information collected from Entrants is subject to Sponsor’s Privacy Policy,
-                                            located <Link to="/privacyPolicy/privacyPolicy.html"
+                                            located <Link to="/privacyPolicy/privacyPolicy"
                                                 aria-label="Privacy policy page" className="primary-color"
                                                 style={{textDecoration: 'underline'}}>here</Link>.</p>
                                     </li>
