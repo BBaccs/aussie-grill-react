@@ -79,7 +79,6 @@ class MenuPages extends Component {
     }
 
     render() {
-        console.log('<MenuPages />')
         let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
         return (
             <div id={`${this.state.category}-page`} className="menu-page">

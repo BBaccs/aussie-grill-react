@@ -30,8 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar location={pathname} />
-      {console.log(pathname, 'pathname')}
+      <NavBar pathname={pathname} />
       <main id="main-content" style={{ background: 'url(/assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png)' }}>
         <Routes>
           {/* Home Page */}
@@ -108,7 +107,7 @@ function App() {
           <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
         </Routes>
       </main>
-      <Footer location={pathname} />
+      <Footer pathname={pathname} />
       {/* <!-- ORDER FOOD CTA --> */}
       <div className="cta-wrapper">
         <div className="d-flex container-fluid justify-content-between align-items-center cta-banner">

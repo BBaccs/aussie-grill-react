@@ -1,5 +1,4 @@
-/* @TODO */
-/* Transition animation for mobile nav btn */
+/* @TODO Transition animation for mobile nav btn */
 import React, { Component } from "react";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
