@@ -23,66 +23,67 @@ import { homePageCards } from "./data/homePageCards";
 
 function AppRoutes(props) {
     const { category, menuItem } = props;
+    function HomePage() {
+        return (
+            <>
+                <h1 className="sr-only">Welcome to Aussie Grill</h1>
+                <ACarousel />
+                <div id="homepage-container-fluid" className="container-fluid-fluid py-5 pt-1">
+                    <MenuItems />
+                    <MenuItems menuData={homePageCards} />
+                </div>
+            </>
+        )
+    }
+
+    function CateringPage() {
+        return (
+            <>
+                <div className="menu-page mt-0 pt-lg-5 py-4 mb-4">
+                    <div className="px-4">
+                        <h1 className="pt-lg-2 pb-2">CATERING DONE MORE DARINGLY</h1>
+                        <p className="mb-0 primary-color">We offer up a variety of platters to get you fueled through a work
+                            meeting, house party or wherever your next adventure takes you.</p>
+                        <p className="mb-0 primary-color">3-hour notice required, some restrictions apply.</p>
+                        <p className="mb-0 primary-color">All platters serve 6-8.</p>
+                    </div>
+                </div>
+                <Menu menuData={CateringCategoryData} />
+            </>
+        )
+    }
 
     return (
         <main id="main-content">
             <Routes>
                 {/* Home Page */}
-                <Route exact index
-                    element={
-                        <>
-                            <h1 className="sr-only">Welcome to Aussie Grill</h1>
-                            <ACarousel />
-                            <div id="homepage-container-fluid" className="container-fluid-fluid py-5 pt-1">
-                                <MenuItems />
-                                <MenuItems menuData={homePageCards} />
-                            </div>
-                        </>
-                    }
-                />
-                { /*  Static Pages */}
-                <Route exact path={'/pickup.html'}
-                    element={
+                <Route exact index element={<HomePage />} />
 
-                        <Ordering />
-                    }
-                />
+                { /*  Static Pages */}
+                <Route exact path={'/pickup.html'} element={<Ordering />} />
                 <Route path={'/ourStory.html'} element={<OurStoryPage />} />
                 <Route path={'/careers.html'} element={<CareersPage />} />
                 <Route path={'/contact.html'} element={<ContactPage />} />
                 <Route path={'/giveaways.html'} element={<GiveawaysPage />} />
+                <Route path={'/franchise.html'} element={<FranchisePage />}/>
                 <Route path={'/privacyPolicy/privacyPolicy.html'} element={<PrivacyPolicyPage />} />
                 <Route path={'/privacyPolicy/ccpa.html'} element={<CcpaPage />} />
                 <Route path={'/privacyPolicy/accessibilityStatement.html'} element={<AccessibilityPage />} />
                 <Route path={'/privacyPolicy/termsAndConditions.html'} element={<TermsAndConditionsPage />} />
+                
+
                 { /*  Menu Category Pages */}
                 <Route path={'/menu/index.html'} element={<Menu />} />
-                {/* @TODO remove title description PROP? */}
-                <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />
+                <Route path={`/menu/handhelds/index.html`} element={<MenuPages dataTitle={category} titleDescription={'100% USDA CHOICE BEEF'} />} />{/* @TODO remove title description PROP? */}
                 <Route path={`/menu/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
-                { /*  Menu Category for CATERING */}
-                <Route path={'/catering/index.html'} element={
-                    <>
-                        <div className="menu-page mt-0 pt-lg-5 py-4 mb-4">
-                            <div className="px-4">
-                                <h1 className="pt-lg-2 pb-2">CATERING DONE MORE DARINGLY</h1>
-                                <p className="mb-0 primary-color">We offer up a variety of platters to get you fueled through a work
-                                    meeting, house party or wherever your next adventure takes you.</p>
-                                <p className="mb-0 primary-color">3-hour notice required, some restrictions apply.</p>
-                                <p className="mb-0 primary-color">All platters serve 6-8.</p>
-                            </div>
-                        </div>
-                        <Menu menuData={CateringCategoryData} />
-                    </>
-                } />
-                <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
 
-                {/* Individual Catering Menu PDP Pages */}
-                <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
+                { /*  Menu Category for CATERING */}
+                <Route path={'/catering/index.html'} element={<CateringPage />} />
+                <Route path={`/catering/${category}/index.html`} element={<MenuPages dataTitle={category} />} />
                 {/* Individual Menu PDP Pages */}
                 <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
-                <Route exact path={'/franchise.html'} element={<FranchisePage />}
-                />
+                <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
+
                 <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
             </Routes>
         </main>
