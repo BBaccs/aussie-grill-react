@@ -1,3 +1,4 @@
+/* Special Legal pages, do not optimize or add components! */
 export default function CcpaPage() {
     return (
         <div className="privacy-page landing-page landing-content-wrapper">
@@ -22,23 +23,23 @@ export default function CcpaPage() {
                             <li>
                                 <a
                                     className="btn btn-primary"
-                                    href="./../privacyPolicy/privacyPolicy.html"
+                                    href="./../privacyPolicy/privacyPolicy"
                                 >Privacy Policy</a>
                             </li>
                             <li>
-                                <a className="btn btn-primary" href="./../privacyPolicy/ccpa.html"
+                                <a className="btn btn-primary" href="./../privacyPolicy/ccpa"
                                 >California Privacy Notice</a>
                             </li>
                             <li>
                                 <a
                                     className="btn btn-primary"
-                                    href="./../privacyPolicy/accessibilityStatement.html"
+                                    href="./../privacyPolicy/accessibilityStatement"
                                 >Accessibility Statement</a>
                             </li>
                             <li>
                                 <a
                                     className="btn btn-primary"
-                                    href="./../privacyPolicy/termsAndConditions.html"
+                                    href="./../privacyPolicy/termsAndConditions"
                                 >Terms &amp; Conditions</a>
                             </li>
                         </ul>
@@ -384,7 +385,7 @@ export default function CcpaPage() {
                                 Your California Consumer privacy rights are described below. To make
                                 a request,
                                 <a
-                                    href="./../https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71.html"
+                                    href="./../https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71"
                                     target="_blank"  rel="noreferrer"
                                 >click here</a>
                                 to connect with our CCPA portal and provide the following

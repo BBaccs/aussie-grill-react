@@ -63,10 +63,12 @@ class Footer extends Component {
                             })}
                         </ul>
                     </div>
-                    <div className="mt-3 d-lg-none"> <span
-                        className="rights-reserved text-capitalize text-center w-100 font-small">
-                        &#169;{year} Bloomin' Brands, Inc.
-                        All Rights Reserved.</span></div>
+                    <div className="mt-3 d-lg-none">
+                        <span className="rights-reserved text-capitalize text-center w-100 font-small">
+                            &#169;{year} Bloomin' Brands, Inc.
+                            All Rights Reserved.
+                        </span>
+                    </div>
                 </div>
             </footer>
         );

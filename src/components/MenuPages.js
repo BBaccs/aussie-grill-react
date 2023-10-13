@@ -79,9 +79,11 @@ class MenuPages extends Component {
     }
 
     render() {
-        let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering/index.html' : './../../menu/index.html';
+        let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
+        const {titleDescription, } = this.props;
+        const {category, menuTitle } = this.state;
         return (
-            <div id={`${this.state.category}-page`} className="menu-page">
+            <div id={`${category}-page`} className="menu-page">
                 <div className="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div className="select-category-bg">
                         <a href={menuCategoryPage}>
@@ -94,14 +96,14 @@ class MenuPages extends Component {
                         <div className="d-flex justify-content-center">
                             <img loading="lazy" className="animal-graphic d-lg-none"
                                 src="/assets/agGraphicElements/animals/mobile/bullHalfSmall.png" alt="" />
-                            {this.props.titleDescription ?
+                            {titleDescription ?
                                 <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                    <h1 className="pb-1">{this.state.menuTitle}</h1>
-                                    <p className="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
+                                    <h1 className="pb-1">{menuTitle}</h1>
+                                    <p className="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{titleDescription}</p>
                                 </div>
                                 :
                                 <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                    <h1 className="no-subhead-padding">{this.state.menuTitle}</h1>
+                                    <h1 className="no-subhead-padding">{menuTitle}</h1>
                                 </div>
                             }
                             <img loading="lazy" className="animal-graphic d-lg-none"
@@ -110,7 +112,7 @@ class MenuPages extends Component {
                     </div>
                     {/* <!-- Start Menu Item Row--> */}
                     <div className="row px-lg-4 pt-lg-5 justify-content-center product-list-wrapper-lg">
-                        {this.state.category.map((item, index) => (
+                        {category.map((item, index) => (
                             <>
                                 <div key={index}
                                     className="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
@@ -133,7 +135,7 @@ class MenuPages extends Component {
                         ))}
                     </div>
                     <div className="m-auto">
-                        <a className="btn btn-primary btn-lg mr-5" href="./../../pickup.html">Order</a>
+                        <a className="btn btn-primary btn-lg mr-5" href="./../../pickup">Order</a>
                     </div>
                 </div>
                 {/* <!-- End Menu Item Row--> */}
@@ -148,20 +150,20 @@ class MenuPages extends Component {
                     <div className="menu-category menu-category-selected">
                         <div className="d-flex justify-content-center">
                             <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                {this.props.titleDescription ?
+                                {titleDescription ?
                                     <div style={{ marginLeft: 125 + 'px' }} className="d-flex align-items-center w-100 flex-column pb-1">
-                                        <h1 className="pb-1">{this.state.menuTitle}</h1>
-                                        <p className="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{this.props.titleDescription}</p>
+                                        <h1 className="pb-1">{menuTitle}</h1>
+                                        <p className="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{titleDescription}</p>
                                     </div>
                                     :
-                                    <h2 className="no-subhead-padding pig-heading lg-pig-heading w-100">{this.state.menuTitle}</h2>
+                                    <h2 className="no-subhead-padding pig-heading lg-pig-heading w-100">{menuTitle}</h2>
                                 }
                             </div>
                             <img loading="lazy" className="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
                                 alt="" />
                         </div>
                     </div>
-                    {this.state.category.map((item, index) => (
+                    {category.map((item, index) => (
                         <div key={index} className="mobile-menu-item menu-item-bg">
                             <a className="d-block" href={item.linkTo}>
                                 {!item.new ?

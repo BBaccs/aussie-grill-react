@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
 import { NavLink } from 'react-router-dom';
@@ -16,7 +17,7 @@ class NavBar2 extends Component {
     this.state = {
       open: false,
       transitioning: false,
-      navData: window.location.pathname === '/franchise.html' ? franchiseNavItems : navItems
+      navData: window.location.pathname === '/franchise' ? franchiseNavItems : navItems
     };
   }
 
@@ -37,7 +38,7 @@ class NavBar2 extends Component {
   componentDidUpdate(prevProps) {
     const { location } = this.props;
 
-    if (location && location.pathname === '/franchise.html' && prevProps.location.pathname !== '/franchise.html') {
+    if (location && location.pathname === '/franchise' && prevProps.location.pathname !== '/franchise') {
       this.setState({ navData: franchiseNavItems });
     }
   }
@@ -64,7 +65,7 @@ class NavBar2 extends Component {
     return (
       <div>
         <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
-        <a href="/privacyPolicy/accessibilityStatement.html" className="sr-only sr-only-focusable">Skip to accessibility statement</a>
+        <Link href="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
         {generateAlertBar}
         <div className="sticky-top nav-border">
           <nav className="navbar navbar-dark bg-ag-dark">

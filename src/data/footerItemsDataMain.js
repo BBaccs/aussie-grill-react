@@ -1,44 +1,44 @@
 export const footerItemsDataMain = [
     {
       name: 'Careers',
-      url: '/careers.html',
+      url: '/careers',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Catering',
-      url: '/catering/index.html',
+      url: '/catering',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Franchise',
-      url: '/franchise.html',
+      url: '/franchise',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Our Story',
-      url: '/ourStory.html',
+      url: '/ourStory',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Locations',
-      url: '/pickup.html',
+      url: '/pickup',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     {
       name: 'Contact',
-      url: '/contact.html',
+      url: '/contact',
       anchorClass: "nav-link",
       liClass: "nav-item"
     },
     /* Desktop Only */
     {
       name: 'Giveaways',
-      url: '/giveaway.html',
+      url: '/giveaway',
       anchorClass: "nav-link",
       liClass: "nav-item desktop-only"
     }

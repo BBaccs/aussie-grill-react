@@ -26,7 +26,7 @@ class PDP extends Component {
                         </div>
                         <div className="row py-5 d-none d-lg-block">
                             <div className="m-auto">
-                                <a href="/../pickup.html" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</a>
+                                <a href="/../pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</a>
                             </div>
                         </div>
                     </div>

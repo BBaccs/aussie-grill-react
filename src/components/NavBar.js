@@ -1,5 +1,6 @@
-/* @TODO Transition animation for mobile nav btn */
+/* @TODO: Transition animation for mobile nav btn */
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
 import { NavLink } from 'react-router-dom';
@@ -15,7 +16,7 @@ class NavBar extends Component {
         super(props);
         this.state = {
             open: false,
-            navData: window.location.pathname === '/franchise.html' ? franchiseNavItems : navItems
+            navData: window.location.pathname === '/franchise' ? franchiseNavItems : navItems
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -27,7 +28,7 @@ class NavBar extends Component {
     // It is automatically provided by React and does not need to be explicitly passed.
     componentDidUpdate(prevProps) {
         const { location } = this.props;
-        if (location && location.pathname === '/franchise.html' && prevProps.location.pathname !== '/franchise.html') {
+        if (location && location.pathname === '/franchise' && prevProps.location.pathname !== '/franchise') {
             this.setState({ navData: franchiseNavItems });
         }
     }
@@ -53,12 +54,12 @@ class NavBar extends Component {
         return (
             <div>
                 <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
-                <a href="/privacyPolicy/accessibilityStatement.html" className="sr-only sr-only-focusable">Skip to accessibility statement</a>
+                <Link to="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
                 {generateAlertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
                         <div className="container-lg d-flex nav-inner-wrapper">
-                            {/*When the transition animation is added we'll need to add classes like 'collapse' to the btn, which temporarily hides it during transition*/}
+                            {/* @TODO: When the transition animation is added we'll need to add classes like 'collapse' to the btn, which temporarily hides it during transition*/}
                             <button onClick={this.handleClick} className={open ? "navbar-toggler d-md-none d-lg-none d-xl-none" : "navbar-toggler d-md-none d-lg-none d-xl-none collapsed"} type="button"
                                 data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                                 aria-expanded={open ? 'true' : 'false'} aria-label={open ? 'Close navigation' : 'Open navigation'} >
@@ -128,5 +129,3 @@ class NavBar extends Component {
 }
 
 export default NavBar;
-
-

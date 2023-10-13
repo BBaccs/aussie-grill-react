@@ -12,11 +12,14 @@ class Ordering extends Component {
         };
     }
     toggleDelivery = () => {
-        this.setState({ showDelivery: !this.state.showDelivery });
+        const { showDelivery } = this.state;
+        this.setState({ showDelivery: !showDelivery });
     }
+    
     togglePickup = () => {
-        this.setState({ showPickup: !this.state.showPickup });
-    }
+        const { showPickup } = this.state;
+        this.setState({ showPickup: !showPickup });
+    }    
 
     toggleChecked = (e) => {
         document.querySelector(`#${e.target.id}`).toggleAttribute('checked')
@@ -34,51 +37,56 @@ class Ordering extends Component {
 
     render() {
         const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
+        const {showDelivery, showPickup, selectedLocation} = this.state;
         return (
             <>
-                <h1 className="landing-heading mb-4 mb-lg-4">Choose your location to place an order!</h1>
-                <div id="location-filter-wrapper" className="mt-md-4 mx-auto pickup-layout">
-                    <div className="mb-2">
-                        <label id="state-label" className="mb-0" htmlFor="statedd">State :</label>
-                        <select onChange={this.handleLocationChange} id="statedd" className="primary-color select">
-                            <option className="slim-option" value="All">All</option>
-                            {uniqueStates.map((stateName) => (
-                                <option className="slim-option" key={stateName} value={stateName}>{stateName}</option>
-                            ))}
-                        </select>
-                    </div>
-                    <div id="checkbox-wrapper" className="mb-3">
-                        <div>
-                            <input
-                                onClick={this.togglePickup}
-                                className={`checkboxLeft ${this.state.showPickup ? 'checked-option' : ''}`}
-                                type="checkbox"
-                                id="pickupChk"
-                                checked={this.state.showPickup}
-                                onChange={this.toggleChecked}
-                            />
-                            {/* OnKeydown goes on label */}
-                            <label onKeyDown={(e) => this.handleKeyDown(e, this.togglePickup)} tabIndex="0" htmlFor="pickupChk">PickUp</label>
+                <div id="pickup-page" className="landing-page">
+                    <div className="container-fluid text-center landing-content-wrapper">
+                        <h1 className="landing-heading mb-4 mb-lg-4">Choose your location to place an order!</h1>
+                        <div id="location-filter-wrapper" className="mt-md-4 mx-auto pickup-layout">
+                            <div className="mb-2">
+                                <label id="state-label" className="mb-0" htmlFor="statedd">State :</label>
+                                <select onChange={this.handleLocationChange} id="statedd" className="primary-color select">
+                                    <option className="slim-option" value="All">All</option>
+                                    {uniqueStates.map((stateName) => (
+                                        <option className="slim-option" key={stateName} value={stateName}>{stateName}</option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div id="checkbox-wrapper" className="mb-3">
+                                <div>
+                                    <input
+                                        onClick={this.togglePickup}
+                                        className={`checkboxLeft ${showPickup ? 'checked-option' : ''}`}
+                                        type="checkbox"
+                                        id="pickupChk"
+                                        checked={showPickup}
+                                        onChange={this.toggleChecked}
+                                    />
+                                    {/* OnKeydown goes on label */}
+                                    <label onKeyDown={(e) => this.handleKeyDown(e, this.togglePickup)} tabIndex="0" htmlFor="pickupChk">PickUp</label>
+                                </div>
+                                <div>
+                                    <input
+                                        onClick={this.toggleDelivery}
+                                        className={`option-filter checkboxRight primary-color ${showDelivery ? 'checked-option' : ''}`}
+                                        checked={showDelivery}
+                                        onChange={this.toggleChecked}
+                                        type="checkbox"
+                                        id="deliveryChk"
+                                    />
+                                    {/* OnKeydown goes on label */}
+                                    <label onKeyDown={(e) => this.handleKeyDown(e, this.toggleDelivery)} tabIndex="0" htmlFor="deliveryChk">Delivery</label>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input
-                                onClick={this.toggleDelivery}
-                                className={`option-filter checkboxRight primary-color ${this.state.showDelivery ? 'checked-option' : ''}`}
-                                checked={this.state.showDelivery}
-                                onChange={this.toggleChecked}
-                                type="checkbox"
-                                id="deliveryChk"
-                            />
-                            {/* OnKeydown goes on label */}
-                            <label onKeyDown={(e) => this.handleKeyDown(e, this.toggleDelivery)} tabIndex="0" htmlFor="deliveryChk">Delivery</label>
-                        </div>
+                        <LocationCardModal
+                            selectedLocation={selectedLocation}
+                            showDelivery={showDelivery}
+                            showPickup={showPickup}
+                        />
                     </div>
                 </div>
-                <LocationCardModal
-                    selectedLocation={this.state.selectedLocation}
-                    showDelivery={this.state.showDelivery}
-                    showPickup={this.state.showPickup}
-                />
             </>
         );
     }

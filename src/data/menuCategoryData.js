@@ -2,44 +2,38 @@ export const menuCategoryData = [
     {
         name: "Handhelds",
         img: "crispyChickenSrirachaSandwich.jpg",
-        // src: "/menu/menuCategories/handhelds.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/handhelds/index.html",
+        linkTo: "/menu/handhelds",
         titleDEscription: "100% USDA CHOICE BEEF"
     },
     {
         name: "Large Plates",
         img: "slicedSteakPlatter.jpeg",
-        // src: "/menu/menuCategories/largePlates.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/largePlates/index.html",
+        linkTo: "/menu/largePlates",
     },
     {
         name: "Salads",
         img: "appleArugulaSaladChicken.jpg",
-        // src: "/menu/menuCategories/salads.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/salads/index.html",
+        linkTo: "/menu/salads",
     },
     {
         name: "Sides & Snacks",
         img: "augVolcanoShrimp.jpg",
-        // src: "/menu/menuCategories/sidesAndSnacks.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/sides&Snacks/index.html",
+        linkTo: "/menu/sides&Snacks",
     },
     {
         name: "Kids",
         img: "crispyChickenTenders.jpg",
-        // src: "/menu/menuCategories/crispyChickenTenders.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/kids/index.html",
+        linkTo: "/menu/kids",
     },
     {
         name: "Desserts & Beverages",
         img: "oreoAndToastedPecanSundae.jpg",
-        // src: "/menu/menuCategories/desserts&Beverages.html",
         imgFilePath: "foodImages/categoryImages",
-        linkTo: "/menu/desserts&Beverages/index.html",
+        linkTo: "/menu/desserts&Beverages",
     }
 ];
