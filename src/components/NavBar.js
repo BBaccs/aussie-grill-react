@@ -1,5 +1,6 @@
-/* @TODO Transition animation for mobile nav btn */
+/* @TODO: Transition animation for mobile nav btn */
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { navItems } from "../data/navItems.js";
 import { socialNavItems } from "../data/socialNavItems.js";
 import { NavLink } from 'react-router-dom';
@@ -53,7 +54,7 @@ class NavBar extends Component {
         return (
             <div>
                 <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
-                <a href="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</a>
+                <Link to="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
                 {generateAlertBar}
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
@@ -128,5 +129,3 @@ class NavBar extends Component {
 }
 
 export default NavBar;
-
-
