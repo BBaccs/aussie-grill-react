@@ -19,10 +19,10 @@ class MenuItems extends Component {
                     <>
                         <picture loading="lazy">
                             <source
-                                srcSet={`/assets/${menuItem.imgFilePath}/desktop/500x375${menuItem.img}`}
+                                srcSet={`${menuItem.imgFilePath}/desktop/500x375${menuItem.img}`}
                                 media="(min-width: 768px)" />
                             <img className="w-100 menu-item-img"
-                                srcSet={`/assets/${menuItem.imgFilePath}/mobile/345x260${menuItem.img}`}
+                                srcSet={`${menuItem.imgFilePath}/mobile/345x260${menuItem.img}`}
                                 alt="" />
                         </picture>
                         {menuItem.btn &&
