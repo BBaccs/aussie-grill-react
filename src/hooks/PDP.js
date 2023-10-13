@@ -38,7 +38,6 @@ function PDP() {
   const location = useLocation();
   let category = location.pathname.split('/')[2];
   let menuData = getCategoryData(category);
-  // console.log(location.pathname.split('/')[3]);
   let pathName = location.pathname.split('/')[3].replaceAll('.html', '').toLowerCase();
   return (
     <>

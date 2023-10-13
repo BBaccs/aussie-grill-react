@@ -1,5 +1,4 @@
-/* TO DO'S */
-/* Remake footer links so there is not a mobile and a desktop but one, use react.js media queries instead of CSS media queries becasue there may be HTML differences */
+/* @TODO Remake footer links so there is not a mobile and a desktop but one, use React media queries instead of CSS media queries becasue there may be HTML differences */
 import React, { Component } from "react";
 import { footerItemsDataMain } from "../data/footerItemsDataMain.js";
 import { footerItemsSecondary } from "../data/footerItemsSecondary.js";

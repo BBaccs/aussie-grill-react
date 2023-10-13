@@ -11,8 +11,6 @@ class Ordering extends Component {
             selectedLocation: 'All',
         };
     }
-
-    //No need to bind becasue of arrow functions
     toggleDelivery = () => {
         this.setState({ showDelivery: !this.state.showDelivery });
     }

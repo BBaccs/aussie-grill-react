@@ -1,5 +1,4 @@
-// Is menu items component necessarry? it's on home page but maybe should be deleted.
-// (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
+// Is menu items component necessarry? it's on home page but maybe should be deleted. (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
 import "./css/custom.css";
 import Footer from "./components/Footer.js";
 import NavBar from "./components/NavBar.js";

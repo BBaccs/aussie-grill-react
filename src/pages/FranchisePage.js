@@ -3,7 +3,6 @@ import HeroImg from '../components/HeroImg';
 export default function FranchisePage() {
     return (
         <>
-            {/* <NavBar navData={franchiseNavItems} /> */}
             <div id="franchise-page" className="landing-page">
                 <HeroImg img={"freestanding.jpg"} />
                 <div id="why-aussie-section-anchor" className="nav-anchor"></div>

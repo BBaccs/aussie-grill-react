@@ -48,7 +48,6 @@ class MenuPages extends Component {
     componentDidMount() {
         const menuCategory = window.location.pathname.split('/')[2];
         const categoryData = this.getCategoryData(menuCategory);
-        // console.log(menuCategory, window.location.pathname)
         if (categoryData) {
             this.setState({ category: categoryData });
         }
@@ -165,7 +164,6 @@ class MenuPages extends Component {
                     </div>
                     {this.state.category.map((item, index) => (
                         <div key={index} className="mobile-menu-item menu-item-bg">
-                            {/* <!-- need display block / w-100 on anchor for ADA --> */}
                             <a className="d-block" href={item.linkTo}>
                                 {!item.new ?
                                     <>

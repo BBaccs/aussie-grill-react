@@ -31,7 +31,6 @@ class NavBar extends Component {
         if (location && location.pathname === '/franchise.html' && prevProps.location.pathname !== '/franchise.html') {
             this.setState({ navData: franchiseNavItems });
         }
-        // console.log('locaiton:', location, 'location.pathname:', location.pathname)
     }
 
     render() {

@@ -33,7 +33,6 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
     return true;
   });
 
-  // Track the previous state name (FL, CO, etc.) for the cards
   let previousStateName = null; 
 
   return (
