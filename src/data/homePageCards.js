@@ -3,7 +3,7 @@ export const homePageCards = [
         name: "Catering",
         img: "catering.jpg",
         imgFilePath: "other",
-        linkTo: "/catering/index",
+        linkTo: "/catering",
         btn: 'See Menu'
     },
     {
