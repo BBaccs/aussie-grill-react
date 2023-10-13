@@ -20,7 +20,6 @@ import HeroImg from './components/HeroImg.js';
 import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
 import { homePageCards } from "./data/homePageCards";
 
-
 function AppRoutes(props) {
     const { category, menuItem } = props;
     function HomePage() {
@@ -53,6 +52,16 @@ function AppRoutes(props) {
         )
     }
 
+    function PageNotFound() {
+        return (
+            <>
+                <h1>404, Page not found Bwakkk Bwakkk!</h1>
+                <HeroImg img={"productPlaceholderImage.jpg"} alt="" />
+            </>
+        )
+    }
+
+
     return (
         <main id="main-content">
             <Routes>
@@ -65,12 +74,12 @@ function AppRoutes(props) {
                 <Route path={'/careers'} element={<CareersPage />} />
                 <Route path={'/contact'} element={<ContactPage />} />
                 <Route path={'/giveaways'} element={<GiveawaysPage />} />
-                <Route path={'/franchise'} element={<FranchisePage />}/>
+                <Route path={'/franchise'} element={<FranchisePage />} />
                 <Route path={'/privacyPolicy/privacyPolicy'} element={<PrivacyPolicyPage />} />
                 <Route path={'/privacyPolicy/ccpa'} element={<CcpaPage />} />
                 <Route path={'/privacyPolicy/accessibilityStatement'} element={<AccessibilityPage />} />
                 <Route path={'/privacyPolicy/termsAndConditions'} element={<TermsAndConditionsPage />} />
-                
+
 
                 { /*  Menu Category Pages */}
                 <Route path={'/menu'} element={<Menu />} />
@@ -84,7 +93,8 @@ function AppRoutes(props) {
                 <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
                 <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
 
-                <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
+                {/* 404 Page */}
+                <Route path={'*'} element={<PageNotFound />} />
             </Routes>
         </main>
     );
