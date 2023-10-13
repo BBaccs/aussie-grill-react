@@ -28,32 +28,23 @@ function AppRoutes(props) {
         <main id="main-content">
             <Routes>
                 {/* Home Page */}
-                <Route
-                    exact index
+                <Route exact index
                     element={
                         <>
                             <h1 className="sr-only">Welcome to Aussie Grill</h1>
                             <ACarousel />
                             <div id="homepage-container-fluid" className="container-fluid-fluid py-5 pt-1">
-                                <section>
-                                    <MenuItems />
-                                </section>
-                                <section className="mt-5">
-                                    <MenuItems menuData={homePageCards} />
-                                </section>
+                                <MenuItems />
+                                <MenuItems menuData={homePageCards} />
                             </div>
                         </>
                     }
                 />
                 { /*  Static Pages */}
-                <Route
-                    exact path={'/pickup.html'}
+                <Route exact path={'/pickup.html'}
                     element={
-                        <div id="pickup-page" className="landing-page">
-                            <div className="container-fluid text-center landing-content-wrapper">
-                                <Ordering />
-                            </div>
-                        </div>
+
+                        <Ordering />
                     }
                 />
                 <Route path={'/ourStory.html'} element={<OurStoryPage />} />
@@ -90,13 +81,7 @@ function AppRoutes(props) {
                 <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
                 {/* Individual Menu PDP Pages */}
                 <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
-                <Route
-                    exact path={'/franchise.html'}
-                    element={
-                        <div >
-                            <FranchisePage />
-                        </div>
-                    }
+                <Route exact path={'/franchise.html'} element={<FranchisePage />}
                 />
                 <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
             </Routes>
