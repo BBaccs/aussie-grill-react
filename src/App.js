@@ -24,13 +24,14 @@ import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryDa
 import { homePageCards } from "./data/homePageCards";
 
 function App() {
-  const location = useLocation();
-  let category = location.pathname.split('/')[2];
-  let menuItem = location.pathname.split('/')[3];
+  const { pathname } = useLocation();
+  let category = pathname.split('/')[2];
+  let menuItem = pathname.split('/')[3];
 
   return (
     <div className="App">
-      <NavBar location={location} />
+      <NavBar location={pathname} />
+      {console.log(pathname, 'pathname')}
       <main id="main-content" style={{ background: 'url(/assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png)' }}>
         <Routes>
           {/* Home Page */}
@@ -107,7 +108,7 @@ function App() {
           <Route path='*' element={<HeroImg img={"productPlaceholderImage.jpg"} />} />
         </Routes>
       </main>
-      <Footer location={location} />
+      <Footer location={pathname} />
       {/* <!-- ORDER FOOD CTA --> */}
       <div className="cta-wrapper">
         <div className="d-flex container-fluid justify-content-between align-items-center cta-banner">
