@@ -122,7 +122,7 @@ class MenuPages extends Component {
                                     {!item.imgFilePath ? '' :
                                         <div>
                                             <img loading="lazy" className="w-100 subheading-img"
-                                                src={`/assets/${item.imgFilePath}/desktop/500x375${item.img}`}
+                                                src={`${item.imgFilePath}/desktop/500x375${item.img}`}
                                                 alt="" />
                                         </div>
                                     }

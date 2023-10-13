@@ -4,21 +4,21 @@ export const dessertsAndBeverages = [
     name: "SALTED CARAMEL COOKIE",
     img: "saltedCaramelCookie.jpg",
     linkTo: "/menu/desserts&Beverages/saltedCaramelCookie",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
+    imgFilePath: "/assets/foodImages/productImages/desserts&Beverages",
     pdpDescription: "Salted caramel cookie with pieces of white chocolate, almond toffee, and pretzels.",
   },
   {
     name: "GHIRARDELLI DOUBLE DARK CHOCOLATE BROWNIE",
     img: "ghirardelliDoubleDarkChocolateBrownie.jpg",
     linkTo: "/menu/desserts&Beverages/ghirardelliDoubleDarkChocolateBrownie",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
+    imgFilePath: "/assets/foodImages/productImages/desserts&Beverages",
     pdpDescription: "Rich double dark chocolate brownie."
   },
   {
     name: "DOUBLE DARK CHOCOLATE BROWNIE SUNDAE",
     img: "sundaeChocolate.jpg",
     linkTo: "/menu/desserts&Beverages/doubleDarkChocolateBrownieSundae",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
+    imgFilePath: "/assets/foodImages/productImages/desserts&Beverages",
     pdpPreview: "*ONLY AVAILABLE AT LUTZ LOCATION.*",
     pdpDescription: "Creamy custard, chocolate sauce, with pieces of Double Dark Chocolate Brownie and whipped cream.",
     pdpDescription2: "*ONLY AVAILABLE AT LUTZ LOCATION.*"
@@ -27,7 +27,7 @@ export const dessertsAndBeverages = [
     name: "SALTED CARAMEL COOKIE SUNDAE",
     img: "saltedCaramelCookieSundae.jpg",
     linkTo: "/menu/desserts&Beverages/saltedCaramelCookie",
-    imgFilePath: "foodImages/productImages/desserts&Beverages",
+    imgFilePath: "/assets/foodImages/productImages/desserts&Beverages",
     pdpPreview: "*ONLY AVAILABLE AT LUTZ LOCATION.*",
     pdpDescription: "Creamy custard, caramel and chocolate sauce, with pieces of house-baked Salted Caramel Cookie and whipped cream.",
     pdpDescription2: "*ONLY AVAILABLE AT LUTZ LOCATION.*"

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class HeroImg extends Component {
     static defaultProps = {
-        imgFilePath: "other",
+        imgFilePath: "/assets/other",
         alt: "",
     };
     render() {
@@ -10,9 +10,9 @@ class HeroImg extends Component {
         return (
             <div>
                 <picture loading="lazy">
-                    <source srcSet={`/assets/${imgFilePath}/desktop/desktop-${img}`} media="(min-width: 1400px)" />
-                    <source srcSet={`assets/${imgFilePath}/desktop/tablet-${img}`} media="(min-width: 600px)" />
-                    <img srcSet={`/assets/${imgFilePath}/mobile/mobile-${img}`} className="d-block w-100" 
+                    <source srcSet={`${imgFilePath}/desktop/desktop-${img}`} media="(min-width: 1400px)" />
+                    <source srcSet={`${imgFilePath}/desktop/tablet-${img}`} media="(min-width: 600px)" />
+                    <img srcSet={`${imgFilePath}/mobile/mobile-${img}`} className="d-block w-100" 
                         media="(max-width: 1400px)" style={{maxHeight: '700px'}} alt={alt} />
                 </picture>    
             </div>
