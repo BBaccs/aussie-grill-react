@@ -12,11 +12,14 @@ class Ordering extends Component {
         };
     }
     toggleDelivery = () => {
-        this.setState({ showDelivery: !this.state.showDelivery });
+        const { showDelivery } = this.state;
+        this.setState({ showDelivery: !showDelivery });
     }
+    
     togglePickup = () => {
-        this.setState({ showPickup: !this.state.showPickup });
-    }
+        const { showPickup } = this.state;
+        this.setState({ showPickup: !showPickup });
+    }    
 
     toggleChecked = (e) => {
         document.querySelector(`#${e.target.id}`).toggleAttribute('checked')
@@ -34,6 +37,7 @@ class Ordering extends Component {
 
     render() {
         const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
+        const {showDelivery, showPickup, selectedLocation} = this.state;
         return (
             <>
                 <div id="pickup-page" className="landing-page">
@@ -53,10 +57,10 @@ class Ordering extends Component {
                                 <div>
                                     <input
                                         onClick={this.togglePickup}
-                                        className={`checkboxLeft ${this.state.showPickup ? 'checked-option' : ''}`}
+                                        className={`checkboxLeft ${showPickup ? 'checked-option' : ''}`}
                                         type="checkbox"
                                         id="pickupChk"
-                                        checked={this.state.showPickup}
+                                        checked={showPickup}
                                         onChange={this.toggleChecked}
                                     />
                                     {/* OnKeydown goes on label */}
@@ -65,8 +69,8 @@ class Ordering extends Component {
                                 <div>
                                     <input
                                         onClick={this.toggleDelivery}
-                                        className={`option-filter checkboxRight primary-color ${this.state.showDelivery ? 'checked-option' : ''}`}
-                                        checked={this.state.showDelivery}
+                                        className={`option-filter checkboxRight primary-color ${showDelivery ? 'checked-option' : ''}`}
+                                        checked={showDelivery}
                                         onChange={this.toggleChecked}
                                         type="checkbox"
                                         id="deliveryChk"
@@ -77,9 +81,9 @@ class Ordering extends Component {
                             </div>
                         </div>
                         <LocationCardModal
-                            selectedLocation={this.state.selectedLocation}
-                            showDelivery={this.state.showDelivery}
-                            showPickup={this.state.showPickup}
+                            selectedLocation={selectedLocation}
+                            showDelivery={showDelivery}
+                            showPickup={showPickup}
                         />
                     </div>
                 </div>
