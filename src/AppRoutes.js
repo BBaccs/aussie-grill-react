@@ -25,7 +25,7 @@ function AppRoutes(props) {
     const { category, menuItem } = props;
 
     return (
-        <main id="main-content" style={{ background: 'url(/assets/agOfficialSwatches/mobile/agButcherPaperUpdated500x500.png)' }}>
+        <main id="main-content">
             <Routes>
                 {/* Home Page */}
                 <Route
@@ -36,7 +36,6 @@ function AppRoutes(props) {
                             <ACarousel />
                             <div id="homepage-container-fluid" className="container-fluid-fluid py-5 pt-1">
                                 <section>
-                                    <h2 className="sr-only">Welcome to Aussie Grill</h2>
                                     <MenuItems />
                                 </section>
                                 <section className="mt-5">
