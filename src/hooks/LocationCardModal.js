@@ -106,7 +106,6 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
             alt=""
           />
         </div>
-
         <Modal.Header closeButton>
           <Modal.Title as="h2" className="h4 delivery">Choose your delivery method</Modal.Title>
         </Modal.Header>

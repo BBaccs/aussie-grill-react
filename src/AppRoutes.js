@@ -88,6 +88,7 @@ function AppRoutes(props) {
                 { /*  Menu Category for CATERING */}
                 <Route path={'/catering'} element={<CateringPage />} />
                 <Route path={`/catering/${category}`} element={<MenuPages dataTitle={category} />} />
+                
                 {/* Individual Menu PDP Pages */}
                 <Route path={`/menu/${category}/${menuItem}`} element={<PDP />} />
                 <Route path={`/catering/${category}/${menuItem}`} element={<PDP />} />
