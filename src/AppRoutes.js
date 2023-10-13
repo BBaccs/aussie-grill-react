@@ -1,4 +1,5 @@
 // Is menu items component necessarry? it's on home page but maybe should be deleted. (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
+// @TODO: Add catering page URL: https://www.ezcater.com/brand/pvt/aussie-grill to catering CTA
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ACarousel from './hooks/ACarousel.js';
@@ -61,7 +62,6 @@ function AppRoutes(props) {
         )
     }
 
-
     return (
         <main id="main-content">
             <Routes>
@@ -79,7 +79,6 @@ function AppRoutes(props) {
                 <Route path={'/privacyPolicy/ccpa'} element={<CcpaPage />} />
                 <Route path={'/privacyPolicy/accessibilityStatement'} element={<AccessibilityPage />} />
                 <Route path={'/privacyPolicy/termsAndConditions'} element={<TermsAndConditionsPage />} />
-
 
                 { /*  Menu Category Pages */}
                 <Route path={'/menu'} element={<Menu />} />

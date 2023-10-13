@@ -58,7 +58,7 @@ class NavBar extends Component {
                 <div className="sticky-top nav-border">
                     <nav className="navbar navbar-dark bg-ag-dark">
                         <div className="container-lg d-flex nav-inner-wrapper">
-                            {/*When the transition animation is added we'll need to add classes like 'collapse' to the btn, which temporarily hides it during transition*/}
+                            {/* @TODO: When the transition animation is added we'll need to add classes like 'collapse' to the btn, which temporarily hides it during transition*/}
                             <button onClick={this.handleClick} className={open ? "navbar-toggler d-md-none d-lg-none d-xl-none" : "navbar-toggler d-md-none d-lg-none d-xl-none collapsed"} type="button"
                                 data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                                 aria-expanded={open ? 'true' : 'false'} aria-label={open ? 'Close navigation' : 'Open navigation'} >
