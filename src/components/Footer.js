@@ -33,7 +33,8 @@ class Footer extends Component {
                             {socialNavItems.map((link, index) => {
                                 return (
                                     <li key={index}><a href={link.url}
-                                        className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a></li>
+                                        className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a>
+                                    </li>
                                 );
                             })}
                         </ul>
