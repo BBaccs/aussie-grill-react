@@ -32,7 +32,7 @@ class Footer extends Component {
                         <ul className="nav nav-uncollapsed g-second privacy-links">
                             <RenderFooterItems footerItems={footerItemsSecondary} />
                         </ul>
-                        <ul className="social-links g-third">
+                        <ul className="social-links footer-social-links g-third">
                             <RenderFooterItems footerItems={socialNavItems} />
                         </ul>
                         <div className="footer-text">
