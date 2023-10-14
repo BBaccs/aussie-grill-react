@@ -7,7 +7,7 @@ import { socialNavItems } from "../data/socialNavItems.js";
 const RenderFooterItems = ({ footerItems }) => {
     return (
         <>
-            {footerItems.map((link, index) => {
+            {footerItems.map((link) => {
                 return (
                     <li className={link.liClass} key={link.name}>
                         <a className={link.anchorClass} href={link.url} target={link.target} rel={link.rel ? link.rel : undefined}>{link.name}</a>
