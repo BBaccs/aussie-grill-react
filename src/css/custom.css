@@ -161,15 +161,22 @@ footer * {
   display: inline-block;
 }
 
-footer span.rights-reserved {
+footer .rights-reserved {
   display: inline-block;
   font-size: 0.5rem;
   width: fit-content;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  display: block;
+  margin: 0px auto 0px auto;
+}
+
+.footer-text {
+  margin-top: 1rem;
 }
 
 .footer-nav {
   max-height: 75px;
-  /* align-content: baseline; */
   flex-direction: column;
 }
 
@@ -179,6 +186,10 @@ footer span.rights-reserved {
 
 .hide-mobile {
   display: none;
+}
+
+.privacy-links {
+  display: grid;
 }
 
 .footer-outer-wrapper .footer-wrapper .footer-grid .main-links li a,
@@ -215,6 +226,7 @@ footer span.rights-reserved {
 .navbar.navbar-dark.bg-ag-dark,
 #navbarToggleExternalContent,
 .footer-wrapper {
+  color: white;
   background-image: url(../assets/agOfficialSwatches/mobile/agConcreteDark500x500.jpg);
 }
 
@@ -441,6 +453,7 @@ ul {
 }
 
 .footer-grid {
+  display: grid;
   grid-template-columns: 11fr 1fr;
 }
 
@@ -493,7 +506,6 @@ ul {
 
 .menu-item-col {
   width: 500px;
-  /* max-width: 500px; */
 }
 
 #homepage-container-fluid .row,
@@ -1422,9 +1434,12 @@ select.select .slim-option {
     text-align: right;
     order: 4;
     align-items: end;
+    justify-content: flex-end;
+    margin-top: 0rem;
+    display: none;
   }
 
- .privacy-links .nav-item .nav-link {
+  .privacy-links .nav-item .nav-link {
     margin-top: 0px !important;
   }
   /* Desktop footer end */
