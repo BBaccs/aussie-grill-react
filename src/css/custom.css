@@ -383,13 +383,16 @@ button {
 .d-grid {
   display: grid;
 }
-
-.social-links {
-  list-style: none;
+.footer-social-links {
   height: 100%;
   width: 100%;
   margin-bottom: 0px;
   text-align: center;
+}
+
+.social-links,
+.footer-social-links {
+  list-style: none;
 }
 
 .table-wrapper {
