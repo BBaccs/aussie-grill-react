@@ -5,8 +5,7 @@ import { navItems } from "../data/navItems.js";
 import { NavLink } from 'react-router-dom';
 import { franchiseNavItems } from "../data/franchiseNavItems.js";
 import { 
-    socialNavItems,
-    franchiseNavItems,
+    socialNavItems
   } from "../data";
 
 class NavBar extends Component {
