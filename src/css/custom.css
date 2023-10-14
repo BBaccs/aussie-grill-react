@@ -455,6 +455,11 @@ ul {
 .footer-grid {
   display: grid;
   grid-template-columns: 11fr 1fr;
+  grid-gap: 5px;
+}
+
+.footer-grid .social-links li {
+  margin: 0.5rem;
 }
 
 /* HOMEPAGE */
@@ -1419,6 +1424,12 @@ select.select .slim-option {
   .footer-grid > * {
     display: flex !important;
     flex-direction: row !important;
+  }
+
+  .footer-grid .social-links li {
+    margin: 0rem 0.5rem 0.75rem 0.5rem;
+    position: relative;
+    bottom: 4px;
   }
 
   .g-second {
