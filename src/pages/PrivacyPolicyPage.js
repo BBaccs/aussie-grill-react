@@ -171,7 +171,7 @@ export default function PrivacyPolicyPage() {
                 services. Like many websites, the Sites are not designed to respond
                 to “Do Not Track” signals received from browsers. To learn more
                 about “Do Not Track” signals, visit{" "}
-                <a href="http://www.allaboutdnt.com" target="_blank"  rel="noreferrer">
+                <a href="http://www.allaboutdnt.com" target="_blank" rel="noopener noreferrer">
                   www.allaboutdnt.com
                 </a>
                 .
@@ -339,7 +339,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   aria-label="your ad choices website"
                   href="./../http://www.youradchoices.com"
-                  target="_blank"  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   www.youradchoices.com
                 </a>{" "}
@@ -347,7 +347,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   aria-label="network advertising website"
                   href="./../http://www.networkadvertising.org"
-                  target="_blank"  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   www.networkadvertising.org
                 </a>
@@ -359,7 +359,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   aria-label="google privacy partners"
                   href="./../https://policies.google.com/technologies/partner-sites"
-                  target="_blank"  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   www.google.com/policies/privacy/partners
                 </a>
@@ -367,7 +367,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   aria-label="adssettings.google.com"
                   href="./../https://adssettings.google.com/authenticated"
-                  target="_blank"  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   adssettings.google.com
                 </a>{" "}
@@ -375,7 +375,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   aria-label="tools.google.com/dlpage/gaoptout"
                   href="./../https://tools.google.com/dlpage/gaoptout"
-                  target="_blank"  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   tools.google.com/dlpage/gaoptout
                 </a>
@@ -518,7 +518,7 @@ export default function PrivacyPolicyPage() {
                 <a
                   href="https://privacyportal-cdn.onetrust.com/dsarwebform/9922e664-67f1-43d9-a730-c990cc69808d/draft/6d28c53a-f4b2-4228-96e2-a461441e4d71"
                   aria-label="Nevada Residents Privacy Policy"
-                  target="_blank"  rel="noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   here
                 </a>{" "}
