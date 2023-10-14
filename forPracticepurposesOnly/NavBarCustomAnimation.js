@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { navItems } from "../data/navItems.js";
-import { socialNavItems } from "../data/socialNavItems.js";
 import { NavLink } from 'react-router-dom';
-import { franchiseNavItems } from "../data/franchiseNavItems.js";
+import { franchiseNavItems } from "../data/franchiseNavItems.js"
+import { 
+  socialNavItems 
+} from "../data";
 
 class NavBar2 extends Component {
   static defaultProps = {
