@@ -1,9 +1,7 @@
-/* @TODO Remake footer links so there is not a mobile and a desktop but one, use React media queries instead of CSS media queries becasue there may be HTML differences */
 import React, { Component } from "react";
 import { footerItemsDataMain } from "../data/footerItemsDataMain.js";
 import { footerItemsSecondary } from "../data/footerItemsSecondary.js";
 import { socialNavItems } from "../data/socialNavItems.js";
-
 
 // If you didn't destructure ({ footerItems }) and instead used ( data ) it would require mapping like this: data.footerItems.map((link, index) => { ... })
 const RenderFooterItems = ({ footerItems }) => {
@@ -11,7 +9,7 @@ const RenderFooterItems = ({ footerItems }) => {
         <>
             {footerItems.map((link, index) => {
                 return (
-                    <li className={link.liClass} key={index}>
+                    <li className={link.liClass} key={link.name}>
                         <a className={link.anchorClass} href={link.url} target={link.target} rel={link.rel ? link.rel : undefined}>{link.name}</a>
                     </li>
                 )
@@ -32,7 +30,7 @@ class Footer extends Component {
                         <ul className="nav nav-uncollapsed g-second privacy-links">
                             <RenderFooterItems footerItems={footerItemsSecondary} />
                         </ul>
-                        <ul className="social-links m-0 p-0 w-100 h-100 d-flex text-center flex-column g-third">
+                        <ul className="social-links g-third">
                             <RenderFooterItems footerItems={socialNavItems} />
                         </ul>
                         <div className="footer-text">
