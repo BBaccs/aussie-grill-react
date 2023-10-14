@@ -10,7 +10,7 @@ class Footer extends Component {
         return (
             <footer className="footer-outer-wrapper">
                 <div className="footer-wrapper px-3 py-4 bg-ag-dark text-white">
-                    <div className="m-auto d-lg-flex d-none justify-content-between desktop-footer">
+                    {/* <div className="m-auto d-lg-flex d-none justify-content-between footer-grid">
                         <div>
                             <ul className="nav nav-uncollapsed main-links">
                                 {footerItemsDataMain.map((link, index) => {
@@ -43,9 +43,20 @@ class Footer extends Component {
                             <div><span className="rights-reserved text-capitalize text-right w-100 font-small"> &#169;{year} Bloomin'
                                 Brands, Inc. All Rights Reserved.</span></div>
                         </div>
-                    </div>
-                    <div className="d-grid d-lg-none mobile-footer-grid">
-                        <ul className="nav nav-uncollapsed d-grid">
+                    </div> */}
+
+
+                    <div className="d-grid footer-grid">
+                        <ul className="nav nav-uncollapsed hide-mobile main-links">
+                            {footerItemsDataMain.map((link, index) => {
+                                return (
+                                    <li className={link.liClass} key={index}>
+                                        <a className={link.anchorClass} href={link.url} target={link.target}>{link.name}</a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                        <ul className="nav nav-uncollapsed d-grid g-second privacy-links">
                             {footerItemsSecondary.map((link, index) => {
                                 return (
                                     <li className={link.liClass} key={index}>
@@ -54,7 +65,7 @@ class Footer extends Component {
                                 );
                             })}
                         </ul>
-                        <ul className="social-links m-0 p-0 w-100 h-100 d-flex text-center flex-column">
+                        <ul className="social-links m-0 p-0 w-100 h-100 d-flex text-center flex-column g-third">
                             {socialNavItems.map((link, index) => {
                                 return (
                                     <li className={"m-2"} key={index}><a href={link.url}
@@ -62,6 +73,11 @@ class Footer extends Component {
                                 );
                             })}
                         </ul>
+                        <div className="hide-mobile footer-text">
+                            <span className="rights-reserved text-capitalize w-100 font-small"> &#169;{year} Bloomin'
+                                Brands, Inc. All Rights Reserved.
+                            </span>
+                        </div>
                     </div>
                     <div className="mt-3 d-lg-none">
                         <span className="rights-reserved text-capitalize text-center w-100 font-small">
