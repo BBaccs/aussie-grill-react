@@ -1,11 +1,10 @@
 /* @TODO: Transition animation for mobile nav btn */
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { navItems } from "../data/navItems.js";
-import { NavLink } from 'react-router-dom';
-import { franchiseNavItems } from "../data/franchiseNavItems.js";
+import { Link, NavLink } from "react-router-dom";
 import { 
-    socialNavItems
+    socialNavItems,
+    franchiseNavItems,
+    navItems,
   } from "../data";
 
 class NavBar extends Component {
