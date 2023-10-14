@@ -1,3 +1,4 @@
+// @TODO: Utilize react-responsive for conditionally rendering components based on viewport size.
 import "./css/custom.css";
 import NavBar from "./components/NavBar.js";
 import Footer from "./components/Footer.js";

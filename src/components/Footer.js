@@ -4,6 +4,21 @@ import { footerItemsDataMain } from "../data/footerItemsDataMain.js";
 import { footerItemsSecondary } from "../data/footerItemsSecondary.js";
 import { socialNavItems } from "../data/socialNavItems.js";
 
+
+// If you didn't destructure ({ footerItems }) and instead used ( data ) it would require mapping like this: data.footerItems.map((link, index) => { ... })
+const RenderFooterItems = ({ footerItems }) => {
+    return (
+        <>
+            {footerItems.map((link, index) => {
+                return (
+                    <li className={link.liClass} key={index}>
+                        <a className={link.anchorClass} href={link.url} target={link.target} rel={link.rel ? link.rel : undefined}>{link.name}</a>
+                    </li>
+                )
+            })}
+        </>
+    )
+}
 class Footer extends Component {
     render() {
         let year = new Date().getFullYear();
@@ -12,31 +27,13 @@ class Footer extends Component {
                 <div className="footer-wrapper px-3 py-4 bg-ag-dark">
                     <div className="footer-grid">
                         <ul className="nav nav-uncollapsed hide-mobile main-links">
-                            {footerItemsDataMain.map((link, index) => {
-                                return (
-                                    <li className={link.liClass} key={index}>
-                                        <a className={link.anchorClass} href={link.url} target={link.target}>{link.name}</a>
-                                    </li>
-                                );
-                            })}
+                            <RenderFooterItems footerItems={footerItemsDataMain} />
                         </ul>
                         <ul className="nav nav-uncollapsed g-second privacy-links">
-                            {footerItemsSecondary.map((link, index) => {
-                                return (
-                                    <li className={link.liClass} key={index}>
-                                        <a className={link.anchorClass} href={link.url} target={link.target}>{link.name}</a>
-                                    </li>
-                                );
-                            })}
+                            <RenderFooterItems footerItems={footerItemsSecondary} />
                         </ul>
                         <ul className="social-links m-0 p-0 w-100 h-100 d-flex text-center flex-column g-third">
-                            {socialNavItems.map((link, index) => {
-                                return (
-                                    <li key={index}><a href={link.url}
-                                        className={link.anchorClass} aria-label={link.ariaLabel} target={link.target}></a>
-                                    </li>
-                                );
-                            })}
+                            <RenderFooterItems footerItems={socialNavItems} />
                         </ul>
                         <div className="footer-text">
                             <span className="rights-reserved"> &#169;{year} Bloomin'
