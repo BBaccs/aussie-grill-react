@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import OrderButton from "../hooks/OrderButton.js";
+import { OrderButton } from "../hooks";
 import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
 import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
 

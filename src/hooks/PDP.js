@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import OrderButton from "./OrderButton.js";
+import { OrderButton } from "./";
 import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
 import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
 
