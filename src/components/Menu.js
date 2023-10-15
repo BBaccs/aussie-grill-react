@@ -31,7 +31,7 @@ class MenuPages extends Component {
                                 </Link>
                             </div>
                         ))}
-                        <div className="d-flex justify-content-center">
+                        <div className="m-auto">
                             <Link className="btn btn-primary btn-lg mr-5" to="/pickup">Order</Link>
                         </div>
                     </div>

@@ -61,7 +61,7 @@ function PDP() {
                 </div>
                 <div className="row py-5 d-none d-lg-block">
                   <div className="m-auto">
-                    <Link to="/../pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</Link>
+                    <Link to="/pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</Link>
                   </div>
                 </div>
               </div>

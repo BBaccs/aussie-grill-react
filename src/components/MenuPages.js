@@ -135,7 +135,7 @@ class MenuPages extends Component {
                         ))}
                     </div>
                     <div className="m-auto">
-                        <Link className="btn btn-primary btn-lg mr-5" to="./../../pickup">Order</Link>
+                        <Link className="btn btn-primary btn-lg mr-5" to="/pickup">Order</Link>
                     </div>
                 </div>
                 {/* <!-- End Menu Item Row--> */}
