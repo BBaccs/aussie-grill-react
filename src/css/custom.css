@@ -199,6 +199,13 @@ footer .rights-reserved {
   background-position: bottom;
 }
 
+.order-btn-wrapper {
+  margin: auto;
+}
+.cta-banner .order-btn-wrapper {
+  margin: 0px;
+}
+
 .bull-cta {
   position: relative;
   right: 30px;

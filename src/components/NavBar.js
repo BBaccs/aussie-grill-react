@@ -47,7 +47,7 @@ class NavBar extends Component {
             this.setState({ open: false });
         }
 
-        if (clickHandler === 'franchise') {
+        else if (clickHandler === 'franchise') {
             this.setState({ navData: franchiseNavItems });
         }
     }

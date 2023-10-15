@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { handHelds } from '../data/menuData/handHelds.js';
 import { largePlates } from '../data/menuData/largePlates.js';
 import { salads } from "../data/menuData/salads.js";
@@ -8,6 +8,7 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
+import OrderButton from "./OrderButton.js";
 
 function getCategoryData(category) {
   switch (category) {
@@ -60,9 +61,7 @@ function PDP() {
                   {item.pdpDescription2 && <p className="product-description text-left text-md-center pl-2 pl-md-0">{item.pdpDescription2}</p>}
                 </div>
                 <div className="row py-5 d-none d-lg-block">
-                  <div className="m-auto">
-                    <a href="/../pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</a>
-                  </div>
+                  <OrderButton />
                 </div>
               </div>
             </div>

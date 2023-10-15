@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import { handHelds } from '../data/menuData/handHelds.js';
 import { largePlates } from '../data/menuData/largePlates.js';
 import { salads } from "../data/menuData/salads.js";
@@ -8,6 +9,7 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
+import OrderButton from "../hooks/OrderButton.js";
 
 function normalizeMenuCategory(category) {
     switch (category) {
@@ -38,7 +40,6 @@ class MenuPages extends Component {
     constructor(props) {
         super(props);
         const menuCategory = window.location.pathname.split('/')[2];
-        // const categoryData = this.getCategoryData(menuCategory);
         this.state = {
             category: [],
             menuTitle: normalizeMenuCategory(menuCategory)
@@ -86,11 +87,11 @@ class MenuPages extends Component {
             <div id={`${category}-page`} className="menu-page">
                 <div className="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
                     <div className="select-category-bg">
-                        <a href={menuCategoryPage}>
+                        <Link to={menuCategoryPage}>
                             <div className="d-flex">
                                 <span className="w-100 py-4 my-1">Select New Category ^</span>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="menu-category menu-category-selected">
                         <div className="d-flex justify-content-center">
@@ -134,18 +135,16 @@ class MenuPages extends Component {
                             </>
                         ))}
                     </div>
-                    <div className="m-auto">
-                        <a className="btn btn-primary btn-lg mr-5" href="./../../pickup">Order</a>
-                    </div>
+                    <OrderButton />
                 </div>
                 {/* <!-- End Menu Item Row--> */}
                 <div className="d-xl-none d-lg-none">
                     <div className="select-category-bg">
-                        <a href={menuCategoryPage}>
+                        <Link to={menuCategoryPage}>
                             <div className="d-flex">
                                 <span className="w-100 py-4 my-1">Select New Category ^</span>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="menu-category menu-category-selected">
                         <div className="d-flex justify-content-center">
@@ -165,7 +164,7 @@ class MenuPages extends Component {
                     </div>
                     {category.map((item, index) => (
                         <div key={index} className="mobile-menu-item menu-item-bg">
-                            <a className="d-block" href={item.linkTo}>
+                            <Link className="d-block" to={item.linkTo}>
                                 {!item.new ?
                                     <>
                                         {
@@ -186,7 +185,7 @@ class MenuPages extends Component {
                                         </div>
                                     </>
                                 }
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

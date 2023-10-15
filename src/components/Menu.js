@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
+import OrderButton from "../hooks/OrderButton.js";
 
 class MenuPages extends Component {
     static defaultProps = {
@@ -31,9 +32,7 @@ class MenuPages extends Component {
                                 </Link>
                             </div>
                         ))}
-                        <div className="d-flex justify-content-center">
-                            <a className="btn btn-primary btn-lg mr-5" href="/pickup">Order</a>
-                        </div>
+                        <OrderButton />
                     </div>
                 </div>
                 {/* Mobile: */}
