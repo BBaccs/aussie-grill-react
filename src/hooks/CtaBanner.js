@@ -1,4 +1,5 @@
 import { useLocation, Link } from 'react-router-dom';
+import OrderButton from "./OrderButton.js";
 
 function CtaBanner() {
     const location = useLocation();
@@ -7,11 +8,7 @@ function CtaBanner() {
             <div className="d-flex container-fluid justify-content-between align-items-center cta-banner">
                 <img loading="lazy" className="bull-cta"
                     src={process.env.PUBLIC_URL + "/assets/agGraphicElements/animals/mobile/bullFullSmall.png"} alt="" />
-                {location.pathname.includes('catering') 
-                    ? <a href="https://www.ezcater.com/brand/pvt/aussie-grill" target="_blank"
-                        className="btn btn-primary cta-primary">Order Catering</a>
-                    : <Link to="/pickup" className="btn btn-primary cta-primary">Order now</Link>
-                }
+                    < OrderButton />
             </div>
         </div>
     );
