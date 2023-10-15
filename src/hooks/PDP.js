@@ -1,14 +1,7 @@
-import { useLocation, Link } from 'react-router-dom';
-import { handHelds } from '../data/menuData/handHelds.js';
-import { largePlates } from '../data/menuData/largePlates.js';
-import { salads } from "../data/menuData/salads.js";
-import { sidesAndSnacks } from "../data/menuData/sidesAndSnacks.js";
-import { kids } from "../data/menuData/kids.js";
-import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
-import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
-import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
-import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
+import { useLocation } from 'react-router-dom';
 import OrderButton from "./OrderButton.js";
+import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
+import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
 
 function getCategoryData(category) {
   switch (category) {

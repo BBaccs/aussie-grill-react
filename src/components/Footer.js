@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import { 
-    footerItemsDataMain, 
-    footerItemsSecondary, 
-    socialNavItems 
-} from "../data";
+import { footerItemsDataMain, footerItemsSecondary, socialNavItems } from "../data";
 
 // If you didn't destructure ({ footerItems }) and instead used ( data ) it would require mapping like this: data.footerItems.map((link, index) => { ... })
 const RenderFooterItems = ({ footerItems }) => {
