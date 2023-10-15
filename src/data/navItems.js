@@ -22,7 +22,8 @@ export const navItems = [
         url: 'https://www.buyatab.com/custom/aussiegrill/?page=ecard',
         liClass: 'd-none d-sm-none d-md-block',
         target: '_blank',
-        title: 'Opens in a new tab'
+        title: 'Opens in a new tab',
+        rel: 'noopener noreferrer'
     },
     {
         name: 'Our Story',
