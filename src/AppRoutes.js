@@ -18,8 +18,8 @@ import MenuPages from './components/MenuPages.js';
 import PDP from './hooks/PDP.js';
 import FranchisePage from './pages/FranchisePage';
 import HeroImg from './components/HeroImg.js';
-import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData.js';
-import { homePageCards } from "./data/homePageCards";
+import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData';
+import { homePageCards } from "./data/otherData/homePageCards";
 
 function AppRoutes(props) {
     const { category, menuItem } = props;
