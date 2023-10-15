@@ -7,7 +7,7 @@ import {
     navItems,
 } from "../data";
 
-const Test = ({ navData, pickup }) => {
+const Test = ({ navData, pickup, isMobile = false }) => {
     return (
         <>
             {
@@ -18,7 +18,8 @@ const Test = ({ navData, pickup }) => {
                                 ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
                                     {link.name}
                                 </a>
-                                : <NavLink className="nav-link" to={link.url} title={link.title}>
+                                : <NavLink onClick={isMobile ? this.handleClick : undefined} // Close hamburger for mobile version
+                                    className="nav-link" to={link.url} title={link.title}>
                                     {link.name}
                                 </NavLink>
                             }
@@ -30,7 +31,8 @@ const Test = ({ navData, pickup }) => {
                                 ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
                                     {link.name}
                                 </a>
-                                : <NavLink className="nav-link" exact={link.url.includes("#")} to={link.url} title={link.title}>
+                                : <NavLink onClick={isMobile ? this.handleClick : undefined} // Close hamburger for mobile version
+                                    className="nav-link" exact={link.url.includes("#")} to={link.url} title={link.title}>
                                     {link.name}
                                 </NavLink>
                             }
@@ -104,35 +106,9 @@ class NavBar extends Component {
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    navData.map((link, index) => {
-                                        return (
-                                            <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
-                                                {
-                                                    link.externalLink || link.hashLink
-                                                        ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
-                                                            {link.name}
-                                                        </a> :
-                                                        <NavLink className="nav-link" to={link.url} title={link.title}>
-                                                            {link.name}
-                                                        </NavLink>
-                                                }
-                                            </li>
-                                        );
-                                    })
+                                    <Test data={navData}/>
                                     :
-                                    navData.filter(link => link.name !== 'Order').map((link, index) => {
-                                        return (
-                                            <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
-                                                {
-                                                    link.externalLink || link.hashLink
-                                                        ? <a className="nav-link" href={link.url}>{link.name}</a> 
-                                                        : <NavLink className="nav-link" exact={link.url.includes("#")} to={link.url}>
-                                                            {link.name}
-                                                          </NavLink>
-                                                }
-                                            </li>
-                                        );
-                                    })
+                                    <Test data={navData.filter(link => link.name !== 'Order')}/>
                                 }
                             </ul>
                             <a href="/">
@@ -147,7 +123,7 @@ class NavBar extends Component {
                     <div className={open ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
                         <div className="bg-ag-dark p-4">
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                <Test data={navData} />
+                                <Test data={navData} isMobile={true}/>
                             </ul>
                         </div>
                     </div>
