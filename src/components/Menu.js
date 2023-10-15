@@ -1,7 +1,7 @@
 // catering uses desktop not mobile -  src={`/assets/foodImages/categoryImages/mobile/345x260${item.img}`} but it should both be
 import React, { Component } from "react";
-import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
+import { menuCategoryData} from "../data/menuData";
 import OrderButton from "../hooks/OrderButton.js";
 
 class MenuPages extends Component {
@@ -18,13 +18,12 @@ class MenuPages extends Component {
                         {this.props.menuData.map((item, index) => (
                             <div key={index}
                                 className="col-xl-4 col-md-6 pt-lg-0 product-content-wrapper-lg container-fluid-fluid py-3 pt-5 menu-item-col">
-                                {/* State can be assigned on link, keep here if needed <Link className="d-block" to={item.linkTo} state={ item.name.replace(/\s/g, '') }> */}
                                 <Link className="d-block" to={item.linkTo}>
                                     <div className="primary-subheading-wrapper">
                                         <div className="h2">{item.name}</div>
                                     </div>
                                     <div>
-                                        {/* @TODO Fix the largeplates image bug here, ALSO, remove category image (pointless) and restructure deskop/mobile images folders. */}
+                                        {/* @TODO remove category image (pointless) and restructure deskop/mobile images folders. */}
                                         <img loading="lazy" className="w-100 subheading-img"
                                             src={`/assets/foodImages/categoryImages/desktop/500x375${item.img}`}
                                             alt="" />

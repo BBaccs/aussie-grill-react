@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
+import { menuCategoryData} from "../data/menuData";
+
 
 class MenuItems extends Component {
     static defaultProps = {

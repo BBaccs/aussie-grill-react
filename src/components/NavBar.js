@@ -5,7 +5,7 @@ import {
     socialNavItems,
     franchiseNavItems,
     navItems,
-} from "../data";
+} from "../data/linksData";
 
 const NavItemsRenderer = ({ navData, resolveClickHandler }) => {
     return (
