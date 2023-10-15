@@ -55,7 +55,7 @@ export const navItems = [
     {
         name: 'Giveaways',
         url: 'giveaways',
-        liClass: 'uncollapsed-desktop-only d-lg-none',
+        liClass: 'uncollapsed-desktop-only',
 
     }
 ];

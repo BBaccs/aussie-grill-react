@@ -301,6 +301,7 @@ button.btn.btn-primary {
   position: fixed;
   bottom: 0vh;
   width: 100%;
+  z-index: 3;
 }
 
 .catering-page .cta-banner,

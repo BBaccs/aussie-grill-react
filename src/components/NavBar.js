@@ -12,10 +12,11 @@ const Test = ({ navData, handleClick, isMobile = false }) => {
         <> {navData.map((link, index) => (
             <li key={index} className={`nav-item ${link.liClass || ''}`}>
                 {link.externalLink || link.hashLink
-                    ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
+                    ? <a className="nav-link" onClick={isMobile && handleClick}
+                        href={link.url} target={link.target} rel={link.rel} title={link.title}>
                         {link.name}
                     </a>
-                    : <NavLink onClick={isMobile ? handleClick : undefined} // Close hamburger for mobile version
+                    : <NavLink onClick={isMobile && handleClick} // Close hamburger for mobile version
                         className="nav-link" exact={link.url.includes("#")} to={link.url}>
                         {link.name}
                     </NavLink>
@@ -42,11 +43,10 @@ class NavBar extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(e) {
-        e.target.className.includes('navbar-toggler-icon') && this.setState(prevState => ({ open: !prevState.open }));
+        this.setState(prevState => ({ open: !prevState.open }));
     }
 
-    // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. 
-    // It is automatically provided by React and does not need to be explicitly passed.
+    // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. It is automatically provided by React and does not need to be explicitly passed.
     componentDidUpdate(prevProps) {
         const { location } = this.props;
         if (location && location.pathname === '/franchise' && prevProps.location.pathname !== '/franchise') {
@@ -105,7 +105,7 @@ class NavBar extends Component {
                     <nav className={`bg-ag-dark p-4 ${open ? "collapse show" : "collapse"}`} id="navbarToggleExternalContent">
                         <>
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                <Test navData={navData} isMobile={true} />
+                                <Test navData={navData} isMobile={true} handleClick={this.handleClick} />
                             </ul>
                         </>
                     </nav>
