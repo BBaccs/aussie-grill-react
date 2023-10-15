@@ -12,8 +12,7 @@ const NavItemsRenderer = ({ navData, resolveClickHandler }) => {
         <> {navData.map((link, index) => (
             <li key={index} className={`nav-item ${link.liClass || ''}`}>
                 {link.externalLink || link.hashLink
-                    ? <a className="nav-link"
-                        href={link.url} target={link.target} rel={link.rel} title={link.title}>
+                    ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
                         {link.name}
                     </a>
                     : <NavLink onClick={() => resolveClickHandler(link.clickHandler)} // Close hamburger for mobile version, franchise link will update franchise nav
