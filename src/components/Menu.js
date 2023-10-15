@@ -1,7 +1,7 @@
 // catering uses desktop not mobile -  src={`/assets/foodImages/categoryImages/mobile/345x260${item.img}`} but it should both be
 import React, { Component } from "react";
-import { menuCategoryData } from "../data/menuCategoryData.js";
 import { Link } from 'react-router-dom';
+import { menuCategoryData} from "../data/menuData";
 import OrderButton from "../hooks/OrderButton.js";
 
 class MenuPages extends Component {

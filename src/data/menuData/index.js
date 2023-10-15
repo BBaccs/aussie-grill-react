@@ -4,3 +4,4 @@ export { salads } from './salads';
 export { sidesAndSnacks } from './sidesAndSnacks';
 export { kids } from './kids';
 export { dessertsAndBeverages } from './dessertsAndBeverages';
+export { menuCategoryData } from './menuCategoryData';
