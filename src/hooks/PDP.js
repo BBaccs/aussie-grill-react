@@ -1,32 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { OrderButton } from "./";
-import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
-import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
-
-function getCategoryData(category) {
-  switch (category) {
-    case 'handhelds':
-      return handHelds;
-    case 'largePlates':
-      return largePlates;
-    case 'salads':
-      return salads;
-    case 'sides&Snacks':
-      return sidesAndSnacks;
-    case 'kids':
-      return kids;
-    case 'desserts&Beverages':
-      return dessertsAndBeverages;
-    case 'platters':
-      return plattersCatering;
-    case 'saladPlatters':
-      return saladPlattersCatering;
-    case 'desserts&Sides':
-      return dessertsAndSidesCatering;
-    default:
-      return null;
-  }
-}
+/* This utility imports & fixes types for handhelds, largeplates, catering platters, etc. */
+import { getCategoryData } from '../utilities/categoryUtils';
 
 function PDP() {
   const location = useLocation();

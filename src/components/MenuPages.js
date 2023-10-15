@@ -1,32 +1,23 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { OrderButton } from "../hooks";
-import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
-import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
+/* This utility imports & fixes types for handhelds, largeplates, catering platters, etc. */
+import { getCategoryData } from '../utilities/categoryUtils';
+
+const normalizedCategoryNames = {
+    handhelds: 'Handhelds',
+    largePlates: 'Large Plates',
+    salads: 'Salads',
+    'sides&Snacks': 'Sides & Snacks',
+    kids: 'Kids',
+    'desserts&Beverages': 'Desserts & Beverages',
+    platters: 'Platters',
+    saladPlatters: 'Salad Platters',
+    'desserts&Sides': 'Desserts & Sides'
+};
 
 function normalizeMenuCategory(category) {
-    switch (category) {
-        case 'handhelds':
-            return 'Handhelds';
-        case 'largePlates':
-            return 'Large Plates';
-        case 'salads':
-            return 'Salads';
-        case 'sides&Snacks':
-            return 'Sides & Snacks';
-        case 'kids':
-            return 'Kids';
-        case 'desserts&Beverages':
-            return 'Desserts & Beverages';
-        case 'platters':
-            return 'Platters';
-        case 'saladPlatters':
-            return 'Salad Platters';
-        case 'desserts&Sides':
-            return 'Desserts & Sides';
-        default:
-            return null;
-    }
+    return normalizedCategoryNames[category] || null;
 }
 
 class MenuPages extends Component {
@@ -41,41 +32,20 @@ class MenuPages extends Component {
 
     componentDidMount() {
         const menuCategory = window.location.pathname.split('/')[2];
-        const categoryData = this.getCategoryData(menuCategory);
+        const categoryData = getCategoryData(menuCategory);
         if (categoryData) {
             this.setState({ category: categoryData });
         }
     }
 
-    getCategoryData(category) {
-        switch (category) {
-            case 'handhelds':
-                return handHelds;
-            case 'largePlates':
-                return largePlates;
-            case 'salads':
-                return salads;
-            case 'sides&Snacks':
-                return sidesAndSnacks;
-            case 'kids':
-                return kids;
-            case 'desserts&Beverages':
-                return dessertsAndBeverages;
-            case 'platters':
-                return plattersCatering;
-            case 'saladPlatters':
-                return saladPlattersCatering;
-            case 'desserts&Sides':
-                return dessertsAndSidesCatering;
-            default:
-                return null;
-        }
+    normalizeMenuCategory(category) {
+        return normalizedCategoryNames[category] || null;
     }
 
     render() {
         let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
-        const {titleDescription, } = this.props;
-        const {category, menuTitle } = this.state;
+        const { titleDescription, } = this.props;
+        const { category, menuTitle } = this.state;
         return (
             <div id={`${category}-page`} className="menu-page">
                 <div className="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
@@ -173,7 +143,7 @@ class MenuPages extends Component {
                                     :
                                     <>
                                         <div className="d-flex justify-content-center mr-4">
-                                            <img loading="lazy" className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" alt=""/>
+                                            <img loading="lazy" className="mobile-bug" src="/assets/agGraphicElements/bug75x75.png" alt="" />
                                             <div className={`h3 ${!item.pdpPreview && 'pb-0'}`}>{item.name}</div>
                                         </div>
                                     </>
