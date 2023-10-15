@@ -40,6 +40,6 @@ export const footerItemsDataMain = [
       name: 'Giveaways',
       url: '/giveaway',
       anchorClass: "nav-link",
-      liClass: "nav-item desktop-only"
+      liClass: "nav-item uncollapsed-desktop-only"
     }
   ];

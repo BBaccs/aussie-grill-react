@@ -3,7 +3,7 @@ export const franchiseNavItems = [
       name: 'Why Aussie Grill',
       url: '#why-aussie-section-anchor',
       hashLink: true,
-      liClass: 'd-none d-sm-none d-md-block',
+      liClass: 'uncollapsed-desktop-only',
     },
     {
       name: 'Investment Considerations',
@@ -14,24 +14,24 @@ export const franchiseNavItems = [
       name: 'Support',
       url: '#support-anchor',
       hashLink: true,
-      liClass: 'd-none d-sm-none d-md-block',
+      liClass: 'uncollapsed-desktop-only',
     },
     {
       name: 'Qualifications',
       url: '#qualifications-anchor',
       hashLink: true,
-      liClass: 'd-none d-sm-none d-md-block',
+      liClass: 'uncollapsed-desktop-only',
     },
     {
       name: 'Available Opportunities',
       url: '#available-opportunities-anchor',
       hashLink: true,
-      liClass: 'd-none d-sm-none d-md-block',
+      liClass: 'uncollapsed-desktop-only',
     },
     {
       name: 'Contact',
       url: '#available-opportunities-anchor',
       hashLink: true,
-      liClass: 'd-none d-sm-none d-md-block',
+      liClass: 'uncollapsed-desktop-only',
     }
   ];

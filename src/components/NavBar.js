@@ -7,39 +7,22 @@ import {
     navItems,
 } from "../data";
 
-const Test = ({ navData, pickup, isMobile = false }) => {
+const Test = ({ navData, handleClick, isMobile = false }) => {
     return (
-        <>
-            {
-                !pickup
-                    ? navData.map((link, index) => (
-                        <li key={index} className={`nav-item ${link.liClass || ''}`}>
-                            {link.externalLink || link.hashLink
-                                ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
-                                    {link.name}
-                                </a>
-                                : <NavLink onClick={isMobile ? this.handleClick : undefined} // Close hamburger for mobile version
-                                    className="nav-link" to={link.url} title={link.title}>
-                                    {link.name}
-                                </NavLink>
-                            }
-                        </li>
-                    ))
-                    : navData.filter(link => link.name !== 'Order').map((link, index) => (
-                        <li key={index} className={`nav-item ${link.liClass || ''}`}>
-                            {link.externalLink || link.hashLink
-                                ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
-                                    {link.name}
-                                </a>
-                                : <NavLink onClick={isMobile ? this.handleClick : undefined} // Close hamburger for mobile version
-                                    className="nav-link" exact={link.url.includes("#")} to={link.url} title={link.title}>
-                                    {link.name}
-                                </NavLink>
-                            }
-                        </li>
-                    ))
-            }
-
+        <> {navData.map((link, index) => (
+            <li key={index} className={`nav-item ${link.liClass || ''}`}>
+                {link.externalLink || link.hashLink
+                    ? <a className="nav-link" href={link.url} target={link.target} rel={link.rel} title={link.title}>
+                        {link.name}
+                    </a>
+                    : <NavLink onClick={isMobile ? handleClick : undefined} // Close hamburger for mobile version
+                        className="nav-link" exact={link.url.includes("#")} to={link.url}>
+                        {link.name}
+                    </NavLink>
+                }
+            </li>
+        ))
+        }
         </>
     )
 }
@@ -59,8 +42,7 @@ class NavBar extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(e) {
-        e.target.className.includes('navbar-toggler-icon') ? this.setState(this.state.open ? { open: false }
-            : { open: true }) : console.log(e.target.className);
+        e.target.className.includes('navbar-toggler-icon') && this.setState(prevState => ({ open: !prevState.open }));
     }
 
     // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. 
@@ -106,9 +88,9 @@ class NavBar extends Component {
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    <Test data={navData}/>
+                                    <Test navData={navData} />
                                     :
-                                    <Test data={navData.filter(link => link.name !== 'Order')}/>
+                                    <Test navData={navData.filter(link => link.name !== 'Order')} />
                                 }
                             </ul>
                             <a href="/">
@@ -120,13 +102,13 @@ class NavBar extends Component {
                             </a>
                         </div>
                     </nav>
-                    <div className={open ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
-                        <div className="bg-ag-dark p-4">
+                    <nav className={`bg-ag-dark p-4 ${open ? "collapse show" : "collapse"}`} id="navbarToggleExternalContent">
+                        <>
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                <Test data={navData} isMobile={true}/>
+                                <Test navData={navData} isMobile={true} />
                             </ul>
-                        </div>
-                    </div>
+                        </>
+                    </nav>
                 </div>
             </div>
         );
