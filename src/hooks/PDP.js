@@ -1,23 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { OrderButton } from "./";
-import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
-import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
-
-const categoryDataMapping = {
-  handhelds: handHelds,
-  largePlates: largePlates,
-  salads: salads,
-  'sides&Snacks': sidesAndSnacks,
-  kids: kids,
-  'desserts&Beverages': dessertsAndBeverages,
-  platters: plattersCatering,
-  saladPlatters: saladPlattersCatering,
-  'desserts&Sides': dessertsAndSidesCatering
-};
-
-function getCategoryData(category) {
-  return categoryDataMapping[category] || null;
-}
+/* This utility imports & fixes types for handhelds, largeplates, catering platters, etc. */
+import { getCategoryData } from '../utilities/categoryUtils';
 
 function PDP() {
   const location = useLocation();

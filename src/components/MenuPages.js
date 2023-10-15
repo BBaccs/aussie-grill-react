@@ -1,20 +1,8 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { OrderButton } from "../hooks";
-import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
-import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
-
-const categoryDataMapping = {
-    handhelds: handHelds,
-    largePlates: largePlates,
-    salads: salads,
-    'sides&Snacks': sidesAndSnacks,
-    kids: kids,
-    'desserts&Beverages': dessertsAndBeverages,
-    platters: plattersCatering,
-    saladPlatters: saladPlattersCatering,
-    'desserts&Sides': dessertsAndSidesCatering
-};
+/* This utility imports & fixes types for handhelds, largeplates, catering platters, etc. */
+import { getCategoryData } from '../utilities/categoryUtils';
 
 const normalizedCategoryNames = {
     handhelds: 'Handhelds',
@@ -44,14 +32,10 @@ class MenuPages extends Component {
 
     componentDidMount() {
         const menuCategory = window.location.pathname.split('/')[2];
-        const categoryData = this.getCategoryData(menuCategory);
+        const categoryData = getCategoryData(menuCategory);
         if (categoryData) {
             this.setState({ category: categoryData });
         }
-    }
-
-    getCategoryData(category) {
-        return categoryDataMapping[category] || null;
     }
 
     normalizeMenuCategory(category) {
