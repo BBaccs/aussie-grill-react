@@ -44,8 +44,8 @@ class NavBar extends Component {
     }
 
     resolveClickHandler = (clickHandler) => {
-        if (this.state.open) { // If mobile view
-            this.setState({ open: false }); // Close the hamburger menu
+        if (this.state.open) {
+            this.setState({ open: false });
         }
 
         if (clickHandler === 'franchise') {
@@ -84,7 +84,7 @@ class NavBar extends Component {
             </div> :
             '';
         return (
-            <div>
+            <>
                 <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
                 <Link to="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
                 {generateAlertBar}
@@ -121,7 +121,7 @@ class NavBar extends Component {
                         </>
                     </nav>
                 </div>
-            </div>
+            </>
         );
     }
 }
