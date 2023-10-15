@@ -1,4 +1,4 @@
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import OrderButton from "./OrderButton.js";
 
 function CtaBanner() {

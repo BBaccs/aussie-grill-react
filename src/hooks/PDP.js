@@ -8,6 +8,7 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
+import OrderButton from "./OrderButton.js";
 
 function getCategoryData(category) {
   switch (category) {
@@ -61,7 +62,7 @@ function PDP() {
                 </div>
                 <div className="row py-5 d-none d-lg-block">
                   <div className="m-auto">
-                    <Link to="/pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</Link>
+                    <OrderButton />
                   </div>
                 </div>
               </div>
