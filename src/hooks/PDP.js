@@ -3,29 +3,20 @@ import { OrderButton } from "./";
 import { handHelds, largePlates, salads, sidesAndSnacks, kids, dessertsAndBeverages } from "../data/menuData";
 import { plattersCatering, saladPlattersCatering, dessertsAndSidesCatering } from "../data/cateringMenuData";
 
+const categoryDataMapping = {
+  handhelds: handHelds,
+  largePlates: largePlates,
+  salads: salads,
+  'sides&Snacks': sidesAndSnacks,
+  kids: kids,
+  'desserts&Beverages': dessertsAndBeverages,
+  platters: plattersCatering,
+  saladPlatters: saladPlattersCatering,
+  'desserts&Sides': dessertsAndSidesCatering
+};
+
 function getCategoryData(category) {
-  switch (category) {
-    case 'handhelds':
-      return handHelds;
-    case 'largePlates':
-      return largePlates;
-    case 'salads':
-      return salads;
-    case 'sides&Snacks':
-      return sidesAndSnacks;
-    case 'kids':
-      return kids;
-    case 'desserts&Beverages':
-      return dessertsAndBeverages;
-    case 'platters':
-      return plattersCatering;
-    case 'saladPlatters':
-      return saladPlattersCatering;
-    case 'desserts&Sides':
-      return dessertsAndSidesCatering;
-    default:
-      return null;
-  }
+  return categoryDataMapping[category] || null;
 }
 
 function PDP() {
