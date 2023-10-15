@@ -6,14 +6,10 @@ import { Routes, Route } from 'react-router-dom';
 import { ACarousel, PDP } from './hooks';
 
 // Components
-import MenuItems from './components/MenuItems';
-import Ordering from './components/Ordering';
-import Menu from './components/Menu';
-import MenuPages from './components/MenuPages';
-import FranchisePage from './pages/FranchisePage';
-import HeroImg from './components/HeroImg';
+import { MenuItems, Ordering, Menu, MenuPages, HeroImg } from './components';
 
 // Pages
+import FranchisePage from './pages/FranchisePage';
 import OurStoryPage from './pages/OurStoryPage';
 import CareersPage from './pages/Careers';
 import ContactPage from './pages/Contact';

@@ -1,8 +1,7 @@
 // @TODO: Utilize react-responsive for conditionally rendering components based on viewport size.
 import "./css/custom.css";
 import { useLocation } from 'react-router-dom';
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import { NavBar, Footer } from "./components";
 import AppRoutes from "./AppRoutes";
 import { CtaBanner } from './hooks';
 

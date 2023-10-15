@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { locationsData } from "../data/otherData/locationsData.js";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
-import { locationsData } from "../data/otherData/locationsData.js";
 import Alert from "react-bootstrap/Alert";
 
 function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
