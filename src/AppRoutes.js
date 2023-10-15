@@ -1,21 +1,11 @@
 // Is menu items component necessarry? it's on home page but maybe should be deleted. (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 import { ACarousel, PDP } from './hooks';
-
 import { MenuItems, Ordering, Menu, MenuPages, HeroImg } from './components';
-
-import FranchisePage from './pages/FranchisePage';
-import OurStoryPage from './pages/OurStoryPage';
-import CareersPage from './pages/Careers';
-import ContactPage from './pages/Contact';
-import GiveawaysPage from './pages/GiveawaysPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import CcpaPage from './pages/CcpaPage';
-import AccessibilityPage from './pages/AccessibilityPage';
-import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
-
+import { FranchisePage, OurStoryPage, CareersPage, ContactPage, GiveawaysPage, 
+         PrivacyPolicyPage, CcpaPage, AccessibilityPage, TermsAndConditionsPage } 
+from './pages';
 import { cateringCategoryData } from './data/cateringMenuData';
 import { homePageCards } from "./data/otherData";
 
