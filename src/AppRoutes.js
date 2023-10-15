@@ -2,13 +2,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Hooks
 import { ACarousel, PDP } from './hooks';
 
-// Components
 import { MenuItems, Ordering, Menu, MenuPages, HeroImg } from './components';
 
-// Pages
 import FranchisePage from './pages/FranchisePage';
 import OurStoryPage from './pages/OurStoryPage';
 import CareersPage from './pages/Careers';
@@ -19,9 +16,8 @@ import CcpaPage from './pages/CcpaPage';
 import AccessibilityPage from './pages/AccessibilityPage';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 
-// Data
-import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData';
-import { homePageCards } from "./data/otherData/homePageCards";
+import { cateringCategoryData } from './data/cateringMenuData';
+import { homePageCards } from "./data/otherData";
 
 function AppRoutes(props) {
     const { category, menuItem } = props;
@@ -50,7 +46,7 @@ function AppRoutes(props) {
                         <p className="mb-0 primary-color">All platters serve 6-8.</p>
                     </div>
                 </div>
-                <Menu menuData={CateringCategoryData} />
+                <Menu menuData={cateringCategoryData} />
             </>
         )
     }

@@ -1,4 +1,4 @@
-import HeroImg from '../components/HeroImg';
+import { HeroImg } from '../components';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 
