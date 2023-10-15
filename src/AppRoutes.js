@@ -1,25 +1,13 @@
 // Is menu items component necessarry? it's on home page but maybe should be deleted. (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
-// @TODO: Add catering page URL: https://www.ezcater.com/brand/pvt/aussie-grill to catering CTA
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ACarousel from './hooks/ACarousel.js';
-import MenuItems from './components/MenuItems.js';
-import Ordering from './components/Ordering';
-import OurStoryPage from './pages/OurStoryPage.js';
-import CareersPage from './pages/Careers.js';
-import ContactPage from './pages/Contact.js';
-import GiveawaysPage from './pages/GiveawaysPage.js';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage.js';
-import CcpaPage from './pages/CcpaPage.js';
-import AccessibilityPage from './pages/AccessibilityPage.js';
-import TermsAndConditionsPage from './pages/TermsAndConditionsPage.js';
-import Menu from './components/Menu.js';
-import MenuPages from './components/MenuPages.js';
-import PDP from './hooks/PDP.js';
-import FranchisePage from './pages/FranchisePage';
-import HeroImg from './components/HeroImg.js';
-import { CateringCategoryData } from './data/cateringMenuData/CateringCategoryData';
-import { homePageCards } from "./data/otherData/homePageCards";
+import { ACarousel, PDP } from './hooks';
+import { MenuItems, Ordering, Menu, MenuPages, HeroImg } from './components';
+import { FranchisePage, OurStoryPage, CareersPage, ContactPage, GiveawaysPage, 
+         PrivacyPolicyPage, CcpaPage, AccessibilityPage, TermsAndConditionsPage } 
+from './pages';
+import { cateringCategoryData } from './data/cateringMenuData';
+import { homePageCards } from "./data/otherData";
 
 function AppRoutes(props) {
     const { category, menuItem } = props;
@@ -48,7 +36,7 @@ function AppRoutes(props) {
                         <p className="mb-0 primary-color">All platters serve 6-8.</p>
                     </div>
                 </div>
-                <Menu menuData={CateringCategoryData} />
+                <Menu menuData={cateringCategoryData} />
             </>
         )
     }

@@ -1,0 +1,9 @@
+export { default as  AccessibilityPage } from './AccessibilityPage';
+export { default as  CareersPage } from './CareersPage';
+export { default as  CcpaPage } from './CcpaPage';
+export { default as  ContactPage } from './ContactPage';
+export { default as  FranchisePage } from './FranchisePage';
+export { default as  GiveawaysPage } from './GiveawaysPage';
+export { default as  OurStoryPage } from './OurStoryPage';
+export { default as  PrivacyPolicyPage } from './PrivacyPolicyPage';
+export { default as  TermsAndConditionsPage } from './TermsAndConditionsPage';

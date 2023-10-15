@@ -1,4 +1,4 @@
-import HeroImg from '../components/HeroImg';
+import { HeroImg } from '../components';
 
 export default function ContactPage() {
     return (
