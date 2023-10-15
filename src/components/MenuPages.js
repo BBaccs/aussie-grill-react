@@ -9,6 +9,7 @@ import { dessertsAndBeverages } from "../data/menuData/dessertsAndBeverages.js";
 import { plattersCatering } from "../data/cateringMenuData/plattersCatering.js";
 import { saladPlattersCatering } from "../data/cateringMenuData/saladPlattersCatering.js";
 import { dessertsAndSidesCatering } from "../data/cateringMenuData/dessertsAndSidesCatering.js";
+import OrderButton from "../hooks/OrderButton.js";
 
 function normalizeMenuCategory(category) {
     switch (category) {
@@ -134,9 +135,7 @@ class MenuPages extends Component {
                             </>
                         ))}
                     </div>
-                    <div className="m-auto">
-                        <Link className="btn btn-primary btn-lg mr-5" to="/pickup">Order</Link>
-                    </div>
+                    <OrderButton />
                 </div>
                 {/* <!-- End Menu Item Row--> */}
                 <div className="d-xl-none d-lg-none">

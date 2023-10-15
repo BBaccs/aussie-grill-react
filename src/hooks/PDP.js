@@ -61,9 +61,7 @@ function PDP() {
                   {item.pdpDescription2 && <p className="product-description text-left text-md-center pl-2 pl-md-0">{item.pdpDescription2}</p>}
                 </div>
                 <div className="row py-5 d-none d-lg-block">
-                  <div className="m-auto">
-                    <OrderButton />
-                  </div>
+                  <OrderButton />
                 </div>
               </div>
             </div>
