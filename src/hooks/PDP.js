@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { handHelds } from '../data/menuData/handHelds.js';
 import { largePlates } from '../data/menuData/largePlates.js';
 import { salads } from "../data/menuData/salads.js";
@@ -61,7 +61,7 @@ function PDP() {
                 </div>
                 <div className="row py-5 d-none d-lg-block">
                   <div className="m-auto">
-                    <a href="/../pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</a>
+                    <Link to="/../pickup" className="btn btn-primary btn-lg mr-5 pdp-lg-button">Order</Link>
                   </div>
                 </div>
               </div>

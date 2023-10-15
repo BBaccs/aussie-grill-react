@@ -32,7 +32,7 @@ class MenuPages extends Component {
                             </div>
                         ))}
                         <div className="d-flex justify-content-center">
-                            <a className="btn btn-primary btn-lg mr-5" href="/pickup">Order</a>
+                            <Link className="btn btn-primary btn-lg mr-5" to="/pickup">Order</Link>
                         </div>
                     </div>
                 </div>
