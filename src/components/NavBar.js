@@ -1,11 +1,32 @@
 /* @TODO: Transition animation for mobile nav btn */
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { 
+import {
     socialNavItems,
     franchiseNavItems,
     navItems,
-  } from "../data";
+} from "../data";
+
+const NavItemsRenderer = ({ navData, resolveClickHandler }) => {
+    return (
+        <> {navData.map((link, index) => (
+            <li key={index} className={`nav-item ${link.liClass || ''}`}>
+                {link.externalLink || link.hashLink
+                    ? <a className="nav-link"
+                        href={link.url} target={link.target} rel={link.rel} title={link.title}>
+                        {link.name}
+                    </a>
+                    : <NavLink onClick={() => resolveClickHandler(link.clickHandler)} // Close hamburger for mobile version, franchise link will update franchise nav
+                        className="nav-link" exact={link.url.includes("#")} to={link.url}>
+                        {link.name}
+                    </NavLink>
+                }
+            </li>
+        ))
+        }
+        </>
+    )
+}
 
 class NavBar extends Component {
     static defaultProps = {
@@ -21,12 +42,22 @@ class NavBar extends Component {
         };
         this.handleClick = this.handleClick.bind(this);
     }
-    handleClick(e) {
-        this.setState(this.state.open ? { open: false } : { open: true });
+
+    resolveClickHandler = (clickHandler) => {
+        if (this.state.open) {
+            this.setState({ open: false });
+        }
+
+        if (clickHandler === 'franchise') {
+            this.setState({ navData: franchiseNavItems });
+        }
     }
 
-    // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. 
-    // It is automatically provided by React and does not need to be explicitly passed.
+    handleClick() {
+        this.setState(prevState => ({ open: !prevState.open }));
+    }
+
+    // The prevProps parameter in the componentDidUpdate method represents the previous props that the component received before the update. It is automatically provided by React and does not need to be explicitly passed.
     componentDidUpdate(prevProps) {
         const { location } = this.props;
         if (location && location.pathname === '/franchise' && prevProps.location.pathname !== '/franchise') {
@@ -53,7 +84,7 @@ class NavBar extends Component {
             </div> :
             '';
         return (
-            <div>
+            <>
                 <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
                 <Link to="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
                 {generateAlertBar}
@@ -68,29 +99,9 @@ class NavBar extends Component {
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    navData.map((link, index) => {
-                                        return (
-                                            <li key={index} className={`${link.liClass ? link.liClass : ''} nav-item`}>
-                                                {
-                                                    link.externalLink || link.hashLink
-                                                        ? <a className="nav-link" href={link.url}>{link.name}</a> :
-                                                        <NavLink className="nav-link" to={link.url} exact={link.url.includes("#")} title={link.title}>{link.name}</NavLink>
-                                                }
-                                            </li>
-                                        );
-                                    })
+                                    <NavItemsRenderer navData={navData} resolveClickHandler={this.resolveClickHandler} />
                                     :
-                                    navData.filter(link => link.name !== 'Order').map((link, index) => {
-                                        return (
-                                            <li key={index} className={`${link.liClass} nav-item`}>
-                                                {
-                                                    link.externalLink || link.hashLink
-                                                        ? <a className="nav-link" href={link.url}>{link.name}</a>
-                                                        : <NavLink className="nav-link" to={link.url}>{link.name}</NavLink>
-                                                }
-                                            </li>
-                                        );
-                                    })
+                                    <NavItemsRenderer navData={navData.filter(link => link.name !== 'Order')} resolveClickHandler={this.resolveClickHandler} />
                                 }
                             </ul>
                             <a href="/">
@@ -102,29 +113,15 @@ class NavBar extends Component {
                             </a>
                         </div>
                     </nav>
-                    <div className={open ? "collapse show" : "collapse"} id="navbarToggleExternalContent">
-                        <div className="bg-ag-dark p-4">
+                    <nav className={`bg-ag-dark p-4 ${open ? "collapse show" : "collapse"}`} id="navbarToggleExternalContent">
+                        <>
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                {navData.map((link, index) => {
-                                    return (
-                                        <li key={index} className="nav-item">
-                                            {
-                                                link.externalLink || link.hashLink
-                                                    ? <a className="nav-link" href={link.url}>{link.name}</a> :
-                                                    <NavLink
-                                                        onClick={this.handleClick}
-                                                        className="nav-link"
-                                                        to={link.url}>{link.name}
-                                                    </NavLink>
-                                            }
-                                        </li>
-                                    );
-                                })}
+                                <NavItemsRenderer navData={navData} resolveClickHandler={this.resolveClickHandler} open={this.state.open} />
                             </ul>
-                        </div>
-                    </div>
+                        </>
+                    </nav>
                 </div>
-            </div>
+            </>
         );
     }
 }
