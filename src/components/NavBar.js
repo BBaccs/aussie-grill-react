@@ -7,16 +7,16 @@ import {
     navItems,
 } from "../data";
 
-const Test = ({ navData, handleClick, isMobile = false }) => {
+const NavItemsRenderer = ({ navData, resolveClickHandler }) => {
     return (
         <> {navData.map((link, index) => (
             <li key={index} className={`nav-item ${link.liClass || ''}`}>
                 {link.externalLink || link.hashLink
-                    ? <a className="nav-link" onClick={isMobile && handleClick}
+                    ? <a className="nav-link"
                         href={link.url} target={link.target} rel={link.rel} title={link.title}>
                         {link.name}
                     </a>
-                    : <NavLink onClick={isMobile && handleClick} // Close hamburger for mobile version
+                    : <NavLink onClick={() => resolveClickHandler(link.clickHandler)} // Close hamburger for mobile version, franchise link will update franchise nav
                         className="nav-link" exact={link.url.includes("#")} to={link.url}>
                         {link.name}
                     </NavLink>
@@ -42,7 +42,18 @@ class NavBar extends Component {
         };
         this.handleClick = this.handleClick.bind(this);
     }
-    handleClick(e) {
+
+    resolveClickHandler = (clickHandler) => {
+        if (this.state.open) { // If mobile view
+            this.setState({ open: false }); // Close the hamburger menu
+        }
+
+        if (clickHandler === 'franchise') {
+            this.setState({ navData: franchiseNavItems });
+        }
+    }
+
+    handleClick() {
         this.setState(prevState => ({ open: !prevState.open }));
     }
 
@@ -88,9 +99,9 @@ class NavBar extends Component {
                             </button>
                             <ul className="nav nav-uncollapsed ag-nav">
                                 {!pickup ?
-                                    <Test navData={navData} />
+                                    <NavItemsRenderer navData={navData} resolveClickHandler={this.resolveClickHandler} />
                                     :
-                                    <Test navData={navData.filter(link => link.name !== 'Order')} />
+                                    <NavItemsRenderer navData={navData.filter(link => link.name !== 'Order')} resolveClickHandler={this.resolveClickHandler} />
                                 }
                             </ul>
                             <a href="/">
@@ -105,7 +116,7 @@ class NavBar extends Component {
                     <nav className={`bg-ag-dark p-4 ${open ? "collapse show" : "collapse"}`} id="navbarToggleExternalContent">
                         <>
                             <ul className="hamburger-dropdown nav d-flex flex-column">
-                                <Test navData={navData} isMobile={true} handleClick={this.handleClick} />
+                                <NavItemsRenderer navData={navData} resolveClickHandler={this.resolveClickHandler} open={this.state.open} />
                             </ul>
                         </>
                     </nav>

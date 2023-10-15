@@ -38,6 +38,7 @@ export const navItems = [
         name: 'Franchise',
         url: 'franchise',
         liClass: 'nav-item uncollapsed-desktop-only',
+        clickHandler: 'franchise',
 
     },
     {
