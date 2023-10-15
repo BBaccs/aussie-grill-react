@@ -280,7 +280,7 @@ button.btn.btn-primary {
   color: white;
 }
 
-.btn.cta-primary {
+.cta-banner .btn-primary {
   border: 0.0625rem solid white;
 }
 
@@ -653,8 +653,7 @@ ul {
 }
 
 .menu-page *,
-.cta-banner,
-.btn.btn-primary.cta-primary {
+.cta-banner{
   font-family: bureauGrotBook;
 }
 
