@@ -1,10 +1,15 @@
 // catering uses desktop not mobile -  src={`/assets/foodImages/categoryImages/mobile/345x260${item.img}`} but it should both be
-import React from "react";
+import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { menuCategoryData} from "../data/menuData";
 import { OrderButton } from '../functionalComponents';
 
-function MenuPages ({ menuData = menuCategoryData }) {
+class MenuPages extends Component {
+    static defaultProps = {
+        menuData: menuCategoryData,
+    };
+    render() {
+        const { menuData } = this.props;
         return (
             <div id="menu-category-page" className="menu-page">
                 <div className="d-none d-lg-block menu-item-bg menu-wrapper-lg pb-5">
@@ -44,5 +49,6 @@ function MenuPages ({ menuData = menuCategoryData }) {
                 </div>
             </div>
         );
+    }
 }
 export default MenuPages;
