@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { locationsData } from "../data/otherData";
-import { LocationCardModal } from "../hooks";
+import { LocationCardModal } from "../functionalComponents";
 
 class Ordering extends Component {
     constructor(props) {

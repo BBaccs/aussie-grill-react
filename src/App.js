@@ -3,7 +3,7 @@ import "./css/custom.css";
 import { useLocation } from 'react-router-dom';
 import { NavBar, Footer } from "./components";
 import AppRoutes from "./AppRoutes";
-import { CtaBanner } from './hooks';
+import { CtaBanner } from './functionalComponents';
 
 function App() {
   const { pathname } = useLocation();

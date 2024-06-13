@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { menuCategoryData} from "../data/menuData";
-import { OrderButton } from '../hooks';
+import { OrderButton } from '../functionalComponents';
 
 class MenuPages extends Component {
     static defaultProps = {

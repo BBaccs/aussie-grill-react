@@ -1,7 +1,7 @@
 // Is menu items component necessarry? it's on home page but maybe should be deleted. (The difference is in the mobile view, check other HTML difference), prob shouuld combine into one component.
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ACarousel, PDP } from './hooks';
+import { ACarousel, PDP } from './functionalComponents';
 import { MenuItems, Ordering, Menu, MenuPages, HeroImg } from './components';
 import { FranchisePage, OurStoryPage, CareersPage, ContactPage, GiveawaysPage, 
          PrivacyPolicyPage, CcpaPage, AccessibilityPage, TermsAndConditionsPage } 

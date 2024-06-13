@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { OrderButton } from "../hooks";
+import { OrderButton } from "../functionalComponents";
 /* This utility imports & fixes types for handhelds, largeplates, catering platters, etc. */
 import { getCategoryData } from '../utilities/categoryUtils';
 
