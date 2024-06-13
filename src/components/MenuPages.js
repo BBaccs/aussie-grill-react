@@ -16,40 +16,29 @@ const normalizedCategoryNames = {
     'desserts&Sides': 'Desserts & Sides'
 };
 
-function normalizeMenuCategory(category) {
-    return normalizedCategoryNames[category] || null;
-}
 
-function MenuPages() {
-
+function MenuPages({ titleDescription }) {
     const menuCategory = window.location.pathname.split('/')[2];
-    this.state = {
+    function normalizeMenuCategory(categoryData) {
+        return normalizedCategoryNames[categoryData] || null;
+    }
+    const [categoryData, setCategoryData] = useState({
         category: [],
         menuTitle: normalizeMenuCategory(menuCategory)
-    };
+      });
     let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
-    const { titleDescription, } = this.props;
-    const { category, menuTitle } = this.state;
+
+
 
     useEffect(() => {
-        // Code here will run only after the initial render, equivalent to componentDidMount
         console.log('Component did mount');
-        const menuCategory = window.location.pathname.split('/')[2];
-        const categoryData = getCategoryData(menuCategory);
-        if (categoryData) {
-            useState({ category: categoryData });
+        const data = getCategoryData(menuCategory);
+        if (data) {
+            setCategoryData({ category : data, menuTitle: normalizeMenuCategory(menuCategory) });
         }
+    }, [window.location.pathname]);
 
-        // Optional cleanup function
-        return () => {
-            // This will run when the component is unmounted, equivalent to componentWillUnmount
-            console.log('Component will unmount');
-        };
-    }, []); // The empty array makes this effect run only on mount and unmount
-
-    // normalizeMenuCategory(category) {
-    //     return normalizedCategoryNames[category] || null;
-    // }
+    const { category } = categoryData;
     return (
         <div id={`${category}-page`} className="menu-page">
             <div className="d-none d-lg-block mobile-menu-item menu-item-bg menu-wrapper-lg pb-5">
@@ -66,12 +55,12 @@ function MenuPages() {
                             src="/assets/agGraphicElements/animals/mobile/bullHalfSmall.png" alt="" />
                         {titleDescription ?
                             <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                <h1 className="pb-1">{menuTitle}</h1>
+                                <h1 className="pb-1">{categoryData.menuTitle}</h1>
                                 <p className="mt-0 pb-3 primary-color" style={{ fontSize: .6 + 'rem' }}>{titleDescription}</p>
                             </div>
                             :
                             <div className="d-flex align-items-center w-100 flex-column pb-1">
-                                <h1 className="no-subhead-padding">{menuTitle}</h1>
+                                <h1 className="no-subhead-padding">{categoryData.menuTitle}</h1>
                             </div>
                         }
                         <img loading="lazy" className="animal-graphic d-lg-none"
@@ -118,11 +107,11 @@ function MenuPages() {
                         <div className="d-flex align-items-center w-100 flex-column pb-1">
                             {titleDescription ?
                                 <div style={{ marginLeft: 125 + 'px' }} className="d-flex align-items-center w-100 flex-column pb-1">
-                                    <h1 className="pb-1">{menuTitle}</h1>
+                                    <h1 className="pb-1">{categoryData.menuTitle}</h1>
                                     <p className="mt-0 pb-3 primary-color w-100" style={{ fontSize: .6 + 'rem' }}>{titleDescription}</p>
                                 </div>
                                 :
-                                <h2 className="no-subhead-padding pig-heading lg-pig-heading w-100">{menuTitle}</h2>
+                                <h2 className="no-subhead-padding pig-heading lg-pig-heading w-100">{categoryData.menuTitle}</h2>
                             }
                         </div>
                         <img loading="lazy" className="pig-graphic" src="/assets/agGraphicElements/animals/mobile/agPigVectorSmall.png"
