@@ -16,7 +16,6 @@ const normalizedCategoryNames = {
     'desserts&Sides': 'Desserts & Sides'
 };
 
-
 function MenuPages({ titleDescription }) {
     const menuCategory = window.location.pathname.split('/')[2];
     function normalizeMenuCategory(categoryData) {
@@ -28,10 +27,7 @@ function MenuPages({ titleDescription }) {
       });
     let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
 
-
-
     useEffect(() => {
-        console.log('Component did mount');
         const data = getCategoryData(menuCategory);
         if (data) {
             setCategoryData({ category : data, menuTitle: normalizeMenuCategory(menuCategory) });
