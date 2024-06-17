@@ -39,6 +39,7 @@ class Ordering extends Component {
         const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
         const {showDelivery, showPickup, selectedLocation} = this.state;
         return (
+            <>
                 <div id="pickup-page" className="landing-page">
                     <div className="container-fluid text-center landing-content-wrapper">
                         <h1 className="landing-heading mb-4 mb-lg-4">Choose your location to place an order!</h1>
