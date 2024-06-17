@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { locationsData } from "../data/otherData";
-import { LocationCardModal } from "../functionalComponents";
+import { LocationCardModal } from "../components";
 
 function Ordering() {
     const [locationData, setLocationData] = useState({

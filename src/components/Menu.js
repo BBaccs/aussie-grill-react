@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { menuCategoryData} from "../data/menuData";
-import { OrderButton } from '../functionalComponents';
+import { OrderButton } from '../components';
 
 function MenuPages ({ menuData = menuCategoryData }) {
         return (
