@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { OrderButton } from ".";
+import { OrderButton } from "../functionalComponents";
 /* This utility imports & fixes types for handhelds, largeplates, catering platters, etc. */
 import { getCategoryData } from '../utilities/categoryUtils';
 
