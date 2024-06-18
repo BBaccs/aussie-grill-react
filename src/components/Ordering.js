@@ -9,6 +9,9 @@ function Ordering() {
         selectedLocation: 'All',
     });
 
+    const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
+    const { showDelivery, showPickup, selectedLocation } = locationData;
+
     const toggleDelivery = () => {
         const { showDelivery } = locationData;
         setLocationData(prevData => ({ ...prevData, showDelivery: !showDelivery }));
@@ -32,9 +35,6 @@ function Ordering() {
     const handleLocationChange = (e) => {
         setLocationData(prevData => ({ ...prevData, selectedLocation: e.target.value }));
     }
-
-    const uniqueStates = [...new Set(locationsData.map((location) => location.stateName))];
-    const { showDelivery, showPickup, selectedLocation } = locationData;
     return (
         <>
             <div id="pickup-page" className="landing-page">
