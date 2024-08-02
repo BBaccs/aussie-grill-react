@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { menuCategoryData } from "../data/menuData";
 
-
 function MenuItems({ menuData = menuCategoryData }) {
     const menuItems = menuData.map((menuItem, index) => (
         /* <!-- Menu Item --> */

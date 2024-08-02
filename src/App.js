@@ -5,8 +5,8 @@ import { NavBar, Footer, CtaBanner } from "./components";
 import AppRoutes from "./AppRoutes";
 function App() {
   const { pathname } = useLocation();
-  let category = pathname.split('/')[2];
-  let menuItem = pathname.split('/')[3];
+  const category = pathname.split('/')[2];
+  const menuItem = pathname.split('/')[3];
 
   return (
     <>
