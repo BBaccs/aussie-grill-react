@@ -33,7 +33,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
     return true;
   });
 
-  let previousStateName = null; 
+  let previousStateName = null;
 
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
@@ -44,8 +44,8 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
               Sorry! No locations match this criteria.
             </Alert>}
           {filteredLocations.map((location, index) => {
-            let currentStateName = location.stateName;
-            let stateTitle = currentStateName !== previousStateName && <h2 key={`state-heading ${currentStateName}`} className="landing-heading my-3 w-100">{location.stateName}</h2>;
+            const currentStateName = location.stateName;
+            const stateTitle = currentStateName !== previousStateName && <h2 key={`state-heading ${currentStateName}`} className="landing-heading my-3 w-100">{location.stateName}</h2>;
             previousStateName = currentStateName;
             return (
               <>

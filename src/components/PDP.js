@@ -5,9 +5,9 @@ import { getCategoryData } from '../utilities/categoryUtils';
 
 function PDP() {
   const location = useLocation();
-  let category = location.pathname.split('/')[2];
-  let menuData = getCategoryData(category);
-  let pathName = location.pathname.split('/')[3].toLowerCase();
+  const category = location.pathname.split('/')[2];
+  const menuData = getCategoryData(category);
+  const pathName = location.pathname.split('/')[3].toLowerCase();
   return (
     <>
       {menuData.map((item, index) => {

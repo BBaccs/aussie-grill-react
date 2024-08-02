@@ -25,7 +25,7 @@ function MenuPages({ titleDescription }) {
         category: [],
         menuTitle: normalizeMenuCategory(menuCategory)
       });
-    let menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
+    const menuCategoryPage = window.location.pathname.includes('catering') ? './../../catering' : './../../menu';
 
     useEffect(() => {
         const data = getCategoryData(menuCategory);

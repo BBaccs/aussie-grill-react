@@ -16,7 +16,7 @@ const RenderFooterItems = ({ footerItems }) => {
 }
 
 function Footer () {
-        let year = new Date().getFullYear();
+        const year = new Date().getFullYear();
         return (
             <footer className="footer-outer-wrapper">
                 <div className="footer-wrapper px-3 py-4 bg-ag-dark">
