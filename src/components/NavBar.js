@@ -91,9 +91,10 @@ function NavBar({ alertBar = true, alertBarMsg = 'Follow the Adventure on', pick
         </div> :
         '';
     return (
-        <>
+        <header>
             <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
             <Link to="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
+            {/* <h1 className="sr-only">MAKE THIS THE H1 DUYNAMICALLY</h1> */}
             {generateAlertBar}
             <div className="sticky-top nav-border">
                 <nav className="navbar navbar-dark bg-ag-dark">
@@ -128,7 +129,7 @@ function NavBar({ alertBar = true, alertBarMsg = 'Follow the Adventure on', pick
                     </>
                 </nav>
             </div>
-        </>
+        </header>
     );
 
 }

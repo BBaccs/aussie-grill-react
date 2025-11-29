@@ -5,7 +5,7 @@ import { menuCategoryData } from "../data/menuData";
 function MenuItems({ menuData = menuCategoryData }) {
     const menuItems = menuData.map((menuItem, index) => (
         /* <!-- Menu Item --> */
-        <div key={index} className="col-lg-4 col-md-6 pt-lg-0 menu-item-col mb-5">
+        <li key={index} className="col-lg-4 col-md-6 pt-lg-0 menu-item-col mb-5">
             <Link className="d-block mt-5" to={menuItem.linkTo} >
                 <div className={`primary-subheading-wrapper ${menuItem.name.length >= 22 && 'xxl-wrapper'}`}>
                     <div className="w-100">
@@ -27,14 +27,14 @@ function MenuItems({ menuData = menuCategoryData }) {
                         </div>}
                 </>
             </Link>
-        </div>
+        </li>
     ));
     const sections = [];
     for (let i = 0; i < menuItems.length; i += 3) {
         sections.push(
-            <div key={i} className="row px-lg-4 justify-content-center">
+            <ul key={i} className="row px-lg-4 justify-content-center">
                 {menuItems.slice(i, i + 3)}
-            </div>
+            </ul>
         );
     }
     return (
