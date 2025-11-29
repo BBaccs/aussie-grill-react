@@ -35,6 +35,12 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
 
   let previousStateName = null;
 
+  const onDialogKeyDown = (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      handleClose();
+    }
+  }
+
   return (
     <div id="location-result" className="mt-md-4 mx-auto pickup-layout">
       <div className="pickup-layout">
@@ -67,7 +73,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
                         {
                           /* If there is a DoorDash URL there will also be an Uber Eats URL */
                           location.doorDashURL &&
-                          <Button variant="primary" onClick={() => handleShow(index)}>
+                          <Button variant="primary" onClick={() => handleShow(index)} aria-haspopup="dialog" aria-controls="delivery-modal" aria-expanded={show ? 'true' : 'false'}>
                             Delivery
                           </Button>
                         }
@@ -98,6 +104,8 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
         backdrop="static"
         keyboard={false}
         centered
+        aria-labelledby="delivery-modal"
+        onKeyDown={onDialogKeyDown}
       >
         <div className="bull-wrapper-2">
           <img loading="lazy"
@@ -107,7 +115,7 @@ function LocationCardModal({ selectedLocation, showDelivery, showPickup }) {
           />
         </div>
         <Modal.Header closeButton>
-          <Modal.Title as="h2" className="h4 delivery">Choose your delivery method</Modal.Title>
+          <Modal.Title as="h2" className="h4 delivery" id="delivery-modal">Choose your delivery method</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="modal-footer justify-content-center p-0 doordash-uber-wrapper">
