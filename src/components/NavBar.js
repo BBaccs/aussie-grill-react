@@ -98,7 +98,7 @@ function NavBar({ alertBar = true, alertBarMsg = 'Follow the Adventure on', pick
         </div> :
         '';
     return (
-        <>
+        <header>
             <a href="#main-content" className="sr-only sr-only-focusable">Skip to main content</a>
             <Link to="/privacyPolicy/accessibilityStatement" className="sr-only sr-only-focusable">Skip to accessibility statement</Link>
             {generateAlertBar}
@@ -118,7 +118,7 @@ function NavBar({ alertBar = true, alertBarMsg = 'Follow the Adventure on', pick
                                 <NavItemsRenderer hideFromTabOrder={open} navData={navData.filter(link => link.name !== 'Order')} resolveClickHandler={resolveClickHandler} />
                             }
                         </ul>
-                        <a href="/" aria-hidden={open ? 'true' : 'false'} tabIndex={open ? -1 : undefined}  >
+                        <a href="/" tabIndex={open ? -1 : undefined}  >
                             <picture loading="lazy">
                                 <source srcSet="/assets/other/mobile/agLogo.png" media="(min-width: 1024px)" />
                                 <img className="ml-2 ag-logo" src="/assets/other/mobile/agLogo.png"
@@ -135,7 +135,7 @@ function NavBar({ alertBar = true, alertBarMsg = 'Follow the Adventure on', pick
                     </nav>
                 </div>
             </div>
-        </>
+        </header>
     );
 
 }
