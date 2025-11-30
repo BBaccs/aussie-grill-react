@@ -108,7 +108,7 @@ function NavBar({ alertBar = true, alertBarMsg = 'Follow the Adventure on', pick
                         {/* @TODO: When the transition animation is added we'll need to add classes like 'collapse' to the btn, which temporarily hides it during transition*/}
                         <button onClick={handleClick} className={open ? "navbar-toggler d-md-none d-lg-none d-xl-none" : "navbar-toggler d-md-none d-lg-none d-xl-none collapsed"} type="button"
                             data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                            aria-expanded={open ? 'true' : 'false'} aria-label={open ? 'Close navigation' : 'Open navigation'} aria-haspopup="true" >
+                            aria-expanded={open ? 'true' : 'false'} aria-label={open ? 'Close navigation' : 'Open navigation'} >
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <ul className="nav nav-uncollapsed ag-nav" aria-hidden={open ? 'true' : 'false'}>
