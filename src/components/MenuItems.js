@@ -13,6 +13,7 @@ function MenuItems({ menuData = menuCategoryData }) {
                     </div>
                 </div>
                 <>
+                {/* @TODO PERFORMACE: remove <picture> srcset on img is all that's needed */}
                     <picture loading="lazy">
                         <source
                             srcSet={`${menuItem.imgFilePath}/desktop/500x375${menuItem.img}`}
